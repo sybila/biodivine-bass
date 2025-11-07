@@ -1,13 +1,17 @@
 use crate::statement::Statement;
 use std::sync::Arc;
 
+/// Represents a single Boolean expression over [`Statement`] references. It can be parsed
+/// and written into the `.adf` text format.
 #[derive(Clone, Hash, PartialEq, Eq, Debug)]
 pub struct ConditionExpression(Arc<ConditionExpressionNode>);
 
+/// Internal enum data structure of [`ConditionExpression`].
 #[derive(Clone, Hash, PartialEq, Eq, Debug)]
 enum ConditionExpressionNode {
     Constant(bool),
     Statement(Statement),
+    Negation(ConditionExpression),
     And(Vec<ConditionExpression>),
     Or(Vec<ConditionExpression>),
     Implication(ConditionExpression, ConditionExpression),
@@ -26,6 +30,11 @@ impl ConditionExpression {
     /// Create a condition referencing a statement.
     pub fn statement(statement: Statement) -> Self {
         ConditionExpression(Arc::new(ConditionExpressionNode::Statement(statement)))
+    }
+
+    /// Create a negation condition.
+    pub fn negation(operand: ConditionExpression) -> Self {
+        ConditionExpression(Arc::new(ConditionExpressionNode::Negation(operand)))
     }
 
     /// Create a logical AND condition.
@@ -63,6 +72,11 @@ impl ConditionExpression {
     /// Check if this condition is a statement reference.
     pub fn is_statement(&self) -> bool {
         matches!(*self.0, ConditionExpressionNode::Statement(_))
+    }
+
+    /// Check if this condition is a negation.
+    pub fn is_negation(&self) -> bool {
+        matches!(*self.0, ConditionExpressionNode::Negation(_))
     }
 
     /// Check if this condition is an AND.
@@ -108,6 +122,14 @@ impl ConditionExpression {
         }
     }
 
+    /// Get the operand if this is a negation condition.
+    pub fn as_negation(&self) -> Option<&ConditionExpression> {
+        match &*self.0 {
+            ConditionExpressionNode::Negation(operand) => Some(operand),
+            _ => None,
+        }
+    }
+
     /// Get the operands if this is an AND condition.
     pub fn as_and(&self) -> Option<&[ConditionExpression]> {
         match &*self.0 {
@@ -149,6 +171,24 @@ impl ConditionExpression {
     }
 }
 
+impl ConditionExpression {
+    /// Parse a condition expression from a string.
+    ///
+    /// Supports the following syntax:
+    /// - `42` - Statement reference
+    /// - `c(v)` - Constant true (verum)
+    /// - `c(f)` - Constant false (falsum)
+    /// - `neg(expr)` - Negation
+    /// - `and(expr1, expr2, ...)` - Logical AND
+    /// - `or(expr1, expr2, ...)` - Logical OR
+    /// - `xor(expr1, expr2)` - Exclusive OR
+    /// - `imp(expr1, expr2)` - Implication
+    /// - `iff(expr1, expr2)` - Equivalence
+    pub fn parse(input: &str) -> Result<Self, String> {
+        crate::condition_expression_parser::parse(input)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -173,6 +213,20 @@ mod tests {
 
         assert!(cond.is_statement());
         assert_eq!(cond.as_statement(), Some(stmt));
+        assert!(!cond.is_constant());
+        assert!(!cond.is_and());
+    }
+
+    #[test]
+    fn test_negation_constructor_and_accessors() {
+        let inner = ConditionExpression::statement(Statement::from(5));
+        let cond = ConditionExpression::negation(inner.clone());
+
+        assert!(cond.is_negation());
+        assert!(cond.as_negation().is_some());
+        let operand = cond.as_negation().unwrap();
+        assert!(operand.is_statement());
+        assert_eq!(operand.as_statement(), Some(Statement::from(5)));
         assert!(!cond.is_constant());
         assert!(!cond.is_and());
     }
@@ -290,6 +344,7 @@ mod tests {
         let cond = ConditionExpression::constant(true);
 
         assert!(cond.as_statement().is_none());
+        assert!(cond.as_negation().is_none());
         assert!(cond.as_and().is_none());
         assert!(cond.as_or().is_none());
         assert!(cond.as_implication().is_none());
