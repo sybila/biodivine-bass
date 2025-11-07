@@ -1,4 +1,4 @@
-use crate::{ConditionExpression, ExpressionAdf, Statement};
+use crate::{ConditionExpression, AdfExpressions, Statement};
 use cancel_this::{Cancellable, is_cancelled};
 use ruddy::VariableId;
 use ruddy::split::Bdd;
@@ -218,7 +218,7 @@ impl SymbolicAdf {
     ///
     /// This operation is cancellable using the `cancel-this` crate. If cancelled,
     /// it will return an error.
-    pub fn try_from_expressions(adf: &ExpressionAdf) -> Cancellable<Self> {
+    pub fn try_from_expressions(adf: &AdfExpressions) -> Cancellable<Self> {
         // Get all statements in sorted order
         let statements: Vec<Statement> = adf.statements().copied().collect();
 
@@ -256,16 +256,16 @@ impl SymbolicAdf {
     }
 }
 
-impl From<&ExpressionAdf> for SymbolicAdf {
-    fn from(adf: &ExpressionAdf) -> Self {
+impl From<&AdfExpressions> for SymbolicAdf {
+    fn from(adf: &AdfExpressions) -> Self {
         // Use the cancellable version, but panic if cancelled
         SymbolicAdf::try_from_expressions(adf)
             .expect("Conversion from ExpressionAdf to SymbolicAdf was cancelled")
     }
 }
 
-impl From<ExpressionAdf> for SymbolicAdf {
-    fn from(adf: ExpressionAdf) -> Self {
+impl From<AdfExpressions> for SymbolicAdf {
+    fn from(adf: AdfExpressions) -> Self {
         SymbolicAdf::from(&adf)
     }
 }
@@ -597,7 +597,7 @@ mod tests {
             ac(1, c(v)).
         "#;
 
-        let expr_adf = ExpressionAdf::parse(adf_str).expect("Failed to parse ADF");
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
         let symbolic_adf = SymbolicAdf::from(&expr_adf);
 
         // Check direct encoding
@@ -620,7 +620,7 @@ mod tests {
             ac(0, c(v)).
         "#;
 
-        let expr_adf = ExpressionAdf::parse(adf_str).expect("Failed to parse ADF");
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
         let symbolic_adf = SymbolicAdf::from(&expr_adf);
 
         let direct = symbolic_adf.direct_encoding();
@@ -647,7 +647,7 @@ mod tests {
             ac(0, c(v)).
         "#;
 
-        let expr_adf = ExpressionAdf::parse(adf_str).expect("Failed to parse ADF");
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
         let symbolic_adf = SymbolicAdf::from(&expr_adf);
 
         let dual = symbolic_adf.dual_encoding();
