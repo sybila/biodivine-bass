@@ -194,16 +194,16 @@ impl DualEncoding {
     }
 }
 
-/// A [`SymbolicAdf`] encodes an ADF symbolically using BDDs.
+/// A [`AdfBdds`] encodes an ADF symbolically using BDDs.
 ///
 /// Internally, it uses two encodings, depending on use case. Direct encoding uses one [`Bdd`]
 /// variable per statement, while dual encoding uses two.
-pub struct SymbolicAdf {
+pub struct AdfBdds {
     direct_encoding: DirectEncoding,
     dual_encoding: DualEncoding,
 }
 
-impl SymbolicAdf {
+impl AdfBdds {
     /// Get the direct encoding of this ADF.
     pub fn direct_encoding(&self) -> &DirectEncoding {
         &self.direct_encoding
@@ -243,7 +243,7 @@ impl SymbolicAdf {
             dual_conditions.insert(*statement, (can_be_true, can_be_false));
         }
 
-        Ok(SymbolicAdf {
+        Ok(AdfBdds {
             direct_encoding: DirectEncoding {
                 var_map: direct_map,
                 conditions: direct_conditions,
@@ -256,17 +256,17 @@ impl SymbolicAdf {
     }
 }
 
-impl From<&AdfExpressions> for SymbolicAdf {
+impl From<&AdfExpressions> for AdfBdds {
     fn from(adf: &AdfExpressions) -> Self {
         // Use the cancellable version, but panic if cancelled
-        SymbolicAdf::try_from_expressions(adf)
+        AdfBdds::try_from_expressions(adf)
             .expect("Conversion from ExpressionAdf to SymbolicAdf was cancelled")
     }
 }
 
-impl From<AdfExpressions> for SymbolicAdf {
+impl From<AdfExpressions> for AdfBdds {
     fn from(adf: AdfExpressions) -> Self {
-        SymbolicAdf::from(&adf)
+        AdfBdds::from(&adf)
     }
 }
 
@@ -598,7 +598,7 @@ mod tests {
         "#;
 
         let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
-        let symbolic_adf = SymbolicAdf::from(&expr_adf);
+        let symbolic_adf = AdfBdds::from(&expr_adf);
 
         // Check direct encoding
         let direct = symbolic_adf.direct_encoding();
@@ -621,7 +621,7 @@ mod tests {
         "#;
 
         let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
-        let symbolic_adf = SymbolicAdf::from(&expr_adf);
+        let symbolic_adf = AdfBdds::from(&expr_adf);
 
         let direct = symbolic_adf.direct_encoding();
 
@@ -648,7 +648,7 @@ mod tests {
         "#;
 
         let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
-        let symbolic_adf = SymbolicAdf::from(&expr_adf);
+        let symbolic_adf = AdfBdds::from(&expr_adf);
 
         let dual = symbolic_adf.dual_encoding();
 
