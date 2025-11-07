@@ -31,7 +31,10 @@ impl DirectMap {
         self.mapping.get(&statement).copied()
     }
 
-    /// Get ordered list of all [`Statement`] objects in the map.
+    /// Get all [`Statement`] objects in the map.
+    ///
+    /// The statements are returned in sorted order (by their index) because they are
+    /// stored in a [`BTreeMap`].
     pub fn statements(&self) -> impl DoubleEndedIterator<Item = Statement> + '_ {
         self.mapping.keys().copied()
     }
@@ -91,7 +94,10 @@ impl DualMap {
         self.mapping.get(&statement).copied()
     }
 
-    /// Get ordered list of all [`Statement`] objects in the map.
+    /// Get all [`Statement`] objects in the map.
+    ///
+    /// The statements are returned in sorted order (by their index) because they are
+    /// stored in a [`BTreeMap`].
     pub fn statements(&self) -> impl DoubleEndedIterator<Item = Statement> + '_ {
         self.mapping.keys().copied()
     }
@@ -158,8 +164,11 @@ impl DirectEncoding {
     }
 
     /// Get all statements that have conditions.
-    pub fn conditional_statements(&self) -> impl Iterator<Item = &Statement> {
-        self.conditions.keys()
+    ///
+    /// The statements are returned in sorted order (by their index) because they are
+    /// stored in a [`BTreeMap`].
+    pub fn conditional_statements(&self) -> impl Iterator<Item = Statement> {
+        self.conditions.keys().copied()
     }
 }
 
@@ -196,8 +205,11 @@ impl DualEncoding {
     }
 
     /// Get all statements that have conditions.
-    pub fn conditional_statements(&self) -> impl Iterator<Item = &Statement> {
-        self.conditions.keys()
+    ///
+    /// The statements are returned in sorted order (by their index) because they are
+    /// stored in a [`BTreeMap`].
+    pub fn conditional_statements(&self) -> impl Iterator<Item = Statement> {
+        self.conditions.keys().copied()
     }
 
     /// Get the [`Bdd`] representing all valid dual variable valuations.
@@ -397,11 +409,12 @@ mod tests {
         let statements = vec![Statement::from(0), Statement::from(5), Statement::from(10)];
         let map = DirectMap::new(&statements);
 
-        // Check that all statements are present
-        assert_eq!(map.statements().count(), 3);
-        assert!(map.statements().find(|it| it.into_index() == 0).is_some());
-        assert!(map.statements().find(|it| it.into_index() == 5).is_some());
-        assert!(map.statements().find(|it| it.into_index() == 10).is_some());
+        // Check that all statements are present in sorted order
+        let result: Vec<_> = map.statements().collect();
+        assert_eq!(
+            result,
+            vec![Statement::from(0), Statement::from(5), Statement::from(10)]
+        );
     }
 
     #[test]
@@ -468,11 +481,12 @@ mod tests {
         let statements = vec![Statement::from(0), Statement::from(5), Statement::from(10)];
         let map = DualMap::new(&statements);
 
-        // Check that all statements are present
-        assert_eq!(map.statements().count(), 3);
-        assert!(map.statements().find(|it| it.into_index() == 0).is_some());
-        assert!(map.statements().find(|it| it.into_index() == 5).is_some());
-        assert!(map.statements().find(|it| it.into_index() == 10).is_some());
+        // Check that all statements are present in sorted order
+        let result: Vec<_> = map.statements().collect();
+        assert_eq!(
+            result,
+            vec![Statement::from(0), Statement::from(5), Statement::from(10)]
+        );
     }
 
     #[test]
@@ -648,10 +662,9 @@ mod tests {
         assert!(condition.is_some());
         assert!(condition.unwrap().is_true());
 
-        // Test conditional_statements
-        let statements: Vec<_> = direct.conditional_statements().copied().collect();
-        assert_eq!(statements.len(), 1);
-        assert_eq!(statements[0], Statement::from(0));
+        // Test conditional_statements (should be in sorted order)
+        let statements: Vec<_> = direct.conditional_statements().collect();
+        assert_eq!(statements, vec![Statement::from(0)]);
     }
 
     #[test]
@@ -680,10 +693,9 @@ mod tests {
         assert!(can_be_true.node_count() > 0);
         assert!(can_be_false.node_count() > 0);
 
-        // Test conditional_statements
-        let statements: Vec<_> = dual.conditional_statements().copied().collect();
-        assert_eq!(statements.len(), 1);
-        assert_eq!(statements[0], Statement::from(0));
+        // Test conditional_statements (should be in sorted order)
+        let statements: Vec<_> = dual.conditional_statements().collect();
+        assert_eq!(statements, vec![Statement::from(0)]);
     }
 
     // Test for From<AdfExpressions> implementation

@@ -29,6 +29,9 @@ impl AdfExpressions {
     }
 
     /// Get all statements in the ADF.
+    ///
+    /// The statements are returned in sorted order (by their index) because they are
+    /// stored in a [`BTreeMap`].
     pub fn statements(&self) -> impl Iterator<Item = Statement> {
         self.conditions.keys().copied()
     }
@@ -205,6 +208,9 @@ impl AdfExpressions {
 
     /// Get an iterator over all statements that have conditions.
     /// Returns pairs of (statement, condition).
+    ///
+    /// The statements are returned in sorted order (by their index) because they are
+    /// stored in a [`BTreeMap`].
     pub fn conditions(&self) -> impl Iterator<Item = (Statement, &ConditionExpression)> {
         self.conditions
             .iter()
@@ -212,6 +218,9 @@ impl AdfExpressions {
     }
 
     /// Get an iterator over all statements that have no condition.
+    ///
+    /// The statements are returned in sorted order (by their index) because they are
+    /// stored in a [`BTreeMap`].
     pub fn free_statements(&self) -> impl Iterator<Item = Statement> {
         self.conditions.iter().filter_map(
             |(stmt, cond)| {
@@ -1113,12 +1122,12 @@ ac(3, and(1, 2)).
         adf.add_statement(Statement::from(1));
         adf.add_statement(Statement::from(2));
 
-        let stmts: Vec<_> = adf.statements().collect();
         // Should be sorted (BTreeMap)
-        assert_eq!(stmts.len(), 3);
-        assert_eq!(stmts[0], Statement::from(1));
-        assert_eq!(stmts[1], Statement::from(2));
-        assert_eq!(stmts[2], Statement::from(3));
+        let stmts: Vec<_> = adf.statements().collect();
+        assert_eq!(
+            stmts,
+            vec![Statement::from(1), Statement::from(2), Statement::from(3)]
+        );
     }
 
     #[test]
@@ -1129,12 +1138,12 @@ ac(3, and(1, 2)).
             .unwrap();
         adf.add_statement(Statement::from(3));
 
+        // All statements should be present in sorted order
         let stmts: Vec<_> = adf.statements().collect();
-        assert_eq!(stmts.len(), 3);
-        // All statements should be present
-        assert!(stmts.contains(&Statement::from(1)));
-        assert!(stmts.contains(&Statement::from(2)));
-        assert!(stmts.contains(&Statement::from(3)));
+        assert_eq!(
+            stmts,
+            vec![Statement::from(1), Statement::from(2), Statement::from(3)]
+        );
     }
 
     // Tests for Default implementation
