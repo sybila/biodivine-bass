@@ -188,6 +188,42 @@ impl ConditionExpression {
     pub fn parse(input: &str) -> Result<Self, String> {
         crate::condition_expression_parser::parse(input)
     }
+
+    /// Collect all statement references in this expression.
+    /// Returns a sorted vector of all statements referenced in the expression.
+    pub fn collect_statements(&self) -> Vec<Statement> {
+        use std::collections::BTreeSet;
+        let mut statements = BTreeSet::new();
+        self.collect_statements_recursive(&mut statements);
+        statements.into_iter().collect()
+    }
+
+    /// Helper method to recursively collect all statement references.
+    fn collect_statements_recursive(&self, statements: &mut std::collections::BTreeSet<Statement>) {
+        if let Some(stmt) = self.as_statement() {
+            statements.insert(stmt);
+        } else if let Some(operand) = self.as_negation() {
+            operand.collect_statements_recursive(statements);
+        } else if let Some(operands) = self.as_and() {
+            for operand in operands {
+                operand.collect_statements_recursive(statements);
+            }
+        } else if let Some(operands) = self.as_or() {
+            for operand in operands {
+                operand.collect_statements_recursive(statements);
+            }
+        } else if let Some((left, right)) = self.as_implication() {
+            left.collect_statements_recursive(statements);
+            right.collect_statements_recursive(statements);
+        } else if let Some((left, right)) = self.as_equivalence() {
+            left.collect_statements_recursive(statements);
+            right.collect_statements_recursive(statements);
+        } else if let Some((left, right)) = self.as_exclusive_or() {
+            left.collect_statements_recursive(statements);
+            right.collect_statements_recursive(statements);
+        }
+        // Constants don't contain statements
+    }
 }
 
 impl TryFrom<&str> for ConditionExpression {
@@ -456,5 +492,141 @@ mod tests {
         let expr = ConditionExpression::try_from(input).unwrap();
         let output = format!("{}", expr);
         assert_eq!(input, output);
+    }
+
+    // Tests for collect_statements
+    #[test]
+    fn test_collect_statements_constant() {
+        let expr = ConditionExpression::constant(true);
+        let stmts = expr.collect_statements();
+        assert!(stmts.is_empty());
+    }
+
+    #[test]
+    fn test_collect_statements_single_statement() {
+        let s1 = Statement::from(42);
+        let expr = ConditionExpression::statement(s1);
+        let stmts = expr.collect_statements();
+        assert_eq!(stmts.len(), 1);
+        assert_eq!(stmts[0], s1);
+    }
+
+    #[test]
+    fn test_collect_statements_negation() {
+        let s1 = Statement::from(1);
+        let expr = ConditionExpression::negation(ConditionExpression::statement(s1));
+        let stmts = expr.collect_statements();
+        assert_eq!(stmts.len(), 1);
+        assert_eq!(stmts[0], s1);
+    }
+
+    #[test]
+    fn test_collect_statements_and() {
+        let s1 = Statement::from(1);
+        let s2 = Statement::from(2);
+        let s3 = Statement::from(3);
+        let expr = ConditionExpression::and(&[
+            ConditionExpression::statement(s1),
+            ConditionExpression::statement(s2),
+            ConditionExpression::statement(s3),
+        ]);
+        let stmts = expr.collect_statements();
+        assert_eq!(stmts.len(), 3);
+        assert!(stmts.contains(&s1));
+        assert!(stmts.contains(&s2));
+        assert!(stmts.contains(&s3));
+    }
+
+    #[test]
+    fn test_collect_statements_nested() {
+        let s1 = Statement::from(1);
+        let s2 = Statement::from(2);
+        let s3 = Statement::from(3);
+        let expr = ConditionExpression::or(&[
+            ConditionExpression::statement(s1),
+            ConditionExpression::and(&[
+                ConditionExpression::statement(s2),
+                ConditionExpression::negation(ConditionExpression::statement(s3)),
+            ]),
+        ]);
+        let stmts = expr.collect_statements();
+        assert_eq!(stmts.len(), 3);
+        assert!(stmts.contains(&s1));
+        assert!(stmts.contains(&s2));
+        assert!(stmts.contains(&s3));
+    }
+
+    #[test]
+    fn test_collect_statements_duplicates() {
+        let s1 = Statement::from(1);
+        let expr = ConditionExpression::and(&[
+            ConditionExpression::statement(s1),
+            ConditionExpression::statement(s1),
+        ]);
+        let stmts = expr.collect_statements();
+        // Should deduplicate
+        assert_eq!(stmts.len(), 1);
+        assert_eq!(stmts[0], s1);
+    }
+
+    #[test]
+    fn test_collect_statements_implication() {
+        let s1 = Statement::from(1);
+        let s2 = Statement::from(2);
+        let expr = ConditionExpression::implication(
+            ConditionExpression::statement(s1),
+            ConditionExpression::statement(s2),
+        );
+        let stmts = expr.collect_statements();
+        assert_eq!(stmts.len(), 2);
+        assert!(stmts.contains(&s1));
+        assert!(stmts.contains(&s2));
+    }
+
+    #[test]
+    fn test_collect_statements_equivalence() {
+        let s1 = Statement::from(1);
+        let s2 = Statement::from(2);
+        let expr = ConditionExpression::equivalence(
+            ConditionExpression::statement(s1),
+            ConditionExpression::statement(s2),
+        );
+        let stmts = expr.collect_statements();
+        assert_eq!(stmts.len(), 2);
+        assert!(stmts.contains(&s1));
+        assert!(stmts.contains(&s2));
+    }
+
+    #[test]
+    fn test_collect_statements_xor() {
+        let s1 = Statement::from(1);
+        let s2 = Statement::from(2);
+        let expr = ConditionExpression::exclusive_or(
+            ConditionExpression::statement(s1),
+            ConditionExpression::statement(s2),
+        );
+        let stmts = expr.collect_statements();
+        assert_eq!(stmts.len(), 2);
+        assert!(stmts.contains(&s1));
+        assert!(stmts.contains(&s2));
+    }
+
+    #[test]
+    fn test_collect_statements_sorted() {
+        let s3 = Statement::from(3);
+        let s1 = Statement::from(1);
+        let s2 = Statement::from(2);
+        // Add in reverse order
+        let expr = ConditionExpression::and(&[
+            ConditionExpression::statement(s3),
+            ConditionExpression::statement(s1),
+            ConditionExpression::statement(s2),
+        ]);
+        let stmts = expr.collect_statements();
+        // Should be sorted
+        assert_eq!(stmts.len(), 3);
+        assert_eq!(stmts[0], s1);
+        assert_eq!(stmts[1], s2);
+        assert_eq!(stmts[2], s3);
     }
 }
