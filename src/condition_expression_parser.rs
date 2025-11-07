@@ -516,4 +516,67 @@ mod tests {
         .unwrap();
         assert!(expr.is_and());
     }
+
+    #[test]
+    fn test_parse_constant_with_wrong_token() {
+        // Test: c(x) where x is not v or f
+        let result = parse("c(x)");
+        assert!(result.is_err());
+        assert!(
+            result
+                .unwrap_err()
+                .contains("Expected 'v' or 'f' in constant")
+        );
+    }
+
+    #[test]
+    fn test_parse_constant_with_number() {
+        // Test: c(42) - number instead of v/f
+        let result = parse("c(42)");
+        assert!(result.is_err());
+        assert!(
+            result
+                .unwrap_err()
+                .contains("Expected 'v' or 'f' in constant")
+        );
+    }
+
+    #[test]
+    fn test_parse_constant_incomplete() {
+        // Test: c( with no closing
+        let result = parse("c(");
+        assert!(result.is_err());
+        assert!(result.unwrap_err().contains("Unexpected end of input"));
+    }
+
+    #[test]
+    fn test_parse_expression_starting_with_unexpected_token() {
+        // Test expression starting with a token that's not a number or identifier
+        let tokens = vec![Token::LeftParen, Token::Number(1), Token::RightParen];
+        let mut parser = Parser::new(tokens);
+        let result = parser.parse_expression();
+        assert!(result.is_err());
+        assert!(result.unwrap_err().contains("Unexpected token"));
+    }
+
+    #[test]
+    fn test_parse_wrong_closing_paren() {
+        // Test: and(1,2] - wrong bracket type
+        let result = parse("and(1,2");
+        assert!(result.is_err());
+        assert!(result.unwrap_err().contains("Expected"));
+    }
+
+    #[test]
+    fn test_expect_method_wrong_token() {
+        // Test the expect method when it gets the wrong token
+        let tokens = vec![Token::LeftParen, Token::Number(1)];
+        let mut parser = Parser::new(tokens);
+        parser.next(); // consume LeftParen
+        let result = parser.expect(Token::RightParen);
+        assert!(result.is_err());
+        let err = result.unwrap_err();
+        assert!(err.contains("Expected"));
+        assert!(err.contains("found"));
+    }
 }
