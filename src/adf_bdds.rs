@@ -173,9 +173,15 @@ impl DirectEncoding {
 /// Also note that for many applications, it is sufficient to encode "free" statements using
 /// direct encoding. However, strictly speaking, this is not always sufficient if we want to
 /// find solutions where a free statement is, well, free and other statements are fixed.
+///
+/// In dual encoding, each statement has two variables: positive (can be true) and negative
+/// (can be false). The valuation where both variables are false is invalid (a statement must
+/// be able to be either true or false). The `valid` BDD encodes the constraint that for every
+/// statement, at least one of its dual variables must be true.
 pub struct DualEncoding {
     var_map: DualMap,
     conditions: BTreeMap<Statement, (Bdd, Bdd)>,
+    valid: Bdd,
 }
 
 impl DualEncoding {
@@ -192,6 +198,15 @@ impl DualEncoding {
     /// Get all statements that have conditions.
     pub fn conditional_statements(&self) -> impl Iterator<Item = &Statement> {
         self.conditions.keys()
+    }
+
+    /// Get the [`Bdd`] representing all valid dual variable valuations.
+    ///
+    /// This BDD is true for valuations where, for every statement, at least one of its
+    /// dual variables (positive or negative) is true. Valuations where both dual variables
+    /// of any statement are false are excluded as invalid.
+    pub fn valid(&self) -> &Bdd {
+        &self.valid
     }
 }
 
@@ -247,6 +262,16 @@ impl AdfBdds {
             dual_conditions.insert(*statement, (can_be_true, can_be_false));
         }
 
+        // Build the valid BDD for dual encoding
+        // For each statement, at least one of (t_var, f_var) must be true
+        let mut valid = Bdd::new_true();
+        for statement in &statements {
+            is_cancelled!()?;
+            let (t_lit, f_lit) = dual_map.get_literals(*statement);
+            // At least one must be true: t_var OR f_var
+            valid = valid.and(&t_lit.or(&f_lit));
+        }
+
         Ok(AdfBdds {
             direct_encoding: DirectEncoding {
                 var_map: direct_map,
@@ -255,6 +280,7 @@ impl AdfBdds {
             dual_encoding: DualEncoding {
                 var_map: dual_map,
                 conditions: dual_conditions,
+                valid,
             },
         })
     }
@@ -907,5 +933,194 @@ mod tests {
         let implication = s0_lit.not().or(&xor_part);
         let expected = implication.not();
         assert!(bdd.structural_eq(&expected));
+    }
+
+    // Tests for valid BDD in DualEncoding
+
+    #[test]
+    fn test_dual_encoding_valid_accessor() {
+        let adf_str = r#"
+            s(0).
+            ac(0, c(v)).
+        "#;
+
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual = symbolic_adf.dual_encoding();
+        let valid = dual.valid();
+
+        // Valid BDD should exist and not be a constant
+        assert!(!valid.is_true());
+        assert!(!valid.is_false());
+        assert!(valid.node_count() > 0);
+    }
+
+    #[test]
+    fn test_dual_encoding_valid_single_statement() {
+        let adf_str = r#"
+            s(0).
+            ac(0, c(v)).
+        "#;
+
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual = symbolic_adf.dual_encoding();
+        let valid = dual.valid();
+        let var_map = dual.var_map();
+
+        // For a single statement, valid should be: t_var OR f_var
+        let (t_lit, f_lit) = var_map.get_literals(Statement::from(0));
+        let expected = t_lit.or(&f_lit);
+
+        assert!(valid.structural_eq(&expected));
+    }
+
+    #[test]
+    fn test_dual_encoding_valid_multiple_statements() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+            s(2).
+            ac(0, 1).
+            ac(1, 2).
+        "#;
+
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual = symbolic_adf.dual_encoding();
+        let valid = dual.valid();
+        let var_map = dual.var_map();
+
+        // For multiple statements, valid should be the conjunction of all (t_i OR f_i)
+        let (t0_lit, f0_lit) = var_map.get_literals(Statement::from(0));
+        let (t1_lit, f1_lit) = var_map.get_literals(Statement::from(1));
+        let (t2_lit, f2_lit) = var_map.get_literals(Statement::from(2));
+
+        let expected = t0_lit
+            .or(&f0_lit)
+            .and(&t1_lit.or(&f1_lit))
+            .and(&t2_lit.or(&f2_lit));
+
+        assert!(valid.structural_eq(&expected));
+    }
+
+    #[test]
+    fn test_dual_encoding_valid_excludes_invalid_valuations() {
+        let adf_str = r#"
+            s(0).
+            ac(0, c(v)).
+        "#;
+
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual = symbolic_adf.dual_encoding();
+        let valid = dual.valid();
+        let var_map = dual.var_map();
+
+        // Get the dual variables
+        let (t_lit, f_lit) = var_map.get_literals(Statement::from(0));
+
+        // The invalid case: both t_var and f_var are false
+        let both_false = t_lit.not().and(&f_lit.not());
+
+        // Valid AND both_false should be false (no satisfying assignment)
+        let intersection = valid.and(&both_false);
+        assert!(intersection.is_false());
+    }
+
+    #[test]
+    fn test_dual_encoding_valid_allows_valid_valuations() {
+        let adf_str = r#"
+            s(0).
+            ac(0, c(v)).
+        "#;
+
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual = symbolic_adf.dual_encoding();
+        let valid = dual.valid();
+        let var_map = dual.var_map();
+
+        // Get the dual variables
+        let (t_lit, f_lit) = var_map.get_literals(Statement::from(0));
+
+        // Test all three valid cases:
+        // 1. Both true (statement can be both true and false - truly "free")
+        let both_true = t_lit.and(&f_lit);
+        let case1 = valid.and(&both_true);
+        assert!(!case1.is_false()); // Should have satisfying assignments
+
+        // 2. Only t_var true (statement can only be true)
+        let only_t = t_lit.and(&f_lit.not());
+        let case2 = valid.and(&only_t);
+        assert!(!case2.is_false()); // Should have satisfying assignments
+
+        // 3. Only f_var true (statement can only be false)
+        let only_f = t_lit.not().and(&f_lit);
+        let case3 = valid.and(&only_f);
+        assert!(!case3.is_false()); // Should have satisfying assignments
+    }
+
+    #[test]
+    fn test_dual_encoding_valid_with_free_statements() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, 1).
+        "#;
+
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual = symbolic_adf.dual_encoding();
+        let valid = dual.valid();
+        let var_map = dual.var_map();
+
+        // Valid should constrain both statement 0 and statement 1 (including free statements)
+        let (t0_lit, f0_lit) = var_map.get_literals(Statement::from(0));
+        let (t1_lit, f1_lit) = var_map.get_literals(Statement::from(1));
+
+        let expected = t0_lit.or(&f0_lit).and(&t1_lit.or(&f1_lit));
+
+        assert!(valid.structural_eq(&expected));
+
+        // Verify that invalid valuations for the free statement are also excluded
+        let s1_both_false = t1_lit.not().and(&f1_lit.not());
+        let intersection = valid.and(&s1_both_false);
+        assert!(intersection.is_false());
+    }
+
+    #[test]
+    fn test_dual_encoding_valid_complex_adf() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+            s(2).
+            s(3).
+            ac(0, and(1, 2)).
+            ac(1, or(2, 3)).
+            ac(2, neg(3)).
+        "#;
+
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual = symbolic_adf.dual_encoding();
+        let valid = dual.valid();
+        let var_map = dual.var_map();
+
+        // Build the expected valid BDD manually
+        let mut expected = Bdd::new_true();
+        for i in 0..4 {
+            let (t_lit, f_lit) = var_map.get_literals(Statement::from(i));
+            expected = expected.and(&t_lit.or(&f_lit));
+        }
+
+        assert!(valid.structural_eq(&expected));
     }
 }
