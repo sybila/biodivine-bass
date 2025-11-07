@@ -424,7 +424,6 @@ ac(2,and(neg(9),neg(6))).
         for i in 1..=10 {
             let stmt = Statement::from(i);
             assert!(adf.get_condition(&stmt).is_some());
-            assert!(adf.get_condition(&stmt).is_some());
         }
     }
 
