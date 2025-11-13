@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-ruddy = "0.0.1"
+ruddy = { git = "https://github.com/sybila/ruddy.git", rev = "e5449ebbde6f05a5262c4b5cc7a26669b1c3e4fd" }
 cancel-this = "0.3.0"

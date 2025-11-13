@@ -47,9 +47,8 @@ checksum = "51743d3e274e2b18df81c4dc6caf8a5b8e15dbe799e0dca05c7617380094e884"
 
 [[package]]
 name = "ruddy"
-version = "0.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9cbf0c98fe469ab28d35efb552df8ed4630129d84daa90745688637ba6e20a61"
+version = "0.0.2"
+source = "git+https://github.com/sybila/ruddy.git?rev=e5449ebbde6f05a5262c4b5cc7a26669b1c3e4fd#e5449ebbde6f05a5262c4b5cc7a26669b1c3e4fd"
 dependencies = [
  "replace_with",
  "rustc-hash",
