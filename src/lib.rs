@@ -45,6 +45,12 @@ impl BddSolver for NaiveGreedySolver {
             // Sort by size (ascending)
             to_merge.sort_by_key(|bdd| bdd.node_count());
 
+            println!(
+                "[{} remaining] Largest BDD: {}",
+                to_merge.len(),
+                to_merge.last().unwrap().node_count()
+            );
+
             // Take the two smallest
             let smallest1 = to_merge.remove(0);
             let smallest2 = to_merge.remove(0);
@@ -136,6 +142,12 @@ impl BddSolver for QuadraticGreedySolver {
             // Update result with the best merge
             result = best_result;
 
+            println!(
+                "[{} remaining] Result BDD: {}",
+                remaining.len(),
+                result.node_count()
+            );
+
             // Remove the merged constraint from remaining
             remaining.remove(best_idx);
 
@@ -216,14 +228,8 @@ impl BddSolver for NaiveGreedySolverShared {
             to_merge.push(merged);
         }
 
-        // Convert the final result back to split BDD
-        // We do this by using the split BDD operations on the filtered constraints
-        // This is a workaround since Ruddy doesn't provide shared->split conversion
-        let filtered_vec: Vec<Bdd> = filtered_constraints
-            .iter()
-            .map(|&bdd| bdd.clone())
-            .collect();
-        NaiveGreedySolver::solve_conjunction(&filtered_vec)
+        let result = to_merge.into_iter().next().unwrap();
+        Ok(manager.export_split(&result))
     }
 }
 
@@ -325,16 +331,15 @@ impl BddSolver for QuadraticGreedySolverShared {
             if result.is_false() {
                 return Ok(Bdd::new_false());
             }
+
+            println!(
+                "[{} remaining] Largest BDD: {}",
+                remaining.len(),
+                manager.node_count(&result)
+            );
         }
 
-        // Convert the final result back to split BDD
-        // We do this by using the quadratic solver on filtered split BDDs
-        // This is a workaround since Ruddy doesn't provide shared->split conversion
-        let filtered_vec: Vec<Bdd> = filtered_constraints
-            .iter()
-            .map(|&bdd| bdd.clone())
-            .collect();
-        QuadraticGreedySolver::solve_conjunction(&filtered_vec)
+        Ok(manager.export_split(&result))
     }
 }
 
