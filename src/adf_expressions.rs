@@ -19,21 +19,21 @@ impl AdfExpressions {
 
     /// Get the acceptance condition for a statement.
     /// Returns `None` if the statement doesn't exist or has no condition.
-    pub fn get_condition(&self, statement: Statement) -> Option<&ConditionExpression> {
-        self.conditions.get(&statement).and_then(|opt| opt.as_ref())
+    pub fn get_condition(&self, statement: &Statement) -> Option<&ConditionExpression> {
+        self.conditions.get(statement).and_then(|opt| opt.as_ref())
     }
 
     /// Check if a statement exists in the ADF (with or without a condition).
-    pub fn has_statement(&self, statement: Statement) -> bool {
-        self.conditions.contains_key(&statement)
+    pub fn has_statement(&self, statement: &Statement) -> bool {
+        self.conditions.contains_key(statement)
     }
 
     /// Get all statements in the ADF.
     ///
     /// The statements are returned in sorted order (by their index) because they are
     /// stored in a [`BTreeMap`].
-    pub fn statements(&self) -> impl Iterator<Item = Statement> {
-        self.conditions.keys().copied()
+    pub fn statements(&self) -> impl Iterator<Item = &Statement> {
+        self.conditions.keys()
     }
 
     /// Get the number of statements in the ADF.
@@ -177,10 +177,7 @@ impl AdfExpressions {
         condition: ConditionExpression,
     ) -> Result<(), String> {
         if let Some(Some(_)) = self.conditions.get(&statement) {
-            return Err(format!(
-                "Statement {} already has a condition",
-                statement.into_index()
-            ));
+            return Err(format!("Statement {} already has a condition", statement));
         }
         self.conditions.insert(statement, Some(condition));
         Ok(())
@@ -214,7 +211,7 @@ impl AdfExpressions {
     pub fn conditions(&self) -> impl Iterator<Item = (Statement, &ConditionExpression)> {
         self.conditions
             .iter()
-            .filter_map(|(stmt, cond)| cond.as_ref().map(|c| (*stmt, c)))
+            .filter_map(|(stmt, cond)| cond.as_ref().map(|c| (stmt.clone(), c)))
     }
 
     /// Get an iterator over all statements that have no condition.
@@ -222,11 +219,13 @@ impl AdfExpressions {
     /// The statements are returned in sorted order (by their index) because they are
     /// stored in a [`BTreeMap`].
     pub fn free_statements(&self) -> impl Iterator<Item = Statement> {
-        self.conditions.iter().filter_map(
-            |(stmt, cond)| {
-                if cond.is_none() { Some(*stmt) } else { None }
-            },
-        )
+        self.conditions.iter().filter_map(|(stmt, cond)| {
+            if cond.is_none() {
+                Some(stmt.clone())
+            } else {
+                None
+            }
+        })
     }
 
     /// Find all statements that appear in some condition expression but are not declared.
@@ -271,13 +270,13 @@ impl AdfExpressions {
 
         // First pass: write all s(N) declarations
         for statement in self.conditions.keys() {
-            output.push_str(&format!("s({}).\n", statement.into_index()));
+            output.push_str(&format!("s({}).\n", statement));
         }
 
         // Second pass: write all ac(N, expr) declarations
         for (statement, condition) in &self.conditions {
             if let Some(expr) = condition {
-                output.push_str(&format!("ac({},{}).\n", statement.into_index(), expr));
+                output.push_str(&format!("ac({},{}).\n", statement, expr));
             }
         }
 
@@ -315,10 +314,10 @@ ac(2, neg(1)).
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
 
-        assert!(adf.has_statement(s1));
-        assert!(adf.has_statement(s2));
-        assert!(adf.get_condition(s1).is_some());
-        assert!(adf.get_condition(s2).is_some());
+        assert!(adf.has_statement(&s1));
+        assert!(adf.has_statement(&s2));
+        assert!(adf.get_condition(&s1).is_some());
+        assert!(adf.get_condition(&s2).is_some());
     }
 
     #[test]
@@ -334,8 +333,8 @@ ac(1, c(v)).
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
 
-        assert!(adf.get_condition(s1).is_some());
-        assert!(adf.get_condition(s2).is_none());
+        assert!(adf.get_condition(&s1).is_some());
+        assert!(adf.get_condition(&s2).is_none());
     }
 
     #[test]
@@ -350,8 +349,8 @@ ac(2, c(v)).
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
 
-        assert!(adf.get_condition(s1).is_some());
-        assert!(adf.get_condition(s2).is_some());
+        assert!(adf.get_condition(&s1).is_some());
+        assert!(adf.get_condition(&s2).is_some());
     }
 
     #[test]
@@ -382,8 +381,8 @@ s(2).
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
 
-        assert!(adf.get_condition(s1).is_some());
-        assert!(adf.get_condition(s2).is_some());
+        assert!(adf.get_condition(&s1).is_some());
+        assert!(adf.get_condition(&s2).is_some());
     }
 
     #[test]
@@ -432,7 +431,7 @@ ac(2,and(neg(9),neg(6))).
         // Check that all statements have conditions
         for i in 1..=10 {
             let stmt = Statement::from(i);
-            assert!(adf.get_condition(stmt).is_some());
+            assert!(adf.get_condition(&stmt).is_some());
         }
     }
 
@@ -607,7 +606,7 @@ ac(1, c(v)).
         assert!(result.is_ok());
         let adf = result.unwrap();
         assert_eq!(adf.len(), 1);
-        assert!(adf.get_condition(Statement::from(1)).is_some());
+        assert!(adf.get_condition(&Statement::from(1)).is_some());
     }
 
     #[test]
@@ -630,10 +629,10 @@ ac(3, and(1, 2)).
         let mut adf = AdfExpressions::new();
         let s1 = Statement::from(1);
 
-        adf.add_statement(s1);
+        adf.add_statement(s1.clone());
         assert_eq!(adf.len(), 1);
-        assert!(adf.has_statement(s1));
-        assert!(adf.get_condition(s1).is_none());
+        assert!(adf.has_statement(&s1));
+        assert!(adf.get_condition(&s1).is_none());
     }
 
     #[test]
@@ -641,8 +640,8 @@ ac(3, and(1, 2)).
         let mut adf = AdfExpressions::new();
         let s1 = Statement::from(1);
 
-        adf.add_statement(s1);
-        adf.add_statement(s1); // Should not error, just do nothing
+        adf.add_statement(s1.clone());
+        adf.add_statement(s1.clone()); // Should not error, just do nothing
         assert_eq!(adf.len(), 1);
     }
 
@@ -652,10 +651,10 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let cond = ConditionExpression::constant(true);
 
-        adf.add_condition(s1, cond.clone()).unwrap();
-        adf.add_statement(s1); // Should not change existing condition
+        adf.add_condition(s1.clone(), cond.clone()).unwrap();
+        adf.add_statement(s1.clone()); // Should not change existing condition
         assert_eq!(adf.len(), 1);
-        assert!(adf.get_condition(s1).is_some());
+        assert!(adf.get_condition(&s1).is_some());
     }
 
     // Tests for add_condition
@@ -665,10 +664,10 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let cond = ConditionExpression::constant(true);
 
-        let result = adf.add_condition(s1, cond);
+        let result = adf.add_condition(s1.clone(), cond);
         assert!(result.is_ok());
         assert_eq!(adf.len(), 1);
-        assert!(adf.get_condition(s1).is_some());
+        assert!(adf.get_condition(&s1).is_some());
     }
 
     #[test]
@@ -677,10 +676,10 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let cond = ConditionExpression::constant(true);
 
-        adf.add_statement(s1);
-        let result = adf.add_condition(s1, cond);
+        adf.add_statement(s1.clone());
+        let result = adf.add_condition(s1.clone(), cond);
         assert!(result.is_ok());
-        assert!(adf.get_condition(s1).is_some());
+        assert!(adf.get_condition(&s1).is_some());
     }
 
     #[test]
@@ -690,8 +689,8 @@ ac(3, and(1, 2)).
         let cond1 = ConditionExpression::constant(true);
         let cond2 = ConditionExpression::constant(false);
 
-        adf.add_condition(s1, cond1).unwrap();
-        let result = adf.add_condition(s1, cond2);
+        adf.add_condition(s1.clone(), cond1).unwrap();
+        let result = adf.add_condition(s1.clone(), cond2);
         assert!(result.is_err());
         assert!(result.unwrap_err().contains("already has a condition"));
     }
@@ -703,14 +702,14 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
 
-        adf.add_statement(s1);
-        adf.add_statement(s2);
+        adf.add_statement(s1.clone());
+        adf.add_statement(s2.clone());
         assert_eq!(adf.len(), 2);
 
-        adf.remove_statement(s1);
+        adf.remove_statement(s1.clone());
         assert_eq!(adf.len(), 1);
-        assert!(!adf.has_statement(s1));
-        assert!(adf.has_statement(s2));
+        assert!(!adf.has_statement(&s1));
+        assert!(adf.has_statement(&s2));
     }
 
     #[test]
@@ -718,7 +717,7 @@ ac(3, and(1, 2)).
         let mut adf = AdfExpressions::new();
         let s1 = Statement::from(1);
 
-        adf.remove_statement(s1); // Should not panic
+        adf.remove_statement(s1.clone()); // Should not panic
         assert_eq!(adf.len(), 0);
     }
 
@@ -728,8 +727,8 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let cond = ConditionExpression::constant(true);
 
-        adf.add_condition(s1, cond).unwrap();
-        adf.remove_statement(s1);
+        adf.add_condition(s1.clone(), cond).unwrap();
+        adf.remove_statement(s1.clone());
         assert_eq!(adf.len(), 0);
     }
 
@@ -740,12 +739,12 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let cond = ConditionExpression::constant(true);
 
-        adf.add_condition(s1, cond).unwrap();
-        assert!(adf.get_condition(s1).is_some());
+        adf.add_condition(s1.clone(), cond).unwrap();
+        assert!(adf.get_condition(&s1).is_some());
 
-        adf.remove_condition(s1);
+        adf.remove_condition(s1.clone());
         assert_eq!(adf.len(), 1); // Statement still exists
-        assert!(adf.get_condition(s1).is_none());
+        assert!(adf.get_condition(&s1).is_none());
     }
 
     #[test]
@@ -753,7 +752,7 @@ ac(3, and(1, 2)).
         let mut adf = AdfExpressions::new();
         let s1 = Statement::from(1);
 
-        adf.remove_condition(s1); // Should not panic
+        adf.remove_condition(s1.clone()); // Should not panic
         assert_eq!(adf.len(), 0);
     }
 
@@ -762,9 +761,9 @@ ac(3, and(1, 2)).
         let mut adf = AdfExpressions::new();
         let s1 = Statement::from(1);
 
-        adf.add_statement(s1);
-        adf.remove_condition(s1); // Should not panic
-        assert!(adf.get_condition(s1).is_none());
+        adf.add_statement(s1.clone());
+        adf.remove_condition(s1.clone()); // Should not panic
+        assert!(adf.get_condition(&s1).is_none());
     }
 
     // Tests for update_condition
@@ -774,9 +773,9 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let cond = ConditionExpression::constant(true);
 
-        adf.update_condition(s1, cond);
+        adf.update_condition(s1.clone(), cond);
         assert_eq!(adf.len(), 1);
-        assert!(adf.get_condition(s1).is_some());
+        assert!(adf.get_condition(&s1).is_some());
     }
 
     #[test]
@@ -785,9 +784,9 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let cond = ConditionExpression::constant(true);
 
-        adf.add_statement(s1);
-        adf.update_condition(s1, cond);
-        assert!(adf.get_condition(s1).is_some());
+        adf.add_statement(s1.clone());
+        adf.update_condition(s1.clone(), cond);
+        assert!(adf.get_condition(&s1).is_some());
     }
 
     #[test]
@@ -797,10 +796,10 @@ ac(3, and(1, 2)).
         let cond1 = ConditionExpression::constant(true);
         let cond2 = ConditionExpression::constant(false);
 
-        adf.add_condition(s1, cond1).unwrap();
-        adf.update_condition(s1, cond2.clone());
+        adf.add_condition(s1.clone(), cond1).unwrap();
+        adf.update_condition(s1.clone(), cond2.clone());
 
-        let retrieved = adf.get_condition(s1).unwrap();
+        let retrieved = adf.get_condition(&s1).unwrap();
         assert_eq!(retrieved, &cond2);
     }
 
@@ -862,15 +861,15 @@ ac(3, and(1, 2)).
         let s2 = Statement::from(2);
         let s3 = Statement::from(3);
 
-        adf.add_statement(s1);
-        adf.add_condition(s2, ConditionExpression::constant(true))
+        adf.add_statement(s1.clone());
+        adf.add_condition(s2.clone(), ConditionExpression::constant(true))
             .unwrap();
-        adf.add_statement(s3);
+        adf.add_statement(s3.clone());
 
         let free: Vec<_> = adf.free_statements().collect();
         assert_eq!(free.len(), 2);
-        assert!(free.contains(&&s1));
-        assert!(free.contains(&&s3));
+        assert!(free.contains(&s1));
+        assert!(free.contains(&s3));
     }
 
     // Tests for find_missing_statements
@@ -880,9 +879,9 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
 
-        adf.add_statement(s1);
-        adf.add_statement(s2);
-        adf.add_condition(s1, ConditionExpression::statement(s2))
+        adf.add_statement(s1.clone());
+        adf.add_statement(s2.clone());
+        adf.add_condition(s1.clone(), ConditionExpression::statement(s2.clone()))
             .unwrap();
 
         let missing = adf.find_missing_statements();
@@ -895,7 +894,7 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
 
-        adf.add_condition(s1, ConditionExpression::statement(s2))
+        adf.add_condition(s1.clone(), ConditionExpression::statement(s2.clone()))
             .unwrap();
 
         let missing = adf.find_missing_statements();
@@ -911,10 +910,10 @@ ac(3, and(1, 2)).
         let s3 = Statement::from(3);
 
         let cond = ConditionExpression::and(&[
-            ConditionExpression::statement(s2),
-            ConditionExpression::negation(ConditionExpression::statement(s3)),
+            ConditionExpression::statement(s2.clone()),
+            ConditionExpression::negation(ConditionExpression::statement(s3.clone())),
         ]);
-        adf.add_condition(s1, cond).unwrap();
+        adf.add_condition(s1.clone(), cond).unwrap();
 
         let missing = adf.find_missing_statements();
         assert_eq!(missing.len(), 2);
@@ -933,17 +932,17 @@ ac(3, and(1, 2)).
 
         // s1 depends on s2 and s3
         adf.add_condition(
-            s1,
+            s1.clone(),
             ConditionExpression::or(&[
-                ConditionExpression::statement(s2),
-                ConditionExpression::statement(s3),
+                ConditionExpression::statement(s2.clone()),
+                ConditionExpression::statement(s3.clone()),
             ]),
         )
         .unwrap();
 
         // s2 exists and depends on s4
-        adf.add_statement(s2);
-        adf.add_condition(s2, ConditionExpression::statement(s4))
+        adf.add_statement(s2.clone());
+        adf.add_condition(s2.clone(), ConditionExpression::statement(s4.clone()))
             .unwrap();
 
         // s3 is missing and references s5 (also missing)
@@ -965,10 +964,10 @@ ac(3, and(1, 2)).
         let s3 = Statement::from(3);
 
         adf.add_condition(
-            s1,
+            s1.clone(),
             ConditionExpression::implication(
-                ConditionExpression::statement(s2),
-                ConditionExpression::statement(s3),
+                ConditionExpression::statement(s2.clone()),
+                ConditionExpression::statement(s3.clone()),
             ),
         )
         .unwrap();
@@ -987,10 +986,10 @@ ac(3, and(1, 2)).
         let s3 = Statement::from(3);
 
         adf.add_condition(
-            s1,
+            s1.clone(),
             ConditionExpression::equivalence(
-                ConditionExpression::statement(s2),
-                ConditionExpression::statement(s3),
+                ConditionExpression::statement(s2.clone()),
+                ConditionExpression::statement(s3.clone()),
             ),
         )
         .unwrap();
@@ -1009,10 +1008,10 @@ ac(3, and(1, 2)).
         let s3 = Statement::from(3);
 
         adf.add_condition(
-            s1,
+            s1.clone(),
             ConditionExpression::exclusive_or(
-                ConditionExpression::statement(s2),
-                ConditionExpression::statement(s3),
+                ConditionExpression::statement(s2.clone()),
+                ConditionExpression::statement(s3.clone()),
             ),
         )
         .unwrap();
@@ -1029,7 +1028,7 @@ ac(3, and(1, 2)).
         let mut adf = AdfExpressions::new();
         let s1 = Statement::from(1);
 
-        adf.add_condition(s1, ConditionExpression::constant(true))
+        adf.add_condition(s1.clone(), ConditionExpression::constant(true))
             .unwrap();
         let len_before = adf.len();
 
@@ -1043,14 +1042,14 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
 
-        adf.add_condition(s1, ConditionExpression::statement(s2))
+        adf.add_condition(s1.clone(), ConditionExpression::statement(s2.clone()))
             .unwrap();
         assert_eq!(adf.len(), 1);
 
         adf.fix_missing_statements();
         assert_eq!(adf.len(), 2);
-        assert!(adf.has_statement(s2));
-        assert!(adf.get_condition(s2).is_none());
+        assert!(adf.has_statement(&s2));
+        assert!(adf.get_condition(&s2).is_none());
     }
 
     #[test]
@@ -1062,12 +1061,12 @@ ac(3, and(1, 2)).
         let s4 = Statement::from(4);
 
         adf.add_condition(
-            s1,
+            s1.clone(),
             ConditionExpression::and(&[
-                ConditionExpression::statement(s2),
+                ConditionExpression::statement(s2.clone()),
                 ConditionExpression::or(&[
-                    ConditionExpression::statement(s3),
-                    ConditionExpression::statement(s4),
+                    ConditionExpression::statement(s3.clone()),
+                    ConditionExpression::statement(s4.clone()),
                 ]),
             ]),
         )
@@ -1078,9 +1077,9 @@ ac(3, and(1, 2)).
         assert_eq!(adf.len(), 4);
 
         // All missing statements should now exist without conditions
-        assert!(adf.get_condition(s2).is_none());
-        assert!(adf.get_condition(s3).is_none());
-        assert!(adf.get_condition(s4).is_none());
+        assert!(adf.get_condition(&s2).is_none());
+        assert!(adf.get_condition(&s3).is_none());
+        assert!(adf.get_condition(&s4).is_none());
     }
 
     #[test]
@@ -1089,7 +1088,7 @@ ac(3, and(1, 2)).
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
 
-        adf.add_condition(s1, ConditionExpression::statement(s2))
+        adf.add_condition(s1.clone(), ConditionExpression::statement(s2.clone()))
             .unwrap();
 
         adf.fix_missing_statements();
@@ -1112,7 +1111,7 @@ ac(3, and(1, 2)).
         adf.add_statement(Statement::from(5));
         let stmts: Vec<_> = adf.statements().collect();
         assert_eq!(stmts.len(), 1);
-        assert_eq!(stmts[0], Statement::from(5));
+        assert_eq!(*stmts[0], Statement::from(5));
     }
 
     #[test]
@@ -1123,7 +1122,7 @@ ac(3, and(1, 2)).
         adf.add_statement(Statement::from(2));
 
         // Should be sorted (BTreeMap)
-        let stmts: Vec<_> = adf.statements().collect();
+        let stmts: Vec<_> = adf.statements().cloned().collect();
         assert_eq!(
             stmts,
             vec![Statement::from(1), Statement::from(2), Statement::from(3)]
@@ -1139,7 +1138,7 @@ ac(3, and(1, 2)).
         adf.add_statement(Statement::from(3));
 
         // All statements should be present in sorted order
-        let stmts: Vec<_> = adf.statements().collect();
+        let stmts: Vec<_> = adf.statements().cloned().collect();
         assert_eq!(
             stmts,
             vec![Statement::from(1), Statement::from(2), Statement::from(3)]
@@ -1166,24 +1165,24 @@ ac(3, and(1, 2)).
     fn test_has_statement_exists() {
         let mut adf = AdfExpressions::new();
         let s1 = Statement::from(1);
-        adf.add_statement(s1);
-        assert!(adf.has_statement(s1));
+        adf.add_statement(s1.clone());
+        assert!(adf.has_statement(&s1));
     }
 
     #[test]
     fn test_has_statement_does_not_exist() {
         let adf = AdfExpressions::new();
         let s1 = Statement::from(1);
-        assert!(!adf.has_statement(s1));
+        assert!(!adf.has_statement(&s1));
     }
 
     #[test]
     fn test_has_statement_with_condition() {
         let mut adf = AdfExpressions::new();
         let s1 = Statement::from(1);
-        adf.add_condition(s1, ConditionExpression::constant(true))
+        adf.add_condition(s1.clone(), ConditionExpression::constant(true))
             .unwrap();
-        assert!(adf.has_statement(s1));
+        assert!(adf.has_statement(&s1));
     }
 
     // Tests for parse_and_fix
@@ -1207,14 +1206,14 @@ ac(1, and(2, 3)).
 "#;
         let adf = AdfExpressions::parse_and_fix(input).unwrap();
         assert_eq!(adf.len(), 3);
-        assert!(adf.has_statement(Statement::from(1)));
-        assert!(adf.has_statement(Statement::from(2)));
-        assert!(adf.has_statement(Statement::from(3)));
+        assert!(adf.has_statement(&Statement::from(1)));
+        assert!(adf.has_statement(&Statement::from(2)));
+        assert!(adf.has_statement(&Statement::from(3)));
         // s1 should have a condition
-        assert!(adf.get_condition(Statement::from(1)).is_some());
+        assert!(adf.get_condition(&Statement::from(1)).is_some());
         // s2 and s3 should not have conditions
-        assert!(adf.get_condition(Statement::from(2)).is_none());
-        assert!(adf.get_condition(Statement::from(3)).is_none());
+        assert!(adf.get_condition(&Statement::from(2)).is_none());
+        assert!(adf.get_condition(&Statement::from(3)).is_none());
     }
 
     // Tests for parse_file
@@ -1259,8 +1258,8 @@ ac(1, and(2, 3)).
 
         let adf = AdfExpressions::parse_and_fix_file(temp_file).unwrap();
         assert_eq!(adf.len(), 3);
-        assert!(adf.has_statement(Statement::from(2)));
-        assert!(adf.has_statement(Statement::from(3)));
+        assert!(adf.has_statement(&Statement::from(2)));
+        assert!(adf.has_statement(&Statement::from(3)));
 
         // Clean up
         fs::remove_file(temp_file).unwrap();

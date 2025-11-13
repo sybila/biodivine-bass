@@ -321,7 +321,7 @@ mod tests {
     fn test_parse_statement_number() {
         let expr = parse("42").unwrap();
         assert!(expr.is_statement());
-        assert_eq!(expr.as_statement(), Some(Statement::from(42)));
+        assert_eq!(expr.as_statement(), Some(&Statement::from(42)));
     }
 
     #[test]
@@ -344,7 +344,7 @@ mod tests {
         assert!(expr.is_negation());
         let operand = expr.as_negation().unwrap();
         assert!(operand.is_statement());
-        assert_eq!(operand.as_statement(), Some(Statement::from(42)));
+        assert_eq!(operand.as_statement(), Some(&Statement::from(42)));
     }
 
     #[test]

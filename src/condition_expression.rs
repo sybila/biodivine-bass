@@ -116,8 +116,8 @@ impl ConditionExpression {
     }
 
     /// Get the statement if this is a statement condition.
-    pub fn as_statement(&self) -> Option<Statement> {
-        match *self.0 {
+    pub fn as_statement(&self) -> Option<&Statement> {
+        match &*self.0 {
             ConditionExpressionNode::Statement(statement) => Some(statement),
             _ => None,
         }
@@ -201,7 +201,7 @@ impl ConditionExpression {
     /// Helper method to recursively collect all statement references.
     fn collect_statements_recursive(&self, statements: &mut std::collections::BTreeSet<Statement>) {
         if let Some(stmt) = self.as_statement() {
-            statements.insert(stmt);
+            statements.insert(stmt.clone());
         } else if let Some(operand) = self.as_negation() {
             operand.collect_statements_recursive(statements);
         } else if let Some(operands) = self.as_and() {
@@ -260,10 +260,10 @@ mod tests {
     #[test]
     fn test_statement_constructor_and_accessors() {
         let stmt = Statement::from(42);
-        let cond = ConditionExpression::statement(stmt);
+        let cond = ConditionExpression::statement(stmt.clone());
 
         assert!(cond.is_statement());
-        assert_eq!(cond.as_statement(), Some(stmt));
+        assert_eq!(cond.as_statement(), Some(&stmt));
         assert!(!cond.is_constant());
         assert!(!cond.is_and());
     }
@@ -277,7 +277,7 @@ mod tests {
         assert!(cond.as_negation().is_some());
         let operand = cond.as_negation().unwrap();
         assert!(operand.is_statement());
-        assert_eq!(operand.as_statement(), Some(Statement::from(5)));
+        assert_eq!(operand.as_statement(), Some(&Statement::from(5)));
         assert!(!cond.is_constant());
         assert!(!cond.is_and());
     }
@@ -505,7 +505,7 @@ mod tests {
     #[test]
     fn test_collect_statements_single_statement() {
         let s1 = Statement::from(42);
-        let expr = ConditionExpression::statement(s1);
+        let expr = ConditionExpression::statement(s1.clone());
         let stmts = expr.collect_statements();
         assert_eq!(stmts.len(), 1);
         assert_eq!(stmts[0], s1);
@@ -514,7 +514,7 @@ mod tests {
     #[test]
     fn test_collect_statements_negation() {
         let s1 = Statement::from(1);
-        let expr = ConditionExpression::negation(ConditionExpression::statement(s1));
+        let expr = ConditionExpression::negation(ConditionExpression::statement(s1.clone()));
         let stmts = expr.collect_statements();
         assert_eq!(stmts.len(), 1);
         assert_eq!(stmts[0], s1);
@@ -526,9 +526,9 @@ mod tests {
         let s2 = Statement::from(2);
         let s3 = Statement::from(3);
         let expr = ConditionExpression::and(&[
-            ConditionExpression::statement(s1),
-            ConditionExpression::statement(s2),
-            ConditionExpression::statement(s3),
+            ConditionExpression::statement(s1.clone()),
+            ConditionExpression::statement(s2.clone()),
+            ConditionExpression::statement(s3.clone()),
         ]);
         let stmts = expr.collect_statements();
         assert_eq!(stmts.len(), 3);
@@ -543,10 +543,10 @@ mod tests {
         let s2 = Statement::from(2);
         let s3 = Statement::from(3);
         let expr = ConditionExpression::or(&[
-            ConditionExpression::statement(s1),
+            ConditionExpression::statement(s1.clone()),
             ConditionExpression::and(&[
-                ConditionExpression::statement(s2),
-                ConditionExpression::negation(ConditionExpression::statement(s3)),
+                ConditionExpression::statement(s2.clone()),
+                ConditionExpression::negation(ConditionExpression::statement(s3.clone())),
             ]),
         ]);
         let stmts = expr.collect_statements();
@@ -560,8 +560,8 @@ mod tests {
     fn test_collect_statements_duplicates() {
         let s1 = Statement::from(1);
         let expr = ConditionExpression::and(&[
-            ConditionExpression::statement(s1),
-            ConditionExpression::statement(s1),
+            ConditionExpression::statement(s1.clone()),
+            ConditionExpression::statement(s1.clone()),
         ]);
         let stmts = expr.collect_statements();
         // Should deduplicate
@@ -574,8 +574,8 @@ mod tests {
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
         let expr = ConditionExpression::implication(
-            ConditionExpression::statement(s1),
-            ConditionExpression::statement(s2),
+            ConditionExpression::statement(s1.clone()),
+            ConditionExpression::statement(s2.clone()),
         );
         let stmts = expr.collect_statements();
         assert_eq!(stmts.len(), 2);
@@ -588,8 +588,8 @@ mod tests {
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
         let expr = ConditionExpression::equivalence(
-            ConditionExpression::statement(s1),
-            ConditionExpression::statement(s2),
+            ConditionExpression::statement(s1.clone()),
+            ConditionExpression::statement(s2.clone()),
         );
         let stmts = expr.collect_statements();
         assert_eq!(stmts.len(), 2);
@@ -602,8 +602,8 @@ mod tests {
         let s1 = Statement::from(1);
         let s2 = Statement::from(2);
         let expr = ConditionExpression::exclusive_or(
-            ConditionExpression::statement(s1),
-            ConditionExpression::statement(s2),
+            ConditionExpression::statement(s1.clone()),
+            ConditionExpression::statement(s2.clone()),
         );
         let stmts = expr.collect_statements();
         assert_eq!(stmts.len(), 2);
@@ -618,9 +618,9 @@ mod tests {
         let s2 = Statement::from(2);
         // Add in reverse order
         let expr = ConditionExpression::and(&[
-            ConditionExpression::statement(s3),
-            ConditionExpression::statement(s1),
-            ConditionExpression::statement(s2),
+            ConditionExpression::statement(s3.clone()),
+            ConditionExpression::statement(s1.clone()),
+            ConditionExpression::statement(s2.clone()),
         ]);
         let stmts = expr.collect_statements();
         // Should be sorted

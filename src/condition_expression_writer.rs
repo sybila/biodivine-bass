@@ -30,7 +30,7 @@ fn write_to(f: &mut impl Write, expr: &ConditionExpression) -> std::fmt::Result 
         }
     } else if let Some(statement) = expr.as_statement() {
         // Statement reference: just the number
-        write!(f, "{}", usize::from(statement))
+        write!(f, "{}", statement)
     } else if let Some(operand) = expr.as_negation() {
         // Negation: neg(expr)
         write!(f, "neg(")?;
@@ -254,7 +254,7 @@ mod tests {
 
         assert_eq!(written, input);
         assert!(reparsed.is_statement());
-        assert_eq!(reparsed.as_statement(), Some(Statement::from(42)));
+        assert_eq!(reparsed.as_statement(), Some(&Statement::from(42)));
     }
 
     #[test]
