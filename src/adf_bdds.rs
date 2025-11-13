@@ -30,7 +30,7 @@ impl DirectMap {
 
     /// Get the BDD [`VariableId`] for a [`Statement`].
     pub fn get(&self, statement: &Statement) -> Option<VariableId> {
-        self.mapping.get(&statement).copied()
+        self.mapping.get(statement).copied()
     }
 
     /// Get all [`Statement`] objects in the map.
@@ -103,7 +103,7 @@ impl DualMap {
 
     /// Get the BDD [`VariableId`]s (positive, negative) for a [`Statement`].
     pub fn get(&self, statement: &Statement) -> Option<(VariableId, VariableId)> {
-        self.mapping.get(&statement).copied()
+        self.mapping.get(statement).copied()
     }
 
     /// Get all [`Statement`] objects in the map.
@@ -182,7 +182,7 @@ impl DirectEncoding {
 
     /// Get the [`Bdd`] condition for a [`Statement`], if it exists.
     pub fn get_condition(&self, statement: &Statement) -> Option<&Bdd> {
-        self.conditions.get(&statement)
+        self.conditions.get(statement)
     }
 
     /// Get all statements that have conditions.
@@ -223,7 +223,7 @@ impl DualEncoding {
 
     /// Get the [`Bdd`] conditions (can_be_true, can_be_false) for a [`Statement`], if they exist.
     pub fn get_condition(&self, statement: &Statement) -> Option<(&Bdd, &Bdd)> {
-        self.conditions.get(&statement).map(|(t, f)| (t, f))
+        self.conditions.get(statement).map(|(t, f)| (t, f))
     }
 
     /// Get all statements that have conditions.
