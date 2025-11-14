@@ -1,0 +1,14 @@
+s(v_Gt).
+s(v_Hb_b1).
+s(v_Hb_b2).
+s(v_Hb_b3).
+s(v_Kni).
+s(v_Kr_b1).
+s(v_Kr_b2).
+ac(v_Gt,and(neg(v_Hb_b1),neg(v_Kr_b1))).
+ac(v_Hb_b1,and(v_Hb_b1,v_Hb_b2)).
+ac(v_Hb_b2,and(v_Hb_b1,and(v_Hb_b2,v_Hb_b3))).
+ac(v_Hb_b3,v_Hb_b3).
+ac(v_Kni,or(and(neg(v_Gt),neg(v_Hb_b1)),and(neg(v_Gt),and(v_Hb_b1,neg(v_Hb_b2))))).
+ac(v_Kr_b1,and(v_Kr_b1,v_Kr_b2)).
+ac(v_Kr_b2,v_Kr_b2).

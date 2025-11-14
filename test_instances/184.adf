@@ -1,0 +1,12 @@
+s(v_DNAdam).
+s(v_Mdm2cyt_b1).
+s(v_Mdm2cyt_b2).
+s(v_Mdm2nuc).
+s(v_p53_b1).
+s(v_p53_b2).
+ac(v_DNAdam,or(and(neg(v_p53_b1),v_DNAdam),and(v_p53_b1,and(neg(v_p53_b2),v_DNAdam)))).
+ac(v_Mdm2cyt_b1,v_Mdm2cyt_b1).
+ac(v_Mdm2cyt_b2,and(v_p53_b1,and(v_p53_b2,v_Mdm2cyt_b1))).
+ac(v_Mdm2nuc,or(and(neg(v_p53_b1),and(v_Mdm2cyt_b1,and(neg(v_Mdm2cyt_b2),neg(v_DNAdam)))),or(and(neg(v_p53_b1),and(v_Mdm2cyt_b1,v_Mdm2cyt_b2)),and(v_p53_b1,and(v_Mdm2cyt_b1,v_Mdm2cyt_b2))))).
+ac(v_p53_b1,or(and(neg(v_p53_b1),neg(v_Mdm2nuc)),or(and(v_p53_b1,and(neg(v_p53_b2),neg(v_Mdm2nuc))),and(v_p53_b1,v_p53_b2)))).
+ac(v_p53_b2,and(v_p53_b1,neg(v_Mdm2nuc))).

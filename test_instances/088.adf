@@ -1,0 +1,12 @@
+s(v_Neural_Precursor).
+s(v_Progenitor).
+s(v_elavl3_HuC).
+s(v_her6).
+s(v_miR_9).
+s(v_zic5).
+ac(v_Neural_Precursor,v_elavl3_HuC).
+ac(v_Progenitor,or(and(neg(v_her6),v_zic5),v_her6)).
+ac(v_elavl3_HuC,and(neg(v_miR_9),neg(v_Progenitor))).
+ac(v_her6,and(neg(v_miR_9),neg(v_Neural_Precursor))).
+ac(v_miR_9,and(neg(v_her6),neg(v_Neural_Precursor))).
+ac(v_zic5,and(neg(v_miR_9),neg(v_Neural_Precursor))).

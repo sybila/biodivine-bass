@@ -1,0 +1,14 @@
+s(v_CII).
+s(v_CI_b1).
+s(v_CI_b2).
+s(v_Cro_b1).
+s(v_Cro_b2).
+s(v_Cro_b3).
+s(v_N).
+ac(v_CII,or(and(neg(v_CI_b1),and(neg(v_Cro_b1),v_N)),or(and(neg(v_CI_b1),and(v_Cro_b1,and(neg(v_Cro_b2),v_N))),or(and(neg(v_CI_b1),and(v_Cro_b1,and(v_Cro_b2,and(neg(v_Cro_b3),v_N)))),or(and(v_CI_b1,and(neg(v_CI_b2),and(neg(v_Cro_b1),v_N))),or(and(v_CI_b1,and(neg(v_CI_b2),and(v_Cro_b1,and(neg(v_Cro_b2),v_N)))),and(v_CI_b1,and(neg(v_CI_b2),and(v_Cro_b1,and(v_Cro_b2,and(neg(v_Cro_b3),v_N))))))))))).
+ac(v_CI_b1,or(and(neg(v_CI_b1),neg(v_Cro_b1)),or(and(neg(v_CI_b1),and(v_Cro_b1,v_CII)),or(and(v_CI_b1,and(neg(v_CI_b2),neg(v_Cro_b1))),or(and(v_CI_b1,and(neg(v_CI_b2),and(v_Cro_b1,v_CII))),and(v_CI_b1,v_CI_b2)))))).
+ac(v_CI_b2,or(and(v_CI_b1,neg(v_Cro_b1)),and(v_CI_b1,and(v_Cro_b1,v_CII)))).
+ac(v_Cro_b1,or(neg(v_CI_b1),or(and(v_CI_b1,neg(v_CI_b2)),and(v_CI_b1,and(v_CI_b2,and(v_Cro_b1,v_Cro_b2)))))).
+ac(v_Cro_b2,or(and(neg(v_CI_b1),v_Cro_b1),or(and(v_CI_b1,and(neg(v_CI_b2),v_Cro_b1)),and(v_CI_b1,and(v_CI_b2,and(v_Cro_b1,and(v_Cro_b2,v_Cro_b3))))))).
+ac(v_Cro_b3,or(and(neg(v_CI_b1),and(v_Cro_b1,and(v_Cro_b2,neg(v_Cro_b3)))),and(v_CI_b1,and(neg(v_CI_b2),and(v_Cro_b1,and(v_Cro_b2,neg(v_Cro_b3))))))).
+ac(v_N,or(and(neg(v_CI_b1),neg(v_Cro_b1)),and(neg(v_CI_b1),and(v_Cro_b1,neg(v_Cro_b2))))).

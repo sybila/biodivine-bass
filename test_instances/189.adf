@@ -1,0 +1,12 @@
+s(v_TrpE).
+s(v_TrpR).
+s(v_Trp_b1).
+s(v_Trp_b2).
+s(v_Trpext_b1).
+s(v_Trpext_b2).
+ac(v_TrpE,and(neg(v_Trp_b1),neg(v_TrpR))).
+ac(v_TrpR,and(v_Trp_b1,v_Trp_b2)).
+ac(v_Trp_b1,or(and(neg(v_Trpext_b1),and(neg(v_Trp_b1),v_TrpE)),or(and(neg(v_Trpext_b1),and(v_Trp_b1,and(neg(v_Trp_b2),v_TrpE))),or(and(neg(v_Trpext_b1),and(v_Trp_b1,v_Trp_b2)),v_Trpext_b1)))).
+ac(v_Trp_b2,and(v_Trpext_b1,and(v_Trpext_b2,v_Trp_b1))).
+ac(v_Trpext_b1,v_Trpext_b1).
+ac(v_Trpext_b2,and(v_Trpext_b1,v_Trpext_b2)).

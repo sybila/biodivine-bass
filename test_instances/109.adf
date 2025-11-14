@@ -1,0 +1,10 @@
+s(v_CcrM).
+s(v_CtrA).
+s(v_DnaA).
+s(v_GcrA).
+s(v_SciP).
+ac(v_CcrM,and(v_CtrA,and(neg(v_CcrM),neg(v_SciP)))).
+ac(v_CtrA,or(and(neg(v_CtrA),and(v_GcrA,and(neg(v_CcrM),neg(v_SciP)))),and(v_CtrA,and(neg(v_CcrM),neg(v_SciP))))).
+ac(v_DnaA,and(v_CtrA,and(neg(v_GcrA),and(neg(v_DnaA),v_CcrM)))).
+ac(v_GcrA,and(neg(v_CtrA),v_DnaA)).
+ac(v_SciP,and(v_CtrA,neg(v_DnaA))).

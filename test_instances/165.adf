@@ -1,0 +1,16 @@
+s(v_BMP).
+s(v_EGF_b1).
+s(v_EGF_b2).
+s(v_Floor).
+s(v_Operculum).
+s(v_Roof).
+s(v_Roof_adj).
+s(v_anterior).
+ac(v_BMP,v_BMP).
+ac(v_EGF_b1,v_EGF_b1).
+ac(v_EGF_b2,and(v_EGF_b1,v_EGF_b2)).
+ac(v_Floor,or(and(v_EGF_b1,and(neg(v_EGF_b2),and(v_BMP,and(v_Roof_adj,v_anterior)))),and(v_EGF_b1,and(v_EGF_b2,and(v_Roof_adj,v_anterior))))).
+ac(v_Operculum,or(and(v_EGF_b1,and(neg(v_EGF_b2),and(v_BMP,and(neg(v_Roof_adj),v_anterior)))),and(v_EGF_b1,and(v_EGF_b2,and(neg(v_Roof_adj),v_anterior))))).
+ac(v_Roof,and(v_EGF_b1,and(neg(v_EGF_b2),and(neg(v_BMP),v_anterior)))).
+ac(v_Roof_adj,v_Roof_adj).
+ac(v_anterior,v_anterior).

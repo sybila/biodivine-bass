@@ -1,5 +1,6 @@
 mod adf_bdds;
 mod adf_expressions;
+mod bn_conversions;
 mod condition_expression;
 mod condition_expression_parser;
 mod condition_expression_writer;

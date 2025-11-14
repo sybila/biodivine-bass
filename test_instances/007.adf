@@ -1,0 +1,10 @@
+s(v_Coup_fti).
+s(v_Emx2).
+s(v_Fgf8).
+s(v_Pax6).
+s(v_Sp8).
+ac(v_Coup_fti,or(neg(or(v_Fgf8,v_Sp8)),neg(or(v_Sp8,v_Fgf8)))).
+ac(v_Emx2,and(v_Coup_fti,neg(or(v_Fgf8,or(v_Sp8,v_Pax6))))).
+ac(v_Fgf8,and(v_Fgf8,and(v_Sp8,neg(v_Emx2)))).
+ac(v_Pax6,and(v_Sp8,neg(or(v_Emx2,v_Coup_fti)))).
+ac(v_Sp8,and(v_Fgf8,neg(v_Emx2))).
