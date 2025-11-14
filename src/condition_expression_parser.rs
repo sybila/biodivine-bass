@@ -97,22 +97,29 @@ impl Parser {
 
                 match ident.as_str() {
                     "c" => {
-                        // Constant: c(v) or c(f)
-                        self.expect(Token::LeftParen)?;
-                        match self.next() {
-                            Some(Token::Identifier(val)) if val == "v" => {
-                                self.expect(Token::RightParen)?;
-                                Ok(ConditionExpression::constant(true))
+                        if self.peek() == Some(&Token::LeftParen) {
+                            // Constant: c(v) or c(f)
+                            self.expect(Token::LeftParen)?;
+                            match self.next() {
+                                Some(Token::Identifier(val)) if val == "v" => {
+                                    self.expect(Token::RightParen)?;
+                                    Ok(ConditionExpression::constant(true))
+                                }
+                                Some(Token::Identifier(val)) if val == "f" => {
+                                    self.expect(Token::RightParen)?;
+                                    Ok(ConditionExpression::constant(false))
+                                }
+                                Some(token) => Err(format!(
+                                    "Expected 'v' or 'f' in constant, found {:?}",
+                                    token
+                                )),
+                                None => Err("Unexpected end of input in constant".to_string()),
                             }
-                            Some(Token::Identifier(val)) if val == "f" => {
-                                self.expect(Token::RightParen)?;
-                                Ok(ConditionExpression::constant(false))
-                            }
-                            Some(token) => Err(format!(
-                                "Expected 'v' or 'f' in constant, found {:?}",
-                                token
-                            )),
-                            None => Err("Unexpected end of input in constant".to_string()),
+                        } else {
+                            // Statement identifier
+                            Ok(ConditionExpression::statement(Statement::from(
+                                ident.as_str(),
+                            )))
                         }
                     }
                     "neg" => {
