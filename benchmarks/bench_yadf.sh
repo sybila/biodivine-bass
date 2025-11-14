@@ -1,16 +1,22 @@
 #!/bin/bash
 
+trap 'echo "Received signal, exiting..."; exit 0' SIGINT SIGTERM
+
 set -e
 set -x
 
 mkdir -p ./results
 
+TIMEOUT='10s'
+TOOL='sybila/tool-yadf'
+BENCHMARKS='./test_instances'
+
 # Time to one solution across various semantics.
-python3 ./benchmarks/run.py 1200s ./test_instances ./benchmarks/run_yadf_adm_1.sh
-mv _run_* ./results/yadf_1_admissible
-python3 ./benchmarks/run.py 1200s ./test_instances ./benchmarks/run_yadf_com_1.sh
-mv _run_* ./results/yadf_1_complete
-python3 ./benchmarks/run.py 1200s ./test_instances ./benchmarks/run_yadf_prf_1.sh
-mv _run_* ./results/yadf_1_preferred
-python3 ./benchmarks/run.py 1200s ./test_instances ./benchmarks/run_yadf_stb_1.sh
-mv _run_* ./results/yadf_1_stable
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' -- -adm 1
+for d in run_*/; do mv -- "$d" "results/yadf_1_adm_${d#./}"; done
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' -- -com 1
+for d in run_*/; do mv -- "$d" "results/yadf_1_com_${d#./}"; done
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' -- -prf 1
+for d in run_*/; do mv -- "$d" "results/yadf_1_prf_${d#./}"; done
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' -- -stb 1
+for d in run_*/; do mv -- "$d" "results/yadf_1_stb_${d#./}"; done

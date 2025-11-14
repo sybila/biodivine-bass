@@ -27,7 +27,7 @@ target
 /target
 
 # Ignore temporary benchmark results
-_run_*
+run_*
 
 # Ignore final benchmark results
 results
