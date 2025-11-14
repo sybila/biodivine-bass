@@ -26,6 +26,8 @@ target
 
 /target
 
+test_instances/_normalized
+
 # Ignore temporary benchmark results
 run_*
 
