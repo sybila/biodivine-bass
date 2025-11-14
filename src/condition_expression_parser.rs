@@ -4,7 +4,6 @@ use crate::statement::Statement;
 /// Tokens for parsing condition expressions.
 #[derive(Debug, Clone, PartialEq, Eq)]
 enum Token {
-    Number(usize),
     Identifier(String),
     LeftParen,
     RightParen,
@@ -33,22 +32,7 @@ fn tokenize(input: &str) -> Result<Vec<Token>, String> {
                 tokens.push(Token::Comma);
                 chars.next();
             }
-            '0'..='9' => {
-                let mut num_str = String::new();
-                while let Some(&ch) = chars.peek() {
-                    if ch.is_ascii_digit() {
-                        num_str.push(ch);
-                        chars.next();
-                    } else {
-                        break;
-                    }
-                }
-                let num = num_str
-                    .parse::<usize>()
-                    .map_err(|_| format!("Invalid number: {}", num_str))?;
-                tokens.push(Token::Number(num));
-            }
-            'a'..='z' | 'A'..='Z' | '_' => {
+            '0'..='9' | 'a'..='z' | 'A'..='Z' | '_' => {
                 let mut ident = String::new();
                 while let Some(&ch) = chars.peek() {
                     if ch.is_alphanumeric() || ch == '_' {
@@ -107,11 +91,6 @@ impl Parser {
 
     fn parse_expression(&mut self) -> Result<ConditionExpression, String> {
         match self.peek() {
-            Some(Token::Number(n)) => {
-                let n = *n;
-                self.next();
-                Ok(ConditionExpression::statement(Statement::from(n)))
-            }
             Some(Token::Identifier(ident)) => {
                 let ident = ident.clone();
                 self.next();
@@ -184,7 +163,10 @@ impl Parser {
                         self.expect(Token::RightParen)?;
                         Ok(ConditionExpression::equivalence(left, right))
                     }
-                    _ => Err(format!("Unknown identifier: {}", ident)),
+                    _ => {
+                        // Unknown identifier - treat as statement label
+                        Ok(ConditionExpression::statement(Statement::from(ident)))
+                    }
                 }
             }
             Some(token) => Err(format!("Unexpected token: {:?}", token)),
@@ -211,7 +193,7 @@ impl Parser {
 /// Parse a condition expression from a string.
 ///
 /// Supports the following syntax:
-/// - `42` - Statement reference
+/// - `42` or `foo` - Statement reference (numeric or string label)
 /// - `c(v)` - Constant true (verum)
 /// - `c(f)` - Constant false (falsum)
 /// - `neg(expr)` - Negation
@@ -245,7 +227,7 @@ mod tests {
     #[test]
     fn test_tokenize_number() {
         let tokens = tokenize("42").unwrap();
-        assert_eq!(tokens, vec![Token::Number(42)]);
+        assert_eq!(tokens, vec![Token::Identifier("42".to_string())]);
     }
 
     #[test]
@@ -284,10 +266,10 @@ mod tests {
                 Token::LeftParen,
                 Token::Identifier("neg".to_string()),
                 Token::LeftParen,
-                Token::Number(1),
+                Token::Identifier("1".to_string()),
                 Token::RightParen,
                 Token::Comma,
-                Token::Number(42),
+                Token::Identifier("42".to_string()),
                 Token::RightParen,
             ]
         );
@@ -301,9 +283,9 @@ mod tests {
             vec![
                 Token::Identifier("and".to_string()),
                 Token::LeftParen,
-                Token::Number(1),
+                Token::Identifier("1".to_string()),
                 Token::Comma,
-                Token::Number(2),
+                Token::Identifier("2".to_string()),
                 Token::RightParen,
             ]
         );
@@ -321,7 +303,7 @@ mod tests {
     fn test_parse_statement_number() {
         let expr = parse("42").unwrap();
         assert!(expr.is_statement());
-        assert_eq!(expr.as_statement(), Some(Statement::from(42)));
+        assert_eq!(expr.as_statement(), Some(&Statement::from(42)));
     }
 
     #[test]
@@ -344,7 +326,7 @@ mod tests {
         assert!(expr.is_negation());
         let operand = expr.as_negation().unwrap();
         assert!(operand.is_statement());
-        assert_eq!(operand.as_statement(), Some(Statement::from(42)));
+        assert_eq!(operand.as_statement(), Some(&Statement::from(42)));
     }
 
     #[test]
@@ -551,8 +533,12 @@ mod tests {
 
     #[test]
     fn test_parse_expression_starting_with_unexpected_token() {
-        // Test expression starting with a token that's not a number or identifier
-        let tokens = vec![Token::LeftParen, Token::Number(1), Token::RightParen];
+        // Test expression starting with a token that's not an identifier
+        let tokens = vec![
+            Token::LeftParen,
+            Token::Identifier("1".to_string()),
+            Token::RightParen,
+        ];
         let mut parser = Parser::new(tokens);
         let result = parser.parse_expression();
         assert!(result.is_err());
@@ -570,7 +556,7 @@ mod tests {
     #[test]
     fn test_expect_method_wrong_token() {
         // Test the expect method when it gets the wrong token
-        let tokens = vec![Token::LeftParen, Token::Number(1)];
+        let tokens = vec![Token::LeftParen, Token::Identifier("1".to_string())];
         let mut parser = Parser::new(tokens);
         parser.next(); // consume LeftParen
         let result = parser.expect(Token::RightParen);
@@ -578,5 +564,89 @@ mod tests {
         let err = result.unwrap_err();
         assert!(err.contains("Expected"));
         assert!(err.contains("found"));
+    }
+
+    // Tests for string labels
+    #[test]
+    fn test_parse_string_statement_label() {
+        let expr = parse("foo").unwrap();
+        assert!(expr.is_statement());
+        assert_eq!(expr.as_statement(), Some(&Statement::from("foo")));
+    }
+
+    #[test]
+    fn test_parse_numeric_string_as_statement() {
+        // Numbers are now parsed as string labels too
+        let expr = parse("123").unwrap();
+        assert!(expr.is_statement());
+        assert_eq!(expr.as_statement(), Some(&Statement::from("123")));
+    }
+
+    #[test]
+    fn test_parse_mixed_labels_in_expression() {
+        // Test mixing numeric and string labels
+        let expr = parse("and(foo, 42, bar)").unwrap();
+        assert!(expr.is_and());
+        let operands = expr.as_and().unwrap();
+        assert_eq!(operands.len(), 3);
+        assert_eq!(operands[0].as_statement(), Some(&Statement::from("foo")));
+        assert_eq!(operands[1].as_statement(), Some(&Statement::from("42")));
+        assert_eq!(operands[2].as_statement(), Some(&Statement::from("bar")));
+    }
+
+    #[test]
+    fn test_parse_string_label_with_numbers() {
+        let expr = parse("foo123").unwrap();
+        assert!(expr.is_statement());
+        assert_eq!(expr.as_statement(), Some(&Statement::from("foo123")));
+    }
+
+    #[test]
+    fn test_parse_string_label_with_underscores() {
+        let expr = parse("foo_bar_123").unwrap();
+        assert!(expr.is_statement());
+        assert_eq!(expr.as_statement(), Some(&Statement::from("foo_bar_123")));
+    }
+
+    #[test]
+    fn test_parse_complex_with_string_labels() {
+        // Test: and(or(alice, neg(bob)), charlie)
+        let expr = parse("and(or(alice, neg(bob)), charlie)").unwrap();
+        assert!(expr.is_and());
+        let operands = expr.as_and().unwrap();
+        assert_eq!(operands.len(), 2);
+
+        // First operand should be an OR
+        assert!(operands[0].is_or());
+        let or_operands = operands[0].as_or().unwrap();
+        assert_eq!(or_operands.len(), 2);
+        assert_eq!(
+            or_operands[0].as_statement(),
+            Some(&Statement::from("alice"))
+        );
+
+        // Second operand of OR should be negation of bob
+        assert!(or_operands[1].is_negation());
+        let neg_operand = or_operands[1].as_negation().unwrap();
+        assert_eq!(neg_operand.as_statement(), Some(&Statement::from("bob")));
+
+        // Second operand of AND should be charlie
+        assert_eq!(
+            operands[1].as_statement(),
+            Some(&Statement::from("charlie"))
+        );
+    }
+
+    #[test]
+    fn test_tokenize_string_labels() {
+        let tokens = tokenize("foo bar123 _test").unwrap();
+        assert_eq!(
+            tokens,
+            vec![
+                Token::Identifier("foo".to_string()),
+                Token::Identifier("bar123".to_string()),
+                Token::Identifier("_test".to_string()),
+            ]
+        );
     }
 }
