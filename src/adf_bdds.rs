@@ -294,6 +294,12 @@ impl AdfBdds {
 
         // Count the number of "unused variables" that we have in the BDD
         let statement_count = self.direct_encoding.var_map.mapping.len();
+
+        if statement_count == 0 {
+            // For empty ADFs, the result is trivial.
+            return if bdd.is_false() { 0.0 } else { 1.0 };
+        }
+
         // Each statement maps to 4 variables, which means (starting
         // from zero), the last variable is 4*x - 1.
         let max_var = VariableId::new_long((statement_count * 4 - 1) as u64).unwrap();
