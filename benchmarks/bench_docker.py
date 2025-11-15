@@ -152,7 +152,7 @@ def process_single_file(
     ]
     
     with print_lock:
-        print(f"[{file_index+1}/{total_files}] Running {filename}...", end=" ", flush=True)
+        print(f"[{file_index+1}/{total_files}] Running {filename}...")
     
     status = "UNKNOWN"
     runtime = 0
@@ -181,15 +181,15 @@ def process_single_file(
         if exit_code == 124:
             status = "TIMEOUT"
             with print_lock:
-                print(f"-> TIMEOUT ({runtime}s)")
+                print(f"[{file_index+1}/{total_files}] Finished {filename} -> TIMEOUT ({runtime}s)")
         elif exit_code == 0:
             status = "OK"
             with print_lock:
-                print(f"-> OK ({runtime}s)")
+                print(f"[{file_index+1}/{total_files}] Finished {filename} -> OK ({runtime}s)")
         else:
             status = "ERROR"
             with print_lock:
-                print(f"-> ERROR (Code: {exit_code})")
+                print(f"[{file_index+1}/{total_files}] Finished {filename} -> ERROR (Code: {exit_code})")
     
     except Exception as e:
         with containers_lock:
