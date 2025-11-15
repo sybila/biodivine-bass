@@ -141,7 +141,7 @@ def main():
         print(f"[INFO] Extra args: {' '.join(pass_through_args)}")
 
     # 3. Prepare CSV and path variables
-    csv_path = os.path.join(output_dir, "results.csv")
+    csv_path = os.path.join(output_dir, "__results.csv")
     csv_header = ["Instance", "Status", "Runtime_sec", "Memory_KB", "ExitCode"]
     host_cwd = os.path.abspath(os.getcwd())
 
