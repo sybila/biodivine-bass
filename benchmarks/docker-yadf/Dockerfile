@@ -16,7 +16,7 @@ COPY ./yadf_0.1.1.jar /sw/yadf_0.1.1.jar
 COPY ./lpopt-2.2-x86_64.tar.gz /sw/lpopt-2.2-x86_64.tar.gz
 RUN tar -xzf lpopt-2.2-x86_64.tar.gz
 
-# A designated path where benchmark scripts look for entry points.
+# A designated file that benchmark scripts will consider as entry point.
 COPY ./run.sh /run.sh
 RUN chmod +x /run.sh
 

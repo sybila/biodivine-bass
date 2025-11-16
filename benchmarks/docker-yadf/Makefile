@@ -1,3 +1,4 @@
+.PHONY: build push
 
 build:
 	docker build -t "sybila/tool-yadf" .
