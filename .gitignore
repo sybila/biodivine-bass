@@ -29,7 +29,7 @@ target
 test_instances/_normalized
 
 # Ignore temporary benchmark results
-run_*
+/run_*
 
 # Ignore final benchmark results
 results
