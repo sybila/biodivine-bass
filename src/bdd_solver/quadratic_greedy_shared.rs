@@ -1,5 +1,6 @@
 use crate::bdd_solver::BddSolver;
 use cancel_this::Cancellable;
+use log::debug;
 use ruddy::split::Bdd;
 
 /// A quadratic greedy solver using shared BDD representation.
@@ -102,8 +103,8 @@ impl BddSolver for QuadraticGreedySolverShared {
                 return Ok(Bdd::new_false());
             }
 
-            println!(
-                "[{} remaining] Largest BDD: {}",
+            debug!(
+                "Merging BDDs: {} constraints remaining, result BDD size: {} nodes",
                 remaining.len(),
                 manager.node_count(&result)
             );

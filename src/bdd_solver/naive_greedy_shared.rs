@@ -1,5 +1,6 @@
 use crate::bdd_solver::BddSolver;
 use cancel_this::Cancellable;
+use log::debug;
 use ruddy::split::Bdd;
 
 /// A naive greedy solver using shared BDD representation.
@@ -53,6 +54,12 @@ impl BddSolver for NaiveGreedySolverShared {
 
             // Sort by size (ascending)
             to_merge.sort_by_key(|bdd| manager.node_count(bdd));
+
+            debug!(
+                "Merging BDDs: {} constraints remaining, largest BDD size: {} nodes",
+                to_merge.len(),
+                manager.node_count(to_merge.last().unwrap())
+            );
 
             // Take the two smallest
             let smallest1 = to_merge.remove(0);

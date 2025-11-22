@@ -1,5 +1,6 @@
 use crate::bdd_solver::BddSolver;
 use cancel_this::Cancellable;
+use log::debug;
 use ruddy::split::Bdd;
 
 /// A quadratic greedy solver using split BDD representation.
@@ -74,8 +75,8 @@ impl BddSolver for QuadraticGreedySolver {
             // Update result with the best merge
             result = best_result;
 
-            println!(
-                "[{} remaining] Result BDD: {}",
+            debug!(
+                "Merging BDDs: {} constraints remaining, result BDD size: {} nodes",
                 remaining.len(),
                 result.node_count()
             );

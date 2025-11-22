@@ -60,6 +60,8 @@ impl From<BddSolverType> for DynamicBddSolver {
 }
 
 fn main() {
+    env_logger::init();
+
     let args = Args::parse();
 
     // Load the ADF file
