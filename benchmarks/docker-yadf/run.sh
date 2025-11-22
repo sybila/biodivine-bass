@@ -26,6 +26,7 @@ else
     
     set +e
     clingo -n $2 /tmp/translated.lp 2>&1
+    exit_code=$?
     case $exit_code in (10|20|30) exit 0;; (*) exit 1;; esac
 fi
 
