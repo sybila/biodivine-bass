@@ -6,7 +6,7 @@ WORKDIR /sw
 # Basic dependencies for building a C++ project and k++ADF specifically:
 RUN apt-get update && apt install -y --no-install-recommends build-essential unzip zlib1g-dev && rm -rf /var/lib/apt/lists/*
 
-# Sources are originally downloaded from https://bitbucket.org/andreasniskanen/k-adf/src/master/
+# Sources are originally downloaded from https://bitbucket.org/andreasniskanen/k-adf/src/master/ (637c31f)
 COPY ./andreasniskanen-k-adf-637c31f2fd4f.zip ./andreasniskanen-k-adf-637c31f2fd4f.zip 
 RUN unzip ./andreasniskanen-k-adf-637c31f2fd4f.zip 
 RUN cd ./andreasniskanen-k-adf-637c31f2fd4f; make
