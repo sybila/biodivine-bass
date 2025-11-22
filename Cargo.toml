@@ -3,10 +3,22 @@ name = "biodivine-adf-solver"
 version = "0.1.0"
 edition = "2024"
 
+[features]
+build-binary = ["clap", "env_logger"]
+
 [dependencies]
 ruddy = { git = "https://github.com/sybila/ruddy.git", rev = "e5449ebbde6f05a5262c4b5cc7a26669b1c3e4fd" }
 cancel-this = "0.3.0"
 biodivine-lib-param-bn = "0.6.3"
+log = "0.4"
+
+clap = { version = "4.5", features = ["derive"], optional = true }
+env_logger = { version = "0.11.8", optional = true }
 
 [dev-dependencies]
 rstest = "0.26.1"
+
+[[bin]]
+name = "BAss"
+path = "bin/BAss.rs"
+required-features = ["build-binary"]

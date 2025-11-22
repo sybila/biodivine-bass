@@ -1,15 +1,17 @@
 use crate::bdd_solver::BddSolver;
 use cancel_this::Cancellable;
+use log::debug;
 use ruddy::split::Bdd;
 
 /// A quadratic greedy solver using shared BDD representation.
 ///
 /// This is equivalent to [`crate::bdd_solver::QuadraticGreedySolver`] but uses a shared BDD manager
 /// internally. The input and output are still split BDDs for API consistency.
+#[derive(Default, Clone, PartialEq, Eq, Hash, Debug)]
 pub struct QuadraticGreedySolverShared;
 
 impl BddSolver for QuadraticGreedySolverShared {
-    fn solve_conjunction(constraints: &[Bdd]) -> Cancellable<Bdd> {
+    fn solve_conjunction(&self, constraints: &[Bdd]) -> Cancellable<Bdd> {
         use cancel_this::is_cancelled;
         use ruddy::shared::BddManager;
 
@@ -101,8 +103,8 @@ impl BddSolver for QuadraticGreedySolverShared {
                 return Ok(Bdd::new_false());
             }
 
-            println!(
-                "[{} remaining] Largest BDD: {}",
+            debug!(
+                "Merging BDDs: {} constraints remaining, result BDD size: {} nodes",
                 remaining.len(),
                 manager.node_count(&result)
             );

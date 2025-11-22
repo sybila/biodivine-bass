@@ -1,5 +1,6 @@
 use crate::bdd_solver::BddSolver;
 use cancel_this::Cancellable;
+use log::debug;
 use ruddy::split::Bdd;
 
 /// A quadratic greedy solver using split BDD representation.
@@ -11,10 +12,11 @@ use ruddy::split::Bdd;
 /// 4. Continue until all constraints are merged
 ///
 /// This requires O(n²) merge attempts but often produces smaller intermediate BDDs.
+#[derive(Default, Clone, PartialEq, Eq, Hash, Debug)]
 pub struct QuadraticGreedySolver;
 
 impl BddSolver for QuadraticGreedySolver {
-    fn solve_conjunction(constraints: &[Bdd]) -> Cancellable<Bdd> {
+    fn solve_conjunction(&self, constraints: &[Bdd]) -> Cancellable<Bdd> {
         use cancel_this::is_cancelled;
 
         // Handle edge cases
@@ -73,8 +75,8 @@ impl BddSolver for QuadraticGreedySolver {
             // Update result with the best merge
             result = best_result;
 
-            println!(
-                "[{} remaining] Result BDD: {}",
+            debug!(
+                "Merging BDDs: {} constraints remaining, result BDD size: {} nodes",
                 remaining.len(),
                 result.node_count()
             );

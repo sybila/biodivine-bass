@@ -16,8 +16,11 @@ pub use quadratic_greedy_shared::QuadraticGreedySolverShared;
 /// fashion. For all other intents and purposes, this only computes
 /// the conjunction of the given constraints.
 pub trait BddSolver {
-    fn solve_conjunction(constraints: &[Bdd]) -> Cancellable<Bdd>;
+    fn solve_conjunction(&self, constraints: &[Bdd]) -> Cancellable<Bdd>;
 }
+
+/// A type alias for referencing BDD solver instances of an erased type.
+pub type DynamicBddSolver = Box<dyn BddSolver>;
 
 #[cfg(test)]
 mod tests {
@@ -48,21 +51,24 @@ mod tests {
 
     #[test]
     fn test_naive_greedy_solver_empty() {
-        let result = NaiveGreedySolver::solve_conjunction(&[]).unwrap();
+        let solver = NaiveGreedySolver::default();
+        let result = solver.solve_conjunction(&[]).unwrap();
         assert!(result.is_true());
     }
 
     #[test]
     fn test_naive_greedy_solver_single() {
         let bdds = vec![Bdd::new_literal(ruddy::VariableId::new(0), true)];
-        let result = NaiveGreedySolver::solve_conjunction(&bdds).unwrap();
+        let solver = NaiveGreedySolver::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.structural_eq(&bdds[0]));
     }
 
     #[test]
     fn test_naive_greedy_solver_simple() {
         let bdds = make_test_bdds();
-        let result = NaiveGreedySolver::solve_conjunction(&bdds).unwrap();
+        let solver = NaiveGreedySolver::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
 
         // Result should be conjunction of all three
         let expected = bdds[0].and(&bdds[1]).and(&bdds[2]);
@@ -72,7 +78,8 @@ mod tests {
     #[test]
     fn test_naive_greedy_solver_contradiction() {
         let bdds = make_contradictory_bdds();
-        let result = NaiveGreedySolver::solve_conjunction(&bdds).unwrap();
+        let solver = NaiveGreedySolver::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.is_false());
     }
 
@@ -80,7 +87,8 @@ mod tests {
     fn test_naive_greedy_solver_with_true() {
         let var0 = ruddy::VariableId::new(0);
         let bdds = vec![Bdd::new_true(), Bdd::new_literal(var0, true)];
-        let result = NaiveGreedySolver::solve_conjunction(&bdds).unwrap();
+        let solver = NaiveGreedySolver::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
 
         // True AND x0 = x0
         assert!(result.structural_eq(&bdds[1]));
@@ -90,27 +98,31 @@ mod tests {
     fn test_naive_greedy_solver_with_false() {
         let var0 = ruddy::VariableId::new(0);
         let bdds = vec![Bdd::new_false(), Bdd::new_literal(var0, true)];
-        let result = NaiveGreedySolver::solve_conjunction(&bdds).unwrap();
+        let solver = NaiveGreedySolver::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.is_false());
     }
 
     #[test]
     fn test_quadratic_greedy_solver_empty() {
-        let result = QuadraticGreedySolver::solve_conjunction(&[]).unwrap();
+        let solver = QuadraticGreedySolver::default();
+        let result = solver.solve_conjunction(&[]).unwrap();
         assert!(result.is_true());
     }
 
     #[test]
     fn test_quadratic_greedy_solver_single() {
         let bdds = vec![Bdd::new_literal(ruddy::VariableId::new(0), true)];
-        let result = QuadraticGreedySolver::solve_conjunction(&bdds).unwrap();
+        let solver = QuadraticGreedySolver::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.structural_eq(&bdds[0]));
     }
 
     #[test]
     fn test_quadratic_greedy_solver_simple() {
         let bdds = make_test_bdds();
-        let result = QuadraticGreedySolver::solve_conjunction(&bdds).unwrap();
+        let solver = QuadraticGreedySolver::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
 
         // Result should be conjunction of all three
         let expected = bdds[0].and(&bdds[1]).and(&bdds[2]);
@@ -120,7 +132,8 @@ mod tests {
     #[test]
     fn test_quadratic_greedy_solver_contradiction() {
         let bdds = make_contradictory_bdds();
-        let result = QuadraticGreedySolver::solve_conjunction(&bdds).unwrap();
+        let solver = QuadraticGreedySolver::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.is_false());
     }
 
@@ -128,7 +141,8 @@ mod tests {
     fn test_quadratic_greedy_solver_with_true() {
         let var0 = ruddy::VariableId::new(0);
         let bdds = vec![Bdd::new_true(), Bdd::new_literal(var0, true)];
-        let result = QuadraticGreedySolver::solve_conjunction(&bdds).unwrap();
+        let solver = QuadraticGreedySolver::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.structural_eq(&bdds[1]));
     }
 
@@ -136,27 +150,31 @@ mod tests {
     fn test_quadratic_greedy_solver_with_false() {
         let var0 = ruddy::VariableId::new(0);
         let bdds = vec![Bdd::new_false(), Bdd::new_literal(var0, true)];
-        let result = QuadraticGreedySolver::solve_conjunction(&bdds).unwrap();
+        let solver = QuadraticGreedySolver::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.is_false());
     }
 
     #[test]
     fn test_naive_greedy_solver_shared_empty() {
-        let result = NaiveGreedySolverShared::solve_conjunction(&[]).unwrap();
+        let solver = NaiveGreedySolverShared::default();
+        let result = solver.solve_conjunction(&[]).unwrap();
         assert!(result.is_true());
     }
 
     #[test]
     fn test_naive_greedy_solver_shared_single() {
         let bdds = vec![Bdd::new_literal(ruddy::VariableId::new(0), true)];
-        let result = NaiveGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver = NaiveGreedySolverShared::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.structural_eq(&bdds[0]));
     }
 
     #[test]
     fn test_naive_greedy_solver_shared_simple() {
         let bdds = make_test_bdds();
-        let result = NaiveGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver = NaiveGreedySolverShared::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
 
         // Result should be conjunction of all three
         let expected = bdds[0].and(&bdds[1]).and(&bdds[2]);
@@ -166,7 +184,8 @@ mod tests {
     #[test]
     fn test_naive_greedy_solver_shared_contradiction() {
         let bdds = make_contradictory_bdds();
-        let result = NaiveGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver = NaiveGreedySolverShared::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.is_false());
     }
 
@@ -174,7 +193,8 @@ mod tests {
     fn test_naive_greedy_solver_shared_with_true() {
         let var0 = ruddy::VariableId::new(0);
         let bdds = vec![Bdd::new_true(), Bdd::new_literal(var0, true)];
-        let result = NaiveGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver = NaiveGreedySolverShared::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.structural_eq(&bdds[1]));
     }
 
@@ -182,27 +202,31 @@ mod tests {
     fn test_naive_greedy_solver_shared_with_false() {
         let var0 = ruddy::VariableId::new(0);
         let bdds = vec![Bdd::new_false(), Bdd::new_literal(var0, true)];
-        let result = NaiveGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver = NaiveGreedySolverShared::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.is_false());
     }
 
     #[test]
     fn test_quadratic_greedy_solver_shared_empty() {
-        let result = QuadraticGreedySolverShared::solve_conjunction(&[]).unwrap();
+        let solver = QuadraticGreedySolverShared::default();
+        let result = solver.solve_conjunction(&[]).unwrap();
         assert!(result.is_true());
     }
 
     #[test]
     fn test_quadratic_greedy_solver_shared_single() {
         let bdds = vec![Bdd::new_literal(ruddy::VariableId::new(0), true)];
-        let result = QuadraticGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver = QuadraticGreedySolverShared::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.structural_eq(&bdds[0]));
     }
 
     #[test]
     fn test_quadratic_greedy_solver_shared_simple() {
         let bdds = make_test_bdds();
-        let result = QuadraticGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver = QuadraticGreedySolverShared::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
 
         // Result should be conjunction of all three
         let expected = bdds[0].and(&bdds[1]).and(&bdds[2]);
@@ -212,7 +236,8 @@ mod tests {
     #[test]
     fn test_quadratic_greedy_solver_shared_contradiction() {
         let bdds = make_contradictory_bdds();
-        let result = QuadraticGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver = QuadraticGreedySolverShared::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.is_false());
     }
 
@@ -220,7 +245,8 @@ mod tests {
     fn test_quadratic_greedy_solver_shared_with_true() {
         let var0 = ruddy::VariableId::new(0);
         let bdds = vec![Bdd::new_true(), Bdd::new_literal(var0, true)];
-        let result = QuadraticGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver = QuadraticGreedySolverShared::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.structural_eq(&bdds[1]));
     }
 
@@ -228,7 +254,8 @@ mod tests {
     fn test_quadratic_greedy_solver_shared_with_false() {
         let var0 = ruddy::VariableId::new(0);
         let bdds = vec![Bdd::new_false(), Bdd::new_literal(var0, true)];
-        let result = QuadraticGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver = QuadraticGreedySolverShared::default();
+        let result = solver.solve_conjunction(&bdds).unwrap();
         assert!(result.is_false());
     }
 
@@ -237,11 +264,15 @@ mod tests {
     fn test_solvers_equivalence_simple() {
         let bdds = make_test_bdds();
 
-        let result_naive = NaiveGreedySolver::solve_conjunction(&bdds).unwrap();
-        let result_quadratic = QuadraticGreedySolver::solve_conjunction(&bdds).unwrap();
-        let result_naive_shared = NaiveGreedySolverShared::solve_conjunction(&bdds).unwrap();
-        let result_quadratic_shared =
-            QuadraticGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver_naive = NaiveGreedySolver::default();
+        let solver_quadratic = QuadraticGreedySolver::default();
+        let solver_naive_shared = NaiveGreedySolverShared::default();
+        let solver_quadratic_shared = QuadraticGreedySolverShared::default();
+
+        let result_naive = solver_naive.solve_conjunction(&bdds).unwrap();
+        let result_quadratic = solver_quadratic.solve_conjunction(&bdds).unwrap();
+        let result_naive_shared = solver_naive_shared.solve_conjunction(&bdds).unwrap();
+        let result_quadratic_shared = solver_quadratic_shared.solve_conjunction(&bdds).unwrap();
 
         // All solvers should produce structurally equivalent results
         assert!(result_naive.structural_eq(&result_quadratic));
@@ -263,11 +294,15 @@ mod tests {
             Bdd::new_literal(var2, true).and(&Bdd::new_literal(var3, false)),
         ];
 
-        let result_naive = NaiveGreedySolver::solve_conjunction(&bdds).unwrap();
-        let result_quadratic = QuadraticGreedySolver::solve_conjunction(&bdds).unwrap();
-        let result_naive_shared = NaiveGreedySolverShared::solve_conjunction(&bdds).unwrap();
-        let result_quadratic_shared =
-            QuadraticGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver_naive = NaiveGreedySolver::default();
+        let solver_quadratic = QuadraticGreedySolver::default();
+        let solver_naive_shared = NaiveGreedySolverShared::default();
+        let solver_quadratic_shared = QuadraticGreedySolverShared::default();
+
+        let result_naive = solver_naive.solve_conjunction(&bdds).unwrap();
+        let result_quadratic = solver_quadratic.solve_conjunction(&bdds).unwrap();
+        let result_naive_shared = solver_naive_shared.solve_conjunction(&bdds).unwrap();
+        let result_quadratic_shared = solver_quadratic_shared.solve_conjunction(&bdds).unwrap();
 
         // All solvers should produce structurally equivalent results
         assert!(result_naive.structural_eq(&result_quadratic));
@@ -284,11 +319,15 @@ mod tests {
             bdds.push(Bdd::new_literal(var, true));
         }
 
-        let result_naive = NaiveGreedySolver::solve_conjunction(&bdds).unwrap();
-        let result_quadratic = QuadraticGreedySolver::solve_conjunction(&bdds).unwrap();
-        let result_naive_shared = NaiveGreedySolverShared::solve_conjunction(&bdds).unwrap();
-        let result_quadratic_shared =
-            QuadraticGreedySolverShared::solve_conjunction(&bdds).unwrap();
+        let solver_naive = NaiveGreedySolver::default();
+        let solver_quadratic = QuadraticGreedySolver::default();
+        let solver_naive_shared = NaiveGreedySolverShared::default();
+        let solver_quadratic_shared = QuadraticGreedySolverShared::default();
+
+        let result_naive = solver_naive.solve_conjunction(&bdds).unwrap();
+        let result_quadratic = solver_quadratic.solve_conjunction(&bdds).unwrap();
+        let result_naive_shared = solver_naive_shared.solve_conjunction(&bdds).unwrap();
+        let result_quadratic_shared = solver_quadratic_shared.solve_conjunction(&bdds).unwrap();
 
         // All solvers should produce structurally equivalent results
         assert!(result_naive.structural_eq(&result_quadratic));

@@ -1,5 +1,6 @@
 use crate::bdd_solver::BddSolver;
 use cancel_this::Cancellable;
+use log::debug;
 use ruddy::split::Bdd;
 
 /// A naive greedy solver that repeatedly merges the two smallest BDDs using split BDD representation.
@@ -7,10 +8,11 @@ use ruddy::split::Bdd;
 /// The algorithm sorts the BDDs by size and always merges the two smallest ones until
 /// only one remains. This is a simple greedy approach that doesn't require quadratic
 /// comparisons but may not always produce optimal intermediate BDD sizes.
+#[derive(Default, Clone, PartialEq, Eq, Hash, Debug)]
 pub struct NaiveGreedySolver;
 
 impl BddSolver for NaiveGreedySolver {
-    fn solve_conjunction(constraints: &[Bdd]) -> Cancellable<Bdd> {
+    fn solve_conjunction(&self, constraints: &[Bdd]) -> Cancellable<Bdd> {
         use cancel_this::is_cancelled;
 
         // Handle edge cases
@@ -31,8 +33,8 @@ impl BddSolver for NaiveGreedySolver {
             // Sort by size (ascending)
             to_merge.sort_by_key(|bdd| bdd.node_count());
 
-            println!(
-                "[{} remaining] Largest BDD: {}",
+            debug!(
+                "Merging BDDs: {} constraints remaining, largest BDD size: {} nodes",
                 to_merge.len(),
                 to_merge.last().unwrap().node_count()
             );

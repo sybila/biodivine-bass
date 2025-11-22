@@ -1,15 +1,16 @@
-use crate::{AdfExpressions, ConditionExpression, Statement};
+use crate::{AdfExpressions, ConditionExpression, ModelSetTwoValued, Statement};
 use cancel_this::{Cancellable, is_cancelled};
 use ruddy::VariableId;
 use ruddy::split::Bdd;
-use std::cmp::max;
 use std::collections::{BTreeMap, BTreeSet};
 use std::ops::Index;
+use std::sync::Arc;
 
 /// Maps every [`Statement`] to a single BDD [`VariableId`].
 ///
 /// It is assumed that the BDD variables follow the natural ordering of the statements, but do not
 /// necessarily need to use the exact same identifiers.
+#[derive(Clone, PartialEq, Eq, Debug)]
 pub struct DirectMap {
     mapping: BTreeMap<Statement, VariableId>,
 }
@@ -41,19 +42,17 @@ impl DirectMap {
         self.mapping.keys()
     }
 
+    /// Get all [`VariableId`] objects used in the map.
+    ///
+    /// The order of values is not guaranteed.
+    pub fn variable_ids(&self) -> impl DoubleEndedIterator<Item = &VariableId> + '_ {
+        self.mapping.values()
+    }
+
     /// Create a [`Bdd`] literal for the given [`Statement`].    
     pub fn make_literal(&self, statement: &Statement, polarity: bool) -> Bdd {
         let var = self[statement];
         Bdd::new_literal(var, polarity)
-    }
-
-    /// Return the largest [`VariableId`] used in this encoding (or `0` if the encoding is empty).
-    pub fn maximum_variable_id(&self) -> VariableId {
-        self.mapping
-            .values()
-            .max()
-            .copied()
-            .unwrap_or(VariableId::new(0))
     }
 }
 
@@ -80,6 +79,7 @@ impl Index<Statement> for DirectMap {
 ///
 /// It is assumed that the BDD variables follow the natural ordering of the statements
 /// (and positive < negative), but do not necessarily need to use the exact same identifiers.
+#[derive(Clone, PartialEq, Eq, Debug)]
 pub struct DualMap {
     mapping: BTreeMap<Statement, (VariableId, VariableId)>,
 }
@@ -135,16 +135,6 @@ impl DualMap {
         let (_, f_var) = self[statement];
         Bdd::new_literal(f_var, true)
     }
-
-    /// Return the largest [`VariableId`] used in this encoding (or `0` if the encoding is empty).
-    pub fn maximum_variable_id(&self) -> VariableId {
-        self.mapping
-            .values()
-            .map(|(a, b)| max(a, b))
-            .max()
-            .copied()
-            .unwrap_or(VariableId::new(0))
-    }
 }
 
 impl Index<&Statement> for DualMap {
@@ -169,6 +159,7 @@ impl Index<Statement> for DualMap {
 ///
 /// Note that statements can exist in `var_map` that do not have corresponding conditions.
 /// These are considered to be "free" statements.
+#[derive(Clone)]
 pub struct DirectEncoding {
     var_map: DirectMap,
     conditions: BTreeMap<Statement, Bdd>,
@@ -192,6 +183,39 @@ impl DirectEncoding {
     pub fn conditional_statements(&self) -> impl Iterator<Item = &Statement> {
         self.conditions.keys()
     }
+
+    /// Returns true if the given [`Bdd`] only uses variables used by this [`DirectMap`].
+    pub fn is_direct_encoded(&self, bdd: &Bdd) -> bool {
+        let used: BTreeSet<VariableId> = bdd.used_variables();
+        let allowed: BTreeSet<VariableId> = self.var_map.variable_ids().copied().collect();
+        used.is_subset(&allowed)
+    }
+
+    /// Compute the number of valuations in a "directly encoded" BDD representation of the
+    /// ADF statements.
+    ///
+    /// The given BDD can only use variables of the direct encoding.
+    pub fn count_direct_valuations(&self, bdd: &Bdd) -> f64 {
+        assert!(self.is_direct_encoded(bdd));
+
+        // Count the number of "unused variables" that we have in the BDD
+        let statement_count = self.var_map.mapping.len();
+
+        if statement_count == 0 {
+            // For empty ADFs, the result is trivial.
+            return if bdd.is_false() { 0.0 } else { 1.0 };
+        }
+
+        // Each statement maps to 4 variables, which means (starting
+        // from zero), the last variable is 4*x - 1.
+        let max_var = VariableId::new_long((statement_count * 4 - 1) as u64).unwrap();
+        let unused_vars = statement_count * 3;
+
+        // Count valuations and normalize them based on unused variables.
+        let count = bdd.count_satisfying_valuations(Some(max_var));
+
+        count / 2.0f64.powf(unused_vars as f64)
+    }
 }
 
 /// Uses [`DualMap`] to encode every condition of an ADF into two BDDs, one describing
@@ -209,6 +233,7 @@ impl DirectEncoding {
 /// (can be false). The valuation where both variables are false is invalid (a statement must
 /// be able to be either true or false). The `valid` BDD encodes the constraint that for every
 /// statement, at least one of its dual variables must be true.
+#[derive(Clone)]
 pub struct DualEncoding {
     var_map: DualMap,
     conditions: BTreeMap<Statement, (Bdd, Bdd)>,
@@ -251,10 +276,20 @@ impl DualEncoding {
 ///
 /// By default, the variables are ordered such that the direct variable is followed by the
 /// two dual variables.
+#[derive(Clone)]
 pub struct AdfBdds {
-    direct_encoding: DirectEncoding,
-    dual_encoding: DualEncoding,
+    direct_encoding: Arc<DirectEncoding>,
+    dual_encoding: Arc<DualEncoding>,
 }
+
+impl PartialEq for AdfBdds {
+    fn eq(&self, other: &Self) -> bool {
+        Arc::ptr_eq(&self.direct_encoding, &other.direct_encoding)
+            && Arc::ptr_eq(&self.dual_encoding, &other.dual_encoding)
+    }
+}
+
+impl Eq for AdfBdds {}
 
 impl AdfBdds {
     /// Get the direct encoding of this ADF.
@@ -267,48 +302,9 @@ impl AdfBdds {
         &self.dual_encoding
     }
 
-    /// Return the largest [`VariableId`] used in the internal encodings
-    /// (or `0` if the ADF is empty).
-    pub fn maximum_variable_id(&self) -> VariableId {
-        max(
-            self.direct_encoding.var_map().maximum_variable_id(),
-            self.dual_encoding.var_map().maximum_variable_id(),
-        )
-    }
-
-    /// Compute the number of valuations in a "directly encoded" BDD representation of the
-    /// ADF statements.
-    ///
-    /// The given BDD can only use variables of the direct encoding.
-    pub fn count_direct_valuations(&self, bdd: &Bdd) -> f64 {
-        // Sanity check that the BDD is "valid".
-        let used_variables = bdd.used_variables();
-        let direct_variables = self
-            .direct_encoding
-            .var_map
-            .mapping
-            .values()
-            .copied()
-            .collect::<BTreeSet<_>>();
-        assert!(used_variables.is_subset(&direct_variables));
-
-        // Count the number of "unused variables" that we have in the BDD
-        let statement_count = self.direct_encoding.var_map.mapping.len();
-
-        if statement_count == 0 {
-            // For empty ADFs, the result is trivial.
-            return if bdd.is_false() { 0.0 } else { 1.0 };
-        }
-
-        // Each statement maps to 4 variables, which means (starting
-        // from zero), the last variable is 4*x - 1.
-        let max_var = VariableId::new_long((statement_count * 4 - 1) as u64).unwrap();
-        let unused_vars = statement_count * 3;
-
-        // Count valuations and normalize them based on unused variables.
-        let count = bdd.count_satisfying_valuations(Some(max_var));
-
-        count / 2.0f64.powf(unused_vars as f64)
+    /// Create a new instance of [`ModelSetTwoValued`] from a "raw" BDD.
+    pub fn mk_two_valued_set(&self, bdd: Bdd) -> ModelSetTwoValued {
+        ModelSetTwoValued::new(bdd, self.direct_encoding.clone())
     }
 
     /// Try to create a [`AdfBdds`] from an [`AdfExpressions`].
@@ -363,15 +359,15 @@ impl AdfBdds {
         }
 
         Ok(AdfBdds {
-            direct_encoding: DirectEncoding {
+            direct_encoding: Arc::new(DirectEncoding {
                 var_map: direct_map,
                 conditions: direct_conditions,
-            },
-            dual_encoding: DualEncoding {
+            }),
+            dual_encoding: Arc::new(DualEncoding {
                 var_map: dual_map,
                 conditions: dual_conditions,
                 valid,
-            },
+            }),
         })
     }
 }
@@ -1284,7 +1280,9 @@ mod tests {
         let symbolic_adf = AdfBdds::from(&expr_adf);
 
         let true_bdd = Bdd::new_true();
-        let count = symbolic_adf.count_direct_valuations(&true_bdd);
+        let count = symbolic_adf
+            .direct_encoding()
+            .count_direct_valuations(&true_bdd);
 
         // True BDD accepts all valuations: 2^2 = 4 (both statements can be T or F)
         // But due to variable spacing, the actual count is 8.0
@@ -1302,7 +1300,9 @@ mod tests {
         let symbolic_adf = AdfBdds::from(&expr_adf);
 
         let false_bdd = Bdd::new_false();
-        let count = symbolic_adf.count_direct_valuations(&false_bdd);
+        let count = symbolic_adf
+            .direct_encoding()
+            .count_direct_valuations(&false_bdd);
 
         // False BDD accepts no valuations
         assert_eq!(count, 0.0);
@@ -1321,7 +1321,9 @@ mod tests {
         // BDD representing s(0) = true
         let var_map = symbolic_adf.direct_encoding().var_map();
         let s0_true = var_map.make_literal(&Statement::from(0), true);
-        let count = symbolic_adf.count_direct_valuations(&s0_true);
+        let count = symbolic_adf
+            .direct_encoding()
+            .count_direct_valuations(&s0_true);
 
         // Accepts 2 valuations: s(0)=T, s(1)=T and s(0)=T, s(1)=F
         assert_eq!(count, 2.0);
@@ -1342,7 +1344,9 @@ mod tests {
         let s0 = var_map.make_literal(&Statement::from(0), true);
         let s1 = var_map.make_literal(&Statement::from(1), true);
         let and_bdd = s0.and(&s1);
-        let count = symbolic_adf.count_direct_valuations(&and_bdd);
+        let count = symbolic_adf
+            .direct_encoding()
+            .count_direct_valuations(&and_bdd);
 
         // Accepts only 1 valuation: s(0)=T, s(1)=T
         assert_eq!(count, 1.0);
@@ -1365,7 +1369,7 @@ mod tests {
         let s1 = var_map.make_literal(&Statement::from(1), true);
         let s2 = var_map.make_literal(&Statement::from(2), true);
         let bdd = s0.and(&s1).or(&s2);
-        let count = symbolic_adf.count_direct_valuations(&bdd);
+        let count = symbolic_adf.direct_encoding().count_direct_valuations(&bdd);
 
         // Accepts valuations:
         // s(2)=T: (T,T,T), (T,F,T), (F,T,T), (F,F,T) = 4
