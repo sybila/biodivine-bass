@@ -2,7 +2,10 @@ use biodivine_adf_solver::bdd_solver::{
     DynamicBddSolver, NaiveGreedySolver, NaiveGreedySolverShared, QuadraticGreedySolver,
     QuadraticGreedySolverShared,
 };
-use biodivine_adf_solver::{AdfBdds, AdfExpressions, AdfInterpretationSolver};
+use biodivine_adf_solver::{
+    AdfBdds, AdfExpressions, AdfInterpretationSolver, DynamicModelSet, ModelSet,
+};
+use cancel_this::Cancellable;
 use clap::Parser;
 use std::process;
 
@@ -27,6 +30,9 @@ enum ProblemType {
     /// Two-valued complete interpretations
     #[value(name = "two-valued-complete", aliases = ["2vc", "two_valued_complete"])]
     TwoValuedComplete,
+    /// Three-valued admissible interpretations
+    #[value(name = "admissible", aliases = ["adm"])]
+    Admissible,
 }
 
 #[derive(clap::ValueEnum, Clone, Debug)]
@@ -91,17 +97,24 @@ fn main() {
     // Solve based on problem type
     let model_set = match args.problem_type {
         ProblemType::TwoValuedComplete => {
-            match interpretation_solver.solve_complete_two_valued(&adf_bdds) {
-                Ok(ms) => ms,
-                Err(_) => {
-                    eprintln!("Error: Solving was cancelled");
-                    process::exit(1);
-                }
-            }
+            process_result(interpretation_solver.solve_complete_two_valued(&adf_bdds))
+        }
+        ProblemType::Admissible => {
+            process_result(interpretation_solver.solve_admissible(&adf_bdds))
         }
     };
 
     // Output the model count
     let count = model_set.model_count();
     println!("{}", count);
+}
+
+fn process_result<T: ModelSet + 'static>(result: Cancellable<T>) -> DynamicModelSet {
+    match result {
+        Ok(model_set) => Box::new(model_set),
+        Err(_) => {
+            eprintln!("Error: Solving was cancelled");
+            process::exit(1);
+        }
+    }
 }
