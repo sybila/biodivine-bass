@@ -70,6 +70,7 @@ impl AdfInterpretationSolver {
         Ok(model_set)
     }
 
+    /// Computes the [`ModelSetThreeValued`] of all admissible three valued interpretations of this ADF.
     pub fn solve_admissible(&self, adf: &AdfBdds) -> Cancellable<ModelSetThreeValued> {
         info!("Starting computation of admissible three-valued interpretations");
 
@@ -82,18 +83,18 @@ impl AdfInterpretationSolver {
         for statement in var_map.statements() {
             is_cancelled!()?;
 
-            // Get the BDD literal for this statement
-            let statement_p_lit = var_map.make_positive_literal(statement, true);
-            let statement_n_lit = var_map.make_negative_literal(statement, true);
-
             // If condition does not exist, this is a free statement.
             let Some((p_condition, n_condition)) = dual.get_condition(statement) else {
                 continue;
             };
 
+            // Get the BDD literal for this statement
+            let p_literal = var_map.make_positive_literal(statement, true);
+            let n_literal = var_map.make_negative_literal(statement, true);
+
             // If the condition can evaluate to true, the corresponding literal must be also set.
-            let p_constraint = p_condition.implies(&statement_p_lit);
-            let n_constraint = n_condition.implies(&statement_n_lit);
+            let p_constraint = p_condition.implies(&p_literal);
+            let n_constraint = n_condition.implies(&n_literal);
 
             debug!(
                 "Generated constraints of size {}/{} for statement `{}`",
@@ -105,6 +106,8 @@ impl AdfInterpretationSolver {
             trap_constraints.push(p_constraint);
             trap_constraints.push(n_constraint);
         }
+
+        trap_constraints.retain(|it| !it.is_true());
 
         info!(
             "Generated {} trap constraints from {} statements",
@@ -118,6 +121,75 @@ impl AdfInterpretationSolver {
 
         info!(
             "Computation complete: found {} admissible three-valued interpretations",
+            model_set.model_count()
+        );
+
+        Ok(model_set)
+    }
+
+    /// Computes the [`ModelSetThreeValued`] of all complete three valued interpretations of this ADF.
+    pub fn solve_complete(&self, adf: &AdfBdds) -> Cancellable<ModelSetThreeValued> {
+        info!("Starting computation of complete three-valued interpretations");
+
+        let dual = adf.dual_encoding();
+        let var_map = dual.var_map();
+
+        let mut trap_constraints = vec![dual.valid().clone()];
+        let total_statements = var_map.statements().count();
+
+        for statement in var_map.statements() {
+            is_cancelled!()?;
+
+            /*
+               Compared to admissible interpretations, in complete interpretations we also
+               require each interpretation that contains * actually allows that variable to
+               be set to both 0 and 1 in it.
+            */
+
+            // If condition does not exist, this is a free statement.
+            let Some((p_condition, n_condition)) = dual.get_condition(statement) else {
+                continue;
+            };
+
+            // Get the BDD literal for this statement
+            let p_literal = var_map.make_positive_literal(statement, true);
+            let n_literal = var_map.make_negative_literal(statement, true);
+
+            // If the condition can evaluate to true, the corresponding literal must be also set.
+            let p_constraint = p_condition.implies(&p_literal);
+            let n_constraint = n_condition.implies(&n_literal);
+
+            let not_fixed = p_literal.and(&n_literal);
+            let can_be_both = p_condition.and(n_condition);
+            let completeness = not_fixed.implies(&can_be_both);
+
+            debug!(
+                "Generated constraints of size {}/{}/{} for statement `{}`",
+                p_constraint.node_count(),
+                n_constraint.node_count(),
+                completeness.node_count(),
+                statement
+            );
+
+            trap_constraints.push(p_constraint);
+            trap_constraints.push(n_constraint);
+            trap_constraints.push(completeness);
+        }
+
+        trap_constraints.retain(|it| !it.is_true());
+
+        info!(
+            "Generated {} trap constraints from {} statements",
+            trap_constraints.len(),
+            total_statements
+        );
+
+        let result_bdd = self.solver.solve_conjunction(&trap_constraints)?;
+
+        let model_set = adf.mk_three_valued_set(result_bdd);
+
+        info!(
+            "Computation complete: found {} complete three-valued interpretations",
             model_set.model_count()
         );
 
@@ -256,9 +328,76 @@ mod tests {
             .solve_admissible(&adf)
             .expect("Solving should not be cancelled");
 
-        // Statement 0 has constant true condition, statement 1 is free
-        // Free statements don't add constraints, so we just have the constraint from statement 0
-        // Plus the valid constraint requiring at least one dual variable per statement
+        // Statement 0 has constant true condition, statement 1 is free.
+        // Free statements don't add constraints, so we just have the constraint from statement 0.
+        // Plus the valid constraint requiring at least one dual variable per statement.
         assert_eq!(model_set.model_count(), 6.0);
+    }
+
+    #[test]
+    fn test_solve_complete_simple_constant_true() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            ac(0, c(v)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_complete(&adf)
+            .expect("Solving should not be cancelled");
+
+        // For statement 0 with constant true condition:
+        // Admissible allows: {T} and {T,U} (2 interpretations)
+        // Complete requires: if statement is free (both T and F), condition must be able to be both
+        // Since condition is constant true (can't be both), statement can't be free
+        // So only {T} is allowed = 1 interpretation
+        assert_eq!(model_set.model_count(), 1.0);
+    }
+
+    #[test]
+    fn test_solve_complete_two_statements() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, 1).
+            ac(1, c(v)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_complete(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 depends on 1, statement 1 has constant true
+        // Admissible allows: **, *1, 11 (3 interpretations)
+        // Complete: Statement 1 can't be free (constant true), so *1 and ** are excluded
+        // Only 11 is allowed = 1 interpretation
+        assert_eq!(model_set.model_count(), 1.0);
+    }
+
+    #[test]
+    fn test_solve_complete_with_free_statement() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, c(v)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_complete(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 has constant true condition, statement 1 is free (no condition)
+        // Admissible allows: 6 interpretations
+        // Complete: Statement 0 can't be free (constant true), so interpretations where 0 is free are excluded
+        // Statement 1 is free, so it can be anything valid
+        assert_eq!(model_set.model_count(), 3.0);
     }
 }

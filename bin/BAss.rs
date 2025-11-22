@@ -33,6 +33,8 @@ enum ProblemType {
     /// Three-valued admissible interpretations
     #[value(name = "admissible", aliases = ["adm"])]
     Admissible,
+    #[value(name = "complete", aliases = ["com"])]
+    Complete,
 }
 
 #[derive(clap::ValueEnum, Clone, Debug)]
@@ -102,6 +104,7 @@ fn main() {
         ProblemType::Admissible => {
             process_result(interpretation_solver.solve_admissible(&adf_bdds))
         }
+        ProblemType::Complete => process_result(interpretation_solver.solve_complete(&adf_bdds)),
     };
 
     // Output the model count
