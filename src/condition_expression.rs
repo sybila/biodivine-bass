@@ -9,7 +9,7 @@ pub struct ConditionExpression(pub(crate) Arc<ConditionExpressionNode>);
 
 /// Internal enum data structure of [`ConditionExpression`].
 #[derive(Clone, Hash, PartialEq, Eq, Debug)]
-pub(crate) enum ConditionExpressionNode {
+pub enum ConditionExpressionNode {
     Constant(bool),
     Statement(Statement),
     Negation(ConditionExpression),
@@ -173,6 +173,12 @@ impl ConditionExpression {
 }
 
 impl ConditionExpression {
+    /// Obtain the underlying [`ConditionExpressionNode`] that stores the expression
+    /// type and children.
+    pub fn node(&self) -> &ConditionExpressionNode {
+        self.0.as_ref()
+    }
+
     /// Parse a condition expression from a string.
     ///
     /// Supports the following syntax:

@@ -10,5 +10,5 @@ pub mod bdd_solver;
 
 pub use adf_bdds::AdfBdds;
 pub use adf_expressions::AdfExpressions;
-pub use condition_expression::ConditionExpression;
+pub use condition_expression::{ConditionExpression, ConditionExpressionNode};
 pub use statement::Statement;
