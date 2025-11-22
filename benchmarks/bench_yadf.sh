@@ -13,11 +13,11 @@ TIMEOUT=${TIMEOUT:-'10s'}
 PARALLEL=${PARALLEL:-'1'}
 
 # Time to one solution across various semantics.
-python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- -adm 1
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- -adm 0
 for d in run_*/; do mv -- "$d" "results/yadf_1_adm_${d#./}"; done
-python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- -com 1
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- -com 0
 for d in run_*/; do mv -- "$d" "results/yadf_1_com_${d#./}"; done
-python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- -prf 1
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- -prf 0
 for d in run_*/; do mv -- "$d" "results/yadf_1_prf_${d#./}"; done
-python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- -stb 1
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- -stb 0
 for d in run_*/; do mv -- "$d" "results/yadf_1_stb_${d#./}"; done
