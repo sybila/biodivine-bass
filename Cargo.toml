@@ -7,6 +7,11 @@ edition = "2024"
 ruddy = { git = "https://github.com/sybila/ruddy.git", rev = "e5449ebbde6f05a5262c4b5cc7a26669b1c3e4fd" }
 cancel-this = "0.3.0"
 biodivine-lib-param-bn = "0.6.3"
+clap = { version = "4.5", features = ["derive"] }
 
 [dev-dependencies]
 rstest = "0.26.1"
+
+[[bin]]
+name = "BAss"
+path = "bin/BAss.rs"
