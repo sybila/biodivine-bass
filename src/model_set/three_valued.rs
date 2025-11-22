@@ -29,7 +29,7 @@ impl ModelSet for ModelSetThreeValued {
 }
 
 impl ModelSetThreeValued {
-    /// Make a [`crate::ModelSetTwoValued`] from the underlying parts.
+    /// Make a [`ModelSetThreeValued`] from the underlying parts.
     ///
     /// # Panics
     ///
@@ -47,7 +47,7 @@ impl ModelSetThreeValued {
         &self.symbolic_set
     }
 
-    /// Get a reference to the underlying [`DirectEncoding`].
+    /// Get a reference to the underlying [`DualEncoding`].
     pub fn encoding(&self) -> &DualEncoding {
         &self.encoding
     }

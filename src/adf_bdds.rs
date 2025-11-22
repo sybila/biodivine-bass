@@ -354,7 +354,7 @@ impl AdfBdds {
         ModelSetTwoValued::new(bdd, self.direct_encoding.clone())
     }
 
-    /// Create a new instance of [`ModelSetTwoValued`] from a "raw" BDD.
+    /// Create a new instance of [`ModelSetThreeValued`] from a "raw" BDD.
     ///
     /// The BDD must satisfy [`DualEncoding::is_dual_encoded`].
     pub fn mk_three_valued_set(&self, bdd: Bdd) -> ModelSetThreeValued {
