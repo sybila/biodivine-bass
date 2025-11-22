@@ -51,12 +51,10 @@ enum BddSolverType {
 impl From<BddSolverType> for DynamicBddSolver {
     fn from(value: BddSolverType) -> Self {
         match value {
-            BddSolverType::NaiveGreedy => Box::new(NaiveGreedySolver::default()),
-            BddSolverType::NaiveGreedyShared => Box::new(NaiveGreedySolverShared::default()),
-            BddSolverType::QuadraticGreedy => Box::new(QuadraticGreedySolver::default()),
-            BddSolverType::QuadraticGreedyShared => {
-                Box::new(QuadraticGreedySolverShared::default())
-            }
+            BddSolverType::NaiveGreedy => Box::new(NaiveGreedySolver),
+            BddSolverType::NaiveGreedyShared => Box::new(NaiveGreedySolverShared),
+            BddSolverType::QuadraticGreedy => Box::new(QuadraticGreedySolver),
+            BddSolverType::QuadraticGreedyShared => Box::new(QuadraticGreedySolverShared),
         }
     }
 }

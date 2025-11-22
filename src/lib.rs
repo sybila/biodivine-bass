@@ -10,7 +10,7 @@ mod statement;
 
 pub mod bdd_solver;
 
-pub use adf_bdds::AdfBdds;
+pub use adf_bdds::{AdfBdds, DirectEncoding, DirectMap, DualEncoding, DualMap};
 pub use adf_expressions::AdfExpressions;
 pub use adf_interpretation_solver::AdfInterpretationSolver;
 pub use condition_expression::{ConditionExpression, ConditionExpressionNode};
