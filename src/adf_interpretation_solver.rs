@@ -64,8 +64,8 @@ impl AdfInterpretationSolver {
         let model_set = adf.mk_two_valued_set(result_bdd);
 
         info!(
-            "Computation complete: found {} complete two-valued interpretations",
-            model_set.model_count()
+            "Computation complete: resulting BDD has {} nodes",
+            model_set.symbolic_set().node_count()
         );
 
         Ok(model_set)
@@ -120,8 +120,8 @@ impl AdfInterpretationSolver {
         let model_set = adf.mk_three_valued_set(result_bdd);
 
         info!(
-            "Computation complete: found {} admissible three-valued interpretations",
-            model_set.model_count()
+            "Computation complete: resulting BDD has {} nodes",
+            model_set.symbolic_set().node_count()
         );
 
         Ok(model_set)
@@ -187,8 +187,8 @@ impl AdfInterpretationSolver {
         let model_set = adf.mk_three_valued_set(result_bdd);
 
         info!(
-            "Computation complete: found {} complete three-valued interpretations",
-            model_set.model_count()
+            "Computation complete: resulting BDD has {} nodes",
+            model_set.symbolic_set().node_count()
         );
 
         Ok(model_set)
@@ -236,9 +236,9 @@ impl AdfInterpretationSolver {
             assert!(!k_preferred.is_empty());
 
             info!(
-                "Found {} preferred models of size {}.",
-                k_preferred.model_count(),
+                "Preferred models of size {} are represented using {} nodes.",
                 k_free,
+                k_preferred.symbolic_set().node_count(),
             );
 
             result = result.union(&k_preferred);
@@ -252,6 +252,11 @@ impl AdfInterpretationSolver {
                 result.symbolic_set().node_count(),
             );
         }
+
+        info!(
+            "Computation complete: resulting BDD has {} nodes",
+            result.symbolic_set().node_count()
+        );
 
         Ok(result)
     }
