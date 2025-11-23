@@ -582,7 +582,7 @@ dependencies = [
 [[package]]
 name = "ruddy"
 version = "0.0.2"
-source = "git+https://github.com/sybila/ruddy.git?rev=e5449ebbde6f05a5262c4b5cc7a26669b1c3e4fd#e5449ebbde6f05a5262c4b5cc7a26669b1c3e4fd"
+source = "git+https://github.com/sybila/ruddy.git?rev=78f0c7307fda17d6bd2816b00b3dd8aab719e339#78f0c7307fda17d6bd2816b00b3dd8aab719e339"
 dependencies = [
  "replace_with",
  "rustc-hash",
