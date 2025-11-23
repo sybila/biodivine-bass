@@ -2,6 +2,7 @@ use crate::bdd_solver::{BddSolver, DynamicBddSolver};
 use crate::{AdfBdds, ModelSetThreeValued, ModelSetTwoValued};
 use cancel_this::{Cancellable, is_cancelled};
 use log::{debug, info};
+use ruddy::split::Bdd;
 
 pub struct AdfInterpretationSolver {
     solver: DynamicBddSolver,
@@ -103,8 +104,7 @@ impl AdfInterpretationSolver {
                 statement
             );
 
-            trap_constraints.push(p_constraint);
-            trap_constraints.push(n_constraint);
+            trap_constraints.push(p_constraint.and(&n_constraint));
         }
 
         trap_constraints.retain(|it| !it.is_true());
@@ -171,9 +171,7 @@ impl AdfInterpretationSolver {
                 statement
             );
 
-            trap_constraints.push(p_constraint);
-            trap_constraints.push(n_constraint);
-            trap_constraints.push(completeness);
+            trap_constraints.push(p_constraint.and(&n_constraint).and(&completeness));
         }
 
         trap_constraints.retain(|it| !it.is_true());
@@ -194,6 +192,68 @@ impl AdfInterpretationSolver {
         );
 
         Ok(model_set)
+    }
+
+    pub fn solve_preferred(&self, adf: &AdfBdds) -> Cancellable<ModelSetThreeValued> {
+        info!(
+            "Starting computation of preferred interpretations by finding complete interpretations"
+        );
+
+        let mut remaining = self.solve_complete(adf)?;
+
+        info!(
+            "Starting minimization process with {} BDD nodes.",
+            remaining.symbolic_set().node_count()
+        );
+
+        let mut result = adf.mk_three_valued_set(Bdd::new_false());
+
+        while !remaining.is_empty() {
+            let preferred_model = remaining.most_fixed_model();
+
+            // Compute the number of free statements in the preferred model:
+            let mut k_free = 0;
+            for (t_var, f_var) in adf.dual_encoding().var_map().variable_id_pairs() {
+                let t_val = preferred_model.get(t_var).expect(
+                    "Correctness violation: Preferred model does not cover all statements.",
+                );
+                let f_val = preferred_model.get(f_var).expect(
+                    "Correctness violation: Preferred model does not cover all statements.",
+                );
+                if *t_val && *f_val {
+                    k_free += 1;
+                }
+            }
+
+            info!(
+                "Current best preferred model has {} free statements",
+                k_free
+            );
+
+            let k_size = ModelSetThreeValued::mk_exactly_k_free_statements(k_free, adf);
+
+            let k_preferred = remaining.intersect(&k_size);
+            assert!(!k_preferred.is_empty());
+
+            info!(
+                "Found {} preferred models of size {}.",
+                k_preferred.model_count(),
+                k_free,
+            );
+
+            result = result.union(&k_preferred);
+
+            let looser_models = k_preferred.extend_with_looser_models();
+            remaining = remaining.minus(&looser_models);
+
+            info!(
+                "Remaining nodes: {}; Result nodes: {}",
+                remaining.symbolic_set().node_count(),
+                result.symbolic_set().node_count(),
+            );
+        }
+
+        Ok(result)
     }
 }
 
