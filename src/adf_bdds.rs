@@ -1514,4 +1514,215 @@ mod tests {
         // s(2)=F: (T,T,F) = 1
         assert_eq!(count, 5.0);
     }
+
+    // Tests for last_valid_variable_id
+
+    #[test]
+    fn test_direct_map_last_valid_variable_id() {
+        let statements = vec![Statement::from(0), Statement::from(5)];
+        let map = DirectMap::new(&statements);
+
+        let last_valid = map.last_valid_variable_id();
+        // For 2 statements: 2 * 4 - 1 = 7
+        assert_eq!(u64::from(last_valid), 7);
+    }
+
+    #[test]
+    fn test_dual_map_last_valid_variable_id() {
+        let statements = vec![Statement::from(0), Statement::from(5), Statement::from(10)];
+        let map = DualMap::new(&statements);
+
+        let last_valid = map.last_valid_variable_id();
+        // For 3 statements: 3 * 4 - 1 = 11
+        assert_eq!(u64::from(last_valid), 11);
+    }
+
+    // Tests for DualMap::size
+
+    #[test]
+    fn test_dual_map_size_empty() {
+        let statements = vec![];
+        let map = DualMap::new(&statements);
+        assert_eq!(map.size(), 0);
+    }
+
+    #[test]
+    fn test_dual_map_size_single() {
+        let statements = vec![Statement::from(0)];
+        let map = DualMap::new(&statements);
+        assert_eq!(map.size(), 1);
+    }
+
+    #[test]
+    fn test_dual_map_size_multiple() {
+        let statements = vec![
+            Statement::from(0),
+            Statement::from(5),
+            Statement::from(10),
+            Statement::from(15),
+        ];
+        let map = DualMap::new(&statements);
+        assert_eq!(map.size(), 4);
+    }
+
+    // Tests for DualMap::variable_id_pairs
+
+    #[test]
+    fn test_dual_map_variable_id_pairs_empty() {
+        let statements = vec![];
+        let map = DualMap::new(&statements);
+        let pairs: Vec<_> = map.variable_id_pairs().collect();
+        assert_eq!(pairs.len(), 0);
+    }
+
+    #[test]
+    fn test_dual_map_variable_id_pairs_single() {
+        let statements = vec![Statement::from(0)];
+        let map = DualMap::new(&statements);
+        let pairs: Vec<_> = map.variable_id_pairs().copied().collect();
+        assert_eq!(pairs.len(), 1);
+
+        let (t_var, f_var) = pairs[0];
+        assert_eq!(u64::from(t_var), (0 << 2) + 1);
+        assert_eq!(u64::from(f_var), (0 << 2) + 2);
+    }
+
+    #[test]
+    fn test_dual_map_variable_id_pairs_multiple() {
+        let statements = vec![Statement::from(0), Statement::from(5)];
+        let map = DualMap::new(&statements);
+        let pairs: Vec<_> = map.variable_id_pairs().copied().collect();
+        assert_eq!(pairs.len(), 2);
+
+        // Pairs should be in statement order (sorted)
+        let (t0, f0) = pairs[0];
+        let (t5, f5) = pairs[1];
+
+        // Statement 0 (index 0 in sorted order)
+        assert_eq!(u64::from(t0), (0 << 2) + 1);
+        assert_eq!(u64::from(f0), (0 << 2) + 2);
+
+        // Statement 5 (index 1 in sorted order)
+        assert_eq!(u64::from(t5), (1 << 2) + 1);
+        assert_eq!(u64::from(f5), (1 << 2) + 2);
+    }
+
+    // Tests for AdfBdds::statements
+
+    #[test]
+    fn test_adf_bdds_statements_empty() {
+        let adf_str = r#""#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let statements: Vec<_> = symbolic_adf.statements().cloned().collect();
+        assert_eq!(statements.len(), 0);
+    }
+
+    #[test]
+    fn test_adf_bdds_statements_single() {
+        let adf_str = r#"
+            s(0).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let statements: Vec<_> = symbolic_adf.statements().cloned().collect();
+        assert_eq!(statements, vec![Statement::from(0)]);
+    }
+
+    #[test]
+    fn test_adf_bdds_statements_multiple() {
+        let adf_str = r#"
+            s(0).
+            s(5).
+            s(10).
+            ac(0, 5).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let statements: Vec<_> = symbolic_adf.statements().cloned().collect();
+        // Statements should be in sorted order
+        assert_eq!(statements.len(), 3);
+        assert_eq!(statements[0], Statement::from(0));
+        assert_eq!(statements[1], Statement::from(10));
+        assert_eq!(statements[2], Statement::from(5));
+    }
+
+    // Tests for AdfBdds::mk_three_valued_interpretation
+
+    #[test]
+    fn test_mk_three_valued_interpretation_single_positive() {
+        let adf_str = r#"
+            s(0).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual_map = symbolic_adf.dual_encoding().var_map();
+        let (t_var, _) = dual_map[&Statement::from(0)];
+
+        // Set positive variable to true
+        let valuation = vec![(t_var, true)];
+        let model_set = symbolic_adf.mk_three_valued_interpretation(valuation);
+
+        assert_eq!(model_set.model_count(), 2.0);
+    }
+
+    #[test]
+    fn test_mk_three_valued_interpretation_single_negative() {
+        let adf_str = r#"
+            s(0).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual_map = symbolic_adf.dual_encoding().var_map();
+        let (_, f_var) = dual_map[&Statement::from(0)];
+
+        // Set negative variable to true
+        let valuation = vec![(f_var, true)];
+        let model_set = symbolic_adf.mk_three_valued_interpretation(valuation);
+
+        assert_eq!(model_set.model_count(), 2.0);
+    }
+
+    #[test]
+    fn test_mk_three_valued_interpretation_multiple_variables() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual_map = symbolic_adf.dual_encoding().var_map();
+        let (t0, _) = dual_map[&Statement::from(0)];
+        let (_, f1) = dual_map[&Statement::from(1)];
+
+        // Set first statement's positive to true, second's negative to true
+        let valuation = vec![(t0, true), (f1, true)];
+        let model_set = symbolic_adf.mk_three_valued_interpretation(valuation);
+
+        assert_eq!(model_set.model_count(), 4.0);
+    }
+
+    #[test]
+    fn test_mk_three_valued_interpretation_both_dual_variables() {
+        let adf_str = r#"
+            s(0).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let dual_map = symbolic_adf.dual_encoding().var_map();
+        let (t_var, f_var) = dual_map[&Statement::from(0)];
+
+        // Set both dual variables to true (statement is free)
+        let valuation = vec![(t_var, true), (f_var, true)];
+        let model_set = symbolic_adf.mk_three_valued_interpretation(valuation);
+
+        assert_eq!(model_set.model_count(), 1.0);
+    }
 }
