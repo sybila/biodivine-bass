@@ -15,7 +15,7 @@ biodivine_aeon.LOG_LEVEL = biodivine_aeon.LOG_ESSENTIAL
 # enabled by default to ensure all nodes are present in the result.
 # You can uncomment this modification below. 
 # 
-# Also note that computing only first X trap spaces is not faster
+# Also note that computing only first X fixed-points is not faster
 # than computing the total cardinality of the set. I.e. the 
 # "time to first" and "time to all" is the same for this implementation.
 #
