@@ -2,6 +2,7 @@ use crate::bdd_solver::{BddSolver, DynamicBddSolver};
 use crate::{AdfBdds, ModelSetThreeValued, ModelSetTwoValued};
 use cancel_this::{Cancellable, is_cancelled};
 use log::{debug, info};
+use ruddy::split::Bdd;
 
 pub struct AdfInterpretationSolver {
     solver: DynamicBddSolver,
@@ -103,8 +104,7 @@ impl AdfInterpretationSolver {
                 statement
             );
 
-            trap_constraints.push(p_constraint);
-            trap_constraints.push(n_constraint);
+            trap_constraints.push(p_constraint.and(&n_constraint));
         }
 
         trap_constraints.retain(|it| !it.is_true());
@@ -171,9 +171,7 @@ impl AdfInterpretationSolver {
                 statement
             );
 
-            trap_constraints.push(p_constraint);
-            trap_constraints.push(n_constraint);
-            trap_constraints.push(completeness);
+            trap_constraints.push(p_constraint.and(&n_constraint).and(&completeness));
         }
 
         trap_constraints.retain(|it| !it.is_true());
@@ -194,6 +192,68 @@ impl AdfInterpretationSolver {
         );
 
         Ok(model_set)
+    }
+
+    pub fn solve_preferred(&self, adf: &AdfBdds) -> Cancellable<ModelSetThreeValued> {
+        info!(
+            "Starting computation of preferred interpretations by finding complete interpretations"
+        );
+
+        let mut remaining = self.solve_complete(adf)?;
+
+        info!(
+            "Starting minimization process with {} BDD nodes.",
+            remaining.symbolic_set().node_count()
+        );
+
+        let mut result = adf.mk_three_valued_set(Bdd::new_false());
+
+        while !remaining.is_empty() {
+            let preferred_model = remaining.most_fixed_model();
+
+            // Compute the number of free statements in the preferred model:
+            let mut k_free = 0;
+            for (t_var, f_var) in adf.dual_encoding().var_map().variable_id_pairs() {
+                let t_val = preferred_model.get(t_var).expect(
+                    "Correctness violation: Preferred model does not cover all statements.",
+                );
+                let f_val = preferred_model.get(f_var).expect(
+                    "Correctness violation: Preferred model does not cover all statements.",
+                );
+                if *t_val && *f_val {
+                    k_free += 1;
+                }
+            }
+
+            info!(
+                "Current best preferred model has {} free statements",
+                k_free
+            );
+
+            let k_size = ModelSetThreeValued::mk_exactly_k_free_statements(k_free, adf);
+
+            let k_preferred = remaining.intersect(&k_size);
+            assert!(!k_preferred.is_empty());
+
+            info!(
+                "Found {} preferred models of size {}.",
+                k_preferred.model_count(),
+                k_free,
+            );
+
+            result = result.union(&k_preferred);
+
+            let looser_models = k_preferred.extend_with_looser_models();
+            remaining = remaining.minus(&looser_models);
+
+            info!(
+                "Remaining nodes: {}; Result nodes: {}",
+                remaining.symbolic_set().node_count(),
+                result.symbolic_set().node_count(),
+            );
+        }
+
+        Ok(result)
     }
 }
 
@@ -399,5 +459,70 @@ mod tests {
         // Complete: Statement 0 can't be free (constant true), so interpretations where 0 is free are excluded
         // Statement 1 is free, so it can be anything valid
         assert_eq!(model_set.model_count(), 3.0);
+    }
+
+    #[test]
+    fn test_solve_preferred_simple_constant_true() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            ac(0, c(v)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_preferred(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 has constant true condition
+        // Complete interpretations: only {T} (0 free statements)
+        // Preferred: should be 1 interpretation with 0 free statements
+        assert_eq!(model_set.model_count(), 1.0);
+    }
+
+    #[test]
+    fn test_solve_preferred_two_statements_one_free() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, c(v)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_preferred(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 has constant true condition (must be fixed), statement 1 is free
+        // Complete interpretations: 3 total (0 fixed, 1 can be T/F/*)
+        // Preferred: those with 0 free statements (both 0 and 1 fixed)
+        // So preferred should be: {T, T} and {T, F} = 2 interpretations
+        assert_eq!(model_set.model_count(), 2.0);
+    }
+
+    #[test]
+    fn test_solve_preferred_mutual_dependency() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, 1).
+            ac(1, 0).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_preferred(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Both statements depend on each other
+        // Complete interpretations: must satisfy 0 <=> 1 and 1 <=> 0
+        // This means both must be true or both must be false (0 free statements)
+        // Preferred: should be 2 interpretations with 0 free statements: {T, T} and {F, F}
+        assert_eq!(model_set.model_count(), 2.0);
     }
 }

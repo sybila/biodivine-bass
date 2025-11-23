@@ -7,7 +7,7 @@ edition = "2024"
 build-binary = ["clap", "env_logger"]
 
 [dependencies]
-ruddy = { git = "https://github.com/sybila/ruddy.git", rev = "e5449ebbde6f05a5262c4b5cc7a26669b1c3e4fd" }
+ruddy = { git = "https://github.com/sybila/ruddy.git", rev = "78f0c7307fda17d6bd2816b00b3dd8aab719e339" }
 cancel-this = "0.3.0"
 biodivine-lib-param-bn = "0.6.3"
 log = "0.4"
