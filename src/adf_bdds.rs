@@ -112,12 +112,8 @@ impl DualMap {
         DualMap { mapping }
     }
 
-    pub fn len(&self) -> usize {
+    pub fn size(&self) -> usize {
         self.mapping.len()
-    }
-
-    pub fn is_empty(&self) -> bool {
-        self.mapping.is_empty()
     }
 
     /// Get the BDD [`VariableId`]s (positive, negative) for a [`Statement`].

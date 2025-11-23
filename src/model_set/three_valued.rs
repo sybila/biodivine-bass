@@ -179,7 +179,7 @@ impl ModelSetThreeValued {
                 trace!(
                     "Computing super-spaces[{}/{}]: BDD size {}.",
                     i + 1,
-                    self.encoding.var_map().len(),
+                    self.encoding.var_map().size(),
                     result.node_count(),
                 );
             }
