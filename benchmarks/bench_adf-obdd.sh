@@ -20,3 +20,5 @@ for d in run_*/; do mv -- "$d" "results/adf_obdd_com_${d#./}"; done
 python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- --count-only --twoval
 for d in run_*/; do mv -- "$d" "results/adf_obdd_2v_${d#./}"; done
 
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- --count-only --stm
+for d in run_*/; do mv -- "$d" "results/adf_obdd_stm_${d#./}"; done

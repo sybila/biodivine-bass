@@ -25,5 +25,3 @@ for d in run_*/; do mv -- "$d" "results/bass_com_${d#./}"; done
 python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- admissible quadratic-greedy
 for d in run_*/; do mv -- "$d" "results/bass_adm_${d#./}"; done
 
-#python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- --count-only -stb 0
-#for d in run_*/; do mv -- "$d" "results/bass_stb_${d#./}"; done
