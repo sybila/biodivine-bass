@@ -14,7 +14,7 @@ PARALLEL=${PARALLEL:-'1'}
 
 # Time to one solution across various semantics.
 python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- --count-only mod
-for d in run_*/; do mv -- "$d" "results/k_2v_adm_${d#./}"; done
+for d in run_*/; do mv -- "$d" "results/k_adf_2v_${d#./}"; done
 
 python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- --count-only adm
 for d in run_*/; do mv -- "$d" "results/k_adf_adm_${d#./}"; done
