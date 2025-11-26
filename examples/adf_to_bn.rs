@@ -46,6 +46,9 @@ fn main() {
 
     std::fs::write(&out_path, bn.to_bnet(true).unwrap()).unwrap();
     out_path.set_extension("sbml");
+    // For SBML, I want to parse the network back from .bnet and re-export it like that,
+    // because that ensures we get rid of the XOR operators.
+    let bn = BooleanNetwork::try_from_bnet(bn.to_bnet(true).unwrap().as_str()).unwrap();
     std::fs::write(&out_path, bn.to_sbml(None)).unwrap();
 }
 
