@@ -19,6 +19,7 @@ if [ "$1" = "--count-only" ]; then
     set +e
     clingo -n $2 /tmp/translated.lp 2>&1 | wc -l
     exit_code=${PIPESTATUS[0]}
+    echo "Exit code of yadf/clingo: $exit_code"
     case $exit_code in (10|20|30) exit 0;; (*) exit 1;; esac
 else
     java -jar /sw/yadf_0.1.1.jar $1 $3 > /tmp/problem.lp 
@@ -27,6 +28,7 @@ else
     set +e
     clingo -n $2 /tmp/translated.lp 2>&1
     exit_code=$?
+    echo "Exit code of yadf/clingo: $exit_code"
     case $exit_code in (10|20|30) exit 0;; (*) exit 1;; esac
 fi
 

@@ -10,6 +10,9 @@ set -e
 
 if [ "$1" = "--count-only" ]; then
     /sw/andreasniskanen-k-adf-637c31f2fd4f/k++adf "${@:2}" | wc -l
+    exit_code=${PIPESTATUS[0]}
+    echo "Exit code of k++ADF: $exit_code"
+    exit $exit_code
 else
     /sw/andreasniskanen-k-adf-637c31f2fd4f/k++adf "$@"
 fi
