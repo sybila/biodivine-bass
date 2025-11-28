@@ -13,7 +13,10 @@ TIMEOUT=${TIMEOUT:-'10s'}
 PARALLEL=${PARALLEL:-'1'}
 
 # Time to one solution across various semantics.
-python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- two-valued-complete quadratic-greedy
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- stable quadratic-greedy
+for d in run_*/; do mv -- "$d" "results/bass_stb_${d#./}"; done
+
+python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- two-valued quadratic-greedy
 for d in run_*/; do mv -- "$d" "results/bass_2v_${d#./}"; done
 
 python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- preferred quadratic-greedy
@@ -24,4 +27,3 @@ for d in run_*/; do mv -- "$d" "results/bass_com_${d#./}"; done
 
 python3 ./benchmarks/bench_docker.py --docker-image $TOOL --timeout $TIMEOUT --folder $BENCHMARKS --match '.*.adf' --parallel $PARALLEL -- admissible quadratic-greedy
 for d in run_*/; do mv -- "$d" "results/bass_adm_${d#./}"; done
-
