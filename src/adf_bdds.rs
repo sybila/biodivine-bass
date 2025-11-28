@@ -31,6 +31,10 @@ impl DirectMap {
         DirectMap { mapping }
     }
 
+    pub fn size(&self) -> usize {
+        self.mapping.len()
+    }
+
     /// Get the BDD [`VariableId`] for a [`Statement`].
     pub fn get(&self, statement: &Statement) -> Option<VariableId> {
         self.mapping.get(statement).copied()
@@ -255,6 +259,31 @@ impl DirectEncoding {
 
         count / 2.0f64.powf(unused_vars as f64)
     }
+
+    /// Extract the valuation with the highest number of fixed zeros.
+    ///
+    /// # Panics
+    ///
+    /// The BDD must be using the dual encoding, and it must not be empty.
+    pub fn most_zero_model(&self, bdd: &Bdd) -> BTreeMap<VariableId, bool> {
+        assert!(self.is_direct_encoded(bdd));
+        assert!(!bdd.is_false());
+
+        let max_var = self.var_map.last_valid_variable_id();
+        // The valuation now also contains other "irrelevant" variables that we need to remove.
+        // These do not influence the optimization process, because they are completely free.
+        // (i.e. they can always be fixed to `false` on all paths)
+        let mut most_false_valuation = bdd.most_negative_valuation(max_var);
+
+        let allowed = self
+            .var_map
+            .variable_ids()
+            .copied()
+            .collect::<BTreeSet<_>>();
+        most_false_valuation.retain(|k, _| allowed.contains(k));
+
+        most_false_valuation
+    }
 }
 
 /// Uses [`DualMap`] to encode every condition of an ADF into two BDDs, one describing
@@ -422,7 +451,7 @@ impl AdfBdds {
         ModelSetThreeValued::new(bdd, self.dual_encoding.clone())
     }
 
-    /// Instantiate a single thre-valued interpretation into a symbolic set.
+    /// Instantiate a single three-valued interpretation into a symbolic set.
     pub fn mk_three_valued_interpretation(
         &self,
         valuation: impl IntoIterator<Item = (VariableId, bool)>,
@@ -432,6 +461,18 @@ impl AdfBdds {
             bdd = bdd.and(&Bdd::new_literal(var, value))
         }
         self.mk_three_valued_set(bdd)
+    }
+
+    /// Instantiate a two-valued interpretation set based on a set of fixed variable values.
+    pub fn mk_two_valued_interpretations(
+        &self,
+        valuation: impl IntoIterator<Item = (VariableId, bool)>,
+    ) -> ModelSetTwoValued {
+        let mut bdd = Bdd::new_true();
+        for (var, value) in valuation {
+            bdd = bdd.and(&Bdd::new_literal(var, value))
+        }
+        self.mk_two_valued_set(bdd)
     }
 
     /// Try to create a [`AdfBdds`] from an [`AdfExpressions`].
@@ -498,6 +539,47 @@ impl AdfBdds {
                 valid,
             }),
         })
+    }
+
+    /// Ensure that all "free" statements (i.e. those without a condition, or with a
+    /// condition equivalent to identity) have their condition fixed to the provided value
+    /// instead.
+    pub fn fix_free_statements(&self, value: bool) -> AdfBdds {
+        let mut free_statements = Vec::new();
+        for s in self.statements() {
+            if let Some(c) = self.direct_encoding().get_condition(s) {
+                let d_var = self.direct_encoding().var_map()[s];
+                // condition_a = a
+                if c.structural_eq(&Bdd::new_literal(d_var, true)) {
+                    free_statements.push(s.clone());
+                }
+            } else {
+                free_statements.push(s.clone());
+            }
+        }
+
+        let mut direct_copy = self.direct_encoding().clone();
+        let mut dual_copy = self.dual_encoding().clone();
+
+        let t = Bdd::new_true();
+        let f = Bdd::new_false();
+        let constant = if value { t.clone() } else { f.clone() };
+        let constant_pair = if value {
+            (t.clone(), f.clone())
+        } else {
+            (f.clone(), t.clone())
+        };
+        for s in free_statements {
+            direct_copy.conditions.insert(s.clone(), constant.clone());
+            dual_copy
+                .conditions
+                .insert(s.clone(), constant_pair.clone());
+        }
+
+        AdfBdds {
+            direct_encoding: Arc::new(direct_copy),
+            dual_encoding: Arc::new(dual_copy),
+        }
     }
 }
 
