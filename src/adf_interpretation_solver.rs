@@ -1,8 +1,9 @@
 use crate::bdd_solver::{BddSolver, DynamicBddSolver};
-use crate::{AdfBdds, ModelSetThreeValued, ModelSetTwoValued};
+use crate::{AdfBdds, ModelSetThreeValued, ModelSetTwoValued, Statement};
 use cancel_this::{Cancellable, is_cancelled};
 use log::{debug, info};
 use ruddy::split::Bdd;
+use std::collections::BTreeSet;
 
 pub struct AdfInterpretationSolver {
     solver: DynamicBddSolver,
@@ -199,8 +200,8 @@ impl AdfInterpretationSolver {
 
         info!(
             "Computed grounded model candidates: resulting BDD has {} nodes and {} paths",
-            result.symbolic_set().node_count(),
-            result.symbolic_set().count_satisfying_paths()
+            result_bdd.node_count(),
+            result_bdd.count_satisfying_paths()
         );
 
         // 6. Enforce that stable models are only those where non-zero variables grounded to 1.
@@ -297,15 +298,38 @@ impl AdfInterpretationSolver {
 
     /// Computes the [`ModelSetThreeValued`] of all complete three valued interpretations of this ADF.
     pub fn solve_complete(&self, adf: &AdfBdds) -> Cancellable<ModelSetThreeValued> {
+        self.solve_complete_internal(adf, &BTreeSet::new())
+    }
+
+    /// Internal version of complete model computation which allows to explicitly fix
+    /// all input variables. This means the result are not all complete models, just the
+    /// ones with fixed inputs, but that's often enough (e.g. if searching for preferred models).
+    fn solve_complete_internal(
+        &self,
+        adf: &AdfBdds,
+        fixed_inputs: &BTreeSet<Statement>,
+    ) -> Cancellable<ModelSetThreeValued> {
         info!("Starting computation of complete three-valued interpretations");
 
         let dual = adf.dual_encoding();
         let var_map = dual.var_map();
 
-        let mut trap_constraints = vec![dual.valid().clone()];
+        let mut initial = dual.valid().clone();
+        for s in fixed_inputs {
+            let p_literal = var_map.make_positive_literal(s, true);
+            let n_literal = var_map.make_negative_literal(s, true);
+            initial = initial.and(&p_literal.and(&n_literal).not());
+        }
+
+        let mut trap_constraints = vec![initial];
         let total_statements = var_map.statements().count();
 
         for statement in var_map.statements() {
+            if fixed_inputs.contains(statement) {
+                // These statements are already explicitly fixed to 0/1 and can't be *.
+                continue;
+            }
+
             is_cancelled!()?;
 
             /*
@@ -367,7 +391,8 @@ impl AdfInterpretationSolver {
             "Starting computation of preferred interpretations by finding complete interpretations"
         );
 
-        let mut remaining = self.solve_complete(adf)?;
+        let fixed_inputs = adf.free_statements();
+        let mut remaining = self.solve_complete_internal(adf, &fixed_inputs)?;
 
         info!(
             "Starting minimization process with {} BDD nodes.",
@@ -411,7 +436,7 @@ impl AdfInterpretationSolver {
 
             result = result.union(&k_preferred);
 
-            let looser_models = k_preferred.extend_with_looser_models();
+            let looser_models = k_preferred.extend_with_looser_models(&fixed_inputs);
             remaining = remaining.minus(&looser_models);
 
             info!(

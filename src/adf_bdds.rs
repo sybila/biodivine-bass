@@ -2,6 +2,7 @@ use crate::{
     AdfExpressions, ConditionExpression, ModelSetThreeValued, ModelSetTwoValued, Statement,
 };
 use cancel_this::{Cancellable, is_cancelled};
+use log::trace;
 use ruddy::VariableId;
 use ruddy::split::Bdd;
 use std::collections::{BTreeMap, BTreeSet};
@@ -475,6 +476,35 @@ impl AdfBdds {
         self.mk_two_valued_set(bdd)
     }
 
+    pub fn mk_three_valued_loosening(&self, two_valued: &ModelSetTwoValued) -> ModelSetThreeValued {
+        let mut result = two_valued.symbolic_set().clone();
+
+        for (i, s) in self.statements().enumerate() {
+            let var = self.direct_encoding().var_map()[s];
+            let lit = self.direct_encoding().var_map().make_literal(s, true);
+            let (p_lit, n_lit) = self.dual_encoding().var_map().make_literals(s);
+
+            let mut matcher = Bdd::new_true();
+            // must be valid encoding
+            matcher = matcher.and(&p_lit.or(&n_lit));
+            // s => !s_n (i.e. 1/*)
+            matcher = matcher.and(&lit.implies(&n_lit.not()));
+            // !s => !s_p (i.e. 0/*)
+            matcher = matcher.and(&lit.not().implies(&p_lit.not()));
+
+            result = result.binary_op_with_exists(&matcher, ruddy::boolean_operators::And, &[var]);
+
+            trace!(
+                "[{}/{}] Loosening: {}",
+                i,
+                self.direct_encoding().var_map().size(),
+                result.node_count()
+            );
+        }
+
+        self.mk_three_valued_set(result)
+    }
+
     /// Try to create a [`AdfBdds`] from an [`AdfExpressions`].
     ///
     /// This operation is cancellable using the `cancel-this` crate. If cancelled,
@@ -541,22 +571,28 @@ impl AdfBdds {
         })
     }
 
-    /// Ensure that all "free" statements (i.e. those without a condition, or with a
-    /// condition equivalent to identity) have their condition fixed to the provided value
-    /// instead.
-    pub fn fix_free_statements(&self, value: bool) -> AdfBdds {
-        let mut free_statements = Vec::new();
+    pub fn free_statements(&self) -> BTreeSet<Statement> {
+        let mut free_statements = BTreeSet::new();
         for s in self.statements() {
             if let Some(c) = self.direct_encoding().get_condition(s) {
                 let d_var = self.direct_encoding().var_map()[s];
                 // condition_a = a
                 if c.structural_eq(&Bdd::new_literal(d_var, true)) {
-                    free_statements.push(s.clone());
+                    free_statements.insert(s.clone());
                 }
             } else {
-                free_statements.push(s.clone());
+                free_statements.insert(s.clone());
             }
         }
+
+        free_statements
+    }
+
+    /// Ensure that all "free" statements (i.e. those without a condition, or with a
+    /// condition equivalent to identity) have their condition fixed to the provided value
+    /// instead.
+    pub fn fix_free_statements(&self, value: bool) -> AdfBdds {
+        let free_statements = self.free_statements();
 
         let mut direct_copy = self.direct_encoding().clone();
         let mut dual_copy = self.dual_encoding().clone();
