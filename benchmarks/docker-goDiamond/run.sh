@@ -13,7 +13,7 @@ set -e
 # to create files that have 4GB.
 
 if [ "$1" = "--count-only" ]; then
-    (ulimit -f 4194304; python3 /sw/diamond/diamond.py "${@:2}" | wc -l)
+    (ulimit -f 4194304; python3 /sw/diamond/diamond.py "${@:2}") | wc -l
     exit_code=${PIPESTATUS[0]}
     echo "Exit code of goDiamond: $exit_code"
     exit $exit_code
