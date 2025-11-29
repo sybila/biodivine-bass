@@ -1,9 +1,9 @@
 use crate::model_set::ModelSet;
-use crate::{AdfBdds, DualEncoding};
+use crate::{AdfBdds, DualEncoding, Statement};
 use log::trace;
 use ruddy::VariableId;
 use ruddy::split::Bdd;
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 use std::sync::Arc;
 
 #[derive(Clone)]
@@ -142,16 +142,19 @@ impl ModelSetThreeValued {
     /// Extend this set with every "looser" interpretation of the interpretations that are
     /// already in the set. In this context, "looser" means the interpretation has `*` in place
     /// of some `1` or `0`.
-    pub fn extend_with_looser_models(&self) -> ModelSetThreeValued {
+    pub fn extend_with_looser_models(
+        &self,
+        fixed_inputs: &BTreeSet<Statement>,
+    ) -> ModelSetThreeValued {
         let mut result = self.symbolic_set.clone();
-        for (i, (p_var, n_var)) in self
-            .encoding
-            .var_map()
-            .variable_id_pairs()
-            .copied()
-            .rev()
-            .enumerate()
-        {
+
+        for (i, s) in self.encoding.var_map().statements().rev().enumerate() {
+            if fixed_inputs.contains(s) {
+                // Fixed inputs can stay fixed.
+                continue;
+            }
+
+            let (p_var, n_var) = self.encoding.var_map()[s];
             let p_lit = Bdd::new_literal(p_var, true);
             let p_nlit = Bdd::new_literal(p_var, false);
             let n_lit = Bdd::new_literal(n_var, true);
@@ -195,6 +198,7 @@ impl ModelSetThreeValued {
 #[cfg(test)]
 mod tests {
     use crate::{AdfBdds, ModelSetThreeValued, Statement};
+    use std::collections::BTreeSet;
 
     fn create_test_adf_bdds() -> AdfBdds {
         let adf_str = r#"
@@ -462,7 +466,7 @@ mod tests {
         let original_count = original_set.model_count();
 
         // Extending should add looser models (where s0 can be free or both)
-        let extended = original_set.extend_with_looser_models();
+        let extended = original_set.extend_with_looser_models(&BTreeSet::new());
         assert!(!extended.is_empty());
 
         // Extended set should have at least as many models as the original

@@ -1,8 +1,9 @@
 use crate::bdd_solver::{BddSolver, DynamicBddSolver};
-use crate::{AdfBdds, ModelSetThreeValued, ModelSetTwoValued};
+use crate::{AdfBdds, ModelSetThreeValued, ModelSetTwoValued, Statement};
 use cancel_this::{Cancellable, is_cancelled};
 use log::{debug, info};
 use ruddy::split::Bdd;
+use std::collections::BTreeSet;
 
 pub struct AdfInterpretationSolver {
     solver: DynamicBddSolver,
@@ -71,6 +72,174 @@ impl AdfInterpretationSolver {
         Ok(model_set)
     }
 
+    pub fn solve_stable_two_valued(&self, adf: &AdfBdds) -> Cancellable<ModelSetTwoValued> {
+        // 1. Make a copy without free statements (those can be safely fixed to false
+        // for stable models).
+        let adf = &adf.fix_free_statements(false);
+
+        info!(
+            "Starting computation of stable BDD solver by computing all two-valued interpretations."
+        );
+
+        // 2. Compute all two-valued models.
+        let mut remaining = self.solve_complete_two_valued(adf)?;
+
+        info!(
+            "Starting minimization process with {} BDD nodes.",
+            remaining.symbolic_set().node_count()
+        );
+
+        let mut result = adf.mk_two_valued_set(Bdd::new_false());
+
+        // 3. Iteratively refine the candidate set using the models with the least
+        // number of ones.
+        while !remaining.is_empty() {
+            is_cancelled!()?;
+
+            let candidate_model = remaining.most_zero_model();
+
+            // Compute the number of ones in the candidate model:
+            let mut k_one = 0;
+            for var in adf.direct_encoding().var_map().variable_ids() {
+                let t_val = candidate_model.get(var).expect(
+                    "Correctness violation: Candidate model does not cover all statements.",
+                );
+                if *t_val {
+                    k_one += 1;
+                }
+            }
+
+            info!("Current best candidate model has {} ones", k_one);
+
+            // For now, the k-sized BDD is only used for small k due to some inefficiencies
+            // in ruddy that will eventually be fixed.
+            let k_size = if k_one < 10 {
+                ModelSetTwoValued::mk_exactly_k_one_statements(k_one, adf)
+            } else {
+                adf.mk_two_valued_interpretations(candidate_model)
+            };
+
+            let k_candidate = remaining.intersect(&k_size);
+            assert!(!k_candidate.is_empty());
+
+            result = result.union(&k_candidate);
+
+            let looser_models = k_candidate.extend_with_more_ones();
+            remaining = remaining.minus(&looser_models);
+
+            info!(
+                "Remaining set nodes: {}; Result set nodes: {}; Result set paths: {}",
+                remaining.symbolic_set().node_count(),
+                result.symbolic_set().node_count(),
+                result.symbolic_set().count_satisfying_paths(),
+            );
+        }
+
+        info!(
+            "Computed stable model candidates: resulting BDD has {} nodes and {} paths",
+            result.symbolic_set().node_count(),
+            result.symbolic_set().count_satisfying_paths()
+        );
+
+        // 4. If the two-valued model has s=0, set the dual variables to zero as well.
+        // If it is s=1, set dual variables to free.
+        let mut result_bdd = result.symbolic_set().clone();
+
+        for s in adf.statements() {
+            is_cancelled!()?;
+
+            let d_var = adf.direct_encoding().var_map()[s];
+            let (p_var, n_var) = adf.dual_encoding().var_map()[s];
+
+            let d_lit = Bdd::new_literal(d_var, true);
+            let p_lit = Bdd::new_literal(p_var, true);
+            let n_lit = Bdd::new_literal(n_var, true);
+
+            // (!s) => (n & !p)
+            result_bdd = result_bdd.and(&d_lit.not().implies(&n_lit.and(&p_lit.not())));
+            // s => (n & p)
+            result_bdd = result_bdd.and(&d_lit.implies(&n_lit.and(&p_lit)));
+        }
+
+        info!(
+            "Expanded stable model candidates to dual encoding: resulting BDD has {} nodes and {} paths",
+            result_bdd.node_count(),
+            result_bdd.count_satisfying_paths()
+        );
+
+        // 5. Propagate "1" values ("ground") in the 3-valued models encoded in dual encoding.
+
+        let mut changed = true;
+        while changed {
+            changed = false;
+
+            // A variable that is "free" can be fixed to "1" if it cannot be set to "0"
+            // (its negative condition is not satisfied)
+            for s in adf.statements() {
+                is_cancelled!()?;
+
+                let (p_var, n_var) = adf.dual_encoding().var_map()[s];
+                let p_lit = Bdd::new_literal(p_var, true);
+                let n_lit = Bdd::new_literal(n_var, true);
+
+                if let Some((_, n_cond)) = adf.dual_encoding().get_condition(s) {
+                    let has_s_free = result_bdd.and(&p_lit.and(&n_lit));
+                    let cant_go_to_zero = has_s_free.and(&n_cond.not());
+                    // These values can be fixed to 1.
+                    if !cant_go_to_zero.is_false() {
+                        // Subst. s_n=1 for s_n=0
+                        let fixed_to_one = cant_go_to_zero.exists(&[n_var]).and(&n_lit.not());
+                        // Remove those where the value is zero, substitute the ones where value is one.
+                        result_bdd = result_bdd.and(&cant_go_to_zero.not()).or(&fixed_to_one);
+                        changed = true;
+                    }
+                }
+                // else: The condition is an identity, meaning the value stays the same
+            }
+        }
+
+        info!(
+            "Computed grounded model candidates: resulting BDD has {} nodes and {} paths",
+            result_bdd.node_count(),
+            result_bdd.count_satisfying_paths()
+        );
+
+        // 6. Enforce that stable models are only those where non-zero variables grounded to 1.
+
+        for s in adf.statements() {
+            let d_var = adf.direct_encoding().var_map()[s];
+            let (p_var, n_var) = adf.dual_encoding().var_map()[s];
+
+            let d_lit = Bdd::new_literal(d_var, true);
+            let p_lit = Bdd::new_literal(p_var, true);
+            let n_lit = Bdd::new_literal(n_var, true);
+
+            result_bdd = result_bdd.and(&d_lit.implies(&p_lit.and(&n_lit.not())));
+        }
+
+        // Forget about the dual variables
+        result_bdd = result_bdd.exists(
+            &adf.dual_encoding()
+                .var_map()
+                .variable_ids()
+                .copied()
+                .collect::<Vec<_>>(),
+        );
+
+        result = adf.mk_two_valued_set(result_bdd);
+
+        // At this point, the BDD is a relation which maps each 2-valued interpretation to its
+        // 3-valued counterpart with only zeros fixed.
+
+        info!(
+            "Computation complete: resulting BDD has {} nodes and {} paths ",
+            result.symbolic_set().node_count(),
+            result.symbolic_set().count_satisfying_paths(),
+        );
+
+        Ok(result)
+    }
+
     /// Computes the [`ModelSetThreeValued`] of all admissible three valued interpretations of this ADF.
     pub fn solve_admissible(&self, adf: &AdfBdds) -> Cancellable<ModelSetThreeValued> {
         info!("Starting computation of admissible three-valued interpretations");
@@ -129,15 +298,38 @@ impl AdfInterpretationSolver {
 
     /// Computes the [`ModelSetThreeValued`] of all complete three valued interpretations of this ADF.
     pub fn solve_complete(&self, adf: &AdfBdds) -> Cancellable<ModelSetThreeValued> {
+        self.solve_complete_internal(adf, &BTreeSet::new())
+    }
+
+    /// Internal version of complete model computation which allows to explicitly fix
+    /// all input variables. This means the result are not all complete models, just the
+    /// ones with fixed inputs, but that's often enough (e.g. if searching for preferred models).
+    fn solve_complete_internal(
+        &self,
+        adf: &AdfBdds,
+        fixed_inputs: &BTreeSet<Statement>,
+    ) -> Cancellable<ModelSetThreeValued> {
         info!("Starting computation of complete three-valued interpretations");
 
         let dual = adf.dual_encoding();
         let var_map = dual.var_map();
 
-        let mut trap_constraints = vec![dual.valid().clone()];
+        let mut initial = dual.valid().clone();
+        for s in fixed_inputs {
+            let p_literal = var_map.make_positive_literal(s, true);
+            let n_literal = var_map.make_negative_literal(s, true);
+            initial = initial.and(&p_literal.and(&n_literal).not());
+        }
+
+        let mut trap_constraints = vec![initial];
         let total_statements = var_map.statements().count();
 
         for statement in var_map.statements() {
+            if fixed_inputs.contains(statement) {
+                // These statements are already explicitly fixed to 0/1 and can't be *.
+                continue;
+            }
+
             is_cancelled!()?;
 
             /*
@@ -199,7 +391,8 @@ impl AdfInterpretationSolver {
             "Starting computation of preferred interpretations by finding complete interpretations"
         );
 
-        let mut remaining = self.solve_complete(adf)?;
+        let fixed_inputs = adf.free_statements();
+        let mut remaining = self.solve_complete_internal(adf, &fixed_inputs)?;
 
         info!(
             "Starting minimization process with {} BDD nodes.",
@@ -243,7 +436,7 @@ impl AdfInterpretationSolver {
 
             result = result.union(&k_preferred);
 
-            let looser_models = k_preferred.extend_with_looser_models();
+            let looser_models = k_preferred.extend_with_looser_models(&fixed_inputs);
             remaining = remaining.minus(&looser_models);
 
             info!(
@@ -529,5 +722,263 @@ mod tests {
         // This means both must be true or both must be false (0 free statements)
         // Preferred: should be 2 interpretations with 0 free statements: {T, T} and {F, F}
         assert_eq!(model_set.model_count(), 2.0);
+    }
+
+    // Tests for solve_stable_two_valued
+
+    #[test]
+    fn test_solve_stable_simple_constant_true() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            ac(0, c(v)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 has constant true condition
+        // Complete two-valued: {0: true} (1 model)
+        // Stable: must be grounded, and since condition is always true, {0: true} is stable
+        assert_eq!(model_set.model_count(), 1.0);
+        assert!(!model_set.is_empty());
+    }
+
+    #[test]
+    fn test_solve_stable_constant_false() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            ac(0, c(f)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 has constant false condition
+        // Complete two-valued: {0: false} (1 model)
+        // Stable: {0: false} is stable (all zeros are stable)
+        assert_eq!(model_set.model_count(), 1.0);
+        assert!(!model_set.is_empty());
+    }
+
+    #[test]
+    fn test_solve_stable_mutual_dependency() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, 1).
+            ac(1, 0).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Both statements depend on each other: 0 <=> 1
+        // Complete two-valued: {0: true, 1: true} and {0: false, 1: false} (2 models)
+        // Stable: Only the all-false model is stable (all zeros are always stable)
+        // The all-true model may not be stable if it can't be properly grounded
+        assert_eq!(model_set.model_count(), 1.0);
+        assert!(!model_set.is_empty());
+    }
+
+    #[test]
+    fn test_solve_stable_with_free_statement() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, c(v)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 has constant true condition, statement 1 is free.
+        // Free statements are fixed to false for stable models
+        // Complete two-valued (after fixing free to false): {0: true, 1: false} (1 model)
+        // Stable: {0: true, 1: false} should be stable
+        assert_eq!(model_set.model_count(), 1.0);
+        assert!(!model_set.is_empty());
+    }
+
+    #[test]
+    fn test_solve_stable_self_reference() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            ac(0, 0).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 has self-reference (identity condition)
+        // Complete two-valued: {0: true} and {0: false} (2 models)
+        // Stable: Only the false model is stable (all zeros are always stable)
+        // The true model may not be stable if it can't be properly grounded
+        assert_eq!(model_set.model_count(), 1.0);
+        assert!(!model_set.is_empty());
+    }
+
+    #[test]
+    fn test_solve_stable_three_statements_chain() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            s(2).
+            ac(0, c(v)).
+            ac(1, 0).
+            ac(2, 1).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Chain: 0=true (constant), 1=0, 2=1
+        // Complete two-valued: {0: true, 1: true, 2: true} (1 model)
+        // Stable: Should be stable if all can be grounded
+        assert_eq!(model_set.model_count(), 1.0);
+        assert!(!model_set.is_empty());
+    }
+
+    #[test]
+    fn test_solve_stable_negation() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, neg(1)).
+            ac(1, c(v)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 = not(1), statement 1 = true (constant)
+        // Complete two-valued: {0: false, 1: true} (1 model)
+        // Stable: Should be stable
+        assert_eq!(model_set.model_count(), 1.0);
+        assert!(!model_set.is_empty());
+    }
+
+    #[test]
+    fn test_solve_stable_complex_and_or() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            s(2).
+            ac(0, and(1, 2)).
+            ac(1, c(v)).
+            ac(2, c(v)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 = 1 AND 2, statements 1 and 2 = true (constant)
+        // Complete two-valued: {0: true, 1: true, 2: true} (1 model)
+        // Stable: Should be stable
+        assert_eq!(model_set.model_count(), 1.0);
+        assert!(!model_set.is_empty());
+    }
+
+    #[test]
+    fn test_solve_stable_empty_result() {
+        let solver = create_test_solver();
+        // Create an ADF that has no stable models
+        // This is tricky - we need a case where models exist but none are stable
+        // One example: a statement that requires itself to be false but can't be grounded
+        let adf_str = r#"
+            s(0).
+            ac(0, neg(0)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 = not(0) creates a contradiction
+        // Complete two-valued: no models (contradiction)
+        // Stable: empty
+        assert_eq!(model_set.model_count(), 0.0);
+        assert!(model_set.is_empty());
+    }
+
+    #[test]
+    fn test_solve_stable_minimal_ones() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            s(2).
+            ac(0, or(1, 2)).
+            ac(1, c(f)).
+            ac(2, c(f)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Statement 0 = 1 OR 2, statements 1 and 2 = false (constant)
+        // Complete two-valued: {0: false, 1: false, 2: false} (1 model)
+        // Stable: Should be stable (all zeros)
+        assert_eq!(model_set.model_count(), 1.0);
+        assert!(!model_set.is_empty());
+    }
+
+    #[test]
+    fn test_solve_stable_multiple_minimal_models() {
+        let solver = create_test_solver();
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, c(v)).
+            ac(1, c(v)).
+        "#;
+        let expr_adf = crate::AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let adf = AdfBdds::from(&expr_adf);
+
+        let model_set = solver
+            .solve_stable_two_valued(&adf)
+            .expect("Solving should not be cancelled");
+
+        // Both statements have constant true conditions
+        // Complete two-valued: {0: true, 1: true} (1 model)
+        // Stable: Should be stable
+        assert_eq!(model_set.model_count(), 1.0);
+        assert!(!model_set.is_empty());
     }
 }

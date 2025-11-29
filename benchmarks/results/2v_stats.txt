@@ -2,13 +2,13 @@ Loading exclude list from ./exclude.txt...
   Found 72 instances to exclude
 
 Loading result tables from ./2v...
-  Found 8 result tables: fasp, mpbn, bass, aeon, k_adf, adf_obdd, tsconj, biolqm
+  Found 9 result tables: fasp, mpbn, bass, aeon, k_adf, adf_obdd, tsconj, biolqm, goDiamond
 
 Processing tables...
-  Row counts after processing: {'fasp': 1165, 'mpbn': 1165, 'bass': 1165, 'aeon': 1165, 'k_adf': 1165, 'adf_obdd': 1165, 'tsconj': 1165, 'biolqm': 1165}
+  Row counts after processing: {'fasp': 1165, 'mpbn': 1165, 'bass': 1165, 'aeon': 1165, 'k_adf': 1165, 'adf_obdd': 1165, 'tsconj': 1165, 'biolqm': 1165, 'goDiamond': 1165}
 
 Joining tables...
-  Joined table has 1165 rows and 25 columns
+  Joined table has 1165 rows and 28 columns
 
 Saving summary to ./2v_summary.csv...
   Summary saved successfully
@@ -58,4 +58,9 @@ biolqm:
   OK count: 1038
   Unique OK count (OK only in this table): 0
   Penalised Average Runtime × 2: 272.69 seconds
+
+goDiamond:
+  OK count: 1130
+  Unique OK count (OK only in this table): 0
+  Penalised Average Runtime × 2: 74.21 seconds
 ================================================================================

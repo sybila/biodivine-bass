@@ -2,13 +2,13 @@ Loading exclude list from ./exclude.txt...
   Found 72 instances to exclude
 
 Loading result tables from ./adm...
-  Found 4 result tables: yadf, bass, k_adf, biolqm
+  Found 5 result tables: yadf, bass, k_adf, biolqm, goDiamond
 
 Processing tables...
-  Row counts after processing: {'yadf': 1165, 'bass': 1165, 'k_adf': 1165, 'biolqm': 1165}
+  Row counts after processing: {'yadf': 1165, 'bass': 1165, 'k_adf': 1165, 'biolqm': 1165, 'goDiamond': 1165}
 
 Joining tables...
-  Joined table has 1165 rows and 13 columns
+  Joined table has 1165 rows and 16 columns
 
 Saving summary to ./adm_summary.csv...
   Summary saved successfully
@@ -38,4 +38,9 @@ biolqm:
   OK count: 292
   Unique OK count (OK only in this table): 0
   Penalised Average Runtime × 2: 1807.30 seconds
+
+goDiamond:
+  OK count: 170
+  Unique OK count (OK only in this table): 0
+  Penalised Average Runtime × 2: 2063.58 seconds
 ================================================================================

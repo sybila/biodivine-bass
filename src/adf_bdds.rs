@@ -31,6 +31,11 @@ impl DirectMap {
         DirectMap { mapping }
     }
 
+    /// Get the number of statements in this map.
+    pub fn size(&self) -> usize {
+        self.mapping.len()
+    }
+
     /// Get the BDD [`VariableId`] for a [`Statement`].
     pub fn get(&self, statement: &Statement) -> Option<VariableId> {
         self.mapping.get(statement).copied()
@@ -112,6 +117,7 @@ impl DualMap {
         DualMap { mapping }
     }
 
+    /// Get the number of statements in this map.
     pub fn size(&self) -> usize {
         self.mapping.len()
     }
@@ -254,6 +260,31 @@ impl DirectEncoding {
         let count = bdd.count_satisfying_valuations(Some(max_var));
 
         count / 2.0f64.powf(unused_vars as f64)
+    }
+
+    /// Extract the valuation with the highest number of fixed zeros.
+    ///
+    /// # Panics
+    ///
+    /// The BDD must be using the dual encoding, and it must not be empty.
+    pub fn most_zero_model(&self, bdd: &Bdd) -> BTreeMap<VariableId, bool> {
+        assert!(self.is_direct_encoded(bdd));
+        assert!(!bdd.is_false());
+
+        let max_var = self.var_map.last_valid_variable_id();
+        // The valuation now also contains other "irrelevant" variables that we need to remove.
+        // These do not influence the optimization process, because they are completely free.
+        // (i.e. they can always be fixed to `false` on all paths)
+        let mut most_false_valuation = bdd.most_negative_valuation(max_var);
+
+        let allowed = self
+            .var_map
+            .variable_ids()
+            .copied()
+            .collect::<BTreeSet<_>>();
+        most_false_valuation.retain(|k, _| allowed.contains(k));
+
+        most_false_valuation
     }
 }
 
@@ -422,7 +453,7 @@ impl AdfBdds {
         ModelSetThreeValued::new(bdd, self.dual_encoding.clone())
     }
 
-    /// Instantiate a single thre-valued interpretation into a symbolic set.
+    /// Instantiate a single three-valued interpretation into a symbolic set.
     pub fn mk_three_valued_interpretation(
         &self,
         valuation: impl IntoIterator<Item = (VariableId, bool)>,
@@ -432,6 +463,21 @@ impl AdfBdds {
             bdd = bdd.and(&Bdd::new_literal(var, value))
         }
         self.mk_three_valued_set(bdd)
+    }
+
+    /// Instantiate a two-valued interpretation set based on a set of fixed variable values.
+    ///
+    /// Creates a [`ModelSetTwoValued`] representing all interpretations where the specified
+    /// variables have the given boolean values. The variables must be from the direct encoding.
+    pub fn mk_two_valued_interpretations(
+        &self,
+        valuation: impl IntoIterator<Item = (VariableId, bool)>,
+    ) -> ModelSetTwoValued {
+        let mut bdd = Bdd::new_true();
+        for (var, value) in valuation {
+            bdd = bdd.and(&Bdd::new_literal(var, value))
+        }
+        self.mk_two_valued_set(bdd)
     }
 
     /// Try to create a [`AdfBdds`] from an [`AdfExpressions`].
@@ -498,6 +544,58 @@ impl AdfBdds {
                 valid,
             }),
         })
+    }
+
+    /// Get all statements that are "free" (have no condition or have an identity condition).
+    ///
+    /// A statement is considered free if:
+    /// - It has no condition defined, or
+    /// - Its condition is equivalent to the statement itself (i.e., `ac(s, s)`).
+    pub fn free_statements(&self) -> BTreeSet<Statement> {
+        let mut free_statements = BTreeSet::new();
+        for s in self.statements() {
+            if let Some(c) = self.direct_encoding().get_condition(s) {
+                let d_var = self.direct_encoding().var_map()[s];
+                // condition_a = a
+                if c.structural_eq(&Bdd::new_literal(d_var, true)) {
+                    free_statements.insert(s.clone());
+                }
+            } else {
+                free_statements.insert(s.clone());
+            }
+        }
+
+        free_statements
+    }
+
+    /// Ensure that all "free" statements (i.e. those without a condition, or with a
+    /// condition equivalent to identity) have their condition fixed to the provided value
+    /// instead.
+    pub fn fix_free_statements(&self, value: bool) -> AdfBdds {
+        let free_statements = self.free_statements();
+
+        let mut direct_copy = self.direct_encoding().clone();
+        let mut dual_copy = self.dual_encoding().clone();
+
+        let t = Bdd::new_true();
+        let f = Bdd::new_false();
+        let constant = if value { t.clone() } else { f.clone() };
+        let constant_pair = if value {
+            (t.clone(), f.clone())
+        } else {
+            (f.clone(), t.clone())
+        };
+        for s in free_statements {
+            direct_copy.conditions.insert(s.clone(), constant.clone());
+            dual_copy
+                .conditions
+                .insert(s.clone(), constant_pair.clone());
+        }
+
+        AdfBdds {
+            direct_encoding: Arc::new(direct_copy),
+            dual_encoding: Arc::new(dual_copy),
+        }
     }
 }
 
@@ -1724,5 +1822,371 @@ mod tests {
         let model_set = symbolic_adf.mk_three_valued_interpretation(valuation);
 
         assert_eq!(model_set.model_count(), 1.0);
+    }
+
+    // Tests for DirectMap::size
+
+    #[test]
+    fn test_direct_map_size_empty() {
+        let statements = vec![];
+        let map = DirectMap::new(&statements);
+        assert_eq!(map.size(), 0);
+    }
+
+    #[test]
+    fn test_direct_map_size_single() {
+        let statements = vec![Statement::from(0)];
+        let map = DirectMap::new(&statements);
+        assert_eq!(map.size(), 1);
+    }
+
+    #[test]
+    fn test_direct_map_size_multiple() {
+        let statements = vec![
+            Statement::from(0),
+            Statement::from(5),
+            Statement::from(10),
+            Statement::from(15),
+        ];
+        let map = DirectMap::new(&statements);
+        assert_eq!(map.size(), 4);
+    }
+
+    // Tests for DirectEncoding::most_zero_model
+
+    #[test]
+    fn test_most_zero_model_all_false() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let var_map = symbolic_adf.direct_encoding().var_map();
+        let s0_false = var_map.make_literal(&Statement::from(0), false);
+        let s1_false = var_map.make_literal(&Statement::from(1), false);
+        let all_false = s0_false.and(&s1_false);
+
+        let model = symbolic_adf.direct_encoding().most_zero_model(&all_false);
+        let s0_var = var_map[&Statement::from(0)];
+        let s1_var = var_map[&Statement::from(1)];
+
+        // Should have both statements false (most zeros)
+        assert_eq!(model.get(&s0_var), Some(&false));
+        assert_eq!(model.get(&s1_var), Some(&false));
+    }
+
+    #[test]
+    fn test_most_zero_model_one_true() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let var_map = symbolic_adf.direct_encoding().var_map();
+        let s0_true = var_map.make_literal(&Statement::from(0), true);
+        let s1_false = var_map.make_literal(&Statement::from(1), false);
+        let one_true = s0_true.and(&s1_false);
+
+        let model = symbolic_adf.direct_encoding().most_zero_model(&one_true);
+        let s0_var = var_map[&Statement::from(0)];
+        let s1_var = var_map[&Statement::from(1)];
+
+        // Should have s(0)=true, s(1)=false (one zero)
+        assert_eq!(model.get(&s0_var), Some(&true));
+        assert_eq!(model.get(&s1_var), Some(&false));
+    }
+
+    #[test]
+    fn test_most_zero_model_multiple_options() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let var_map = symbolic_adf.direct_encoding().var_map();
+        let s0_true = var_map.make_literal(&Statement::from(0), true);
+        let s1_true = var_map.make_literal(&Statement::from(1), true);
+        let s0_false = var_map.make_literal(&Statement::from(0), false);
+        let s1_false = var_map.make_literal(&Statement::from(1), false);
+
+        // Create a set with multiple models: (F,F), (F,T), (T,F)
+        let ff = s0_false.and(&s1_false);
+        let ft = s0_false.and(&s1_true);
+        let tf = s0_true.and(&s1_false);
+        let multiple = ff.or(&ft).or(&tf);
+
+        let model = symbolic_adf.direct_encoding().most_zero_model(&multiple);
+        let s0_var = var_map[&Statement::from(0)];
+        let s1_var = var_map[&Statement::from(1)];
+
+        // Should pick (F,F) as it has the most zeros
+        assert_eq!(model.get(&s0_var), Some(&false));
+        assert_eq!(model.get(&s1_var), Some(&false));
+    }
+
+    // Tests for AdfBdds::mk_two_valued_interpretations
+
+    #[test]
+    fn test_mk_two_valued_interpretations_single() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let var_map = symbolic_adf.direct_encoding().var_map();
+        let s0_var = var_map[&Statement::from(0)];
+
+        // Set s(0) to true
+        let valuation = vec![(s0_var, true)];
+        let model_set = symbolic_adf.mk_two_valued_interpretations(valuation);
+
+        // Should accept 2 valuations: (T,T) and (T,F)
+        assert_eq!(model_set.model_count(), 2.0);
+    }
+
+    #[test]
+    fn test_mk_two_valued_interpretations_multiple() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+            s(2).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let var_map = symbolic_adf.direct_encoding().var_map();
+        let s0_var = var_map[&Statement::from(0)];
+        let s1_var = var_map[&Statement::from(1)];
+
+        // Set s(0) to true, s(1) to false
+        let valuation = vec![(s0_var, true), (s1_var, false)];
+        let model_set = symbolic_adf.mk_two_valued_interpretations(valuation);
+
+        // Should accept 2 valuations: (T,F,T) and (T,F,F)
+        assert_eq!(model_set.model_count(), 2.0);
+    }
+
+    #[test]
+    fn test_mk_two_valued_interpretations_all_fixed() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let var_map = symbolic_adf.direct_encoding().var_map();
+        let s0_var = var_map[&Statement::from(0)];
+        let s1_var = var_map[&Statement::from(1)];
+
+        // Set both to true
+        let valuation = vec![(s0_var, true), (s1_var, true)];
+        let model_set = symbolic_adf.mk_two_valued_interpretations(valuation);
+
+        // Should accept only 1 valuation: (T,T)
+        assert_eq!(model_set.model_count(), 1.0);
+    }
+
+    // Tests for AdfBdds::free_statements
+
+    #[test]
+    fn test_free_statements_no_conditions() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let free = symbolic_adf.free_statements();
+
+        // Both statements have no conditions, so both should be free
+        assert_eq!(free.len(), 2);
+        assert!(free.contains(&Statement::from(0)));
+        assert!(free.contains(&Statement::from(1)));
+    }
+
+    #[test]
+    fn test_free_statements_identity_condition() {
+        let adf_str = r#"
+            s(0).
+            ac(0, 0).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let free = symbolic_adf.free_statements();
+
+        // Statement 0 has condition ac(0, 0) which is identity, so it should be free
+        assert_eq!(free.len(), 1);
+        assert!(free.contains(&Statement::from(0)));
+    }
+
+    #[test]
+    fn test_free_statements_non_identity_condition() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, 1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let free = symbolic_adf.free_statements();
+
+        // Statement 0 has condition ac(0, 1) which is not identity, so it's not free
+        // Statement 1 has no condition, so it's free
+        assert_eq!(free.len(), 1);
+        assert!(!free.contains(&Statement::from(0)));
+        assert!(free.contains(&Statement::from(1)));
+    }
+
+    #[test]
+    fn test_free_statements_mixed() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+            s(2).
+            ac(0, 1).
+            ac(1, 1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        let free = symbolic_adf.free_statements();
+
+        // Statement 0: ac(0, 1) - not identity, not free
+        // Statement 1: ac(1, 1) - identity, free
+        // Statement 2: no condition, free
+        assert_eq!(free.len(), 2);
+        assert!(!free.contains(&Statement::from(0)));
+        assert!(free.contains(&Statement::from(1)));
+        assert!(free.contains(&Statement::from(2)));
+    }
+
+    // Tests for AdfBdds::fix_free_statements
+
+    #[test]
+    fn test_fix_free_statements_true() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, 1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        // Statement 1 is free (no condition)
+        let fixed = symbolic_adf.fix_free_statements(true);
+
+        // Statement 1 should now have condition c(v) (true)
+        let direct = fixed.direct_encoding();
+        let condition = direct.get_condition(&Statement::from(1));
+        assert!(condition.is_some());
+        assert!(condition.unwrap().is_true());
+    }
+
+    #[test]
+    fn test_fix_free_statements_false() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, 1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        // Statement 1 is free (no condition)
+        let fixed = symbolic_adf.fix_free_statements(false);
+
+        // Statement 1 should now have condition c(f) (false)
+        let direct = fixed.direct_encoding();
+        let condition = direct.get_condition(&Statement::from(1));
+        assert!(condition.is_some());
+        assert!(condition.unwrap().is_false());
+    }
+
+    #[test]
+    fn test_fix_free_statements_identity_condition() {
+        let adf_str = r#"
+            s(0).
+            ac(0, 0).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        // Statement 0 has identity condition, so it's free
+        let fixed = symbolic_adf.fix_free_statements(true);
+
+        // Statement 0 should now have condition c(v) (true) instead of identity
+        let direct = fixed.direct_encoding();
+        let condition = direct.get_condition(&Statement::from(0));
+        assert!(condition.is_some());
+        assert!(condition.unwrap().is_true());
+    }
+
+    #[test]
+    fn test_fix_free_statements_multiple_free() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+            s(2).
+            ac(0, 1).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        // Statements 1 and 2 are free
+        let fixed = symbolic_adf.fix_free_statements(false);
+
+        let direct = fixed.direct_encoding();
+        // Statement 0 should keep its original condition
+        let cond0 = direct.get_condition(&Statement::from(0));
+        assert!(cond0.is_some());
+        assert!(!cond0.unwrap().is_false()); // Should not be false (has condition ac(0, 1))
+
+        // Statements 1 and 2 should have condition c(f) (false)
+        let cond1 = direct.get_condition(&Statement::from(1));
+        let cond2 = direct.get_condition(&Statement::from(2));
+        assert!(cond1.is_some());
+        assert!(cond2.is_some());
+        assert!(cond1.unwrap().is_false());
+        assert!(cond2.unwrap().is_false());
+    }
+
+    #[test]
+    fn test_fix_free_statements_preserves_non_free() {
+        let adf_str = r#"
+            s(0).
+            s(1).
+            ac(0, 1).
+            ac(1, 0).
+        "#;
+        let expr_adf = AdfExpressions::parse(adf_str).expect("Failed to parse ADF");
+        let symbolic_adf = AdfBdds::from(&expr_adf);
+
+        // No free statements (both have non-identity conditions)
+        let fixed = symbolic_adf.fix_free_statements(true);
+
+        // Both statements should keep their original conditions
+        let direct = symbolic_adf.direct_encoding();
+        let fixed_direct = fixed.direct_encoding();
+
+        let orig0 = direct.get_condition(&Statement::from(0));
+        let orig1 = direct.get_condition(&Statement::from(1));
+        let fixed0 = fixed_direct.get_condition(&Statement::from(0));
+        let fixed1 = fixed_direct.get_condition(&Statement::from(1));
+
+        // Conditions should be structurally equivalent
+        assert!(orig0.unwrap().structural_eq(fixed0.unwrap()));
+        assert!(orig1.unwrap().structural_eq(fixed1.unwrap()));
     }
 }

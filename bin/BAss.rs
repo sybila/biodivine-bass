@@ -28,8 +28,10 @@ struct Args {
 #[derive(clap::ValueEnum, Clone, Debug)]
 enum ProblemType {
     /// Two-valued complete interpretations
-    #[value(name = "two-valued-complete", aliases = ["2vc", "two_valued_complete"])]
+    #[value(name = "two-valued", aliases = ["2v"])]
     TwoValuedComplete,
+    #[value(name = "stable", aliases = ["stb"])]
+    Stable,
     /// Three-valued admissible interpretations
     #[value(name = "admissible", aliases = ["adm"])]
     Admissible,
@@ -102,6 +104,9 @@ fn main() {
     let model_set = match args.problem_type {
         ProblemType::TwoValuedComplete => {
             process_result(interpretation_solver.solve_complete_two_valued(&adf_bdds))
+        }
+        ProblemType::Stable => {
+            process_result(interpretation_solver.solve_stable_two_valued(&adf_bdds))
         }
         ProblemType::Admissible => {
             process_result(interpretation_solver.solve_admissible(&adf_bdds))

@@ -2,13 +2,13 @@ Loading exclude list from ./exclude.txt...
   Found 72 instances to exclude
 
 Loading result tables from ./stm...
-  Found 3 result tables: yadf, k_adf, adf_obdd
+  Found 5 result tables: yadf, bass, k_adf, adf_obdd, goDiamond
 
 Processing tables...
-  Row counts after processing: {'yadf': 1165, 'k_adf': 1165, 'adf_obdd': 1165}
+  Row counts after processing: {'yadf': 1165, 'bass': 1165, 'k_adf': 1165, 'adf_obdd': 1165, 'goDiamond': 1165}
 
 Joining tables...
-  Joined table has 1165 rows and 10 columns
+  Joined table has 1165 rows and 16 columns
 
 Saving summary to ./stm_summary.csv...
   Summary saved successfully
@@ -24,13 +24,23 @@ yadf:
   Unique OK count (OK only in this table): 0
   Penalised Average Runtime × 2: 2269.90 seconds
 
+bass:
+  OK count: 1149
+  Unique OK count (OK only in this table): 50
+  Penalised Average Runtime × 2: 36.53 seconds
+
 k_adf:
   OK count: 1115
-  Unique OK count (OK only in this table): 544
+  Unique OK count (OK only in this table): 16
   Penalised Average Runtime × 2: 105.73 seconds
 
 adf_obdd:
   OK count: 571
   Unique OK count (OK only in this table): 0
   Penalised Average Runtime × 2: 1249.27 seconds
+
+goDiamond:
+  OK count: 202
+  Unique OK count (OK only in this table): 0
+  Penalised Average Runtime × 2: 2002.20 seconds
 ================================================================================
