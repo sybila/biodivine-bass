@@ -93,3 +93,10 @@ c(f): constant symbol "falsum" - inconsistency/bot
 ```
 
 See `./test_instances` for examples.
+
+### Performance
+
+In `./test_instances`, you can find 1200+ benchmarks that are used to evaluate the performance of BAss. 
+In `./benchmarks`, you can find a range of scripts `bench_*` that compare BAss with a wide range of tools
+using these benchmark instances. To run the benchmarks, `docker` (or similar tool) needs to be available, 
+since benchmarked tools are executed in isolated docker containers.
