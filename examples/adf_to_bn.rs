@@ -1,7 +1,7 @@
 use ConditionExpressionNode::{
     And, Constant, Equivalence, ExclusiveOr, Implication, Negation, Or, Statement,
 };
-use biodivine_adf_solver::{AdfExpressions, ConditionExpression, ConditionExpressionNode};
+use biodivine_bass::{AdfExpressions, ConditionExpression, ConditionExpressionNode};
 use biodivine_lib_param_bn::BooleanNetwork;
 use std::path::PathBuf;
 

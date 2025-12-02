@@ -248,7 +248,7 @@ impl ConditionExpression {
     /// # Example
     ///
     /// ```
-    /// # use biodivine_adf_solver::{ConditionExpression, Statement};
+    /// # use biodivine_bass::{ConditionExpression, Statement};
     /// # use std::collections::BTreeMap;
     /// let s1 = Statement::from(1);
     /// let s2 = Statement::from(2);
@@ -329,7 +329,7 @@ impl ConditionExpression {
     /// # Example
     ///
     /// ```
-    /// # use biodivine_adf_solver::{ConditionExpression, Statement};
+    /// # use biodivine_bass::{ConditionExpression, Statement};
     /// let s1 = Statement::from(1);
     /// let s2 = Statement::from(2);
     /// let expr = ConditionExpression::and(&[
@@ -397,7 +397,7 @@ impl ConditionExpression {
     /// # Example
     ///
     /// ```
-    /// # use biodivine_adf_solver::{ConditionExpression, Statement};
+    /// # use biodivine_bass::{ConditionExpression, Statement};
     /// let s1 = Statement::from(1);
     /// let s2 = Statement::from(2);
     /// let s3 = Statement::from(3);
@@ -463,7 +463,7 @@ impl ConditionExpression {
     /// # Example
     ///
     /// ```
-    /// # use biodivine_adf_solver::{ConditionExpression, Statement};
+    /// # use biodivine_bass::{ConditionExpression, Statement};
     /// let s1 = Statement::from(1);
     /// let s2 = Statement::from(2);
     /// let s3 = Statement::from(3);

@@ -1,10 +1,11 @@
 use crate::AdfBdds;
+use crate::Statement;
 use crate::adf_bdds::DirectEncoding;
 use crate::model_set::ModelSet;
 use log::trace;
 use ruddy::VariableId;
 use ruddy::split::Bdd;
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 use std::sync::Arc;
 
 #[derive(Clone)]
@@ -29,6 +30,10 @@ impl ModelSet for ModelSetTwoValued {
 
     fn model_count(&self) -> f64 {
         ModelSetTwoValued::model_count(self)
+    }
+
+    fn iter(&self) -> impl Iterator<Item = BTreeMap<Statement, Option<bool>>> {
+        ModelIterator::new(self).map(|it| it.into_iter().map(|(k, v)| (k, Some(v))).collect())
     }
 }
 
@@ -156,6 +161,65 @@ impl ModelSetTwoValued {
             symbolic_set: result,
             encoding: self.encoding.clone(),
         }
+    }
+
+    /// Iterate over all models in this set.
+    ///
+    /// Returns an iterator that yields `BTreeMap<Statement, bool>` representing each model.
+    pub fn iter_models(&self) -> impl Iterator<Item = BTreeMap<Statement, bool>> {
+        ModelIterator::new(self)
+    }
+}
+
+/// Iterator over all models in a [`ModelSetTwoValued`].
+pub struct ModelIterator {
+    encoding: Arc<DirectEncoding>,
+    iterator: ruddy::split::ValuationsIterator,
+}
+
+impl ModelIterator {
+    fn new(model_set: &ModelSetTwoValued) -> Self {
+        let used_variables: BTreeSet<VariableId> = model_set
+            .encoding
+            .var_map()
+            .variable_ids()
+            .copied()
+            .collect();
+        let last_var = model_set.encoding.maximum_variable();
+
+        // Set everything unused to false in order to limit the actual number of valuations.
+        let mut bdd_restriction = Bdd::new_true();
+        let mut var = VariableId::zero();
+        while var <= last_var {
+            if !used_variables.contains(&var) {
+                bdd_restriction = bdd_restriction.and(&Bdd::new_literal(var, false));
+            }
+            var = var.next();
+        }
+
+        let bdd_restricted = model_set.symbolic_set().and(&bdd_restriction);
+
+        ModelIterator {
+            encoding: model_set.encoding.clone(),
+            iterator: bdd_restricted.iter_satisfying_valuations(VariableId::zero(), last_var),
+        }
+    }
+}
+
+impl Iterator for ModelIterator {
+    type Item = BTreeMap<Statement, bool>;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        let valuation = self.iterator.next()?;
+        let mut result = BTreeMap::new();
+        for s in self.encoding.var_map().statements() {
+            let var = self.encoding.var_map()[s];
+            let value = valuation
+                .get(&var)
+                .expect("Correctness violation: Unknown BDD variable");
+            result.insert(s.clone(), *value);
+        }
+        Some(result)
     }
 }
 
@@ -638,5 +702,67 @@ mod tests {
         // Extending empty set should still be empty
         assert!(extended.is_empty());
         assert_eq!(extended.model_count(), 0.0);
+    }
+
+    #[test]
+    fn test_iter_models_empty() {
+        let adf = create_test_adf_bdds();
+        let set = adf.mk_two_valued_set(ruddy::split::Bdd::new_false());
+
+        let models: Vec<_> = set.iter_models().collect();
+        assert_eq!(models.len(), 0);
+    }
+
+    #[test]
+    fn test_iter_models_all_true() {
+        let adf = create_test_adf_bdds();
+        let true_bdd = ruddy::split::Bdd::new_true();
+        let set = adf.mk_two_valued_set(true_bdd);
+
+        let models: Vec<_> = set.iter_models().collect();
+        // Should have 4 models: (F,F), (F,T), (T,F), (T,T)
+        assert_eq!(models.len(), 4);
+
+        // Verify all models are distinct
+        let mut model_set = std::collections::BTreeSet::new();
+        for model in &models {
+            model_set.insert(model.clone());
+        }
+        assert_eq!(model_set.len(), 4);
+    }
+
+    #[test]
+    fn test_iter_models_single_literal() {
+        let adf = create_test_adf_bdds();
+        let var_map = adf.direct_encoding().var_map();
+        let s0_true = var_map.make_literal(&Statement::from(0), true);
+        let set = adf.mk_two_valued_set(s0_true);
+
+        let models: Vec<_> = set.iter_models().collect();
+        // Should have 2 models: s(0)=T, s(1)=T and s(0)=T, s(1)=F
+        assert_eq!(models.len(), 2);
+
+        // Verify both models have s(0)=true
+        for model in &models {
+            assert_eq!(model.get(&Statement::from(0)), Some(&true));
+        }
+    }
+
+    #[test]
+    fn test_iter_models_and() {
+        let adf = create_test_adf_bdds();
+        let var_map = adf.direct_encoding().var_map();
+        let s0 = var_map.make_literal(&Statement::from(0), true);
+        let s1 = var_map.make_literal(&Statement::from(1), true);
+        let and_bdd = s0.and(&s1);
+        let set = adf.mk_two_valued_set(and_bdd);
+
+        let models: Vec<_> = set.iter_models().collect();
+        // Should have 1 model: s(0)=T, s(1)=T
+        assert_eq!(models.len(), 1);
+
+        let model = &models[0];
+        assert_eq!(model.get(&Statement::from(0)), Some(&true));
+        assert_eq!(model.get(&Statement::from(1)), Some(&true));
     }
 }

@@ -1,4 +1,4 @@
-use biodivine_adf_solver::AdfExpressions;
+use biodivine_bass::AdfExpressions;
 use biodivine_lib_param_bn::BooleanNetwork;
 use std::path::PathBuf;
 
