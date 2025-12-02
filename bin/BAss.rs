@@ -12,6 +12,11 @@ use std::process;
 #[derive(Parser, Debug)]
 #[command(name = "BAss")]
 #[command(about = "BDD-based ADF symbolic solver (BAss)", long_about = None)]
+#[command(group(
+    clap::ArgGroup::new("problem")
+        .required(true)
+        .args(&["two_valued", "stable", "admissible", "complete", "preferred"])
+))]
 struct Args {
     /// Two-valued complete interpretations (alias: -2v)
     #[arg(long = "two-valued", alias = "2v", group = "problem", action = clap::ArgAction::SetTrue)]

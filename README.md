@@ -20,7 +20,7 @@ cargo install --git https://github.com/sybila/biodivine-adf-solver --features=bu
 The usage is quite straightforward and is described in the following help message:
 
 ```text
-Usage: BAss [OPTIONS] <INPUT_FILE>
+Usage: BAss [OPTIONS] <--two-valued|--stable|--admissible|--complete|--preferred> <INPUT_FILE>
 
 Arguments:
   <INPUT_FILE>
@@ -76,8 +76,8 @@ with the logical operations and constants as follows:
 
 ```
 and(x,y): conjunction
-or(x,y): disjunctin
-iff(x,Y): if and only if
+or(x,y): disjunction
+iff(x,y): if and only if
 xor(x,y): exclusive or
 neg(x): classical negation
 c(v): constant symbol "verum" - tautology/top
