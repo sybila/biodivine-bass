@@ -1,3 +1,11 @@
+<!--[![Crates.io](https://img.shields.io/crates/v/biodivine-bass?style=flat-square)](https://crates.io/crates/biodivine-bass)-->
+<!--[![Api Docs](https://img.shields.io/badge/docs-api-yellowgreen?style=flat-square)](https://docs.rs/biodivine-bass/)-->
+[![Continuous integration](https://img.shields.io/github/actions/workflow/status/sybila/biodivine-bass/build.yml?branch=main&style=flat-square)](https://github.com/sybila/biodivine-bass/actions?query=workflow%3Abuild)
+[![Codecov](https://img.shields.io/codecov/c/github/sybila/biodivine-bass?style=flat-square)](https://codecov.io/gh/sybila/biodivine-bass)
+[![GitHub issues](https://img.shields.io/github/issues/sybila/biodivine-bass?style=flat-square)](https://github.com/sybila/biodivine-bass/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/sybila/biodivine-bass?style=flat-square)](https://github.com/sybila/biodivine-bass/commits/master)
+<!--[![Crates.io](https://img.shields.io/crates/l/biodivine-bass?style=flat-square)](https://github.com/sybila/biodivine-bass/blob/master/LICENSE)-->
+
 # BAss (BDD-based ADF symbolic solver)
 
 BAss is a (relatively) simple fully symbolic solver for abstract dialectical frameworks (ADFs) based on binary 
