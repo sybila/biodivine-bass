@@ -30,9 +30,9 @@ mpbn:
   Penalised Average Runtime × 2: 219.08 seconds
 
 bass:
-  OK count: 969
-  Unique OK count (OK only in this table): 15
-  Penalised Average Runtime × 2: 414.84 seconds
+  OK count: 982
+  Unique OK count (OK only in this table): 24
+  Penalised Average Runtime × 2: 389.95 seconds
 
 aeon:
   OK count: 900
@@ -46,7 +46,7 @@ k_adf:
 
 tsconj:
   OK count: 1103
-  Unique OK count (OK only in this table): 2
+  Unique OK count (OK only in this table): 1
   Penalised Average Runtime × 2: 134.59 seconds
 
 biolqm:
