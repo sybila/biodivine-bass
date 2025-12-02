@@ -253,13 +253,18 @@ impl DirectEncoding {
 
         // Each statement maps to 4 variables, which means (starting
         // from zero), the last variable is 4*x - 1.
-        let max_var = VariableId::new_long((statement_count * 4 - 1) as u64).unwrap();
+        let max_var = self.maximum_variable();
         let unused_vars = statement_count * 3;
 
         // Count valuations and normalize them based on unused variables.
         let count = bdd.count_satisfying_valuations(Some(max_var));
 
         count / 2.0f64.powf(unused_vars as f64)
+    }
+
+    pub(crate) fn maximum_variable(&self) -> VariableId {
+        VariableId::new_long((self.var_map.mapping.len() * 4 - 1) as u64)
+            .expect("Correctness violation: Largest variable cannot be represented.")
     }
 
     /// Extract the valuation with the highest number of fixed zeros.
@@ -365,13 +370,18 @@ impl DualEncoding {
 
         // Each statement maps to 4 variables, which means (starting
         // from zero), the last variable is 4*x - 1.
-        let max_var = VariableId::new_long((statement_count * 4 - 1) as u64).unwrap();
+        let max_var = self.maximum_variable();
         let unused_vars = statement_count * 2;
 
         // Count valuations and normalize them based on unused variables.
         let count = bdd.count_satisfying_valuations(Some(max_var));
 
         count / 2.0f64.powf(unused_vars as f64)
+    }
+
+    pub(crate) fn maximum_variable(&self) -> VariableId {
+        VariableId::new_long((self.var_map.mapping.len() * 4 - 1) as u64)
+            .expect("Correctness violation: Largest variable cannot be represented.")
     }
 
     /// Extract the valuation with the highest number of fixed variable values (i.e. `01` or `10`

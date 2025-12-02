@@ -302,7 +302,7 @@ impl AdfExpressions {
     /// # Example
     ///
     /// ```
-    /// # use biodivine_adf_solver::{AdfExpressions, ConditionExpression, Statement};
+    /// # use biodivine_bass::{AdfExpressions, ConditionExpression, Statement};
     /// let mut adf = AdfExpressions::new();
     /// let s1 = Statement::from(1);
     /// let s2 = Statement::from(2);
@@ -346,7 +346,7 @@ impl AdfExpressions {
     /// # Example
     ///
     /// ```
-    /// # use biodivine_adf_solver::{AdfExpressions, ConditionExpression, Statement};
+    /// # use biodivine_bass::{AdfExpressions, ConditionExpression, Statement};
     /// let mut adf = AdfExpressions::new();
     /// let s1 = Statement::from(1);
     /// let s2 = Statement::from(2);
@@ -386,7 +386,7 @@ impl AdfExpressions {
     /// # Example
     ///
     /// ```
-    /// # use biodivine_adf_solver::{AdfExpressions, ConditionExpression, Statement};
+    /// # use biodivine_bass::{AdfExpressions, ConditionExpression, Statement};
     /// let mut adf = AdfExpressions::new();
     /// let s1 = Statement::from(1);
     /// let s2 = Statement::from(2);
@@ -443,7 +443,7 @@ impl AdfExpressions {
     /// # Example
     ///
     /// ```
-    /// # use biodivine_adf_solver::{AdfExpressions, ConditionExpression, Statement};
+    /// # use biodivine_bass::{AdfExpressions, ConditionExpression, Statement};
     /// # use std::collections::BTreeMap;
     /// let mut adf = AdfExpressions::new();
     /// let s1 = Statement::from(1);
@@ -552,7 +552,7 @@ impl AdfExpressions {
     /// # Example
     ///
     /// ```
-    /// # use biodivine_adf_solver::{AdfExpressions, ConditionExpression, Statement};
+    /// # use biodivine_bass::{AdfExpressions, ConditionExpression, Statement};
     /// let mut adf = AdfExpressions::new();
     /// let s1 = Statement::from(1);
     /// let s2 = Statement::from(2);

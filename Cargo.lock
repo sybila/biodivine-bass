@@ -68,7 +68,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8"
 
 [[package]]
-name = "biodivine-adf-solver"
+name = "biodivine-bass"
 version = "0.1.0"
 dependencies = [
  "biodivine-lib-param-bn",
@@ -582,7 +582,7 @@ dependencies = [
 [[package]]
 name = "ruddy"
 version = "0.0.2"
-source = "git+https://github.com/sybila/ruddy.git?rev=78f0c7307fda17d6bd2816b00b3dd8aab719e339#78f0c7307fda17d6bd2816b00b3dd8aab719e339"
+source = "git+https://github.com/sybila/ruddy.git?rev=e9b014b7fe3f5b1e8929632dc8a5ca4f9cde717e#e9b014b7fe3f5b1e8929632dc8a5ca4f9cde717e"
 dependencies = [
  "replace_with",
  "rustc-hash",

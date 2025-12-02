@@ -29,6 +29,10 @@ impl ModelSet for ModelSetThreeValued {
     fn model_count(&self) -> f64 {
         ModelSetThreeValued::model_count(self)
     }
+
+    fn iter(&self) -> impl Iterator<Item = BTreeMap<Statement, Option<bool>>> {
+        self.iter_models()
+    }
 }
 
 impl ModelSetThreeValued {
@@ -192,6 +196,75 @@ impl ModelSetThreeValued {
             symbolic_set: result,
             encoding: self.encoding.clone(),
         }
+    }
+
+    /// Iterate over all models in this set.
+    ///
+    /// Returns an iterator that yields `BTreeMap<Statement, Option<bool>>` representing each model.
+    pub fn iter_models(&self) -> impl Iterator<Item = BTreeMap<Statement, Option<bool>>> {
+        ModelIterator::new(self)
+    }
+}
+
+/// Iterator over all models in a [`ModelSetThreeValued`].
+pub struct ModelIterator {
+    encoding: Arc<DualEncoding>,
+    iterator: ruddy::split::ValuationsIterator,
+}
+
+impl ModelIterator {
+    fn new(model_set: &ModelSetThreeValued) -> Self {
+        let used_variables: BTreeSet<VariableId> = model_set
+            .encoding
+            .var_map()
+            .variable_ids()
+            .copied()
+            .collect();
+        let last_var = model_set.encoding.maximum_variable();
+
+        // Set everything unused to false in order to limit the actual number of valuations.
+        let mut bdd_restriction = Bdd::new_true();
+        let mut var = VariableId::zero();
+        while var <= last_var {
+            if !used_variables.contains(&var) {
+                bdd_restriction = bdd_restriction.and(&Bdd::new_literal(var, false));
+            }
+            var = var.next();
+        }
+
+        let bdd_restricted = model_set.symbolic_set().and(&bdd_restriction);
+
+        ModelIterator {
+            encoding: model_set.encoding.clone(),
+            iterator: bdd_restricted.iter_satisfying_valuations(VariableId::zero(), last_var),
+        }
+    }
+}
+
+impl Iterator for ModelIterator {
+    type Item = BTreeMap<Statement, Option<bool>>;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        let valuation = self.iterator.next()?;
+        let mut result = BTreeMap::new();
+        for s in self.encoding.var_map().statements() {
+            let (p_var, n_var) = self.encoding.var_map()[s];
+            let p_value = *valuation
+                .get(&p_var)
+                .expect("Correctness violation: Unknown BDD variable");
+            let n_value = *valuation
+                .get(&n_var)
+                .expect("Correctness violation: Unknown BDD variable");
+            assert!(p_value || n_value);
+            let value = match (p_value, n_value) {
+                (false, false) => unreachable!("Invalid dual encoding."),
+                (true, false) => Some(true),
+                (false, true) => Some(false),
+                (true, true) => None,
+            };
+            result.insert(s.clone(), value);
+        }
+        Some(result)
     }
 }
 

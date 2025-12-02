@@ -1,13 +1,14 @@
 [package]
-name = "biodivine-adf-solver"
+name = "biodivine-bass"
 version = "0.1.0"
 edition = "2024"
+exclude = ["/benchmarks", "./test_instances", "/.github"]
 
 [features]
 build-binary = ["clap", "env_logger"]
 
 [dependencies]
-ruddy = { git = "https://github.com/sybila/ruddy.git", rev = "78f0c7307fda17d6bd2816b00b3dd8aab719e339" }
+ruddy = { git = "https://github.com/sybila/ruddy.git", rev = "e9b014b7fe3f5b1e8929632dc8a5ca4f9cde717e" }
 cancel-this = "0.3.0"
 biodivine-lib-param-bn = "0.6.3"
 log = "0.4"

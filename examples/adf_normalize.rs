@@ -1,4 +1,4 @@
-use biodivine_adf_solver::{AdfExpressions, Statement};
+use biodivine_bass::{AdfExpressions, Statement};
 use std::collections::BTreeMap;
 use std::path::PathBuf;
 
