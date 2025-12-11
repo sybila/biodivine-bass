@@ -41,7 +41,9 @@ fn main() {
     for (i, var) in bn.variables().enumerate() {
         let original_name = bn.get_variable_name(var);
         if let Ok(numeral) = original_name.parse::<usize>() {
-            bn.as_graph_mut().set_variable_name(var, format!("v_{numeral}").as_str()).unwrap();
+            bn.as_graph_mut()
+                .set_variable_name(var, format!("v_{numeral}").as_str())
+                .unwrap();
         } else {
             bn.as_graph_mut()
                 .set_variable_name(var, format!("v_{i}").as_str())
