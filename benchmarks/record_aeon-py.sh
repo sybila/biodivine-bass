@@ -57,8 +57,8 @@ for problem in "two-valued" complete preferred; do
         echo "" >> "$output_file"
         echo "--- Instance: $instance ---" >> "$output_file"
         
-        # Run the tool (no --count-only needed, it's not in the original args)
-        ./benchmarks/run_aeon-py.sh ${ARG_MAP[$problem]} "$instance_file" >> "$output_file" 2>&1 || echo "Error running $instance" >> "$output_file"
+        # Run the tool using a very large enumeration limit
+        ./benchmarks/run_aeon-py.sh ${ARG_MAP[$problem]} "$instance_file" 1000000000 >> "$output_file" 2>&1 || echo "Error running $instance" >> "$output_file"
         
     done < "$fast_file"
     

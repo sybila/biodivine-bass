@@ -1,0 +1,1624 @@
+=== tsconj min ===
+
+--- Instance: 007 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/007.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/007.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00111
+11000
+
+--- Instance: 015 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/015.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/015.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0000001000000000
+0000001000000001
+--00---1------00
+-------1-------1
+
+--- Instance: 021 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/021.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/021.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+10110011110011010
+10010011010011010
+10110011110011111
+10110011110011110
+00001100001101001
+01010000010001000
+01010000010001101
+01010000010001100
+00001110001100011
+00001100001100011
+
+--- Instance: 028 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/028.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/028.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+011111101111110101
+011111101111111101
+011111101111110111
+011111101111111111
+011111101111110011
+011111101111111001
+011111101111111011
+111101100011100101
+111101100011101101
+111101100011101001
+111101100011100111
+111101100011100011
+111101100011101111
+111101100011101011
+110000100000000000
+110000100100000000
+110000110000000000
+110000110100000000
+100000100000000000
+100000110000000000
+100000100100000000
+100000110100000000
+110000000000000000
+110000000100000000
+100000000000000000
+100000000100000000
+110000010000000000
+100000010000000000
+110000010100000000
+100000010100000000
+110000000000100000
+110000000100100000
+110000100000100000
+110000100100100000
+110000110000100000
+110000010000100000
+110000110100100000
+110000010100100000
+100000100000100000
+100000100100100000
+100000110000100000
+100000110100100000
+100000000000100000
+100000010000100000
+100000000100100000
+100000010100100000
+100101000110000011
+100101000110001011
+100101100110000011
+100101100110001011
+100101000110100011
+100101100110100011
+100101000110101011
+100101100110101011
+100101000010000011
+100101000010001011
+100101000010100011
+100101000010101011
+100101100010000011
+100101100010100011
+100101100010001011
+100101100010101011
+100101000110001001
+100101100110001001
+100101000010001001
+100101100010001001
+100101000110101001
+100101000010101001
+100101100110101001
+100101100010101001
+110101000110100011
+110101000110101001
+110101000110101011
+110101000110001001
+110101100110001001
+110101000110000011
+110101000110001011
+110101100110000011
+110101100110001011
+110101000010000011
+110101100010000011
+110101000010100011
+110101000010101001
+110101000010101011
+110101000010001001
+110101000010001011
+110101100010001001
+110101100010001011
+100101000110000101
+100101000010000101
+100101000110000111
+100101000010000111
+100101000110001101
+100101000110001111
+100101000010001101
+100101000010001111
+100101000110100101
+100101000110100111
+100101000010100101
+100101000010100111
+100101000110101101
+100101000010101101
+100101000110101111
+100101000010101111
+100101100110000101
+100101100010000101
+100101100110001101
+100101100010001101
+100101100110000111
+100101100110001111
+100101100010000111
+100101100010001111
+100101100110100111
+100101100110101111
+100101100010100111
+100101100010101111
+100101100110100101
+100101100010100101
+100101100110101101
+100101100010101101
+110101000110000111
+110101000010000111
+110101000110001111
+110101000010001111
+110101000110000101
+110101000110001101
+110101000010000101
+110101000010001101
+110101000110101111
+110101000010101111
+110101000110101101
+110101000010101101
+110101000110100111
+110101000110100101
+110101000010100111
+110101000010100101
+110101100110001111
+110101100110001101
+110101100010001111
+110101100010001101
+110101100110000111
+110101100010000111
+110101100110000101
+110101100010000101
+100001010110001011
+100001010110001111
+100001010110000011
+100001010110000111
+100001010010000011
+100001010010001011
+100001010010000111
+100001010010001111
+100001010110000101
+100001010010000101
+100001010110001001
+100001010110001101
+100001010010001001
+100001010010001101
+110001010110000011
+110001010010000011
+110001010010000101
+110001010110000101
+110001010010000111
+110001010110000111
+110001010010001011
+110001010110001011
+110001010010001111
+110001010110001111
+110001010010001001
+110001010110001001
+110001010010001101
+110001010110001101
+100001010010100011
+100001010110100011
+110001010010100011
+110001010110100011
+100001010010100111
+100001010110100111
+110001010010100111
+110001010110100111
+100001010010100101
+100001010110100101
+110001010010100101
+110001010110100101
+100001010010101011
+100001010110101011
+110001010010101011
+110001010110101011
+100001010010101001
+100001010110101001
+110001010010101001
+110001010110101001
+100001010010101111
+100001010110101111
+110001010010101111
+110001010110101111
+100001010010101101
+100001010110101101
+110001010010101101
+110001010110101101
+100001110010000011
+100001110110000011
+110001110110000011
+110001110010000011
+100001110010100011
+100001110110100011
+110001110010100011
+110001110110100011
+100001110010000111
+100001110110000111
+110001110010000111
+110001110110000111
+100001110010100111
+100001110110100111
+110001110010100111
+110001110110100111
+100001110010000101
+100001110110000101
+100001110010100101
+100001110110100101
+110001110010000101
+110001110110000101
+110001110010100101
+110001110110100101
+100001110010001001
+100001110110001001
+110001110010001001
+110001110110001001
+100001110010101001
+100001110110101001
+110001110010101001
+110001110110101001
+100001110010001101
+100001110110001101
+100001110010101101
+100001110110101101
+110001110010001101
+110001110110001101
+110001110010101101
+110001110110101101
+100001110010001011
+100001110110001011
+110001110010001011
+110001110110001011
+100001110010101011
+100001110110101011
+110001110010101011
+110001110110101011
+100001110010001111
+100001110110001111
+100001110010101111
+100001110110101111
+110001110010001111
+110001110110001111
+110001110010101111
+110001110110101111
+
+--- Instance: 029 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/029.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/029.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+01111011111
+10000101000
+10101010101
+10000100000
+
+--- Instance: 031 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/031.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/031.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+000000000
+
+--- Instance: 063 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/063.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/063.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0001100100000
+0001100100100
+0001100101100
+0001100101000
+1110011011111
+1110011011011
+0110011000111
+0001101000100
+0001101000000
+
+--- Instance: 067 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/067.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/067.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0011111110011
+1111111110011
+1111101110011
+0111011001000
+0111001001000
+0010000100100
+0010010100100
+0000000100000
+0000010100000
+0100001100000
+0100011100000
+0100001001000
+0100011001000
+0010010001100
+0010000001100
+0000000001000
+0000010001000
+
+--- Instance: 074 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/074.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/074.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00101111-10-000101
+00101011-10-000101
+100000000000000000
+
+--- Instance: 088 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/088.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/088.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+010101
+101000
+000010
+
+--- Instance: 097 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/097.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/097.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1100110011
+0110011101
+1001101110
+0000000000
+
+--- Instance: 109 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/109.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/109.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00000
+
+--- Instance: 110 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/110.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/110.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+001001100
+110110011
+
+--- Instance: 119 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/119.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/119.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0011101000010010001
+0011111000010010001
+1011101000010010001
+1011111000010010001
+1011101000000010001
+0011101000000010001
+1011111000000010001
+0011111000000010001
+1111101000011010011
+1111111000011010011
+1111101000001010011
+1111111000001010011
+0111101000001010011
+0111101000011010011
+0111111000001010011
+0111111000011010011
+1000000000000010000
+1000010000000010000
+1000000000010010000
+1000010000010010000
+0000000000010010000
+0000000000000010000
+0000010000010010000
+0000010000000010000
+1100000000001010010
+1100000000011010010
+0100000000001010010
+0100000000011010010
+1100010000001010010
+0100010000001010010
+1100010000011010010
+0100010000011010010
+0000000001000010000
+0100000001001010010
+1111111111101101111
+0111111111101101111
+1111111111111101111
+0111111111111101111
+1100010111111101110
+1100010111101101110
+0100010111111101110
+1111101111111101111
+0111101111111101111
+1111101111101101111
+0111101111101101111
+1100000111111101110
+0100000111111101110
+1100000111101101110
+0100010111101101110
+1011111111101101111
+0011111111101101111
+1011111111111101111
+0011111111111101111
+1011101111111101111
+0011101111111101111
+1011101111101101111
+0011101111101101111
+1000010111111101110
+1000010111101101110
+0000010111111101110
+0000010111101101110
+1000000111111101110
+0000000111111101110
+1000000111101101110
+
+--- Instance: 129 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/129.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/129.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0000000000000000000000000000000000
+1111111111111111111111111111111111
+
+--- Instance: 133 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/133.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/133.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1011111110
+1010101111
+0101110110
+0100110110
+1011001010
+1010001010
+0101000010
+0100000010
+1010001000
+0100000000
+
+--- Instance: 165 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/165.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/165.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00000011
+00000001
+00000010
+00000000
+01000101
+01000111
+01000000
+01000010
+01110011
+01101001
+01100010
+01100000
+10000001
+10000011
+10000000
+10000010
+11001001
+11010011
+11000000
+11000010
+11101001
+11110011
+11100000
+11100010
+
+--- Instance: 172 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/172.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/172.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0111011
+0111001
+0111000
+0001111
+0000111
+1001001
+1001000
+1000001
+1000000
+
+--- Instance: 184 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/184.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/184.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+000011
+010100
+
+--- Instance: 189 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/189.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/189.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+011111
+001010
+-0-000
+
+--- Instance: 212 ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/212.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/212.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1110100110111100
+1110100010111100
+0010110100111000
+0010110000111000
+0010111100111000
+0010111000111000
+1111101110000101
+1111101010000101
+
+--- Instance: A-1-brookings-or-us.gml.50.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/A-1-brookings-or-us.gml.50.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/A-1-brookings-or-us.gml.50.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+-0---10-000-
+
+--- Instance: A-1-rockland-county-department-of-public-transportation_20121220_2018.gml.20.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/A-1-rockland-county-department-of-public-transportation_20121220_2018.gml.20.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/A-1-rockland-county-department-of-public-transportation_20121220_2018.gml.20.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0110100000111100
+0111111100011100
+0111111000011101
+
+--- Instance: B-1-university-of-pretoria_20150805_1406.normalized.gml.80.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/B-1-university-of-pretoria_20150805_1406.normalized.gml.80.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/B-1-university-of-pretoria_20150805_1406.normalized.gml.80.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1011100110100
+1010100110110
+1011111110100
+1010111110110
+
+--- Instance: Small-result-b10.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b10.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b10.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+100101
+101111
+
+--- Instance: Small-result-b11.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b11.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b11.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00001110010011
+00001110110101
+
+--- Instance: Small-result-b13.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b13.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b13.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+111001
+110010
+
+--- Instance: Small-result-b14.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b14.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b14.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+01011100010101
+
+--- Instance: Small-result-b16.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b16.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b16.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+000101
+1-0-11
+
+--- Instance: Small-result-b17.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b17.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b17.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00111100011001
+
+--- Instance: Small-result-b19.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b19.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b19.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+01111001110
+
+--- Instance: Small-result-b2.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b2.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b2.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+11000
+
+--- Instance: Small-result-b20.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b20.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b20.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00111011011101100111100
+10101011011101010111100
+
+--- Instance: Small-result-b21.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b21.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b21.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00111011010000101010110
+
+--- Instance: Small-result-b3.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b3.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b3.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+----1--0--0
+
+--- Instance: Small-result-b33.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b33.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b33.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+-01010-1-
+
+--- Instance: Small-result-b34.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b34.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b34.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+--------
+
+--- Instance: Small-result-b35.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b35.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b35.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0000010
+
+--- Instance: Small-result-b41.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b41.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b41.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+010101
+
+--- Instance: Small-result-b42.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b42.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b42.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1011101001100
+10-01110011-0
+
+--- Instance: Small-result-b57.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b57.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b57.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+10011100
+
+--- Instance: Small-result-b58.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b58.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b58.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+10111101
+
+--- Instance: Small-result-b8.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b8.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b8.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+01000100
+
+--- Instance: Small-result-b83.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/Small-result-b83.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/Small-result-b83.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+------------
+
+--- Instance: T-1-cascadespoint-or-us.gml.20.apx.graph ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/T-1-cascadespoint-or-us.gml.20.apx.graph.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/T-1-cascadespoint-or-us.gml.20.apx.graph.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1011111
+1110111
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0011000110
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1110011010
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy05_12_32.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy05_12_32.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy05_12_32.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+011001001110
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+111110000
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+000001010
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step6_batch_yyy08_35_52.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step6_batch_yyy08_35_52.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step6_batch_yyy08_35_52.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+10101111110011110011101100101111010
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+10101010001111100001010011
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1100101100110101000000111
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00011011101011000110100
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy05_30_33.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy05_30_33.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy05_30_33.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+011010011000000011101000011111
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1110100010010011010100011
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0101010010001010100001
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1011011111100111001
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+101010011
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1011000011
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0001000000
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy09_10_48.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy09_10_48.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy09_10_48.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0101110100
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00101010
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step6_batch_yyy09_27_61.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step6_batch_yyy09_27_61.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step6_batch_yyy09_27_61.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+000011011110000000110100100
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_access-allegany-transit_20130327_1518.normalized.gml.50_42_76.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_access-allegany-transit_20130327_1518.normalized.gml.50_42_76.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_access-allegany-transit_20130327_1518.normalized.gml.50_42_76.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+110101100010100110010011101111010011111101
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_benton-or-us.gml.80_25_56.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_benton-or-us.gml.80_25_56.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_benton-or-us.gml.80_25_56.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1101110101110011011111111
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+01111101110001010001
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_caravan_or_2015-12-01.gml.50_19_32.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_caravan_or_2015-12-01.gml.50_19_32.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_caravan_or_2015-12-01.gml.50_19_32.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1111001111100110001
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+10000111011001000000
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+110001101001011010
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1111010001
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hoang-express_20120831_1707.normalized.gml.50_14_23.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hoang-express_20120831_1707.normalized.gml.50_14_23.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hoang-express_20120831_1707.normalized.gml.50_14_23.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00110110110110
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_laguna-beach-transit_20151216_1912.gml.20_20_50.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_laguna-beach-transit_20151216_1912.gml.20_20_50.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_laguna-beach-transit_20151216_1912.gml.20_20_50.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+10101011000111101000
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+01101101010
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+001100000110
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+10000011000
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0001011001011
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0001101110001111
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+001110000
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_societe-nationale-des-chemins-de-fer-tunisiens_20140804_1915.gml.20_18_21.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_societe-nationale-des-chemins-de-fer-tunisiens_20140804_1915.gml.20_18_21.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_societe-nationale-des-chemins-de-fer-tunisiens_20140804_1915.gml.20_18_21.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+111000011001000011
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_southwest-point_20151216_1538.gml.80_18_34.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_southwest-point_20151216_1538.gml.80_18_34.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_southwest-point_20151216_1538.gml.80_18_34.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+001010110001100111
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+011110101000011
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_the-shuttle-inc_20141224_0137.gml.20_18_23.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_the-shuttle-inc_20141224_0137.gml.20_18_23.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_the-shuttle-inc_20141224_0137.gml.20_18_23.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+110010111001011110
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.20_18_20.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.20_18_20.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.20_18_20.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+100110110110110010
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+011000010100111010
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+10011000111110
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1011000110
+1101001110
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0010011010
+1101101110
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy05_12_32.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy05_12_32.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy05_12_32.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+001110001111
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+011110100
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step2_batch_yyy01_17_49.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step2_batch_yyy01_17_49.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step2_batch_yyy01_17_49.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+-11-------00-1-0-
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+10011101101010111010100000
+10011110100010111110101000
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0111000011011000000010111
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00010011001010000011110
+00010001100010010011110
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0110101111011111011111010
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0000110101011001101110
+1000110111011001101110
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+--0--1---1-1-1100--
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+--11----0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1000010000
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0011110000
+0001110000
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy09_10_48.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy09_10_48.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy09_10_48.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0111100000
+0011100000
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+01000011
+01100011
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1101-01--0-01-101010
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+-11110--100--011000-
+-11110--100--001001-
+-10110--100--111-10-
+-10110--100--101-11-
+-011101-10110001001-
+-001101-10110101-11-
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+000110010100110101
+000010011000110101
+0--1-11001----010-
+0--0-11010----0---
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1011001001
+0011011001
+1000-0010-
+0000-1010-
+0101011011
+0100-1011-
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hoang-express_20120831_1707.normalized.gml.50_14_23.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hoang-express_20120831_1707.normalized.gml.50_14_23.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hoang-express_20120831_1707.normalized.gml.50_14_23.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+1-110-----0100
+1-011-----0100
+1-001-----1101
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+01011000010
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+000011011100
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00111101011
+0001010-1-0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+00000011---01
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0-1-0-1--11-10--
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+0----0--1
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+100100001001111
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+100-101-000-01-101
+100-100-000-00-101
+101-111-000101-100
+101-100-000100-100
+100-001-110-01-001
+100-000-110-00-001
+101-011-110101-000
+101-000-110100-000
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx ---
+Starting 'sybila/tool-tsconj' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'tsconj' with arguments '/sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx.normal.bnet'.
++ set -e
++ '[' /sw/run.py = --count-only ']'
++ /sw/venv/bin/python3 /sw/run.py min 0 ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx.normal.bnet
+/sw/venv/lib/python3.11/site-packages/minizinc/__init__.py:26: RuntimeWarning: MiniZinc was not found on the system. No default driver could be initialised.
+  warnings.warn(
+11010110101011
+11100110110011
+11100011110001
+11010011101001

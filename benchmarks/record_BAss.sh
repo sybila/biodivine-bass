@@ -25,11 +25,11 @@ declare -A PROBLEM_MAP=(
 )
 
 declare -A ARG_MAP=(
-    ["stable"]="stable quadratic-greedy"
-    ["two-valued"]="two-valued quadratic-greedy"
-    ["preferred"]="preferred quadratic-greedy"
-    ["complete"]="complete quadratic-greedy"
-    ["admissible"]="admissible quadratic-greedy"
+    ["stable"]="-stb"
+    ["two-valued"]="-2v"
+    ["preferred"]="-prf"
+    ["complete"]="-com"
+    ["admissible"]="-adm"
 )
 
 for problem in stable "two-valued" preferred complete admissible; do

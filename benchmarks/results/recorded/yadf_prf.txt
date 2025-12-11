@@ -1,0 +1,3711 @@
+=== yadf preferred ===
+
+--- Instance: 007 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/007.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,0) ass(4,0) ass(0,1) ass(1,1)
+Answer: 2
+ass(3,1) ass(2,1) ass(4,1) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 015 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/015.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,u) ass(8,u) ass(6,u) ass(2,u) ass(5,u) ass(15,1) ass(9,1) ass(14,u) ass(4,u) ass(13,u) ass(7,u) ass(0,u) ass(10,u) ass(12,u) ass(11,u) ass(1,u)
+Answer: 2
+ass(3,u) ass(8,0) ass(6,u) ass(2,u) ass(5,u) ass(15,1) ass(9,0) ass(14,u) ass(4,u) ass(13,u) ass(7,u) ass(0,u) ass(10,0) ass(12,u) ass(11,0) ass(1,u)
+Answer: 3
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(10,0) ass(12,0) ass(11,0) ass(1,0)
+Answer: 4
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(10,0) ass(12,0) ass(11,0) ass(1,0)
+SATISFIABLE
+
+Models       : 4
+Calls        : 1
+Time         : 0.014s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.014s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 021 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/021.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,1) ass(12,0) ass(11,1) ass(1,0)
+Answer: 2
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(15,1) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,1) ass(12,0) ass(11,1) ass(1,0)
+Answer: 3
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,1) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(1,1)
+Answer: 4
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,0) ass(7,1) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(1,1)
+Answer: 5
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,1) ass(11,0) ass(1,0)
+Answer: 6
+ass(3,1) ass(8,0) ass(6,1) ass(2,0) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,1) ass(11,0) ass(1,0)
+Answer: 7
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,1) ass(11,0) ass(1,0)
+Answer: 8
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(15,1) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,1) ass(10,1) ass(12,0) ass(11,1) ass(1,0)
+Answer: 9
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(15,1) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(1,0)
+Answer: 10
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(1,1)
+SATISFIABLE
+
+Models       : 10
+Calls        : 1
+Time         : 0.072s (Solving: 0.06s 1st Model: 0.02s Unsat: 0.00s)
+CPU Time     : 0.072s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 028 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/028.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 2
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 3
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 4
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 5
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 6
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 7
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 8
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 9
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 10
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 11
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 12
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 13
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 14
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 15
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 16
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 17
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 18
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 19
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 20
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 21
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 22
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 23
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 24
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 25
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 26
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 27
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 28
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 29
+ass(3,1) ass(8,0) ass(6,1) ass(2,1) ass(5,1) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 30
+ass(3,1) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 31
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 32
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 33
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,1) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 34
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 35
+ass(3,1) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,1) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 36
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 37
+ass(3,1) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,1) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 38
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 39
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,1) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 40
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 41
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 42
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 43
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 44
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 45
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 46
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 47
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 48
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 49
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 50
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 51
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 52
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 53
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 54
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 55
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 56
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 57
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 58
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 59
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 60
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 61
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 62
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 63
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 64
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 65
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 66
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 67
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 68
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 69
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 70
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 71
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 72
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 73
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 74
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 75
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 76
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 77
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 78
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 79
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 80
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 81
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 82
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 83
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 84
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 85
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 86
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 87
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 88
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 89
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 90
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 91
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 92
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 93
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 94
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 95
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 96
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 97
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 98
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 99
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 100
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 101
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 102
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 103
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 104
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 105
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 106
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 107
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 108
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 109
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 110
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 111
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 112
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 113
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 114
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 115
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 116
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 117
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 118
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 119
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 120
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 121
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 122
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 123
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 124
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 125
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 126
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 127
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 128
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 129
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 130
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 131
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 132
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 133
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 134
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 135
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 136
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 137
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 138
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 139
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 140
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 141
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 142
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 143
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 144
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 145
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 146
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 147
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 148
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 149
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 150
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 151
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 152
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 153
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 154
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 155
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 156
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 157
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 158
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 159
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 160
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 161
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 162
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 163
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 164
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 165
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 166
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 167
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 168
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 169
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 170
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 171
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 172
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 173
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 174
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 175
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 176
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 177
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 178
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 179
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 180
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 181
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 182
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 183
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 184
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 185
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 186
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 187
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 188
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 189
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 190
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 191
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 192
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 193
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 194
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 195
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 196
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 197
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 198
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 199
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 200
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 201
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 202
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 203
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 204
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 205
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 206
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 207
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 208
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 209
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 210
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 211
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 212
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 213
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 214
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 215
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 216
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+Answer: 217
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+Answer: 218
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 219
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 220
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 221
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 222
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 223
+ass(3,1) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 224
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 225
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 226
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 227
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 228
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 229
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 230
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 231
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 232
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 233
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 234
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 235
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 236
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 237
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 238
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 239
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 240
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 241
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 242
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 243
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 244
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 245
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 246
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 247
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 248
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 249
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 250
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,1)
+Answer: 251
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 252
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(17,0) ass(1,0)
+Answer: 253
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 254
+ass(3,1) ass(8,0) ass(6,1) ass(2,1) ass(5,1) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 255
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 256
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+SATISFIABLE
+
+Models       : 256
+Calls        : 1
+Time         : 0.769s (Solving: 0.76s 1st Model: 0.05s Unsat: 0.21s)
+CPU Time     : 0.767s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 029 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/029.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,1) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(9,1) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+Answer: 2
+ass(3,1) ass(10,1) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(9,1) ass(4,0) ass(7,1) ass(0,1) ass(1,0)
+Answer: 3
+ass(3,0) ass(10,0) ass(8,0) ass(6,1) ass(2,0) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,1) ass(1,0)
+Answer: 4
+ass(3,0) ass(10,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 4
+Calls        : 1
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 031 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/031.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 063 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/063.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,1) ass(8,1) ass(6,0) ass(12,0) ass(2,1) ass(11,0) ass(5,0) ass(9,1) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+Answer: 2
+ass(3,1) ass(10,1) ass(8,1) ass(6,1) ass(12,0) ass(2,1) ass(11,0) ass(5,1) ass(9,1) ass(4,0) ass(7,1) ass(0,1) ass(1,1)
+Answer: 3
+ass(3,1) ass(10,1) ass(8,1) ass(6,1) ass(12,0) ass(2,1) ass(11,0) ass(5,1) ass(9,1) ass(4,0) ass(7,0) ass(0,1) ass(1,1)
+Answer: 4
+ass(3,0) ass(10,0) ass(8,0) ass(6,1) ass(12,1) ass(2,0) ass(11,1) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+Answer: 5
+ass(3,0) ass(10,0) ass(8,0) ass(6,1) ass(12,1) ass(2,0) ass(11,1) ass(5,0) ass(9,0) ass(4,1) ass(7,1) ass(0,0) ass(1,0)
+Answer: 6
+ass(3,1) ass(10,0) ass(8,0) ass(6,0) ass(12,1) ass(2,0) ass(11,1) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,0) ass(1,0)
+Answer: 7
+ass(3,1) ass(10,0) ass(8,0) ass(6,0) ass(12,1) ass(2,0) ass(11,1) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+Answer: 8
+ass(3,0) ass(10,0) ass(8,0) ass(6,0) ass(12,1) ass(2,0) ass(11,1) ass(5,0) ass(9,0) ass(4,1) ass(7,1) ass(0,0) ass(1,0)
+Answer: 9
+ass(3,0) ass(10,0) ass(8,0) ass(6,0) ass(12,1) ass(2,0) ass(11,1) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 9
+Calls        : 1
+Time         : 0.026s (Solving: 0.02s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.026s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 067 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/067.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,1) ass(8,1) ass(6,0) ass(12,1) ass(2,0) ass(11,1) ass(5,1) ass(9,1) ass(4,1) ass(7,0) ass(0,1) ass(1,1)
+Answer: 2
+ass(3,1) ass(10,1) ass(8,1) ass(6,0) ass(12,1) ass(2,1) ass(11,1) ass(5,1) ass(9,1) ass(4,1) ass(7,0) ass(0,1) ass(1,1)
+Answer: 3
+ass(3,1) ass(10,1) ass(8,0) ass(6,1) ass(12,0) ass(2,1) ass(11,1) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+Answer: 4
+ass(3,1) ass(10,1) ass(8,0) ass(6,1) ass(12,0) ass(2,0) ass(11,1) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+Answer: 5
+ass(3,0) ass(10,1) ass(8,0) ass(6,1) ass(12,0) ass(2,0) ass(11,0) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,0) ass(1,0)
+Answer: 6
+ass(3,0) ass(10,1) ass(8,0) ass(6,0) ass(12,0) ass(2,0) ass(11,0) ass(5,0) ass(9,0) ass(4,1) ass(7,1) ass(0,0) ass(1,0)
+Answer: 7
+ass(3,0) ass(10,1) ass(8,0) ass(6,1) ass(12,0) ass(2,1) ass(11,0) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,0) ass(1,0)
+Answer: 8
+ass(3,0) ass(10,1) ass(8,0) ass(6,0) ass(12,0) ass(2,1) ass(11,0) ass(5,0) ass(9,0) ass(4,1) ass(7,1) ass(0,0) ass(1,0)
+Answer: 9
+ass(3,1) ass(10,1) ass(8,1) ass(6,0) ass(12,1) ass(2,1) ass(11,1) ass(5,1) ass(9,1) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+Answer: 10
+ass(3,0) ass(10,0) ass(8,0) ass(6,0) ass(12,0) ass(2,1) ass(11,0) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+Answer: 11
+ass(3,0) ass(10,0) ass(8,0) ass(6,1) ass(12,0) ass(2,1) ass(11,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+Answer: 12
+ass(3,1) ass(10,0) ass(8,0) ass(6,1) ass(12,0) ass(2,1) ass(11,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+Answer: 13
+ass(3,1) ass(10,0) ass(8,0) ass(6,0) ass(12,0) ass(2,1) ass(11,0) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,1)
+Answer: 14
+ass(3,0) ass(10,0) ass(8,0) ass(6,1) ass(12,0) ass(2,0) ass(11,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+Answer: 15
+ass(3,0) ass(10,0) ass(8,0) ass(6,0) ass(12,0) ass(2,0) ass(11,0) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+Answer: 16
+ass(3,1) ass(10,0) ass(8,0) ass(6,1) ass(12,0) ass(2,0) ass(11,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+Answer: 17
+ass(3,1) ass(10,0) ass(8,0) ass(6,0) ass(12,0) ass(2,0) ass(11,0) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 17
+Calls        : 1
+Time         : 0.030s (Solving: 0.03s 1st Model: 0.00s Unsat: 0.01s)
+CPU Time     : 0.030s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 074 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/074.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,u) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,0) ass(16,u) ass(10,1) ass(12,1) ass(11,0) ass(17,1) ass(1,0)
+Answer: 2
+ass(3,u) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,0) ass(16,u) ass(10,1) ass(12,1) ass(11,0) ass(17,1) ass(1,0)
+Answer: 3
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.116s (Solving: 0.10s 1st Model: 0.00s Unsat: 0.01s)
+CPU Time     : 0.115s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 088 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/088.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(2,0) ass(5,1) ass(4,0) ass(0,0) ass(1,1)
+Answer: 2
+ass(3,0) ass(2,1) ass(5,0) ass(4,0) ass(0,1) ass(1,0)
+Answer: 3
+ass(3,0) ass(2,0) ass(5,0) ass(4,1) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 097 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/097.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+Answer: 2
+ass(3,0) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(9,1) ass(4,1) ass(7,0) ass(0,1) ass(1,1)
+Answer: 3
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(9,0) ass(4,1) ass(7,1) ass(0,1) ass(1,0)
+Answer: 4
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,1) ass(9,1) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 4
+Calls        : 1
+Time         : 0.012s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 109 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/109.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,0) ass(4,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 110 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/110.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,1) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+Answer: 2
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,0) ass(4,1) ass(7,1) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 119 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/119.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,0)
+Answer: 2
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,0)
+Answer: 3
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,0)
+Answer: 4
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,0)
+Answer: 5
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,0)
+Answer: 6
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,0)
+Answer: 7
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,0)
+Answer: 8
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,0)
+Answer: 9
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,1)
+Answer: 10
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 11
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,1)
+Answer: 12
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 13
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,1)
+Answer: 14
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 15
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,1)
+Answer: 16
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 17
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 18
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 19
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,0)
+Answer: 20
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,0)
+Answer: 21
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,1)
+Answer: 22
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,0)
+Answer: 23
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,1)
+Answer: 24
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,0)
+Answer: 25
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 26
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,0)
+Answer: 27
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,1)
+Answer: 28
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(17,1) ass(1,0)
+Answer: 29
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,1)
+Answer: 30
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,1)
+Answer: 31
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,0)
+Answer: 32
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(17,0) ass(1,0)
+Answer: 33
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 34
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 35
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 36
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 37
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 38
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 39
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 40
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 41
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 42
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 43
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 44
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 45
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 46
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 47
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 48
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 49
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 50
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 51
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 52
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 53
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 54
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 55
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 56
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 57
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,0)
+Answer: 58
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,0) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+Answer: 59
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 60
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 61
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 62
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+Answer: 63
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+Answer: 64
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,1) ass(1,0)
+SATISFIABLE
+
+Models       : 64
+Calls        : 1
+Time         : 0.583s (Solving: 0.58s 1st Model: 0.00s Unsat: 0.04s)
+CPU Time     : 0.583s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 129 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/129.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(21,1) ass(8,1) ass(25,1) ass(33,1) ass(32,1) ass(24,1) ass(29,1) ass(30,1) ass(18,1) ass(4,1) ass(0,1) ass(16,1) ass(31,1) ass(27,1) ass(19,1) ass(23,1) ass(17,1) ass(22,1) ass(1,1) ass(28,1) ass(3,1) ass(6,1) ass(2,1) ass(5,1) ass(15,1) ass(9,1) ass(14,1) ass(13,1) ass(7,1) ass(10,1) ass(12,1) ass(11,1) ass(20,1) ass(26,1)
+Answer: 2
+ass(21,0) ass(8,0) ass(25,0) ass(33,0) ass(32,0) ass(24,0) ass(29,0) ass(30,0) ass(18,0) ass(4,0) ass(0,0) ass(16,0) ass(31,0) ass(27,0) ass(19,0) ass(23,0) ass(17,0) ass(22,0) ass(1,0) ass(28,0) ass(3,0) ass(6,0) ass(2,0) ass(5,0) ass(15,0) ass(9,0) ass(14,0) ass(13,0) ass(7,0) ass(10,0) ass(12,0) ass(11,0) ass(20,0) ass(26,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.454s (Solving: 0.44s 1st Model: 0.16s Unsat: 0.12s)
+CPU Time     : 0.452s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 133 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/133.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(9,0) ass(4,1) ass(7,1) ass(0,1) ass(1,0)
+Answer: 2
+ass(3,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,1) ass(1,0)
+Answer: 3
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(9,0) ass(4,1) ass(7,1) ass(0,0) ass(1,1)
+Answer: 4
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+Answer: 5
+ass(3,0) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(9,0) ass(4,1) ass(7,1) ass(0,0) ass(1,1)
+Answer: 6
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(9,1) ass(4,1) ass(7,1) ass(0,1) ass(1,0)
+Answer: 7
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,1) ass(1,0)
+Answer: 8
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,1) ass(1,0)
+Answer: 9
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+Answer: 10
+ass(3,0) ass(8,1) ass(6,0) ass(2,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 10
+Calls        : 1
+Time         : 0.022s (Solving: 0.02s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.019s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 165 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/165.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,1) ass(2,0) ass(5,1) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+Answer: 2
+ass(3,0) ass(6,0) ass(2,0) ass(5,1) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+Answer: 3
+ass(3,0) ass(6,0) ass(2,0) ass(5,0) ass(4,1) ass(7,1) ass(0,1) ass(1,1)
+Answer: 4
+ass(3,0) ass(6,0) ass(2,1) ass(5,0) ass(4,1) ass(7,1) ass(0,1) ass(1,1)
+Answer: 5
+ass(3,0) ass(6,0) ass(2,0) ass(5,0) ass(4,0) ass(7,0) ass(0,1) ass(1,1)
+Answer: 6
+ass(3,0) ass(6,0) ass(2,1) ass(5,0) ass(4,0) ass(7,0) ass(0,1) ass(1,1)
+Answer: 7
+ass(3,1) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(7,1) ass(0,1) ass(1,1)
+Answer: 8
+ass(3,1) ass(6,1) ass(2,1) ass(5,0) ass(4,0) ass(7,1) ass(0,1) ass(1,1)
+Answer: 9
+ass(3,0) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(7,0) ass(0,1) ass(1,1)
+Answer: 10
+ass(3,0) ass(6,1) ass(2,1) ass(5,0) ass(4,0) ass(7,0) ass(0,1) ass(1,1)
+Answer: 11
+ass(3,0) ass(6,0) ass(2,1) ass(5,0) ass(4,1) ass(7,1) ass(0,0) ass(1,1)
+Answer: 12
+ass(3,0) ass(6,0) ass(2,0) ass(5,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+Answer: 13
+ass(3,0) ass(6,0) ass(2,1) ass(5,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+Answer: 14
+ass(3,1) ass(6,1) ass(2,1) ass(5,0) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+Answer: 15
+ass(3,0) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+Answer: 16
+ass(3,0) ass(6,1) ass(2,1) ass(5,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+Answer: 17
+ass(3,0) ass(6,0) ass(2,0) ass(5,0) ass(4,0) ass(7,1) ass(0,1) ass(1,0)
+Answer: 18
+ass(3,0) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(7,1) ass(0,1) ass(1,0)
+Answer: 19
+ass(3,0) ass(6,0) ass(2,0) ass(5,0) ass(4,0) ass(7,0) ass(0,1) ass(1,0)
+Answer: 20
+ass(3,0) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(7,0) ass(0,1) ass(1,0)
+Answer: 21
+ass(3,0) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(7,1) ass(0,0) ass(1,0)
+Answer: 22
+ass(3,0) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+Answer: 23
+ass(3,0) ass(6,0) ass(2,0) ass(5,0) ass(4,0) ass(7,1) ass(0,0) ass(1,0)
+Answer: 24
+ass(3,0) ass(6,0) ass(2,0) ass(5,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 24
+Calls        : 1
+Time         : 0.037s (Solving: 0.02s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.037s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 172 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/172.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(6,1) ass(2,1) ass(5,1) ass(4,0) ass(0,0) ass(1,1)
+Answer: 2
+ass(3,1) ass(6,0) ass(2,1) ass(5,0) ass(4,0) ass(0,0) ass(1,1)
+Answer: 3
+ass(3,1) ass(6,1) ass(2,1) ass(5,0) ass(4,0) ass(0,0) ass(1,1)
+Answer: 4
+ass(3,0) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(0,1) ass(1,0)
+Answer: 5
+ass(3,1) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(0,1) ass(1,0)
+Answer: 6
+ass(3,0) ass(6,0) ass(2,0) ass(5,0) ass(4,0) ass(0,1) ass(1,0)
+Answer: 7
+ass(3,1) ass(6,0) ass(2,0) ass(5,0) ass(4,0) ass(0,1) ass(1,0)
+Answer: 8
+ass(3,0) ass(6,1) ass(2,0) ass(5,1) ass(4,1) ass(0,0) ass(1,0)
+Answer: 9
+ass(3,1) ass(6,1) ass(2,0) ass(5,1) ass(4,1) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 9
+Calls        : 1
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.009s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 184 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/184.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,0) ass(5,1) ass(4,1) ass(0,0) ass(1,0)
+Answer: 2
+ass(3,1) ass(2,0) ass(5,0) ass(4,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.014s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 189 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/189.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,u) ass(5,0) ass(4,0) ass(0,u) ass(1,0)
+Answer: 2
+ass(3,0) ass(2,1) ass(5,0) ass(4,1) ass(0,0) ass(1,0)
+Answer: 3
+ass(3,1) ass(2,1) ass(5,1) ass(4,1) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 212 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/212.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,1) ass(10,1) ass(12,1) ass(11,1) ass(1,1)
+Answer: 2
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,1) ass(10,1) ass(12,1) ass(11,1) ass(1,1)
+Answer: 3
+ass(3,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(15,1) ass(9,0) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(10,1) ass(12,1) ass(11,0) ass(1,0)
+Answer: 4
+ass(3,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(15,0) ass(9,0) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(10,1) ass(12,1) ass(11,0) ass(1,0)
+Answer: 5
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,1) ass(15,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(10,1) ass(12,1) ass(11,0) ass(1,1)
+Answer: 6
+ass(3,0) ass(8,0) ass(6,1) ass(2,1) ass(5,1) ass(15,0) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(10,1) ass(12,1) ass(11,0) ass(1,1)
+Answer: 7
+ass(3,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(15,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(10,1) ass(12,1) ass(11,0) ass(1,0)
+Answer: 8
+ass(3,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(15,0) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(10,1) ass(12,1) ass(11,0) ass(1,0)
+SATISFIABLE
+
+Models       : 8
+Calls        : 1
+Time         : 0.030s (Solving: 0.02s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.030s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: A-1-brookings-or-us.gml.50.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/A-1-brookings-or-us.gml.50.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,u) ass(8,0) ass(6,0) ass(2,u) ass(11,u) ass(5,u) ass(9,u) ass(4,0) ass(7,0) ass(0,u) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.008s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: A-1-rockland-county-department-of-public-transportation_20121220_2018.gml.20.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/A-1-rockland-county-department-of-public-transportation_20121220_2018.gml.20.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(15,0) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(10,1) ass(12,1) ass(11,0) ass(1,1)
+Answer: 2
+ass(3,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(15,1) ass(9,0) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,0) ass(10,1) ass(12,1) ass(11,1) ass(1,1)
+Answer: 3
+ass(3,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(15,0) ass(9,1) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,0) ass(10,1) ass(12,1) ass(11,1) ass(1,1)
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.045s (Solving: 0.02s 1st Model: 0.01s Unsat: 0.01s)
+CPU Time     : 0.045s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: B-1-university-of-pretoria_20150805_1406.normalized.gml.80.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/B-1-university-of-pretoria_20150805_1406.normalized.gml.80.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(10,1) ass(8,1) ass(6,0) ass(12,1) ass(2,0) ass(11,0) ass(5,1) ass(9,0) ass(4,1) ass(7,1) ass(0,1) ass(1,0)
+Answer: 2
+ass(3,0) ass(10,1) ass(8,0) ass(6,0) ass(12,1) ass(2,0) ass(11,1) ass(5,1) ass(9,0) ass(4,1) ass(7,1) ass(0,1) ass(1,0)
+Answer: 3
+ass(3,1) ass(10,1) ass(8,0) ass(6,0) ass(12,1) ass(2,1) ass(11,1) ass(5,1) ass(9,0) ass(4,1) ass(7,1) ass(0,1) ass(1,0)
+Answer: 4
+ass(3,1) ass(10,1) ass(8,1) ass(6,0) ass(12,1) ass(2,1) ass(11,0) ass(5,1) ass(9,0) ass(4,1) ass(7,1) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 4
+Calls        : 1
+Time         : 0.011s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.011s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b10.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b10.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(2,1) ass(5,1) ass(4,1) ass(0,1) ass(1,0)
+Answer: 2
+ass(3,1) ass(2,0) ass(5,1) ass(4,0) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b11.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b11.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(9,1) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(10,0) ass(12,1) ass(11,0) ass(1,0)
+Answer: 2
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(9,1) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(10,0) ass(12,1) ass(11,0) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.089s (Solving: 0.03s 1st Model: 0.01s Unsat: 0.01s)
+CPU Time     : 0.089s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b13.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b13.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,0) ass(5,0) ass(4,1) ass(0,1) ass(1,1)
+Answer: 2
+ass(3,0) ass(2,1) ass(5,1) ass(4,0) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b14.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b14.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(9,1) ass(4,0) ass(13,1) ass(7,1) ass(0,0) ass(10,0) ass(12,1) ass(11,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.103s (Solving: 0.02s 1st Model: 0.01s Unsat: 0.01s)
+CPU Time     : 0.103s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b16.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b16.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,u) ass(2,0) ass(5,1) ass(4,1) ass(0,1) ass(1,u)
+Answer: 2
+ass(3,1) ass(2,0) ass(5,1) ass(4,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.008s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b17.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b17.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(9,1) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(10,1) ass(12,1) ass(11,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.091s (Solving: 0.02s 1st Model: 0.02s Unsat: 0.00s)
+CPU Time     : 0.090s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b19.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b19.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.015s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.014s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b2.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b2.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,0) ass(4,0) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b20.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b20.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(21,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(15,1) ass(18,1) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,0) ass(20,1) ass(19,1) ass(17,1) ass(22,1) ass(1,0)
+Answer: 2
+ass(3,0) ass(21,1) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(15,1) ass(18,1) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(20,1) ass(19,1) ass(17,1) ass(22,0) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.663s (Solving: 0.49s 1st Model: 0.13s Unsat: 0.11s)
+CPU Time     : 0.663s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b21.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b21.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(21,1) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,1) ass(18,0) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,1) ass(20,0) ass(19,0) ass(17,1) ass(22,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.589s (Solving: 0.43s 1st Model: 0.09s Unsat: 0.34s)
+CPU Time     : 0.589s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b3.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b3.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,u) ass(8,u) ass(6,0) ass(2,u) ass(5,u) ass(9,0) ass(4,u) ass(7,u) ass(0,u) ass(1,u)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.020s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.020s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b33.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b33.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,u) ass(6,u) ass(2,1) ass(5,0) ass(4,1) ass(7,1) ass(0,u) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.011s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b34.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b34.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,u) ass(6,u) ass(2,u) ass(5,u) ass(4,u) ass(7,u) ass(0,u) ass(1,u)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.014s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.014s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b35.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b35.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,0) ass(2,0) ass(5,1) ass(4,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.009s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b41.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b41.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(2,0) ass(5,1) ass(4,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b42.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b42.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,u) ass(8,u) ass(6,1) ass(12,1) ass(2,1) ass(11,0) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,1) ass(1,0)
+Answer: 2
+ass(3,1) ass(10,1) ass(8,0) ass(6,1) ass(12,1) ass(2,0) ass(11,1) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.029s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.029s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b57.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b57.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(6,0) ass(2,0) ass(5,1) ass(4,1) ass(7,0) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b58.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b58.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(6,0) ass(2,1) ass(5,1) ass(4,1) ass(7,1) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b8.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b8.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,0) ass(2,0) ass(5,1) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b83.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/Small-result-b83.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,u) ass(10,u) ass(8,u) ass(6,u) ass(2,u) ass(11,u) ass(5,u) ass(9,u) ass(4,u) ass(7,u) ass(0,u) ass(1,u)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.133s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.133s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: T-1-cascadespoint-or-us.gml.20.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/T-1-cascadespoint-or-us.gml.20.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(6,1) ass(2,1) ass(5,1) ass(4,1) ass(0,1) ass(1,0)
+Answer: 2
+ass(3,0) ass(6,1) ass(2,1) ass(5,1) ass(4,1) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(9,0) ass(4,0) ass(7,0) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy05_12_32.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy05_12_32.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,1) ass(8,1) ass(6,1) ass(2,0) ass(11,0) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.013s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.013s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(4,1) ass(7,0) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(4,0) ass(7,1) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step6_batch_yyy08_35_52.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step6_batch_yyy08_35_52.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(21,1) ass(8,1) ass(25,1) ass(33,0) ass(32,1) ass(24,0) ass(29,1) ass(30,0) ass(18,0) ass(4,1) ass(0,1) ass(16,1) ass(31,0) ass(27,1) ass(19,0) ass(23,0) ass(17,1) ass(22,1) ass(1,0) ass(28,0) ass(3,1) ass(6,1) ass(2,1) ass(5,1) ass(15,1) ass(9,0) ass(14,1) ass(13,1) ass(7,0) ass(34,1) ass(10,1) ass(12,1) ass(11,0) ass(20,1) ass(26,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 2.364s (Solving: 2.34s 1st Model: 0.16s Unsat: 2.19s)
+CPU Time     : 2.363s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(21,1) ass(8,1) ass(25,0) ass(6,0) ass(2,1) ass(24,0) ass(5,1) ass(15,0) ass(18,1) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,0) ass(20,1) ass(19,1) ass(23,0) ass(17,0) ass(22,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.253s (Solving: 0.24s 1st Model: 0.21s Unsat: 0.03s)
+CPU Time     : 0.253s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(21,0) ass(8,1) ass(6,0) ass(2,0) ass(24,0) ass(5,0) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,1) ass(11,0) ass(20,1) ass(19,1) ass(23,0) ass(17,0) ass(22,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.510s (Solving: 0.50s 1st Model: 0.18s Unsat: 0.33s)
+CPU Time     : 0.508s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(21,0) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(15,1) ass(18,1) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,1) ass(10,0) ass(12,1) ass(11,1) ass(20,1) ass(19,0) ass(17,0) ass(22,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.280s (Solving: 0.26s 1st Model: 0.25s Unsat: 0.01s)
+CPU Time     : 0.280s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy05_30_33.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy05_30_33.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(21,0) ass(8,1) ass(25,1) ass(24,1) ass(29,0) ass(18,0) ass(4,0) ass(0,0) ass(16,1) ass(27,1) ass(19,0) ass(23,1) ass(17,0) ass(22,0) ass(1,1) ass(28,0) ass(3,0) ass(6,1) ass(2,0) ass(5,1) ass(15,1) ass(9,1) ass(14,0) ass(13,0) ass(7,1) ass(10,1) ass(12,1) ass(11,0) ass(20,0) ass(26,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.977s (Solving: 0.96s 1st Model: 0.64s Unsat: 0.32s)
+CPU Time     : 0.975s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(21,1) ass(8,1) ass(6,0) ass(2,0) ass(24,1) ass(5,0) ass(15,0) ass(18,0) ass(9,1) ass(14,0) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,1) ass(10,1) ass(12,1) ass(11,0) ass(20,0) ass(19,1) ass(23,0) ass(17,0) ass(22,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.174s (Solving: 0.16s 1st Model: 0.16s Unsat: 0.01s)
+CPU Time     : 0.174s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(21,1) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(15,0) ass(18,0) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,0) ass(16,1) ass(10,0) ass(12,0) ass(11,1) ass(20,0) ass(19,0) ass(17,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.402s (Solving: 0.39s 1st Model: 0.06s Unsat: 0.33s)
+CPU Time     : 0.402s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,1) ass(10,1) ass(12,0) ass(11,1) ass(17,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.172s (Solving: 0.16s 1st Model: 0.04s Unsat: 0.12s)
+CPU Time     : 0.171s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(4,1) ass(7,1) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(9,1) ass(4,0) ass(7,0) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.014s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.014s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.014s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.013s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy09_10_48.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy09_10_48.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(9,0) ass(4,1) ass(7,1) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.022s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.022s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,1) ass(2,1) ass(5,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step6_batch_yyy09_27_61.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step6_batch_yyy09_27_61.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(21,0) ass(8,0) ass(25,1) ass(6,0) ass(2,0) ass(24,0) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,1) ass(10,0) ass(12,1) ass(11,0) ass(20,0) ass(19,0) ass(23,0) ass(26,1) ass(17,1) ass(22,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.520s (Solving: 0.47s 1st Model: 0.15s Unsat: 0.32s)
+CPU Time     : 0.520s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_access-allegany-transit_20130327_1518.normalized.gml.50_42_76.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_access-allegany-transit_20130327_1518.normalized.gml.50_42_76.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(21,0) ass(8,0) ass(25,0) ass(33,1) ass(32,1) ass(24,0) ass(29,1) ass(30,1) ass(18,1) ass(39,0) ass(4,1) ass(41,1) ass(35,1) ass(0,1) ass(16,0) ass(38,0) ass(31,0) ass(27,0) ass(19,0) ass(36,0) ass(23,1) ass(17,0) ass(22,1) ass(1,1) ass(28,0) ass(40,1) ass(3,1) ass(6,1) ass(2,1) ass(5,1) ass(15,0) ass(9,1) ass(14,1) ass(13,1) ass(7,1) ass(34,1) ass(10,0) ass(12,0) ass(11,1) ass(20,0) ass(37,1) ass(26,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 1.510s (Solving: 1.50s 1st Model: 1.48s Unsat: 0.02s)
+CPU Time     : 1.510s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_benton-or-us.gml.80_25_56.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_benton-or-us.gml.80_25_56.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(21,1) ass(8,1) ass(6,1) ass(2,0) ass(24,1) ass(5,1) ass(15,1) ass(18,1) ass(9,1) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,1) ass(11,1) ass(20,0) ass(19,1) ass(23,0) ass(17,1) ass(22,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.446s (Solving: 0.44s 1st Model: 0.05s Unsat: 0.39s)
+CPU Time     : 0.446s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,1) ass(18,0) ass(9,1) ass(14,0) ass(4,0) ass(13,1) ass(7,0) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(19,0) ass(17,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.077s (Solving: 0.07s 1st Model: 0.07s Unsat: 0.00s)
+CPU Time     : 0.077s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_caravan_or_2015-12-01.gml.50_19_32.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_caravan_or_2015-12-01.gml.50_19_32.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,1) ass(18,1) ass(9,1) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,1) ass(10,1) ass(12,0) ass(11,1) ass(17,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.046s (Solving: 0.04s 1st Model: 0.02s Unsat: 0.02s)
+CPU Time     : 0.046s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,0) ass(11,0) ass(19,0) ass(17,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.087s (Solving: 0.08s 1st Model: 0.05s Unsat: 0.03s)
+CPU Time     : 0.086s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,1) ass(15,0) ass(9,0) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.063s (Solving: 0.06s 1st Model: 0.00s Unsat: 0.06s)
+CPU Time     : 0.062s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(9,1) ass(4,0) ass(7,0) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hoang-express_20120831_1707.normalized.gml.50_14_23.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hoang-express_20120831_1707.normalized.gml.50_14_23.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(9,0) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(10,1) ass(12,0) ass(11,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.017s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.01s)
+CPU Time     : 0.017s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_laguna-beach-transit_20151216_1912.gml.20_20_50.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_laguna-beach-transit_20151216_1912.gml.20_20_50.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,0) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,0) ass(19,1) ass(17,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.104s (Solving: 0.09s 1st Model: 0.02s Unsat: 0.07s)
+CPU Time     : 0.101s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(10,1) ass(8,1) ass(6,0) ass(2,0) ass(11,1) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(10,0) ass(8,0) ass(6,1) ass(2,0) ass(5,1) ass(9,0) ass(4,0) ass(7,0) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.009s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.009s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,0) ass(8,1) ass(6,1) ass(12,0) ass(2,1) ass(11,1) ass(5,0) ass(9,1) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,0) ass(10,0) ass(12,1) ass(11,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.021s (Solving: 0.01s 1st Model: 0.01s Unsat: 0.01s)
+CPU Time     : 0.021s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_societe-nationale-des-chemins-de-fer-tunisiens_20140804_1915.gml.20_18_21.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_societe-nationale-des-chemins-de-fer-tunisiens_20140804_1915.gml.20_18_21.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,1) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,1) ass(10,1) ass(12,0) ass(11,0) ass(17,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.038s (Solving: 0.03s 1st Model: 0.03s Unsat: 0.00s)
+CPU Time     : 0.038s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_southwest-point_20151216_1538.gml.80_18_34.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_southwest-point_20151216_1538.gml.80_18_34.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,0) ass(15,1) ass(9,1) ass(14,1) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,0) ass(10,1) ass(12,1) ass(11,0) ass(17,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.123s (Solving: 0.12s 1st Model: 0.00s Unsat: 0.12s)
+CPU Time     : 0.123s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,0) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,0) ass(10,1) ass(12,1) ass(11,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.033s (Solving: 0.03s 1st Model: 0.01s Unsat: 0.02s)
+CPU Time     : 0.033s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_the-shuttle-inc_20141224_0137.gml.20_18_23.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_the-shuttle-inc_20141224_0137.gml.20_18_23.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,1) ass(15,1) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,1) ass(16,1) ass(10,0) ass(12,1) ass(11,0) ass(17,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.048s (Solving: 0.04s 1st Model: 0.00s Unsat: 0.04s)
+CPU Time     : 0.048s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.20_18_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.20_18_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(15,1) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,0) ass(10,0) ass(12,1) ass(11,1) ass(17,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.037s (Solving: 0.03s 1st Model: 0.02s Unsat: 0.01s)
+CPU Time     : 0.037s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,1) ass(2,0) ass(5,1) ass(15,1) ass(9,0) ass(14,0) ass(4,1) ass(13,0) ass(7,0) ass(0,0) ass(16,0) ass(10,1) ass(12,0) ass(11,0) ass(17,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.037s (Solving: 0.03s 1st Model: 0.01s Unsat: 0.02s)
+CPU Time     : 0.037s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,1) ass(2,0) ass(5,1) ass(9,0) ass(4,1) ass(13,0) ass(7,1) ass(0,1) ass(10,0) ass(12,1) ass(11,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,1) ass(1,1)
+Answer: 2
+ass(3,1) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(9,0) ass(4,0) ass(7,1) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.014s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.014s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(9,0) ass(4,1) ass(7,1) ass(0,1) ass(1,1)
+Answer: 2
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.026s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.025s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy05_12_32.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy05_12_32.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(10,1) ass(8,1) ass(6,1) ass(2,1) ass(11,1) ass(5,0) ass(9,1) ass(4,0) ass(7,1) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.033s (Solving: 0.02s 1st Model: 0.01s Unsat: 0.00s)
+CPU Time     : 0.033s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(4,1) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step2_batch_yyy01_17_49.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step2_batch_yyy01_17_49.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,1) ass(2,u) ass(5,u) ass(15,u) ass(9,u) ass(14,u) ass(4,0) ass(13,u) ass(7,u) ass(0,u) ass(16,u) ass(10,1) ass(12,u) ass(11,u) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.038s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.038s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(21,1) ass(8,0) ass(25,1) ass(6,0) ass(2,1) ass(24,0) ass(5,0) ass(15,1) ass(18,1) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,1) ass(10,0) ass(12,1) ass(11,1) ass(20,0) ass(19,0) ass(23,1) ass(17,0) ass(22,1) ass(1,0)
+Answer: 2
+ass(3,0) ass(21,1) ass(8,0) ass(25,1) ass(6,1) ass(2,1) ass(24,1) ass(5,0) ass(15,0) ass(18,0) ass(9,0) ass(14,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(16,1) ass(10,0) ass(12,1) ass(11,1) ass(20,0) ass(19,0) ass(23,1) ass(17,0) ass(22,1) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.148s (Solving: 0.13s 1st Model: 0.11s Unsat: 0.01s)
+CPU Time     : 0.148s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(21,0) ass(8,1) ass(6,0) ass(2,1) ass(24,0) ass(5,1) ass(15,0) ass(18,0) ass(9,1) ass(14,0) ass(4,0) ass(13,0) ass(7,1) ass(0,0) ass(16,1) ass(10,1) ass(12,0) ass(11,1) ass(20,0) ass(19,1) ass(23,0) ass(17,1) ass(22,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.514s (Solving: 0.50s 1st Model: 0.03s Unsat: 0.47s)
+CPU Time     : 0.514s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(21,0) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(15,1) ass(18,0) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,1) ass(0,0) ass(16,1) ass(10,0) ass(12,0) ass(11,1) ass(20,0) ass(19,0) ass(17,0) ass(22,1) ass(1,0)
+Answer: 2
+ass(3,0) ass(21,0) ass(8,1) ass(6,1) ass(2,1) ass(5,1) ass(15,1) ass(18,1) ass(9,0) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,0) ass(16,0) ass(10,0) ass(12,0) ass(11,1) ass(20,0) ass(19,0) ass(17,0) ass(22,0) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.439s (Solving: 0.39s 1st Model: 0.04s Unsat: 0.19s)
+CPU Time     : 0.439s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(21,1) ass(8,1) ass(6,1) ass(2,1) ass(24,1) ass(5,1) ass(15,1) ass(18,0) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,0) ass(16,1) ass(10,1) ass(12,1) ass(11,0) ass(20,1) ass(19,1) ass(23,0) ass(17,1) ass(22,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.576s (Solving: 0.56s 1st Model: 0.06s Unsat: 0.49s)
+CPU Time     : 0.575s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(21,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,0) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,0) ass(16,0) ass(10,0) ass(12,1) ass(11,0) ass(20,0) ass(19,1) ass(17,1) ass(1,0)
+Answer: 2
+ass(3,1) ass(21,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,1) ass(18,0) ass(9,0) ass(14,0) ass(4,1) ass(13,1) ass(7,1) ass(0,1) ass(16,1) ass(10,0) ass(12,1) ass(11,0) ass(20,0) ass(19,1) ass(17,1) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.710s (Solving: 0.70s 1st Model: 0.69s Unsat: 0.00s)
+CPU Time     : 0.708s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,u) ass(8,u) ass(6,0) ass(2,1) ass(5,1) ass(15,u) ass(18,u) ass(9,u) ass(14,u) ass(4,1) ass(13,1) ass(7,0) ass(0,u) ass(16,u) ass(10,0) ass(12,u) ass(11,u) ass(17,1) ass(1,u)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.019s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.019s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,u) ass(2,1) ass(5,u) ass(4,u) ass(7,u) ass(0,u) ass(1,u)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.009s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(9,0) ass(4,0) ass(7,0) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+Answer: 2
+ass(3,1) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.021s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.021s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy09_10_48.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy09_10_48.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+Answer: 2
+ass(3,1) ass(8,0) ass(6,0) ass(2,1) ass(5,0) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.039s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.039s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,1) ass(2,1) ass(5,0) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+Answer: 2
+ass(3,0) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.008s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,u) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(15,u) ass(18,u) ass(9,0) ass(14,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(16,u) ass(10,0) ass(12,u) ass(11,1) ass(19,0) ass(17,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.019s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.01s)
+CPU Time     : 0.019s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,u) ass(5,1) ass(15,u) ass(18,0) ass(9,u) ass(14,u) ass(4,1) ass(13,0) ass(7,0) ass(0,u) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(19,u) ass(17,0) ass(1,1)
+Answer: 2
+ass(3,0) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(15,u) ass(18,1) ass(9,u) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,u) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(19,1) ass(17,0) ass(1,0)
+Answer: 3
+ass(3,0) ass(8,1) ass(6,0) ass(2,u) ass(5,1) ass(15,u) ass(18,0) ass(9,u) ass(14,u) ass(4,0) ass(13,0) ass(7,0) ass(0,u) ass(16,1) ass(10,1) ass(12,1) ass(11,1) ass(19,u) ass(17,0) ass(1,1)
+Answer: 4
+ass(3,1) ass(8,0) ass(6,u) ass(2,u) ass(5,1) ass(15,u) ass(18,0) ass(9,u) ass(14,u) ass(4,1) ass(13,0) ass(7,1) ass(0,u) ass(16,1) ass(10,0) ass(12,1) ass(11,1) ass(19,u) ass(17,0) ass(1,1)
+Answer: 5
+ass(3,1) ass(8,1) ass(6,u) ass(2,0) ass(5,1) ass(15,u) ass(18,1) ass(9,u) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,u) ass(16,1) ass(10,0) ass(12,1) ass(11,1) ass(19,1) ass(17,0) ass(1,0)
+Answer: 6
+ass(3,1) ass(8,1) ass(6,u) ass(2,u) ass(5,1) ass(15,u) ass(18,0) ass(9,u) ass(14,u) ass(4,0) ass(13,0) ass(7,1) ass(0,u) ass(16,1) ass(10,0) ass(12,1) ass(11,1) ass(19,u) ass(17,0) ass(1,1)
+SATISFIABLE
+
+Models       : 6
+Calls        : 1
+Time         : 0.029s (Solving: 0.02s 1st Model: 0.00s Unsat: 0.01s)
+CPU Time     : 0.029s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,u) ass(8,0) ass(6,0) ass(2,u) ass(5,u) ass(15,0) ass(9,u) ass(14,1) ass(4,u) ass(13,1) ass(7,1) ass(0,0) ass(16,0) ass(10,u) ass(12,u) ass(11,1) ass(17,1) ass(1,u)
+Answer: 2
+ass(3,u) ass(8,u) ass(6,0) ass(2,u) ass(5,u) ass(15,0) ass(9,u) ass(14,1) ass(4,u) ass(13,1) ass(7,u) ass(0,0) ass(16,1) ass(10,u) ass(12,u) ass(11,0) ass(17,0) ass(1,u)
+Answer: 3
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,0) ass(10,0) ass(12,1) ass(11,1) ass(17,1) ass(1,0)
+Answer: 4
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(15,1) ass(9,1) ass(14,0) ass(4,1) ass(13,0) ass(7,1) ass(0,0) ass(16,1) ass(10,0) ass(12,1) ass(11,0) ass(17,0) ass(1,0)
+SATISFIABLE
+
+Models       : 4
+Calls        : 1
+Time         : 0.015s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.015s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,0) ass(2,0) ass(5,1) ass(9,u) ass(4,u) ass(7,1) ass(0,0) ass(1,1)
+Answer: 2
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(9,u) ass(4,u) ass(7,1) ass(0,0) ass(1,0)
+Answer: 3
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(9,u) ass(4,u) ass(7,1) ass(0,1) ass(1,0)
+Answer: 4
+ass(3,1) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(9,1) ass(4,0) ass(7,0) ass(0,1) ass(1,0)
+Answer: 5
+ass(3,1) ass(8,0) ass(6,1) ass(2,1) ass(5,1) ass(9,1) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+Answer: 6
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,1) ass(9,1) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 6
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hoang-express_20120831_1707.normalized.gml.50_14_23.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hoang-express_20120831_1707.normalized.gml.50_14_23.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,u) ass(8,0) ass(6,0) ass(2,u) ass(5,u) ass(9,0) ass(4,u) ass(13,u) ass(7,1) ass(0,1) ass(10,1) ass(12,0) ass(11,1) ass(1,u)
+Answer: 2
+ass(3,u) ass(8,0) ass(6,0) ass(2,u) ass(5,u) ass(9,0) ass(4,u) ass(13,u) ass(7,1) ass(0,1) ass(10,0) ass(12,1) ass(11,1) ass(1,u)
+Answer: 3
+ass(3,u) ass(8,0) ass(6,1) ass(2,u) ass(5,u) ass(9,1) ass(4,u) ass(13,u) ass(7,1) ass(0,1) ass(10,0) ass(12,1) ass(11,0) ass(1,u)
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,0) ass(8,1) ass(6,0) ass(2,1) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,0) ass(8,0) ass(6,1) ass(2,1) ass(11,0) ass(5,1) ass(9,0) ass(4,0) ass(7,1) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(10,0) ass(8,u) ass(6,u) ass(2,1) ass(5,0) ass(9,0) ass(4,1) ass(7,1) ass(0,0) ass(1,0)
+Answer: 2
+ass(3,1) ass(10,1) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(9,1) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(10,0) ass(8,0) ass(6,u) ass(12,0) ass(2,0) ass(11,0) ass(5,u) ass(9,1) ass(4,1) ass(7,u) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.009s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,u) ass(6,1) ass(2,u) ass(5,u) ass(15,u) ass(9,u) ass(14,1) ass(4,1) ass(13,u) ass(7,0) ass(0,0) ass(10,1) ass(12,0) ass(11,u) ass(1,u)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.014s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.014s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,u) ass(8,1) ass(6,u) ass(2,u) ass(5,0) ass(4,u) ass(7,u) ass(0,0) ass(1,u)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(5,0) ass(9,1) ass(14,0) ass(4,0) ass(13,0) ass(7,1) ass(0,1) ass(10,0) ass(12,0) ass(11,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.019s (Solving: 0.01s 1st Model: 0.01s Unsat: 0.00s)
+CPU Time     : 0.019s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,u) ass(2,0) ass(5,1) ass(15,u) ass(9,0) ass(14,1) ass(4,0) ass(13,1) ass(7,1) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,u) ass(17,0) ass(1,0)
+Answer: 2
+ass(3,u) ass(8,0) ass(6,u) ass(2,0) ass(5,1) ass(15,u) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,1) ass(11,u) ass(17,0) ass(1,0)
+Answer: 3
+ass(3,u) ass(8,0) ass(6,u) ass(2,0) ass(5,0) ass(15,u) ass(9,1) ass(14,0) ass(4,0) ass(13,0) ass(7,1) ass(0,1) ass(16,0) ass(10,0) ass(12,1) ass(11,u) ass(17,0) ass(1,0)
+Answer: 4
+ass(3,1) ass(8,0) ass(6,u) ass(2,0) ass(5,0) ass(15,u) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,1) ass(0,1) ass(16,0) ass(10,1) ass(12,1) ass(11,u) ass(17,0) ass(1,0)
+Answer: 5
+ass(3,1) ass(8,0) ass(6,u) ass(2,0) ass(5,1) ass(15,u) ass(9,0) ass(14,1) ass(4,0) ass(13,1) ass(7,0) ass(0,1) ass(16,1) ass(10,1) ass(12,0) ass(11,u) ass(17,1) ass(1,0)
+Answer: 6
+ass(3,u) ass(8,0) ass(6,u) ass(2,0) ass(5,1) ass(15,u) ass(9,1) ass(14,1) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,u) ass(17,1) ass(1,0)
+Answer: 7
+ass(3,1) ass(8,0) ass(6,u) ass(2,0) ass(5,0) ass(15,u) ass(9,0) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,1) ass(10,1) ass(12,0) ass(11,u) ass(17,1) ass(1,0)
+Answer: 8
+ass(3,u) ass(8,0) ass(6,u) ass(2,0) ass(5,0) ass(15,u) ass(9,1) ass(14,0) ass(4,0) ass(13,0) ass(7,0) ass(0,1) ass(16,1) ass(10,0) ass(12,0) ass(11,u) ass(17,1) ass(1,0)
+SATISFIABLE
+
+Models       : 8
+Calls        : 1
+Time         : 0.032s (Solving: 0.03s 1st Model: 0.00s Unsat: 0.02s)
+CPU Time     : 0.032s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -prf = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -prf ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,1) ass(6,0) ass(2,1) ass(5,1) ass(9,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(10,1) ass(12,0) ass(11,0) ass(1,1)
+Answer: 2
+ass(3,1) ass(8,0) ass(6,0) ass(2,1) ass(5,1) ass(9,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(10,1) ass(12,0) ass(11,0) ass(1,1)
+Answer: 3
+ass(3,0) ass(8,1) ass(6,1) ass(2,1) ass(5,0) ass(9,1) ass(4,1) ass(13,1) ass(7,0) ass(0,1) ass(10,0) ass(12,0) ass(11,1) ass(1,1)
+Answer: 4
+ass(3,1) ass(8,0) ass(6,1) ass(2,1) ass(5,0) ass(9,1) ass(4,1) ass(13,0) ass(7,0) ass(0,1) ass(10,0) ass(12,0) ass(11,1) ass(1,1)
+SATISFIABLE
+
+Models       : 4
+Calls        : 1
+Time         : 0.012s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
++ exit_code=30
++ case $exit_code in
++ exit 0

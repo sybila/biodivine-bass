@@ -1,0 +1,1489 @@
+=== BAss stable ===
+
+--- Instance: 007 ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/007.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/007.normal.adf
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:34Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:34Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 11 for statement `1`
+[2025-12-11T18:34:34Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `2`
+[2025-12-11T18:34:34Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 8 for statement `3`
+[2025-12-11T18:34:34Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `4`
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Generated 5 fixed-point constraints from 5 statements
+[2025-12-11T18:34:34Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:34Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:34Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:34Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 11 BDD nodes.
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 2 ones
+t(0) t(1) f(2) f(3) f(4)
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 7; Result set nodes: 7; Result set paths: 1
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 3 ones
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 11; Result set paths: 2
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 11 nodes and 2 paths
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 30 nodes and 2 paths
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 30 nodes and 2 paths
+[2025-12-11T18:34:34Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 7 nodes and 1 paths 
+[2025-12-11T18:34:34Z INFO  BAss] Solution count: 1
+
+--- Instance: 088 ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/088.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/088.normal.adf
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `2`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `3`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `4`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `5`
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Generated 6 fixed-point constraints from 6 statements
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 16 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 16 nodes
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 16 nodes
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 16 BDD nodes.
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 1 ones
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 13; Result set nodes: 8; Result set paths: 1
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 2 ones
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 8; Result set nodes: 12; Result set paths: 2
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 3 ones
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 16; Result set paths: 3
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 16 nodes and 3 paths
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 46 nodes and 3 paths
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 48 nodes and 3 paths
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 16 nodes and 3 paths 
+[2025-12-11T18:34:35Z INFO  BAss] Solution count: 3
+f(0) f(1) f(2) f(3) t(4) f(5)
+f(0) t(1) f(2) t(3) f(4) t(5)
+t(0) f(1) t(2) f(3) f(4) f(5)
+
+--- Instance: 097 ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/097.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/097.normal.adf
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `0`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `1`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `2`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `3`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `4`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `5`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `6`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `7`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `8`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `9`
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 7 nodes
+f(0) f(1) f(2) f(3) f(4) f(5) f(6) f(7) f(8) f(9)
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 12 BDD nodes.
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 0 ones
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 12 nodes and 1 paths
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:35Z INFO  BAss] Solution count: 1
+
+--- Instance: 109 ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/109.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/109.normal.adf
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 8 for statement `1`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `2`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `3`
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `4`
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Generated 5 fixed-point constraints from 5 statements
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:35Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 7 nodes
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 7 BDD nodes.
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 0 ones
+f(0) f(1) f(2) f(3) f(4)
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 7; Result set paths: 1
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 7 nodes and 1 paths
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 17 nodes and 1 paths
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 17 nodes and 1 paths
+[2025-12-11T18:34:35Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 7 nodes and 1 paths 
+[2025-12-11T18:34:35Z INFO  BAss] Solution count: 1
+
+--- Instance: 110 ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/110.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/110.normal.adf
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `3`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `4`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `5`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `6`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `8`
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Generated 9 fixed-point constraints from 9 statements
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 13 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 15 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 17 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 18 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 19 nodes
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 19 nodes
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 19 BDD nodes.
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 3 ones
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 11; Result set nodes: 11; Result set paths: 1
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 6 ones
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 19; Result set paths: 2
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 19 nodes and 2 paths
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 54 nodes and 2 paths
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 55 nodes and 2 paths
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes and 1 paths 
+[2025-12-11T18:34:36Z INFO  BAss] Solution count: 1
+t(0) t(1) f(2) t(3) t(4) f(5) f(6) t(7) t(8)
+
+--- Instance: 133 ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/133.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/133.normal.adf
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `2`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 4 for statement `3`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `5`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `6`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 4 for statement `7`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `8`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 8 for statement `9`
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 12 BDD nodes.
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 1 ones
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 12 nodes and 1 paths
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:36Z INFO  BAss] Solution count: 1
+f(0) t(1) f(2) f(3) f(4) f(5) f(6) f(7) f(8) f(9)
+
+--- Instance: 165 ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/165.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/165.normal.adf
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `0`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `1`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 4 for statement `2`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 12 for statement `3`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 12 for statement `4`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `5`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `6`
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `7`
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Generated 8 fixed-point constraints from 8 statements
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:36Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 10 BDD nodes.
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 0 ones
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 10; Result set paths: 1
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 10 nodes and 1 paths
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:36Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes and 1 paths 
+[2025-12-11T18:34:36Z INFO  BAss] Solution count: 1
+f(0) f(1) f(2) f(3) f(4) f(5) f(6) f(7)
+
+--- Instance: 184 ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/184.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/184.normal.adf
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `1`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `2`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 12 for statement `3`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `4`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `5`
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Generated 6 fixed-point constraints from 6 statements
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 8 nodes
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 8 BDD nodes.
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 2 ones
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 8; Result set paths: 1
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 8 nodes and 1 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 20 nodes and 1 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 20 nodes and 1 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 8 nodes and 1 paths 
+[2025-12-11T18:34:37Z INFO  BAss] Solution count: 1
+f(0) f(1) f(2) f(3) t(4) t(5)
+
+--- Instance: 189 ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/189.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/189.normal.adf
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 8 for statement `2`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `3`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `4`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 4 for statement `5`
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Generated 6 fixed-point constraints from 6 statements
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 1 nodes
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 1 BDD nodes.
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes and 0 paths 
+[2025-12-11T18:34:37Z INFO  BAss] Solution count: 0
+
+--- Instance: Small-result-b10.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b10.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b10.apx.graph.normal.adf
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `0`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `2`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `3`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `4`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `5`
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Generated 6 fixed-point constraints from 6 statements
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 13 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 10 BDD nodes.
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 3 ones
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 8; Result set paths: 1
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 8 nodes and 1 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 20 nodes and 1 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 20 nodes and 1 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 8 nodes and 1 paths 
+[2025-12-11T18:34:37Z INFO  BAss] Solution count: 1
+t(0) f(1) f(2) t(3) f(4) t(5)
+
+--- Instance: Small-result-b13.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b13.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b13.apx.graph.normal.adf
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `0`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `1`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 11 for statement `2`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `3`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `5`
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Generated 6 fixed-point constraints from 6 statements
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:37Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 11 BDD nodes.
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 3 ones
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 8; Result set nodes: 8; Result set paths: 1
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 4 ones
+t(0) t(1) f(2) f(3) t(4) f(5)
+t(0) t(1) t(2) f(3) f(4) t(5)
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 11; Result set paths: 2
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 11 nodes and 2 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 30 nodes and 2 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 31 nodes and 2 paths
+[2025-12-11T18:34:37Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes and 2 paths 
+[2025-12-11T18:34:37Z INFO  BAss] Solution count: 2
+
+--- Instance: Small-result-b16.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b16.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b16.apx.graph.normal.adf
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `0`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `1`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `2`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `3`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `5`
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Generated 6 fixed-point constraints from 6 statements
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 8 nodes
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 8 BDD nodes.
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 2 ones
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 8; Result set paths: 1
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 8 nodes and 1 paths
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 20 nodes and 1 paths
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 20 nodes and 1 paths
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 8 nodes and 1 paths 
+[2025-12-11T18:34:38Z INFO  BAss] Solution count: 1
+f(0) f(1) f(2) t(3) f(4) t(5)
+
+--- Instance: Small-result-b2.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b2.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b2.apx.graph.normal.adf
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `2`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `3`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `4`
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Generated 5 fixed-point constraints from 5 statements
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 7 nodes
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 7 BDD nodes.
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 2 ones
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 7; Result set paths: 1
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 7 nodes and 1 paths
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 17 nodes and 1 paths
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 17 nodes and 1 paths
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 7 nodes and 1 paths 
+[2025-12-11T18:34:38Z INFO  BAss] Solution count: 1
+t(0) t(1) f(2) f(3) f(4)
+
+--- Instance: Small-result-b33.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b33.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b33.apx.graph.normal.adf
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 21 for statement `1`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `2`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `3`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `4`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `5`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 20 for statement `6`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `7`
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `8`
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Generated 9 fixed-point constraints from 9 statements
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 15 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 18 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 17 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:38Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 1 nodes
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 1 BDD nodes.
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:38Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes and 0 paths 
+[2025-12-11T18:34:38Z INFO  BAss] Solution count: 0
+
+--- Instance: Small-result-b34.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b34.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b34.apx.graph.normal.adf
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 11 for statement `0`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `1`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 11 for statement `2`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 19 for statement `3`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 14 for statement `4`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `5`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 15 for statement `6`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 11 for statement `7`
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Generated 8 fixed-point constraints from 8 statements
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 15 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 13 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 15 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 1 nodes
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 1 BDD nodes.
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes and 0 paths 
+[2025-12-11T18:34:39Z INFO  BAss] Solution count: 0
+
+--- Instance: Small-result-b35.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b35.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b35.apx.graph.normal.adf
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 11 for statement `1`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 15 for statement `2`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 11 for statement `3`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `4`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `5`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 8 for statement `6`
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Generated 7 fixed-point constraints from 7 statements
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 13 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 13 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 9 nodes
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 9 BDD nodes.
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 1 ones
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 9; Result set paths: 1
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 9 nodes and 1 paths
+f(0) f(1) f(2) f(3) f(4) t(5) f(6)
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 23 nodes and 1 paths
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 23 nodes and 1 paths
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 9 nodes and 1 paths 
+[2025-12-11T18:34:39Z INFO  BAss] Solution count: 1
+
+--- Instance: Small-result-b41.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b41.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b41.apx.graph.normal.adf
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `2`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `3`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 8 for statement `4`
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `5`
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Generated 6 fixed-point constraints from 6 statements
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:39Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 8 nodes
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 8 BDD nodes.
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 3 ones
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 8; Result set paths: 1
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 8 nodes and 1 paths
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 20 nodes and 1 paths
+f(0) t(1) f(2) t(3) f(4) t(5)
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 20 nodes and 1 paths
+[2025-12-11T18:34:39Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 8 nodes and 1 paths 
+[2025-12-11T18:34:39Z INFO  BAss] Solution count: 1
+
+--- Instance: Small-result-b57.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b57.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b57.apx.graph.normal.adf
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 35 for statement `1`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `3`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `4`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `5`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `6`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Generated 8 fixed-point constraints from 8 statements
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 10 BDD nodes.
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 4 ones
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 10; Result set paths: 1
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 10 nodes and 1 paths
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 26 nodes and 1 paths
+t(0) f(1) f(2) t(3) t(4) t(5) f(6) f(7)
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes and 1 paths 
+[2025-12-11T18:34:40Z INFO  BAss] Solution count: 1
+
+--- Instance: Small-result-b58.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b58.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b58.apx.graph.normal.adf
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 21 for statement `1`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `3`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `4`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `5`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `6`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Generated 8 fixed-point constraints from 8 statements
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 10 BDD nodes.
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 6 ones
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 10; Result set paths: 1
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 10 nodes and 1 paths
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes and 1 paths 
+[2025-12-11T18:34:40Z INFO  BAss] Solution count: 1
+t(0) f(1) t(2) t(3) t(4) t(5) f(6) t(7)
+
+--- Instance: Small-result-b8.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/Small-result-b8.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/Small-result-b8.apx.graph.normal.adf
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `3`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `4`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `5`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `6`
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 18 for statement `7`
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Generated 8 fixed-point constraints from 8 statements
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:40Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 10 BDD nodes.
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 2 ones
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 10; Result set paths: 1
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 10 nodes and 1 paths
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:40Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes and 1 paths 
+[2025-12-11T18:34:40Z INFO  BAss] Solution count: 1
+f(0) t(1) f(2) f(3) f(4) t(5) f(6) f(7)
+
+--- Instance: T-1-cascadespoint-or-us.gml.20.apx.graph ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/T-1-cascadespoint-or-us.gml.20.apx.graph.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/T-1-cascadespoint-or-us.gml.20.apx.graph.normal.adf
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `2`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `3`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 12 for statement `4`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `5`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `6`
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Generated 7 fixed-point constraints from 7 statements
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 11 BDD nodes.
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 6 ones
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 11; Result set paths: 2
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 11 nodes and 2 paths
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 30 nodes and 2 paths
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 41 nodes and 2 paths
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 9 nodes and 1 paths 
+[2025-12-11T18:34:41Z INFO  BAss] Solution count: 1
+t(0) t(1) t(2) f(3) t(4) t(5) t(6)
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `2`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `3`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `4`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `5`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `6`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `7`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `8`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `9`
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 12 BDD nodes.
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 4 ones
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 12 nodes and 1 paths
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 32 nodes and 1 paths
+f(0) f(1) t(2) t(3) f(4) f(5) f(6) t(7) t(8) f(9)
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:41Z INFO  BAss] Solution count: 1
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 14 for statement `3`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `5`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `6`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `7`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `8`
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 12 for statement `9`
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:41Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 12 BDD nodes.
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 6 ones
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 12 nodes and 1 paths
+t(0) t(1) t(2) f(3) f(4) t(5) t(6) f(7) t(8) f(9)
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:41Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:41Z INFO  BAss] Solution count: 1
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx.normal.adf
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 11 for statement `1`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `2`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 14 for statement `3`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `4`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `5`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `6`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `8`
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Generated 9 fixed-point constraints from 9 statements
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 11 BDD nodes.
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 5 ones
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 11; Result set paths: 1
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 11 nodes and 1 paths
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 29 nodes and 1 paths
+t(0) t(1) t(2) t(3) t(4) f(5) f(6) f(7) f(8)
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 29 nodes and 1 paths
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes and 1 paths 
+[2025-12-11T18:34:42Z INFO  BAss] Solution count: 1
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `0`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `2`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `3`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `5`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `6`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `8`
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Generated 9 fixed-point constraints from 9 statements
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 11 BDD nodes.
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 2 ones
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 11; Result set paths: 1
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 11 nodes and 1 paths
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 29 nodes and 1 paths
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 29 nodes and 1 paths
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes and 1 paths 
+[2025-12-11T18:34:42Z INFO  BAss] Solution count: 1
+f(0) f(1) f(2) f(3) f(4) t(5) f(6) t(7) f(8)
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `1`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `3`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `5`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `6`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `7`
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `8`
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Generated 9 fixed-point constraints from 9 statements
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:42Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 11 BDD nodes.
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 5 ones
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 11; Result set paths: 1
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 11 nodes and 1 paths
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 29 nodes and 1 paths
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 29 nodes and 1 paths
+[2025-12-11T18:34:42Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes and 1 paths 
+[2025-12-11T18:34:42Z INFO  BAss] Solution count: 1
+t(0) f(1) t(2) f(3) t(4) f(5) f(6) t(7) t(8)
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `2`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 17 for statement `3`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `4`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 12 for statement `5`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `6`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `7`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `8`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `9`
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 12 BDD nodes.
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 5 ones
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 12 nodes and 1 paths
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:43Z INFO  BAss] Solution count: 1
+t(0) f(1) t(2) t(3) f(4) f(5) f(6) f(7) t(8) t(9)
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `0`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `2`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 14 for statement `3`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `4`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `5`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `6`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `7`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `8`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `9`
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 12 BDD nodes.
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 1 ones
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 12 nodes and 1 paths
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:43Z INFO  BAss] Solution count: 1
+f(0) f(1) f(2) t(3) f(4) f(5) f(6) f(7) f(8) f(9)
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `1`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 14 for statement `2`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `3`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `5`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `6`
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `7`
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Generated 8 fixed-point constraints from 8 statements
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:43Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 10 BDD nodes.
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 3 ones
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 10; Result set paths: 1
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 10 nodes and 1 paths
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:43Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes and 1 paths 
+[2025-12-11T18:34:43Z INFO  BAss] Solution count: 1
+f(0) f(1) t(2) f(3) t(4) f(5) t(6) f(7)
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `0`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `2`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `3`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `4`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `5`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `6`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `8`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `9`
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 12 BDD nodes.
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 6 ones
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 12 nodes and 1 paths
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:44Z INFO  BAss] Solution count: 1
+t(0) t(1) t(2) t(3) f(4) t(5) f(6) f(7) f(8) t(9)
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 21 for statement `0`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `1`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `2`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `3`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `4`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `5`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 23 for statement `6`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `8`
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Generated 9 fixed-point constraints from 9 statements
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 11 BDD nodes.
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 3 ones
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 11; Result set paths: 1
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 11 nodes and 1 paths
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 29 nodes and 1 paths
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 29 nodes and 1 paths
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes and 1 paths 
+[2025-12-11T18:34:44Z INFO  BAss] Solution count: 1
+f(0) f(1) t(2) t(3) t(4) f(5) f(6) f(7) f(8)
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 8 for statement `0`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 18 for statement `2`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `3`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `4`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `5`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `6`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `7`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `8`
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `9`
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 17 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 21 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 25 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 23 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 16 nodes
+[2025-12-11T18:34:44Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 17 nodes
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 17 nodes
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 17 BDD nodes.
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 5 ones
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 12; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 6 ones
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 17; Result set paths: 2
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 17 nodes and 2 paths
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 48 nodes and 2 paths
+t(0) t(1) f(2) t(3) f(4) f(5) t(6) t(7) t(8) f(9)
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 56 nodes and 2 paths
+[2025-12-11T18:34:44Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:44Z INFO  BAss] Solution count: 1
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 16 for statement `0`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 12 for statement `3`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 11 for statement `4`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `5`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `6`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `8`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 12 for statement `9`
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 17 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 15 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 14 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 15 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 16 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 17 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 19 nodes
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 19 nodes
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 19 BDD nodes.
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 4 ones
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 12; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 7 ones
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 19; Result set paths: 2
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 19 nodes and 2 paths
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 54 nodes and 2 paths
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 54 nodes and 2 paths
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:45Z INFO  BAss] Solution count: 1
+f(0) f(1) t(2) f(3) f(4) t(5) t(6) f(7) t(8) f(9)
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `2`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `3`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 13 for statement `4`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `5`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `6`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 14 for statement `7`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `8`
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Generated 9 fixed-point constraints from 9 statements
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 11 BDD nodes.
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 5 ones
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 11; Result set paths: 1
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 11 nodes and 1 paths
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 29 nodes and 1 paths
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 29 nodes and 1 paths
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes and 1 paths 
+[2025-12-11T18:34:45Z INFO  BAss] Solution count: 1
+f(0) t(1) t(2) t(3) t(4) f(5) t(6) f(7) f(8)
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 8 for statement `0`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `3`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `5`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 8 for statement `6`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 8 for statement `7`
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `8`
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Generated 9 fixed-point constraints from 9 statements
+[2025-12-11T18:34:45Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 1 nodes
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 1 BDD nodes.
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:45Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes and 0 paths 
+[2025-12-11T18:34:45Z INFO  BAss] Solution count: 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 13 for statement `1`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `2`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 19 for statement `3`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 15 for statement `5`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `6`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 12 for statement `7`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `8`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `9`
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 14 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 18 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 18 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 25 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 20 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 12 BDD nodes.
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 2 ones
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 12 nodes and 1 paths
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 32 nodes and 1 paths
+t(0) f(1) f(2) f(3) f(4) t(5) f(6) f(7) f(8) f(9)
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:46Z INFO  BAss] Solution count: 1
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `0`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 15 for statement `1`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `2`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 23 for statement `3`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `5`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `6`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `8`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `9`
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 5 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 11 nodes
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 11 BDD nodes.
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 3 ones
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 12; Result set paths: 1
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 12 nodes and 1 paths
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 32 nodes and 1 paths
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 12 nodes and 1 paths 
+[2025-12-11T18:34:46Z INFO  BAss] Solution count: 1
+f(0) f(1) f(2) t(3) t(4) t(5) f(6) f(7) f(8) f(9)
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `0`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `3`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 16 for statement `4`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `5`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `6`
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `7`
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Generated 8 fixed-point constraints from 8 statements
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 12 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 13 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:46Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 9 nodes
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 9 BDD nodes.
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 3 ones
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 10; Result set paths: 1
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 10 nodes and 1 paths
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 26 nodes and 1 paths
+[2025-12-11T18:34:46Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 10 nodes and 1 paths 
+[2025-12-11T18:34:46Z INFO  BAss] Solution count: 1
+f(0) t(1) f(2) f(3) f(4) f(5) t(6) t(7)
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `0`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `1`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 9 for statement `2`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `3`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `4`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `5`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `6`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `8`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `9`
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Generated 10 fixed-point constraints from 10 statements
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 6 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 14 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 14 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 22 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 13 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 21 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 22 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 24 nodes
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 24 nodes
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 24 BDD nodes.
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 5 ones
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 12; Result set nodes: 17; Result set paths: 2
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 6 ones
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 24; Result set paths: 3
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 24 nodes and 3 paths
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 70 nodes and 3 paths
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 71 nodes and 3 paths
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes and 0 paths 
+[2025-12-11T18:34:47Z INFO  BAss] Solution count: 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.adf
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 3 for statement `0`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `10`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `3`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `4`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `5`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `6`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `7`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `8`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `9`
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Generated 11 fixed-point constraints from 11 statements
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 10 constraints remaining, result BDD size: 4 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 9 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 8 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 9 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 4 constraints remaining, result BDD size: 10 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 3 constraints remaining, result BDD size: 17 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 2 constraints remaining, result BDD size: 18 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 1 constraints remaining, result BDD size: 13 nodes
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 13 nodes
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 13 BDD nodes.
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Current best candidate model has 7 ones
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Remaining set nodes: 1; Result set nodes: 13; Result set paths: 1
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 13 nodes and 1 paths
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 35 nodes and 1 paths
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 35 nodes and 1 paths
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes and 0 paths 
+[2025-12-11T18:34:47Z INFO  BAss] Solution count: 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-bass' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'BAss' with arguments '-stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf'.
++ set -e
++ '[' -stb = --count-only ']'
++ RUST_LOG=debug
++ /sw/BAss -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of stable BDD solver by computing all two-valued interpretations.
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Starting computation of complete two-valued interpretations
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 19 for statement `0`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 7 for statement `1`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `2`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 10 for statement `3`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `4`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 5 for statement `5`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 14 for statement `6`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `7`
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::adf_interpretation_solver] Generated constraint of size 6 for statement `8`
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Generated 9 fixed-point constraints from 9 statements
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 8 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 7 constraints remaining, result BDD size: 11 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 6 constraints remaining, result BDD size: 7 nodes
+[2025-12-11T18:34:47Z DEBUG biodivine_bass::bdd_solver::quadratic_greedy] Merging BDDs: 5 constraints remaining, result BDD size: 1 nodes
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Starting minimization process with 1 BDD nodes.
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computed stable model candidates: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Expanded stable model candidates to dual encoding: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computed grounded model candidates: resulting BDD has 1 nodes and 0 paths
+[2025-12-11T18:34:47Z INFO  biodivine_bass::adf_interpretation_solver] Computation complete: resulting BDD has 1 nodes and 0 paths 
+[2025-12-11T18:34:47Z INFO  BAss] Solution count: 0
