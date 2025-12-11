@@ -53,10 +53,10 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-- - - - - - - 1 - - - - - 1 - - 
-- - - - - - 0 0 0 0 - - - 1 - - 
-0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
-0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 
+- - - - - - - 1 - - - - - - - 1 
+- - 0 0 - - - 1 - - - - - - 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
 
 --- Instance: 021 ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -97,16 +97,16 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 1 
-0 0 1 1 0 1 0 0 1 0 0 1 1 0 0 0 0 
-0 1 0 0 0 1 1 0 0 0 1 0 0 0 0 0 1 
-0 0 1 1 0 0 0 1 1 0 0 1 1 0 0 0 0 
-0 0 1 1 0 0 0 1 1 0 0 1 1 1 0 0 0 
-0 1 0 0 0 1 1 0 1 0 1 0 0 0 0 0 1 
-1 0 0 0 1 1 0 1 0 0 1 0 0 1 1 0 1 
-1 0 0 0 1 1 0 1 0 1 1 0 0 1 1 1 1 
-1 0 0 0 1 1 1 1 0 1 1 0 0 1 1 1 1 
-1 0 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 
+0 1 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 
+0 1 0 1 0 0 0 0 0 1 0 0 0 1 1 0 0 
+0 0 0 0 1 1 1 0 0 0 1 1 0 0 0 1 1 
+0 0 0 0 1 1 0 0 0 0 1 1 0 1 0 0 1 
+0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 1 1 
+0 1 0 1 0 0 0 0 0 1 0 0 0 1 1 0 1 
+1 0 0 1 0 0 1 1 0 1 0 0 1 1 0 1 0 
+1 0 1 1 0 0 1 1 1 1 0 0 1 1 0 1 0 
+1 0 1 1 0 0 1 1 1 1 0 0 1 1 1 1 0 
+1 0 1 1 0 0 1 1 1 1 0 0 1 1 1 1 1 
 
 --- Instance: 028 ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -141,262 +141,262 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 1 1 1 1 0 1 0 1 1 1 1 1 1 0 1 1 
-0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 
-0 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 1 1 
-0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 
-0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 1 1 
+0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 0 1 
+0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 
 0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 
-0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 
-1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 
-1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 
-1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 
-1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
-1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
-1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 1 
+0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 
+0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 0 1 1 
+0 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 
+1 0 0 1 0 1 1 0 0 0 1 0 1 0 0 1 0 1 
+1 0 0 1 0 1 1 0 0 0 1 0 0 0 1 1 1 1 
+1 0 0 1 0 1 1 0 0 0 1 0 1 0 1 0 1 1 
+1 0 0 1 0 1 1 0 0 0 1 0 1 0 1 0 0 1 
+1 0 0 1 0 1 1 0 0 0 1 0 1 0 0 1 1 1 
+1 0 0 1 0 1 1 0 0 0 1 0 1 0 0 0 1 1 
+1 0 0 1 0 1 1 0 0 0 1 0 1 0 1 1 0 1 
 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 
-1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 
-1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 
-1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 
-1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
-1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-1 0 1 0 1 0 1 1 1 1 0 1 0 1 0 0 0 0 
-1 0 1 0 1 0 0 0 1 1 0 1 0 1 0 0 0 1 
-1 0 1 0 1 0 0 1 0 1 0 1 0 1 0 0 0 1 
-1 0 1 0 1 0 0 1 1 1 0 1 0 1 0 0 0 1 
-1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 0 1 
-1 0 1 0 1 0 1 0 1 1 0 1 0 1 0 0 0 1 
-1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 0 1 
-1 0 1 0 1 0 1 1 1 1 0 1 0 1 0 0 0 1 
-1 0 1 0 0 0 0 0 1 1 0 0 0 1 0 1 0 1 
-1 0 1 0 0 0 0 0 1 1 0 0 0 1 1 1 0 0 
-1 0 1 0 0 0 0 0 1 1 0 0 0 1 0 1 0 0 
-1 0 1 0 0 0 1 1 1 1 0 0 0 1 1 1 0 1 
-1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 1 
-1 0 1 0 0 0 0 0 1 1 0 0 0 1 1 1 0 1 
-1 0 1 0 0 0 0 1 0 1 0 0 0 1 0 1 0 1 
-1 0 1 0 0 0 0 1 0 1 0 0 0 1 1 1 0 0 
-1 0 1 0 0 0 0 1 0 1 0 0 0 1 0 1 0 0 
-1 0 1 0 0 0 0 0 1 1 0 1 0 1 1 0 0 0 
-1 0 1 0 0 0 0 0 1 1 0 1 0 1 1 0 0 1 
-1 0 1 0 0 0 0 1 0 1 0 0 0 1 1 1 0 1 
-1 0 1 0 0 0 0 1 1 1 0 0 0 1 0 1 0 1 
-1 0 1 0 0 0 0 1 1 1 0 0 0 1 1 1 0 0 
-1 0 1 0 0 0 0 1 1 1 0 0 0 1 0 1 0 0 
-1 0 1 0 0 0 0 1 0 1 0 1 0 1 1 0 0 0 
-1 0 1 0 0 0 0 1 0 1 0 1 0 1 1 0 0 1 
-1 0 1 0 0 0 0 1 1 1 0 0 0 1 1 1 0 1 
-1 0 1 0 0 0 1 0 0 1 0 0 0 1 0 1 0 1 
-1 0 1 0 0 0 1 0 0 1 0 0 0 1 1 1 0 0 
-1 0 1 0 0 0 1 0 0 1 0 0 0 1 0 1 0 0 
-1 0 1 0 0 0 0 1 1 1 0 1 0 1 1 0 0 0 
-1 0 1 0 0 0 0 1 1 1 0 1 0 1 1 0 0 1 
-1 0 1 0 0 0 1 0 0 1 0 0 0 1 1 1 0 1 
-1 0 1 0 0 0 1 0 1 1 0 0 0 1 0 1 0 1 
-1 0 1 0 0 0 1 0 1 1 0 0 0 1 1 1 0 0 
-1 0 1 0 0 0 1 0 1 1 0 0 0 1 0 1 0 0 
-1 0 1 0 0 0 1 0 0 1 0 1 0 1 1 0 0 0 
-1 0 1 0 0 0 1 0 0 1 0 1 0 1 1 0 0 1 
-1 0 1 0 0 0 1 0 1 1 0 0 0 1 1 1 0 1 
-1 0 1 0 0 0 1 1 0 1 0 0 0 1 0 1 0 1 
-1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 1 0 0 
-1 0 1 0 0 0 1 1 0 1 0 0 0 1 0 1 0 0 
-1 0 1 0 0 0 1 0 1 1 0 1 0 1 1 0 0 0 
-1 0 1 0 0 0 1 0 1 1 0 1 0 1 1 0 0 1 
-1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 1 0 1 
-1 0 1 0 0 0 1 1 1 1 0 0 0 1 0 1 0 1 
-1 0 1 0 0 0 1 1 1 1 0 0 0 1 1 1 0 0 
-1 0 1 0 0 0 1 1 1 1 0 0 0 1 0 1 0 0 
-1 0 1 0 0 0 1 1 0 1 0 1 0 1 1 0 0 0 
-1 0 1 0 0 0 1 1 0 1 0 1 0 1 1 0 0 1 
-1 0 1 0 0 0 0 0 1 1 0 1 0 1 0 0 0 0 
-1 0 1 0 0 0 0 0 1 1 0 1 0 1 0 0 0 1 
-1 0 1 0 0 0 0 1 0 1 0 1 0 1 0 0 0 0 
-1 0 1 0 0 0 0 1 0 1 0 1 0 1 0 0 0 1 
-1 0 1 0 0 0 0 1 1 1 0 1 0 1 0 0 0 0 
-1 0 1 0 0 0 0 1 1 1 0 1 0 1 0 0 0 1 
-1 0 1 0 0 0 1 0 0 1 0 1 0 1 0 0 0 0 
-1 0 1 0 0 0 1 0 0 1 0 1 0 1 0 0 0 1 
-1 0 1 0 0 0 1 0 1 1 0 1 0 1 0 0 0 0 
-1 0 1 0 0 0 1 0 1 1 0 1 0 1 0 0 0 1 
-1 0 1 0 0 0 1 1 0 1 0 1 0 1 0 0 0 0 
-1 0 1 0 0 0 1 1 0 1 0 1 0 1 0 0 0 1 
-1 0 1 0 0 0 1 1 1 1 0 1 0 1 0 0 0 0 
-1 0 1 0 0 0 1 1 1 1 0 1 0 1 0 0 0 1 
-1 0 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 
-1 0 1 0 1 0 0 0 1 1 0 0 0 1 1 1 0 0 
-1 0 1 0 1 0 0 0 1 1 0 0 0 1 0 1 0 0 
-1 0 1 0 1 0 0 0 1 1 0 0 0 1 0 1 0 1 
-1 0 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 1 
-1 0 1 0 1 0 0 0 1 1 0 0 0 1 1 1 0 1 
-1 0 1 0 1 0 0 0 1 1 0 1 0 1 0 0 0 0 
-1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 1 0 0 
-1 0 1 0 1 0 0 1 0 1 0 0 0 1 0 1 0 0 
-1 0 1 0 1 0 0 1 0 1 0 0 0 1 0 1 0 1 
-1 0 1 0 1 0 0 0 1 1 0 1 0 1 1 0 0 1 
-1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 1 0 1 
-1 0 1 0 1 0 0 1 0 1 0 1 0 1 0 0 0 0 
-1 0 1 0 1 0 0 1 1 1 0 0 0 1 1 1 0 0 
-1 0 1 0 1 0 0 1 1 1 0 0 0 1 0 1 0 0 
-1 0 1 0 1 0 0 1 1 1 0 0 0 1 0 1 0 1 
-1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 0 1 
-1 0 1 0 1 0 0 1 1 1 0 0 0 1 1 1 0 1 
-1 0 1 0 1 0 0 1 1 1 0 1 0 1 0 0 0 0 
-1 0 1 0 1 0 1 0 0 1 0 0 0 1 1 1 0 0 
-1 0 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 0 
-1 0 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 
-1 0 1 0 1 0 0 1 1 1 0 1 0 1 1 0 0 1 
-1 0 1 0 1 0 1 0 0 1 0 0 0 1 1 1 0 1 
-1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 0 0 
-1 0 1 0 1 0 1 0 1 1 0 0 0 1 1 1 0 0 
-1 0 1 0 1 0 1 0 1 1 0 0 0 1 0 1 0 0 
-1 0 1 0 1 0 1 0 1 1 0 0 0 1 0 1 0 1 
-1 0 1 0 1 0 1 0 0 1 0 1 0 1 1 0 0 1 
-1 0 1 0 1 0 1 0 1 1 0 0 0 1 1 1 0 1 
-1 0 1 0 1 0 1 0 1 1 0 1 0 1 0 0 0 0 
-1 0 1 0 1 0 1 1 0 1 0 0 0 1 1 1 0 0 
-1 0 1 0 1 0 1 1 0 1 0 0 0 1 0 1 0 0 
-1 0 1 0 1 0 1 1 0 1 0 0 0 1 0 1 0 1 
-1 0 1 0 1 0 1 0 1 1 0 1 0 1 1 0 0 1 
-1 0 1 0 1 0 1 1 0 1 0 0 0 1 1 1 0 1 
-1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 0 0 
-1 0 1 0 1 0 1 1 1 1 0 0 0 1 1 1 0 0 
-1 0 1 0 1 0 1 1 1 1 0 0 0 1 0 1 0 0 
-1 0 1 0 1 0 1 1 1 1 0 0 0 1 0 1 0 1 
-1 0 1 0 1 0 1 1 0 1 0 1 0 1 1 0 0 1 
-1 0 1 0 1 0 1 1 1 1 0 0 0 1 1 1 0 1 
-1 0 1 0 1 0 0 0 1 1 0 1 0 1 1 0 0 0 
-1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 0 0 
-1 0 1 0 1 0 0 1 1 1 0 1 0 1 1 0 0 0 
-1 0 1 0 1 0 1 0 0 1 0 1 0 1 1 0 0 0 
-1 0 1 0 1 0 1 0 1 1 0 1 0 1 1 0 0 0 
-1 0 1 0 1 0 1 1 0 1 0 1 0 1 1 0 0 0 
-1 0 1 0 1 0 1 1 1 1 0 1 0 1 1 0 0 0 
-1 0 1 0 1 0 1 1 1 1 0 1 0 1 1 0 0 1 
-1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 
+1 0 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 
+1 0 0 0 0 1 1 1 0 1 1 0 0 0 1 0 0 1 
+1 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 
+1 0 0 0 0 1 1 1 0 1 1 0 0 0 0 1 1 1 
+1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 1 1 1 0 1 1 0 0 0 1 0 1 1 
+1 0 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+1 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 
+1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 
+1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 
+1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 
+1 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 
+1 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 
+1 0 0 0 0 1 0 1 0 1 1 0 0 0 1 0 0 1 
+1 0 0 0 0 1 1 1 0 0 1 0 0 0 1 0 1 1 
+1 0 0 0 0 0 1 1 0 1 0 0 1 0 0 0 0 0 
+1 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 1 1 
+1 0 0 0 0 1 0 1 0 0 1 0 0 0 0 1 0 1 
+1 0 0 0 0 1 0 1 0 0 1 0 0 0 0 1 1 1 
+1 0 0 0 0 1 0 1 0 0 1 0 0 0 1 0 0 1 
+1 0 0 0 0 1 0 1 0 0 1 0 1 0 1 0 1 1 
+1 0 0 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 
+1 0 0 0 0 1 0 1 0 0 1 0 1 0 1 1 1 1 
+1 0 0 0 0 1 0 1 0 1 1 0 0 0 0 0 1 1 
+1 0 0 0 0 1 0 1 0 1 1 0 0 0 0 1 0 1 
+1 0 0 0 0 1 0 1 0 1 1 0 0 0 0 1 1 1 
+1 0 0 0 0 1 0 1 0 0 1 0 0 0 1 0 1 1 
+1 0 0 0 0 1 0 1 0 0 1 0 0 0 1 1 0 1 
+1 0 0 0 0 1 0 1 0 0 1 0 0 0 1 1 1 1 
+1 0 0 0 0 1 0 1 0 0 1 0 1 0 0 0 1 1 
+1 0 0 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 
+1 0 0 0 0 1 0 1 0 0 1 0 1 0 0 1 1 1 
+1 0 0 0 0 1 0 1 0 0 1 0 1 0 1 0 0 1 
+1 0 0 0 0 1 0 1 0 1 1 0 0 0 1 0 1 1 
+1 0 0 0 0 1 0 1 0 1 1 0 0 0 1 1 0 1 
+1 0 0 0 0 1 0 1 0 1 1 0 0 0 1 1 1 1 
+1 0 0 0 0 1 0 1 0 1 1 0 1 0 0 0 1 1 
+1 0 0 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 
+1 0 0 0 0 1 0 1 0 1 1 0 1 0 0 1 1 1 
+1 0 0 0 0 1 0 1 0 1 1 0 1 0 1 0 0 1 
+1 0 0 0 0 1 0 1 0 1 1 0 1 0 1 0 1 1 
+1 0 0 0 0 1 0 1 0 1 1 0 1 0 1 1 0 1 
+1 0 0 0 0 1 0 1 0 1 1 0 1 0 1 1 1 1 
+1 0 0 0 0 1 1 1 0 0 1 0 0 0 0 0 1 1 
+1 0 0 0 0 1 1 1 0 0 1 0 0 0 0 1 0 1 
+1 0 0 0 0 1 1 1 0 0 1 0 0 0 0 1 1 1 
+1 0 0 0 0 1 1 1 0 0 1 0 0 0 1 0 0 1 
+1 0 0 0 0 1 1 1 0 1 1 0 1 0 1 0 0 1 
+1 0 0 0 0 1 1 1 0 0 1 0 1 0 1 1 0 1 
+1 0 0 0 0 1 1 1 0 0 1 0 1 0 1 1 1 1 
+1 0 0 0 0 1 1 1 0 1 1 0 0 0 0 0 1 1 
+1 0 0 0 0 1 1 1 0 1 1 0 0 0 0 1 0 1 
+1 0 0 0 0 1 1 1 0 0 1 0 0 0 1 1 0 1 
+1 0 0 0 0 1 1 1 0 0 1 0 0 0 1 1 1 1 
+1 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 1 1 
+1 0 0 0 0 1 1 1 0 0 1 0 1 0 0 1 0 1 
+1 0 0 0 0 1 1 1 0 0 1 0 1 0 0 1 1 1 
+1 0 0 0 0 1 1 1 0 0 1 0 1 0 1 0 0 1 
+1 0 0 0 0 1 1 1 0 0 1 0 1 0 1 0 1 1 
+1 0 0 0 0 1 1 1 0 1 1 0 0 0 1 1 0 1 
+1 0 0 0 0 1 1 1 0 1 1 0 0 0 1 1 1 1 
+1 0 0 0 0 1 1 1 0 1 1 0 1 0 0 0 1 1 
+1 0 0 0 0 1 1 1 0 1 1 0 1 0 0 1 0 1 
+1 0 0 0 0 1 1 1 0 1 1 0 1 0 0 1 1 1 
+1 0 0 0 0 1 1 1 0 1 1 0 1 0 1 1 0 1 
+1 0 0 0 0 1 1 1 0 1 1 0 1 0 1 0 1 1 
+1 0 0 1 0 1 1 0 0 1 1 0 0 0 1 1 0 1 
+1 0 0 1 0 1 0 0 0 1 1 0 0 0 1 0 1 1 
+1 0 0 0 0 1 1 1 0 1 1 0 1 0 1 1 1 1 
+1 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 1 
+1 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 0 1 
+1 0 0 1 0 1 0 0 0 0 1 0 0 0 0 1 1 1 
+1 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 
+1 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 1 1 
+1 0 0 1 0 1 0 0 0 0 1 0 1 0 1 1 0 1 
+1 0 0 1 0 1 0 0 0 0 1 0 1 0 1 1 1 1 
+1 0 0 1 0 1 0 0 0 1 1 0 0 0 0 0 1 1 
+1 0 0 1 0 1 0 0 0 1 1 0 0 0 0 1 0 1 
+1 0 0 1 0 1 0 0 0 1 1 0 0 0 0 1 1 1 
+1 0 0 1 0 1 0 0 0 1 1 0 0 0 1 0 0 1 
+1 0 0 1 0 1 0 0 0 0 1 0 0 0 1 1 0 1 
+1 0 0 1 0 1 0 0 0 0 1 0 0 0 1 1 1 1 
+1 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 1 1 
+1 0 0 1 0 1 0 0 0 0 1 0 1 0 0 1 0 1 
+1 0 0 1 0 1 0 0 0 0 1 0 1 0 0 1 1 1 
+1 0 0 1 0 1 0 0 0 0 1 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 0 0 1 0 1 0 1 0 1 1 
+1 0 0 1 0 1 0 0 0 1 1 0 0 0 1 1 0 1 
+1 0 0 1 0 1 0 0 0 1 1 0 0 0 1 1 1 1 
+1 0 0 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 
+1 0 0 1 0 1 0 0 0 1 1 0 1 0 0 1 0 1 
+1 0 0 1 0 1 0 0 0 1 1 0 1 0 0 1 1 1 
+1 0 0 1 0 1 0 0 0 1 1 0 1 0 1 0 0 1 
+1 0 0 1 0 1 0 0 0 1 1 0 1 0 1 0 1 1 
+1 0 0 1 0 1 0 0 0 1 1 0 1 0 1 1 0 1 
+1 0 0 1 0 1 0 0 0 1 1 0 1 0 1 1 1 1 
+1 0 0 1 0 1 1 0 0 0 1 0 0 0 0 0 1 1 
+1 0 0 1 0 1 1 0 0 0 1 0 0 0 0 1 0 1 
+1 0 0 1 0 1 1 0 0 0 1 0 0 0 0 1 1 1 
+1 0 0 1 0 1 1 0 0 0 1 0 0 0 1 0 0 1 
+1 0 0 1 0 1 1 0 0 0 1 0 0 0 1 0 1 1 
+1 0 0 1 0 1 1 0 0 0 1 0 0 0 1 1 0 1 
+1 0 0 1 0 1 1 0 0 0 1 0 1 0 1 1 1 1 
+1 0 0 1 0 1 1 0 0 1 1 0 0 0 0 0 1 1 
+1 0 0 1 0 1 1 0 0 1 1 0 0 0 0 1 0 1 
+1 0 0 1 0 1 1 0 0 1 1 0 0 0 0 1 1 1 
+1 0 0 1 0 1 1 0 0 1 1 0 0 0 1 0 0 1 
+1 0 0 1 0 1 1 0 0 1 1 0 0 0 1 0 1 1 
+1 0 0 1 0 1 1 0 0 1 1 0 0 0 1 1 1 1 
+1 0 0 1 0 1 1 0 0 1 1 0 1 0 0 0 1 1 
+1 0 0 1 0 1 1 0 0 1 1 0 1 0 0 1 0 1 
+1 0 0 1 0 1 1 0 0 1 1 0 1 0 0 1 1 1 
+1 0 0 1 0 1 1 0 0 1 1 0 1 0 1 0 0 1 
+1 0 0 1 0 1 1 0 0 1 1 0 1 0 1 0 1 1 
+1 0 0 1 0 1 1 0 0 1 1 0 1 0 1 1 0 1 
+1 0 0 1 0 1 1 0 0 1 1 0 1 0 1 1 1 1 
+1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 
+1 1 0 0 0 0 1 0 0 1 0 0 1 0 0 0 0 0 
+1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+1 1 0 0 0 1 1 1 0 0 1 0 0 0 1 1 1 1 
+1 1 0 0 0 1 1 1 0 0 1 0 1 0 0 0 1 1 
+1 1 0 0 0 1 1 1 0 0 1 0 1 0 0 1 0 1 
+1 1 0 0 0 1 1 1 0 0 1 0 1 0 0 1 1 1 
+1 1 0 0 0 1 1 1 0 0 1 0 1 0 1 0 0 1 
+1 1 0 0 0 1 1 1 0 0 1 0 1 0 1 0 1 1 
+1 1 0 0 0 1 1 1 0 0 1 0 1 0 1 1 0 1 
+1 1 0 1 0 1 0 0 0 0 1 0 0 0 1 1 1 1 
+1 1 0 1 0 1 0 0 0 0 1 0 1 0 0 0 1 1 
+1 1 0 1 0 1 0 0 0 0 1 0 1 0 0 1 0 1 
+1 1 0 1 0 1 0 0 0 0 1 0 1 0 0 1 1 1 
+1 1 0 1 0 1 0 0 0 0 1 0 1 0 1 0 0 1 
+1 1 0 1 0 1 0 0 0 0 1 0 1 0 1 0 1 1 
+1 1 0 1 0 1 0 0 0 0 1 0 1 0 1 1 0 1 
+1 1 0 1 0 1 0 0 0 1 1 0 1 0 1 1 1 1 
+1 1 0 1 0 1 1 0 0 0 1 0 0 0 0 0 1 1 
+1 1 0 1 0 1 1 0 0 0 1 0 0 0 0 1 0 1 
+1 1 0 1 0 1 1 0 0 0 1 0 0 0 0 1 1 1 
+1 1 0 1 0 1 1 0 0 0 1 0 0 0 1 0 0 1 
+1 1 0 1 0 1 1 0 0 0 1 0 0 0 1 0 1 1 
+1 1 0 1 0 1 1 0 0 0 1 0 0 0 1 1 0 1 
+1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+1 1 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 
+1 1 0 0 0 1 1 1 0 1 1 0 0 0 0 1 0 1 
 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 
-1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
-1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
-1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 
-1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 
-1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 
-1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 
-1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
-1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 
-1 1 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 1 
-1 1 1 0 0 0 0 0 1 1 0 1 0 1 0 0 0 1 
-1 1 1 0 0 0 0 1 0 1 0 1 0 1 0 0 0 1 
-1 1 1 0 0 0 0 1 1 1 0 1 0 1 0 0 0 1 
-1 1 1 0 0 0 1 0 0 1 0 1 0 1 0 0 0 1 
-1 1 1 0 0 0 1 0 1 1 0 1 0 1 0 0 0 1 
-1 1 1 0 0 0 1 1 0 1 0 1 0 1 0 0 0 1 
-1 1 1 0 0 0 1 1 1 1 0 1 0 1 0 0 0 1 
-1 1 1 0 1 0 0 0 1 1 0 0 0 1 0 1 0 1 
-1 1 1 0 1 0 0 0 1 1 0 0 0 1 1 1 0 1 
-1 1 1 0 1 0 0 1 0 1 0 0 0 1 0 1 0 1 
-1 1 1 0 1 0 0 1 0 1 0 0 0 1 1 1 0 1 
-1 1 1 0 1 0 0 1 1 1 0 0 0 1 0 1 0 1 
-1 1 1 0 1 0 0 1 1 1 0 0 0 1 1 1 0 1 
-1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 
-1 1 1 0 1 0 1 0 0 1 0 0 0 1 1 1 0 1 
-1 1 1 0 1 0 1 0 1 1 0 0 0 1 0 1 0 1 
-1 1 1 0 1 0 1 0 1 1 0 0 0 1 1 1 0 1 
-1 1 1 0 1 0 1 1 0 1 0 0 0 1 0 1 0 1 
-1 1 1 0 1 0 1 1 0 1 0 0 0 1 1 1 0 1 
-1 1 1 0 1 0 1 1 1 1 0 0 0 1 0 1 0 1 
-1 1 1 0 1 0 1 1 1 1 0 0 0 1 1 1 0 1 
-1 1 1 0 0 0 0 0 1 1 0 0 0 1 1 1 0 0 
-1 1 1 0 0 0 0 0 1 1 0 0 0 1 0 1 0 0 
-1 1 1 0 0 0 0 0 1 1 0 0 0 1 0 1 0 1 
-1 1 1 0 0 0 1 1 1 1 0 1 0 1 0 0 0 0 
-1 1 1 0 0 0 0 0 1 1 0 0 0 1 1 1 0 1 
-1 1 1 0 0 0 0 0 1 1 0 1 0 1 0 0 0 0 
-1 1 1 0 0 0 0 1 0 1 0 0 0 1 1 1 0 0 
-1 1 1 0 0 0 0 1 0 1 0 0 0 1 0 1 0 0 
-1 1 1 0 0 0 0 1 0 1 0 0 0 1 0 1 0 1 
-1 1 1 0 0 0 0 0 1 1 0 1 0 1 1 0 0 1 
-1 1 1 0 0 0 0 1 0 1 0 0 0 1 1 1 0 1 
-1 1 1 0 0 0 0 1 0 1 0 1 0 1 0 0 0 0 
-1 1 1 0 0 0 0 1 1 1 0 0 0 1 1 1 0 0 
-1 1 1 0 0 0 0 1 1 1 0 0 0 1 0 1 0 0 
-1 1 1 0 0 0 0 1 1 1 0 0 0 1 0 1 0 1 
-1 1 1 0 0 0 0 1 0 1 0 1 0 1 1 0 0 1 
-1 1 1 0 0 0 0 1 1 1 0 0 0 1 1 1 0 1 
-1 1 1 0 0 0 0 1 1 1 0 1 0 1 0 0 0 0 
-1 1 1 0 0 0 1 0 0 1 0 0 0 1 1 1 0 0 
-1 1 1 0 0 0 1 0 0 1 0 0 0 1 0 1 0 0 
-1 1 1 0 0 0 1 0 0 1 0 0 0 1 0 1 0 1 
-1 1 1 0 0 0 0 1 1 1 0 1 0 1 1 0 0 1 
-1 1 1 0 0 0 1 0 0 1 0 0 0 1 1 1 0 1 
-1 1 1 0 0 0 1 0 0 1 0 1 0 1 0 0 0 0 
-1 1 1 0 0 0 1 0 1 1 0 0 0 1 1 1 0 0 
-1 1 1 0 0 0 1 0 1 1 0 0 0 1 0 1 0 0 
-1 1 1 0 0 0 1 0 1 1 0 0 0 1 0 1 0 1 
-1 1 1 0 0 0 1 0 0 1 0 1 0 1 1 0 0 1 
-1 1 1 0 0 0 1 0 1 1 0 0 0 1 1 1 0 1 
-1 1 1 0 0 0 1 0 1 1 0 1 0 1 0 0 0 0 
-1 1 1 0 0 0 1 1 0 1 0 0 0 1 1 1 0 0 
-1 1 1 0 0 0 1 1 0 1 0 0 0 1 0 1 0 0 
-1 1 1 0 0 0 1 1 0 1 0 0 0 1 0 1 0 1 
-1 1 1 0 0 0 1 0 1 1 0 1 0 1 1 0 0 1 
-1 1 1 0 0 0 1 1 0 1 0 0 0 1 1 1 0 1 
-1 1 1 0 0 0 1 1 0 1 0 1 0 1 0 0 0 0 
-1 1 1 0 0 0 1 1 1 1 0 0 0 1 1 1 0 0 
-1 1 1 0 0 0 1 1 1 1 0 0 0 1 0 1 0 0 
-1 1 1 0 0 0 1 1 1 1 0 0 0 1 0 1 0 1 
-1 1 1 0 0 0 1 1 0 1 0 1 0 1 1 0 0 1 
-1 1 1 0 0 0 1 1 1 1 0 0 0 1 1 1 0 1 
-1 1 1 0 0 0 0 0 1 1 0 1 0 1 1 0 0 0 
-1 1 1 0 0 0 0 1 0 1 0 1 0 1 1 0 0 0 
-1 1 1 0 0 0 0 1 1 1 0 1 0 1 1 0 0 0 
-1 1 1 0 0 0 1 0 0 1 0 1 0 1 1 0 0 0 
-1 1 1 0 0 0 1 0 1 1 0 1 0 1 1 0 0 0 
-1 1 1 0 0 0 1 1 0 1 0 1 0 1 1 0 0 0 
-1 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 0 
-1 1 1 0 0 0 1 1 1 1 0 1 0 1 1 0 0 1 
-1 1 1 0 1 0 0 0 1 1 0 0 0 1 0 1 0 0 
-1 1 1 0 1 0 0 0 1 1 0 0 0 1 1 1 0 0 
-1 1 1 0 1 0 0 0 1 1 0 1 0 1 0 0 0 0 
-1 1 1 0 1 0 0 0 1 1 0 1 0 1 0 0 0 1 
-1 1 1 0 1 0 0 1 0 1 0 0 0 1 0 1 0 0 
-1 1 1 0 1 0 0 1 0 1 0 0 0 1 1 1 0 0 
-1 1 1 0 1 0 0 1 0 1 0 1 0 1 0 0 0 0 
-1 1 1 0 1 0 0 1 0 1 0 1 0 1 0 0 0 1 
-1 1 1 0 1 0 0 1 1 1 0 0 0 1 0 1 0 0 
-1 1 1 0 1 0 0 1 1 1 0 0 0 1 1 1 0 0 
-1 1 1 0 1 0 0 1 1 1 0 1 0 1 0 0 0 0 
-1 1 1 0 1 0 0 1 1 1 0 1 0 1 0 0 0 1 
-1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 0 
-1 1 1 0 1 0 1 0 0 1 0 0 0 1 1 1 0 0 
-1 1 1 0 1 0 1 0 0 1 0 1 0 1 0 0 0 0 
-1 1 1 0 1 0 1 0 0 1 0 1 0 1 0 0 0 1 
-1 1 1 0 1 0 1 0 1 1 0 0 0 1 0 1 0 0 
-1 1 1 0 1 0 1 0 1 1 0 0 0 1 1 1 0 0 
-1 1 1 0 1 0 1 0 1 1 0 1 0 1 0 0 0 0 
-1 1 1 0 1 0 1 0 1 1 0 1 0 1 0 0 0 1 
-1 1 1 0 1 0 1 1 0 1 0 0 0 1 0 1 0 0 
-1 1 1 0 1 0 1 1 0 1 0 0 0 1 1 1 0 0 
-1 1 1 0 1 0 1 1 0 1 0 1 0 1 0 0 0 0 
-1 1 1 0 1 0 1 1 0 1 0 1 0 1 0 0 0 1 
-1 1 1 0 1 0 1 1 1 1 0 0 0 1 0 1 0 0 
-1 1 1 0 1 0 1 1 1 1 0 0 0 1 1 1 0 0 
-1 1 1 0 1 0 1 1 1 1 0 1 0 1 0 0 0 0 
-1 1 1 0 1 0 1 1 1 1 0 1 0 1 0 0 0 1 
-1 1 1 1 1 0 0 0 1 1 1 1 0 1 1 0 0 0 
-1 1 1 1 1 0 0 1 0 1 1 1 0 1 1 0 0 0 
-1 1 1 1 1 0 0 1 1 1 1 1 0 1 1 0 0 0 
-1 1 1 1 1 0 1 0 0 1 1 1 0 1 1 0 0 0 
-1 1 1 1 1 0 1 0 1 1 1 1 0 1 1 0 0 0 
-1 1 1 1 1 0 1 1 0 1 1 1 0 1 1 0 0 0 
-1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 0 0 0 
+1 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 
+1 1 0 0 0 1 1 1 0 1 1 0 0 0 0 0 1 1 
+1 1 0 0 0 1 1 1 0 1 1 0 0 0 1 0 0 1 
+1 1 0 0 0 1 1 1 0 1 1 0 0 0 0 1 1 1 
+1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 
+1 1 0 0 0 1 1 1 0 1 1 0 0 0 1 1 0 1 
+1 1 0 0 0 1 1 1 0 1 1 0 0 0 1 0 1 1 
+1 1 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 
+1 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 
+1 1 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 
+1 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 
+1 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 
+1 1 0 0 0 1 0 1 0 1 1 0 0 0 1 0 1 1 
+1 1 0 0 0 0 1 1 0 1 0 0 1 0 0 0 0 0 
+1 1 0 0 0 1 0 1 0 0 1 0 0 0 0 0 1 1 
+1 1 0 0 0 1 0 1 0 0 1 0 0 0 0 1 0 1 
+1 1 0 0 0 1 0 1 0 0 1 0 0 0 0 1 1 1 
+1 1 0 0 0 1 0 1 0 0 1 0 0 0 1 0 0 1 
+1 1 0 0 0 1 0 1 0 0 1 0 0 0 1 0 1 1 
+1 1 0 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 
+1 1 0 0 0 1 0 1 0 0 1 0 1 0 1 1 1 1 
+1 1 0 0 0 1 0 1 0 1 1 0 0 0 0 0 1 1 
+1 1 0 0 0 1 0 1 0 1 1 0 0 0 0 1 0 1 
+1 1 0 0 0 1 0 1 0 1 1 0 0 0 0 1 1 1 
+1 1 0 0 0 1 0 1 0 1 1 0 0 0 1 0 0 1 
+1 1 0 0 0 1 0 1 0 0 1 0 0 0 1 1 0 1 
+1 1 0 0 0 1 0 1 0 0 1 0 0 0 1 1 1 1 
+1 1 0 0 0 1 0 1 0 0 1 0 1 0 0 0 1 1 
+1 1 0 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 
+1 1 0 0 0 1 0 1 0 0 1 0 1 0 0 1 1 1 
+1 1 0 0 0 1 0 1 0 0 1 0 1 0 1 0 0 1 
+1 1 0 0 0 1 0 1 0 0 1 0 1 0 1 0 1 1 
+1 1 0 0 0 1 0 1 0 1 1 0 0 0 1 1 0 1 
+1 1 0 0 0 1 0 1 0 1 1 0 0 0 1 1 1 1 
+1 1 0 0 0 1 0 1 0 1 1 0 1 0 0 0 1 1 
+1 1 0 0 0 1 0 1 0 1 1 0 1 0 0 1 0 1 
+1 1 0 0 0 1 0 1 0 1 1 0 1 0 0 1 1 1 
+1 1 0 0 0 1 0 1 0 1 1 0 1 0 1 0 0 1 
+1 1 0 0 0 1 0 1 0 1 1 0 1 0 1 0 1 1 
+1 1 0 0 0 1 0 1 0 1 1 0 1 0 1 1 0 1 
+1 1 0 0 0 1 0 1 0 1 1 0 1 0 1 1 1 1 
+1 1 0 0 0 1 1 1 0 0 1 0 0 0 0 0 1 1 
+1 1 0 0 0 1 1 1 0 0 1 0 0 0 0 1 0 1 
+1 1 0 0 0 1 1 1 0 0 1 0 0 0 0 1 1 1 
+1 1 0 0 0 1 1 1 0 0 1 0 0 0 1 0 0 1 
+1 1 0 0 0 1 1 1 0 0 1 0 0 0 1 0 1 1 
+1 1 0 0 0 1 1 1 0 0 1 0 0 0 1 1 0 1 
+1 1 0 0 0 1 1 1 0 0 1 0 1 0 1 1 1 1 
+1 1 0 0 0 1 1 1 0 1 1 0 0 0 1 1 1 1 
+1 1 0 0 0 1 1 1 0 1 1 0 1 0 0 0 1 1 
+1 1 0 0 0 1 1 1 0 1 1 0 1 0 0 1 0 1 
+1 1 0 0 0 1 1 1 0 1 1 0 1 0 0 1 1 1 
+1 1 0 0 0 1 1 1 0 1 1 0 1 0 1 0 0 1 
+1 1 0 0 0 1 1 1 0 1 1 0 1 0 1 0 1 1 
+1 1 0 0 0 1 1 1 0 1 1 0 1 0 1 1 0 1 
+1 1 0 0 0 1 1 1 0 1 1 0 1 0 1 1 1 1 
+1 1 0 1 0 1 0 0 0 1 1 0 0 0 1 1 0 1 
+1 1 0 1 0 1 0 0 0 0 1 0 0 0 0 0 1 1 
+1 1 0 1 0 1 0 0 0 0 1 0 0 0 0 1 0 1 
+1 1 0 1 0 1 0 0 0 0 1 0 0 0 0 1 1 1 
+1 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 
+1 1 0 1 0 1 0 0 0 0 1 0 0 0 1 0 1 1 
+1 1 0 1 0 1 0 0 0 0 1 0 0 0 1 1 0 1 
+1 1 0 1 0 1 0 0 0 0 1 0 1 0 1 1 1 1 
+1 1 0 1 0 1 0 0 0 1 1 0 0 0 0 0 1 1 
+1 1 0 1 0 1 0 0 0 1 1 0 0 0 0 1 0 1 
+1 1 0 1 0 1 0 0 0 1 1 0 0 0 0 1 1 1 
+1 1 0 1 0 1 0 0 0 1 1 0 0 0 1 0 0 1 
+1 1 0 1 0 1 0 0 0 1 1 0 0 0 1 0 1 1 
+1 1 0 1 0 1 0 0 0 1 1 0 0 0 1 1 1 1 
+1 1 0 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 
+1 1 0 1 0 1 0 0 0 1 1 0 1 0 0 1 0 1 
+1 1 0 1 0 1 0 0 0 1 1 0 1 0 0 1 1 1 
+1 1 0 1 0 1 0 0 0 1 1 0 1 0 1 0 0 1 
+1 1 0 1 0 1 0 0 0 1 1 0 1 0 1 0 1 1 
+1 1 0 1 0 1 0 0 0 1 1 0 1 0 1 1 0 1 
+1 1 0 1 0 1 1 0 0 0 1 0 0 0 1 1 1 1 
+1 1 0 1 0 1 1 0 0 1 1 0 0 0 0 0 1 1 
+1 1 0 1 0 1 1 0 0 1 1 0 0 0 0 1 0 1 
+1 1 0 1 0 1 1 0 0 1 1 0 0 0 0 1 1 1 
+1 1 0 1 0 1 1 0 0 1 1 0 0 0 1 0 0 1 
+1 1 0 1 0 1 1 0 0 1 1 0 0 0 1 0 1 1 
+1 1 0 1 0 1 1 0 0 1 1 0 0 0 1 1 0 1 
+1 1 0 1 0 1 1 0 0 1 1 0 0 0 1 1 1 1 
+1 1 1 1 0 1 1 0 0 0 1 1 1 0 0 0 1 1 
+1 1 1 1 0 1 1 0 0 0 1 1 1 0 0 1 0 1 
+1 1 1 1 0 1 1 0 0 0 1 1 1 0 0 1 1 1 
+1 1 1 1 0 1 1 0 0 0 1 1 1 0 1 0 0 1 
+1 1 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 1 
+1 1 1 1 0 1 1 0 0 0 1 1 1 0 1 1 0 1 
+1 1 1 1 0 1 1 0 0 0 1 1 1 0 1 1 1 1 
 
 --- Instance: 029 ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -418,10 +418,10 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 1 1 1 1 0 1 1 1 1 
-1 0 0 0 0 0 1 0 0 0 0 
-1 0 0 0 0 0 1 0 1 0 0 
-1 0 1 1 0 1 0 1 0 1 0 
+0 1 1 1 1 0 1 1 1 1 1 
+1 0 0 0 0 1 0 0 0 0 0 
+1 0 0 0 0 1 0 1 0 0 0 
+1 0 1 0 1 0 1 0 1 0 1 
 
 --- Instance: 031 ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -483,15 +483,15 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 0 0 0 1 1 0 0 1 0 0 
-0 0 0 0 0 0 1 1 0 0 1 0 1 
-0 0 1 0 0 0 1 1 0 0 1 0 0 
-0 0 1 0 0 0 1 1 0 1 0 0 0 
-0 0 1 0 0 0 1 1 0 0 1 0 1 
-0 0 0 0 0 0 1 1 0 1 0 0 0 
-0 1 1 1 1 1 0 0 1 1 0 0 0 
-1 1 0 1 1 1 0 0 1 1 0 1 1 
-1 1 1 1 1 1 0 0 1 1 0 1 1 
+0 0 0 1 1 0 0 1 0 0 1 0 0 
+0 0 0 1 1 0 0 1 0 1 0 0 0 
+0 0 0 1 1 0 0 1 0 1 1 0 0 
+0 0 0 1 1 0 1 0 0 0 1 0 0 
+0 0 0 1 1 0 1 0 0 0 0 0 0 
+0 0 0 1 1 0 0 1 0 0 0 0 0 
+0 1 1 0 0 1 1 0 0 0 1 1 1 
+1 1 1 0 0 1 1 0 1 1 0 1 1 
+1 1 1 0 0 1 1 0 1 1 1 1 1 
 
 --- Instance: 067 ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -521,23 +521,23 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 1 0 0 1 0 0 0 0 0 0 1 
-0 0 0 0 0 0 0 0 1 0 1 0 0 
-0 1 0 0 0 0 0 0 0 1 0 0 1 
-0 1 0 0 0 0 0 0 1 1 0 0 1 
-0 1 0 0 0 0 0 0 1 1 1 0 0 
-0 1 0 0 0 1 1 0 0 1 0 0 1 
-0 0 0 1 1 1 1 1 1 1 1 1 0 
-0 0 1 0 0 1 0 0 0 0 1 0 0 
-0 0 0 0 0 0 0 0 1 0 0 0 1 
-0 0 0 0 0 0 0 0 0 0 0 0 1 
-0 0 0 0 0 0 0 0 0 0 1 0 0 
-0 0 1 0 0 1 0 0 1 0 0 0 1 
-0 0 1 0 0 1 0 0 1 0 1 0 0 
-0 1 0 0 0 0 0 0 0 1 1 0 0 
-0 1 0 0 0 1 1 0 1 1 0 0 1 
-1 1 0 1 1 1 1 1 0 1 1 1 0 
-1 1 0 1 1 1 1 1 1 1 1 1 0 
+0 0 1 0 0 0 0 0 0 1 1 0 0 
+0 0 1 0 0 1 0 1 0 0 1 0 0 
+0 1 0 0 0 0 1 0 0 1 0 0 0 
+0 1 0 0 0 1 1 0 0 1 0 0 0 
+0 1 0 0 0 1 1 1 0 0 0 0 0 
+0 1 1 1 0 0 1 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 1 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 1 0 0 0 0 0 
+0 0 1 0 0 0 0 1 0 0 1 0 0 
+0 0 1 0 0 1 0 0 0 1 1 0 0 
+0 0 0 0 0 1 0 1 0 0 0 0 0 
+0 0 1 1 1 1 1 1 1 0 0 1 1 
+0 1 0 0 0 0 1 1 0 0 0 0 0 
+0 1 1 1 0 1 1 0 0 1 0 0 0 
+1 1 1 1 1 0 1 1 1 0 0 1 1 
+1 1 1 1 1 1 1 1 1 0 0 1 1 
 
 --- Instance: 074 ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -589,8 +589,8 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 - 0 0 0 1 0 1 1 0 1 0 1 1 - 1 
-0 0 0 - 0 0 0 1 0 1 1 0 1 1 1 1 - 1 
+0 0 1 0 1 0 1 1 - 1 0 - 0 0 0 1 0 1 
+0 0 1 0 1 1 1 1 - 1 0 - 0 0 0 1 0 1 
 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 
 --- Instance: 088 ---
@@ -723,70 +723,70 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 
-0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 
-0 0 1 1 1 1 0 1 1 1 0 0 0 0 0 0 1 1 1 
-0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 
-0 0 0 0 0 0 1 0 0 0 1 1 1 1 0 1 0 0 0 
-0 0 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 
-0 0 1 1 1 1 0 1 1 1 0 0 0 0 1 0 1 1 1 
-0 0 0 1 0 0 1 0 0 0 1 1 1 1 0 1 0 0 0 
-0 0 0 1 0 0 1 0 0 0 1 1 1 1 1 1 0 0 0 
-0 0 1 0 1 1 0 1 1 1 0 0 0 0 1 0 1 1 1 
-0 0 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 
-0 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 
-0 0 0 0 0 0 1 0 0 0 1 1 1 1 1 1 0 0 0 
-0 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 
-0 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 
-0 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 1 
-0 1 0 1 1 0 1 0 0 1 1 1 1 1 0 1 0 0 0 
-0 1 0 0 1 0 1 0 0 1 0 0 0 0 1 0 0 0 0 
-0 1 0 1 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 
-0 1 0 0 1 0 1 0 0 1 1 1 1 1 0 1 0 0 0 
-0 1 0 1 1 0 1 0 0 1 0 0 0 0 1 0 0 0 0 
-0 1 0 0 1 0 1 0 0 1 1 1 1 1 1 1 0 0 0 
-0 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 
-0 1 0 1 1 0 1 0 0 1 1 1 1 1 1 1 0 0 0 
-0 1 1 0 1 1 0 1 1 1 0 0 0 0 1 0 1 1 1 
-0 1 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 
-0 1 1 1 1 1 0 1 1 1 0 0 0 0 0 0 1 1 1 
-0 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 
-0 1 1 1 1 1 0 1 1 1 0 0 0 0 1 0 1 1 1 
-0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 
-1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 
-1 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 
-1 0 0 1 0 0 1 0 0 0 1 1 1 1 0 1 0 0 0 
-1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 
-1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 
-1 0 0 0 0 0 1 0 0 0 1 1 1 1 0 1 0 0 0 
-1 0 0 0 0 0 1 0 0 0 1 1 1 1 1 1 0 0 0 
-1 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 
-1 0 1 0 1 1 0 1 1 1 0 0 0 0 0 0 1 1 1 
-1 0 0 1 0 0 1 0 0 0 1 1 1 1 1 1 0 0 0 
-1 0 1 0 1 1 0 1 1 1 0 0 0 0 1 0 1 1 1 
-1 0 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 
-1 0 1 1 1 1 0 1 1 1 0 0 0 0 0 0 1 1 1 
-1 0 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 
-1 0 1 1 1 1 0 1 1 1 0 0 0 0 1 0 1 1 1 
-1 0 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 
-1 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 
-1 1 0 1 1 0 1 0 0 1 1 1 1 1 0 1 0 0 0 
-1 1 0 0 1 0 1 0 0 1 0 0 0 0 1 0 0 0 0 
-1 1 0 0 1 0 1 0 0 1 1 1 1 1 0 1 0 0 0 
-1 1 0 1 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 
-1 1 0 0 1 0 1 0 0 1 1 1 1 1 1 1 0 0 0 
-1 1 0 1 1 0 1 0 0 1 0 0 0 0 1 0 0 0 0 
-1 1 0 1 1 0 1 0 0 1 1 1 1 1 1 1 0 0 0 
-1 1 1 0 1 1 0 1 1 1 0 0 0 0 0 0 1 1 1 
-1 1 1 0 1 1 0 1 1 1 0 0 0 0 1 0 1 1 1 
-1 1 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 
-1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 
-1 1 1 1 1 1 0 1 1 1 0 0 0 0 0 0 1 1 1 
-1 1 1 1 1 1 0 1 1 1 0 0 0 0 1 0 1 1 1 
-1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 
-1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 
+0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 1 1 1 1 1 0 0 0 0 0 0 0 1 0 0 0 1 
+0 0 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 1 0 
+0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 
+0 0 1 1 1 1 1 0 0 0 0 1 0 0 1 0 0 0 1 
+0 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 
+0 0 0 0 0 1 0 1 1 1 1 0 1 1 0 1 1 1 0 
+0 0 1 1 1 0 1 1 1 1 1 0 1 1 0 1 1 1 1 
+0 0 1 1 1 0 1 0 0 0 0 1 0 0 1 0 0 0 1 
+0 0 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 
+0 0 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 
+0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 1 1 1 0 
+0 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 
+0 1 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 1 0 
+0 1 0 0 0 1 0 1 1 1 1 0 1 1 0 1 1 1 0 
+0 1 0 0 0 1 0 0 0 0 0 1 1 0 1 0 0 1 0 
+0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 
+0 1 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 1 0 
+0 1 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 1 0 
+0 1 0 0 0 0 0 1 1 1 1 1 1 1 0 1 1 1 0 
+0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 
+0 1 1 1 1 0 1 0 0 0 0 0 1 0 1 0 0 1 1 
+0 1 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 1 0 
+0 1 1 1 1 0 1 0 0 0 0 1 1 0 1 0 0 1 1 
+0 1 1 1 1 0 1 1 1 1 1 0 1 1 0 1 1 1 1 
+0 1 1 1 1 1 1 0 0 0 0 0 1 0 1 0 0 1 1 
+0 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 
+0 1 1 1 1 1 1 0 0 0 0 1 1 0 1 0 0 1 1 
+0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+1 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 0 0 
+1 0 0 0 0 1 0 1 1 1 1 0 1 1 0 1 1 1 0 
+1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 
+1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 
+1 0 0 0 0 0 0 1 1 1 1 0 1 1 0 1 1 1 0 
+1 0 0 0 0 0 0 1 1 1 1 1 1 1 0 1 1 1 0 
+1 0 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 
+1 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 
+1 0 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 1 0 
+1 0 1 1 1 0 1 0 0 0 0 1 0 0 1 0 0 0 1 
+1 0 1 1 1 0 1 1 1 1 1 0 1 1 0 1 1 1 1 
+1 0 1 1 1 1 1 0 0 0 0 0 0 0 1 0 0 0 1 
+1 0 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 
+1 0 1 1 1 1 1 0 0 0 0 1 0 0 1 0 0 0 1 
+1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 
+1 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 
+1 1 0 0 0 1 0 1 1 1 1 0 1 1 0 1 1 1 0 
+1 1 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 1 0 
+1 1 0 0 0 0 0 1 1 1 1 0 1 1 0 1 1 1 0 
+1 1 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 1 0 
+1 1 0 0 0 0 0 1 1 1 1 1 1 1 0 1 1 1 0 
+1 1 0 0 0 1 0 0 0 0 0 1 1 0 1 0 0 1 0 
+1 1 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 1 0 
+1 1 1 1 1 0 1 0 0 0 0 0 1 0 1 0 0 1 1 
+1 1 1 1 1 0 1 0 0 0 0 1 1 0 1 0 0 1 1 
+1 1 1 1 1 0 1 1 1 1 1 0 1 1 0 1 1 1 1 
+1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 
+1 1 1 1 1 1 1 0 0 0 0 0 1 0 1 0 0 1 1 
+1 1 1 1 1 1 1 0 0 0 0 1 1 0 1 0 0 1 1 
+1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 
 
 --- Instance: 129 ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1046,14 +1046,14 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 1 0 0 0 1 0 1 1 1 1 0 1 1 1 0 
-1 1 1 1 1 1 0 0 1 0 1 0 0 0 1 0 
-0 0 1 1 1 0 0 0 1 0 1 1 0 0 0 0 
-0 0 1 1 1 0 0 0 1 0 1 1 0 1 0 0 
-0 0 1 1 1 0 0 0 1 0 1 1 1 0 0 0 
-0 0 1 1 1 0 0 0 1 0 1 1 1 1 0 0 
-1 1 0 0 0 1 0 1 1 1 1 0 1 0 1 0 
-1 1 1 1 1 1 0 0 1 0 1 0 0 1 1 0 
+1 1 1 0 1 0 0 0 1 0 1 1 1 1 0 0 
+0 0 1 0 1 1 1 1 0 0 1 1 1 0 0 0 
+0 0 1 0 1 1 0 0 0 0 1 1 1 0 0 0 
+0 0 1 0 1 1 0 1 0 0 1 1 1 0 0 0 
+0 0 1 0 1 1 1 0 0 0 1 1 1 0 0 0 
+1 1 1 0 1 0 0 1 1 0 1 1 1 1 0 0 
+1 1 1 1 1 0 1 0 1 0 0 0 0 1 0 1 
+1 1 1 1 1 0 1 1 1 0 0 0 0 1 0 1 
 
 --- Instance: A-1-brookings-or-us.gml.50.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1086,7 +1086,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-- 0 0 - - - - 1 0 - 0 0 
+- 0 - - - 1 0 - 0 0 0 - 
 
 --- Instance: A-1-rockland-county-department-of-public-transportation_20121220_2018.gml.20.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1145,9 +1145,9 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 1 1 1 0 1 1 1 1 1 1 0 0 0 
-0 1 0 1 1 1 0 0 1 1 1 1 1 1 0 0 
-0 1 1 1 1 1 0 0 1 0 1 0 0 0 0 0 
+0 1 1 0 1 0 0 0 0 0 1 1 1 1 0 0 
+0 1 1 1 1 1 1 0 0 0 0 1 1 1 0 1 
+0 1 1 1 1 1 1 1 0 0 0 1 1 1 0 0 
 
 --- Instance: B-1-university-of-pretoria_20150805_1406.normalized.gml.80.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1178,10 +1178,10 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 1 1 0 1 0 1 0 0 1 1 0 
-1 0 1 0 0 1 1 1 0 0 1 1 0 
-1 0 1 0 0 1 1 1 1 1 1 1 0 
-1 0 1 1 0 1 0 1 1 1 1 1 0 
+1 0 1 0 1 0 0 1 1 0 1 1 0 
+1 0 1 1 1 0 0 1 1 0 1 0 0 
+1 0 1 0 1 1 1 1 1 0 1 1 0 
+1 0 1 1 1 1 1 1 1 0 1 0 0 
 
 --- Instance: Small-result-b10.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1296,8 +1296,8 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 0 1 1 0 0 1 1 1 0 0 1 
-0 0 0 1 0 1 0 0 1 1 1 0 1 1 
+0 0 0 0 1 1 1 0 0 1 0 0 1 1 
+0 0 0 0 1 1 1 0 1 1 0 1 0 1 
 
 --- Instance: Small-result-b13.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1432,7 +1432,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 1 0 1 0 1 1 1 0 0 0 1 
+0 1 0 1 1 1 0 0 0 1 0 1 0 1 
 
 --- Instance: Small-result-b16.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1567,7 +1567,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 1 0 0 1 1 1 1 1 0 0 0 1 
+0 0 1 1 1 1 0 0 0 1 1 0 0 1 
 
 --- Instance: Small-result-b19.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1611,7 +1611,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 1 1 1 0 0 1 1 1 
+0 1 1 1 1 0 0 1 1 1 0 
 
 --- Instance: Small-result-b2.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1772,17 +1772,9 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
-Garbage collection #1: 50021 nodes / 17357 free / 0.01s / 0.01s total
-Garbage collection #2: 50021 nodes / 17750 free / 0.007s / 0.017s total
-Garbage collection #3: 50021 nodes / 0 free / 0.001s / 0.018s total
-Resizing node table from 50021 to 100019
-Garbage collection #4: 100019 nodes / 26611 free / 0.002s / 0.02s total
-Garbage collection #5: 100019 nodes / 0 free / 0.002s / 0.022s total
-Resizing node table from 100019 to 150011
-Garbage collection #6: 150011 nodes / 120094 free / 0.001s / 0.023s total
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 1 1 0 1 1 0 0 1 1 1 1 1 0 0 1 1 0 1 1 0 1 
-1 0 1 1 0 1 0 1 0 1 1 1 1 1 0 0 0 1 0 1 1 0 1 
+0 0 1 1 1 0 1 1 0 1 1 1 0 1 1 0 0 1 1 1 1 0 0 
+1 0 1 0 1 0 1 1 0 1 1 1 0 1 0 1 0 1 1 1 1 0 0 
 
 --- Instance: Small-result-b21.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1926,7 +1918,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 0 0 0 1 0 1 0 1 0 1 1 1 0 1 1 0 1 1 0 1 
+0 0 1 1 1 0 1 1 0 1 0 0 0 0 1 0 1 0 1 0 1 1 0 
 
 --- Instance: Small-result-b3.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -1970,7 +1962,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-- - 0 - - 1 - - 0 - - 
+- - - - 1 - - 0 - - 0 
 
 --- Instance: Small-result-b33.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -2157,8 +2149,8 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 1 - 0 - 0 1 1 1 0 0 1 
-1 0 1 0 0 1 1 1 0 1 0 0 1 
+1 0 - 0 1 1 1 0 0 1 1 - 0 
+1 0 1 1 1 0 1 0 0 1 1 0 0 
 
 --- Instance: Small-result-b57.apx.graph ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -2394,7 +2386,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 1 0 1 0 0 1 0 0 1 1 
+0 1 1 0 0 1 0 0 1 1 1 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -2525,7 +2517,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_25 v_26 v_27 v_28 v_29 v_3 v_30 v_31 v_32 v_33 v_34 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 0 0 1 1 1 1 0 0 1 1 1 1 0 1 1 0 0 1 0 1 1 0 1 1 0 1 0 1 1 1 1 1 1 
+1 0 1 0 1 1 1 1 1 1 0 0 1 1 1 1 0 0 1 1 1 0 1 1 0 0 1 0 1 1 1 1 0 1 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -2569,7 +2561,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_25 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 1 1 1 1 1 0 0 0 0 1 1 0 1 0 0 1 1 0 1 0 1 0 0 0 
+1 0 1 0 1 0 1 0 0 0 1 1 1 1 1 0 0 0 0 1 0 1 0 0 1 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -2612,7 +2604,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 1 1 1 0 1 0 1 0 0 0 0 0 0 0 1 1 1 0 1 0 1 1 0 0 
+1 1 0 0 1 0 1 1 0 0 1 1 0 1 0 1 0 0 0 0 0 0 1 1 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -2664,7 +2656,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 1 0 1 1 0 0 0 1 1 0 0 1 0 0 1 1 0 1 1 1 0 
+0 0 0 1 1 0 1 1 1 0 1 0 1 1 0 0 0 1 1 0 1 0 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy05_30_33.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -2723,7 +2715,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_25 v_26 v_27 v_28 v_29 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 0 0 0 0 0 1 1 1 0 1 1 0 0 0 0 1 1 1 1 1 0 1 0 0 1 1 0 
+0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 1 1 0 1 0 0 0 0 1 1 1 1 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -2771,7 +2763,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 1 0 1 0 0 1 1 0 1 0 1 1 0 0 0 1 1 0 1 0 0 0 1 0 
+1 1 1 0 1 0 0 0 1 0 0 1 0 0 1 1 0 1 0 1 0 0 0 1 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -2821,7 +2813,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 0 1 0 1 0 1 0 0 0 0 0 1 1 0 1 0 0 1 0 
+0 1 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 0 0 0 0 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -2861,7 +2853,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 1 0 0 1 1 1 0 0 1 1 1 0 1 1 1 1 1 
+1 0 1 1 0 1 1 1 1 1 1 0 0 1 1 1 0 0 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3089,7 +3081,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_25 v_26 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 1 0 0 0 0 0 0 0 1 1 0 0 1 0 0 1 0 0 0 1 1 0 1 1 1 
+0 0 0 0 1 1 0 1 1 1 1 0 0 0 0 0 0 0 1 1 0 1 0 0 1 0 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_access-allegany-transit_20130327_1518.normalized.gml.50_42_76.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3153,7 +3145,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_25 v_26 v_27 v_28 v_29 v_3 v_30 v_31 v_32 v_33 v_34 v_35 v_36 v_37 v_38 v_39 v_4 v_40 v_41 v_5 v_6 v_7 v_8 v_9 
-1 1 1 0 1 0 0 1 1 0 0 1 0 0 0 1 1 1 0 1 1 1 1 1 0 1 0 0 1 1 1 1 1 1 0 0 1 1 1 0 0 0 
+1 1 0 1 0 1 1 0 0 0 1 0 1 0 0 1 1 0 0 1 0 0 1 1 1 0 1 1 1 1 0 1 0 0 1 1 1 1 1 1 0 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_benton-or-us.gml.80_25_56.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3199,7 +3191,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 1 1 1 0 0 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 0 1 0 1 
+1 1 0 1 1 1 0 1 0 1 1 1 0 0 1 1 0 1 1 1 1 1 1 1 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bustang_20151217_1135.gml.80_20_41.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3237,7 +3229,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 0 0 1 0 1 0 0 0 1 1 1 1 1 0 1 1 1 
+0 1 1 1 1 1 0 1 1 1 0 0 0 1 0 1 0 0 0 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_caravan_or_2015-12-01.gml.50_19_32.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3272,7 +3264,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 1 1 0 0 1 1 0 0 0 1 1 1 0 0 1 1 1 1 
+1 1 1 1 0 0 1 1 1 1 1 0 0 1 1 0 0 0 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3308,7 +3300,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 1 
+1 0 0 0 0 1 1 1 0 1 1 0 0 1 0 0 0 0 0 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3342,7 +3334,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 1 0 1 0 1 1 0 1 0 0 0 0 1 1 0 1 0 
+1 1 0 0 0 1 1 0 1 0 0 1 0 1 1 0 1 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3393,7 +3385,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 1 1 0 1 1 0 1 1 0 1 1 
+0 0 1 1 0 1 1 0 1 1 0 1 1 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_laguna-beach-transit_20151216_1912.gml.20_20_50.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3444,7 +3436,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 0 1 1 1 1 0 1 0 0 0 1 0 1 0 1 1 0 0 
+1 0 1 0 1 0 1 1 0 0 0 1 1 1 1 0 1 0 0 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3467,7 +3459,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 1 0 1 1 0 1 0 1 
+0 1 1 0 1 1 0 1 0 1 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3490,7 +3482,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 1 0 1 1 0 0 0 0 0 1 
+0 0 1 1 0 0 0 0 0 1 1 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3515,7 +3507,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 0 0 0 0 0 1 1 0 0 
+1 0 0 0 0 0 1 1 0 0 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3543,7 +3535,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 1 1 0 1 0 1 1 0 0 1 
+0 0 0 1 0 1 1 0 0 1 0 1 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3582,7 +3574,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 0 1 1 1 1 0 1 1 0 1 1 1 0 
+0 0 0 1 1 0 1 1 1 0 0 0 1 1 1 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3646,7 +3638,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 1 0 1 0 0 0 0 1 1 1 0 0 0 0 1 1 0 
+1 1 1 0 0 0 0 1 1 0 0 1 0 0 0 0 1 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_southwest-point_20151216_1538.gml.80_18_34.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3678,7 +3670,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 1 1 0 0 1 1 1 1 0 1 0 1 1 0 0 
+0 0 1 0 1 0 1 1 0 0 0 1 1 0 0 1 1 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_swan-island-tma_20151217_0809.gml.20_15_26.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3710,7 +3702,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 0 0 1 1 1 1 1 0 1 0 1 0 
+0 1 1 1 1 0 1 0 1 0 0 0 0 1 1 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_the-shuttle-inc_20141224_0137.gml.20_18_23.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3741,7 +3733,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 1 0 1 0 1 1 1 1 0 0 0 1 0 1 1 1 0 
+1 1 0 0 1 0 1 1 1 0 0 1 0 1 1 1 1 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.20_18_20.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3773,7 +3765,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 1 0 1 1 0 0 1 0 0 1 1 0 1 1 0 1 
+1 0 0 1 1 0 1 1 0 1 1 0 1 1 0 0 1 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3805,7 +3797,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 0 1 1 1 0 1 0 1 0 0 0 0 1 0 1 
+0 1 1 0 0 0 0 1 0 1 0 0 1 1 1 0 1 0 
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3833,7 +3825,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 1 1 1 0 0 1 1 0 0 0 1 1 
+1 0 0 1 1 0 0 0 1 1 1 1 1 0 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -3966,7 +3958,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 1 1 1 1 1 0 0 0 1 1 
+0 0 1 1 1 0 0 0 1 1 1 1 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4059,7 +4051,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-- 1 0 0 - 1 - 0 - 1 - - - - - - - 
+- 1 1 - - - - - - - 0 0 - 1 - 0 - 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy07_26_19.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4108,8 +4100,8 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_25 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 0 0 1 0 1 1 1 1 1 0 0 1 0 1 0 0 0 1 1 1 1 0 1 0 
-1 0 1 0 1 0 1 1 1 0 1 0 0 1 0 0 0 0 0 1 1 1 0 1 1 0 
+1 0 0 1 1 1 0 1 1 0 1 0 1 0 1 1 1 0 1 0 1 0 0 0 0 0 
+1 0 0 1 1 1 1 0 1 0 0 0 1 0 1 1 1 1 1 0 1 0 1 0 0 0 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy03_25_20.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4162,7 +4154,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 1 1 0 0 0 0 0 0 0 1 1 0 1 1 1 1 0 0 0 0 1 1 
+0 1 1 1 0 0 0 0 1 1 0 1 1 0 0 0 0 0 0 0 1 0 1 1 1 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy04_23_34.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4228,8 +4220,8 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 0 1 0 0 1 0 0 1 1 0 1 1 0 1 0 0 0 1 1 0 
-0 0 1 0 1 0 0 0 0 0 1 1 0 1 1 0 1 0 0 1 1 0 0 
+0 0 0 1 0 0 0 1 1 0 0 0 1 0 0 1 0 0 1 1 1 1 0 
+0 0 0 1 0 0 1 1 0 0 1 0 1 0 0 0 0 0 1 1 1 1 0 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy06_25_26.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4289,7 +4281,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_22 v_23 v_24 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 1 1 1 1 1 0 1 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 
+0 1 1 0 1 0 1 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 0 1 0 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4348,8 +4340,8 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_20 v_21 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 1 1 0 0 1 1 0 1 1 0 1 0 0 1 1 0 1 0 1 
-1 0 0 1 1 0 0 1 1 0 1 1 0 1 0 0 1 1 0 1 1 1 
+0 0 0 0 1 1 0 1 0 1 0 1 1 0 0 1 1 0 1 1 1 0 
+1 0 0 0 1 1 0 1 1 1 0 1 1 0 0 1 1 0 1 1 1 0 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy05_19_23.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4397,7 +4389,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-- - - 1 - 1 1 0 0 - - 0 - - 1 - - - 1 
+- - 0 - - 1 - - - 1 - 1 - 1 1 0 0 - - 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4643,7 +4635,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 1 - 0 1 - 1 0 1 0 1 0 0 1 - 0 1 - - 0 
+1 1 0 1 - 0 1 - - 0 - 0 1 - 1 0 1 0 1 0 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4680,12 +4672,12 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_18 v_19 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-- 0 1 1 0 0 0 1 0 0 1 - 1 1 1 0 1 - 1 0 
-- 0 1 1 0 1 0 1 - 1 1 - 0 1 1 0 1 - 1 0 
-- 1 0 - - 0 0 1 0 0 1 - 1 1 1 0 - - 1 0 
-- 1 0 - - 0 1 1 0 0 0 - 1 1 1 0 - - 1 0 
-- 1 0 - - 1 0 1 - 1 1 - 0 1 1 0 - - 1 0 
-- 1 0 - - 1 1 1 - 1 0 - 0 1 1 0 - - 1 0 
+- 0 0 1 1 0 1 - 1 0 1 1 0 1 0 1 - 1 1 - 
+- 0 1 1 1 0 1 - 1 0 1 1 0 0 0 1 0 0 1 - 
+- 1 0 1 1 0 - - 1 0 0 - - 1 0 1 - 1 1 - 
+- 1 0 1 1 0 - - 1 0 0 - - 1 1 1 - 1 0 - 
+- 1 1 1 1 0 - - 1 0 0 - - 0 0 1 0 0 1 - 
+- 1 1 1 1 0 - - 1 0 0 - - 0 1 1 0 0 0 - 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4726,10 +4718,10 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 - - - - - 0 - - - - 0 - 1 1 0 1 0 
-0 - - - - - 0 1 0 - - 1 - 1 1 0 0 1 
-0 0 0 0 1 1 0 1 0 1 0 0 1 0 0 1 1 0 
-0 0 0 0 1 1 0 1 0 1 0 1 1 0 0 1 0 1 
+0 - - 0 - 1 1 0 1 0 - - - - 0 - - - 
+0 - - 1 - 1 1 0 0 1 - - - - 0 1 0 - 
+0 0 0 0 1 0 0 1 1 0 0 0 1 1 0 1 0 1 
+0 0 0 1 1 0 0 1 0 1 0 0 1 1 0 1 0 1 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4793,9 +4785,9 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 - 0 1 0 0 1 1 0 - - - - - 
-1 - 0 1 0 0 0 1 1 - - - - - 
-1 - 1 1 0 1 0 0 1 - - - - - 
+1 - 0 0 1 - - - - - 1 1 0 1 
+1 - 0 1 1 - - - - - 0 1 0 0 
+1 - 1 1 0 - - - - - 0 1 0 0 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_leo-express_20150223_1307.gml.50_11_18.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4817,7 +4809,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 1 0 0 1 1 0 0 0 0 1 
+0 1 0 1 1 0 0 0 0 1 0 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_mumbai-metro_20151216_1419.gml.50_12_19.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4841,7 +4833,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 0 0 0 1 1 0 1 1 1 
+0 0 0 0 1 1 0 1 1 1 0 0 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4868,8 +4860,8 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 0 0 1 0 1 0 - 1 - 
-0 0 1 1 1 1 1 0 1 0 1 
+0 0 0 1 0 1 0 - 1 - 0 
+0 0 1 1 1 1 0 1 0 1 1 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_path_20120517_1620.normalized.gml.20_13_15.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4899,7 +4891,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 0 - 0 1 0 0 0 0 1 1 - - 
+0 0 0 0 0 0 1 1 - - - 0 1 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_rockland_county_ny_2016-01.gml.20_16_32.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -4946,7 +4938,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-0 - 1 - 1 0 - - 1 - 0 - 1 - - 1 
+0 - 1 - 0 - 1 - - 1 1 - 1 0 - - 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -5018,7 +5010,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 0 1 1 1 1 0 1 0 0 0 0 1 0 
+1 0 0 1 0 0 0 0 1 0 0 1 1 1 1 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tri-rail_20090129_0554.gml.50_18_29.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -5053,14 +5045,14 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_14 v_15 v_16 v_17 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 0 0 - 0 0 - 0 0 1 0 - 0 0 0 - 1 1 
-1 0 0 - 0 0 - 1 0 1 0 - 1 0 0 - 0 0 
-1 0 0 1 0 0 - 0 0 0 1 - 0 0 0 - 1 1 
-1 0 0 1 0 0 - 1 0 0 1 - 1 0 0 - 0 0 
-1 0 0 1 0 1 - 0 0 0 1 - 0 1 1 - 1 1 
-1 0 0 - 0 1 - 0 0 1 0 - 0 0 1 - 1 1 
-1 0 0 - 0 1 - 1 0 1 0 - 1 0 1 - 0 0 
-1 0 0 1 0 1 - 1 0 0 1 - 1 1 1 - 0 0 
+1 0 0 - 0 0 0 - 1 1 0 - 0 0 - 0 0 1 
+1 0 0 - 1 0 0 - 0 0 0 - 0 0 - 1 0 1 
+1 0 1 - 0 0 0 - 1 1 0 1 0 0 - 0 0 0 
+1 0 0 - 1 0 1 - 0 0 0 - 0 1 - 1 0 1 
+1 0 0 - 0 0 1 - 1 1 0 - 0 1 - 0 0 1 
+1 0 1 - 1 0 0 - 0 0 0 1 0 0 - 1 0 0 
+1 0 1 - 0 1 1 - 1 1 0 1 0 1 - 0 0 0 
+1 0 1 - 1 1 1 - 0 0 0 1 0 1 - 1 0 0 
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_valleyretriever_or_2015-12-01.gml.20_14_20.apx ---
 Starting 'sybila/tool-biolqm' in '/home/daemontus/biodivine-adf-solver'.
@@ -5092,7 +5084,7 @@ Will execute 'bioLQM.jar' with arguments '-r trapspace terminal BDD ./test_insta
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
  WARN (AbstractReaderWriter.java:105) - processAttribute: The attribute 'essential' on the element input is not part of the SBML specifications (Input).
 v_0 v_1 v_10 v_11 v_12 v_13 v_2 v_3 v_4 v_5 v_6 v_7 v_8 v_9 
-1 1 0 0 0 1 1 0 0 0 1 1 1 1 
-1 1 0 0 1 1 1 0 0 1 1 0 1 1 
-1 1 1 0 0 1 0 1 0 0 1 1 1 0 
-1 1 1 0 1 1 0 1 0 1 1 0 1 0 
+1 1 0 1 0 0 1 1 1 0 1 0 0 1 
+1 1 0 1 0 1 1 0 1 0 1 0 1 1 
+1 1 1 0 0 0 1 1 1 1 0 0 0 1 
+1 1 1 0 0 1 1 0 1 1 0 0 1 1 

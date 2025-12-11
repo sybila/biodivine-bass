@@ -216,8 +216,8 @@ SATISFIABLE
 
 Models       : 72
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: 007 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -761,8 +761,8 @@ SATISFIABLE
 
 Models       : 20
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: 026 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -1501,7 +1501,7 @@ SATISFIABLE
 
 Models       : 64
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: 031 ---
@@ -5452,8 +5452,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: 062 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -7515,8 +7515,8 @@ SATISFIABLE
 
 Models       : 22
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: 100 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -7669,8 +7669,8 @@ SATISFIABLE
 
 Models       : 7
 Calls        : 1
-Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.001s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: 105 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -8098,7 +8098,7 @@ SATISFIABLE
 Models       : 5
 Calls        : 1
 Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+CPU Time     : 0.001s
 
 --- Instance: 135 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -8357,7 +8357,7 @@ SATISFIABLE
 
 Models       : 54
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: 148 ---
@@ -8482,8 +8482,8 @@ SATISFIABLE
 
 Models       : 23
 Calls        : 1
-Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.001s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: 153 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -9360,8 +9360,8 @@ SATISFIABLE
 
 Models       : 368
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: 165 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -9777,8 +9777,8 @@ SATISFIABLE
 
 Models       : 13
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: 176 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -9990,7 +9990,7 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: 182 ---
@@ -10090,7 +10090,7 @@ SATISFIABLE
 
 Models       : 20
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: 184 ---
@@ -10259,8 +10259,8 @@ SATISFIABLE
 
 Models       : 24
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: 187 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -10758,8 +10758,8 @@ SATISFIABLE
 
 Models       : 238
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: 189 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -10890,8 +10890,8 @@ SATISFIABLE
 
 Models       : 9
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: 198 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -11082,7 +11082,7 @@ SATISFIABLE
 
 Models       : 4
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.003s
 
 --- Instance: 205 ---
@@ -11336,8 +11336,8 @@ SATISFIABLE
 
 Models       : 8
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: 228 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -11679,8 +11679,8 @@ SATISFIABLE
 
 Models       : 160
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: 229 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -12038,8 +12038,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.001s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: A-1-BA_60_70_3.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -12322,8 +12322,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: B-1-BA_40_60_2.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -12345,8 +12345,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: B-1-BA_40_80_4.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -12368,7 +12368,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: B-1-afinput_exp_cycles_indvary1_step8_batch_yyy08.apx.graph ---
@@ -12610,8 +12610,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: Small-result-b10.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -12743,7 +12743,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: Small-result-b15.apx.graph ---
@@ -12818,8 +12818,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: Small-result-b18.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -12841,7 +12841,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.004s
 
 --- Instance: Small-result-b19.apx.graph ---
@@ -12966,7 +12966,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.004s
 
 --- Instance: Small-result-b23.apx.graph ---
@@ -13185,8 +13185,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: Small-result-b37.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -13308,7 +13308,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: Small-result-b41.apx.graph ---
@@ -13358,8 +13358,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: Small-result-b43.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -13456,8 +13456,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: Small-result-b47.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -13479,7 +13479,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: Small-result-b48.apx.graph ---
@@ -13533,8 +13533,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.006s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: Small-result-b53.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -13558,8 +13558,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.007s
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
 
 --- Instance: Small-result-b54.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -13610,8 +13610,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.009s
+Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.008s
 
 --- Instance: Small-result-b57.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -13685,8 +13685,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: Small-result-b61.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -13712,7 +13712,7 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.005s
 
 --- Instance: Small-result-b62.apx.graph ---
@@ -13738,7 +13738,7 @@ SATISFIABLE
 Models       : 1
 Calls        : 1
 Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+CPU Time     : 0.005s
 
 --- Instance: Small-result-b63.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -13762,7 +13762,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.004s
 
 --- Instance: Small-result-b64.apx.graph ---
@@ -13933,8 +13933,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: Small-result-b73.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -14008,8 +14008,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.007s
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
 
 --- Instance: Small-result-b76.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -14181,8 +14181,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: Small-result-b82.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -14327,7 +14327,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: Small-result-b9.apx.graph ---
@@ -14375,8 +14375,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: T-1-BA_100_10_5.apx.graph ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -14498,7 +14498,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.004s
 
 --- Instance: T-1-caravan-airport-transportation_20151216_1604.gml.20.apx.graph ---
@@ -14553,7 +14553,7 @@ SATISFIABLE
 
 Models       : 16
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: T-1-cascadespoint-or-us.gml.20.apx.graph ---
@@ -14830,7 +14830,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.006s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step3_batch_yyy07_43_1168.apx ---
@@ -15280,8 +15280,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step8_batch_yyy02_34_80.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -15405,8 +15405,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.011s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.011s
+Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.008s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary2_step1_batch_yyy09_29_309.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -15480,8 +15480,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step1_batch_yyy07_33_173.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -15530,7 +15530,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy02_37_293.apx ---
@@ -15630,8 +15630,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step3_batch_yyy02_22_31.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -15705,7 +15705,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy01_13_63.apx ---
@@ -15730,8 +15730,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy02_14_83.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -15980,8 +15980,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.011s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.011s
+Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.009s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step2_batch_yyy09_23_151.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16005,7 +16005,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step2_batch_yyy10_42_992.apx ---
@@ -16030,8 +16030,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.008s
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step5_batch_yyy01_41_338.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16105,8 +16105,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.026s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.026s
+Time         : 0.025s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.025s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step6_batch_yyy01_31_112.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16155,8 +16155,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.007s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step6_batch_yyy09_27_61.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16255,8 +16255,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step7_batch_yyy10_33_64.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16280,7 +16280,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step8_batch_yyy03_37_126.apx ---
@@ -16430,8 +16430,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary3_step2_batch_yyy07_35_338.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16455,8 +16455,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary3_step2_batch_yyy10_28_139.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16530,8 +16530,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_bw2.pfile-3-02.pddl.3.cnf_282_461.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16580,8 +16580,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_bw2.pfile-3-03.pddl.1.cnf_266_494.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16605,7 +16605,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.005s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_bw2.pfile-3-05.pddl.1.cnf_267_497.apx ---
@@ -16655,8 +16655,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_bw2.pfile-3-05.pddl.3.cnf_283_462.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16680,8 +16680,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.006s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_bw2.pfile-3-05.pddl.4.cnf_248_392.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16705,8 +16705,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_bw2.pfile-3-07.pddl.1.cnf_265_493.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16755,7 +16755,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_bw2.pfile-3-07.pddl.3.cnf_281_460.apx ---
@@ -16830,8 +16830,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.007s
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_bw2.pfile-3-08.pddl.2.cnf_161_285.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -16906,7 +16906,7 @@ SATISFIABLE
 Models       : 1
 Calls        : 1
 Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+CPU Time     : 0.004s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C1-01.pddl.1.cnf_86_136.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -17255,8 +17255,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.006s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C1-04.pddl.4.cnf_175_274.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -17455,8 +17455,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C1-05.pddl.6.cnf_219_359.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -17480,8 +17480,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C1-06.pddl.1.cnf_86_136.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -17530,8 +17530,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C1-07.pddl.1.cnf_86_136.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -17680,7 +17680,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C1-09.pddl.3.cnf_205_334.apx ---
@@ -17730,8 +17730,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C1-09.pddl.5.cnf_213_361.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -17780,7 +17780,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.005s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C2-01.pddl.2.cnf_239_432.apx ---
@@ -17830,8 +17830,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.006s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C2-010.pddl.1.cnf_135_220.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -17930,8 +17930,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.009s
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C2-03.pddl.1.cnf_135_220.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -18055,8 +18055,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.006s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C2-05.pddl.1.cnf_135_220.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -18105,8 +18105,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.006s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C2-06.pddl.2.cnf_239_432.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -18605,8 +18605,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.008s
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L3-C1-010.pddl.4.cnf_281_463.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -18680,8 +18680,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L3-C1-04.pddl.1.cnf_233_430.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -18730,7 +18730,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.007s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L3-C1-04.pddl.4.cnf_281_463.apx ---
@@ -18780,8 +18780,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L3-C1-07.pddl.1.cnf_164_287.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -18955,8 +18955,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.008s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L3-C2-09.pddl.1.cnf_229_406.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -18980,8 +18980,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_access-allegany-transit_20130327_1518.normalized.gml.50_42_76.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -19055,8 +19055,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bay-area-rapid-transit_20151217_1022.gml.20_45_56.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -19080,7 +19080,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bay-town-trolley_20151216_1628.gml.20_198_277.apx ---
@@ -19105,7 +19105,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_beloit-transit-system_20150513_1515.gml.20_235_391.apx ---
@@ -19255,8 +19255,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_cecil-transit_20151202_2004.gml.80_105_248.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -19330,7 +19330,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_citygo_20090102_2309.gml.80_101_198.apx ---
@@ -19530,8 +19530,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.008s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_duke-university_20150227_1733.gml.80_110_268.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -19555,8 +19555,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_el-dorado-transit_20151217_1024.gml.20_139_270.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -19717,10 +19717,10 @@ Will execute 'go-diamond' with arguments '-mod -enum ./test_instances/_normalize
 + python3 /sw/diamond/diamond.py -mod -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx.normal.adf
 /sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
   openpar = [m.start() for m in re.finditer('\(',string)]
-==============================
-two-valued models
 /sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
   closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+two-valued models
 clingo version 5.6.2
 Reading from /sw/diamond/lib/fmodel.lp ...
 Solving...
@@ -19830,8 +19830,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_irvine-shuttle_20091229_1547.gml.80_43_79.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -19880,8 +19880,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_jeffco-express_20151217_0857.gml.20_77_117.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -19955,8 +19955,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_kern-regional-transit_20140801_2043.gml.20_179_323.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -20180,7 +20180,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_milton-freewater-or-us.gml.80_29_50.apx ---
@@ -20380,8 +20380,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_omit-sainte-julie_20151202_1945.gml.50_152_280.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -20755,7 +20755,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
@@ -21055,8 +21055,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tillamook-or-us.gml.80_182_418.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -21080,8 +21080,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tillamook_or_2016-01.gml.80_181_424.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -21559,7 +21559,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx ---
@@ -21656,7 +21656,7 @@ UNSATISFIABLE
 Models       : 0
 Calls        : 1
 Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step2_batch_yyy08_23_147.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -21786,7 +21786,7 @@ SATISFIABLE
 
 Models       : 3
 Calls        : 1
-Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.009s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step5_batch_yyy06_29_57.apx ---
@@ -21859,8 +21859,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.009s
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step1_batch_yyy08_39_869.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -22000,12 +22000,12 @@ Will execute 'go-diamond' with arguments '-mod -enum ./test_instances/_normalize
 + '[' -mod = --count-only ']'
 + ulimit -f 4194304
 + python3 /sw/diamond/diamond.py -mod -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step6_batch_yyy01_28_111.apx.normal.adf
-==============================
-two-valued models
 /sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
   openpar = [m.start() for m in re.finditer('\(',string)]
 /sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
   closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+two-valued models
 clingo version 5.6.2
 Reading from /sw/diamond/lib/fmodel.lp ...
 Solving...
@@ -22019,8 +22019,8 @@ SATISFIABLE
 
 Models       : 3
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step6_batch_yyy03_25_55.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -22116,7 +22116,7 @@ UNSATISFIABLE
 Models       : 0
 Calls        : 1
 Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary1_step7_batch_yyy06_50_423.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -22350,8 +22350,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.013s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.013s
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary2_step1_batch_yyy09_29_309.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -22373,8 +22373,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step1_batch_yyy03_43_614.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -22419,8 +22419,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.006s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step1_batch_yyy07_33_173.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -22490,8 +22490,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy04_34_251.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -22540,7 +22540,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_indvary3_step2_batch_yyy07_24_49.apx ---
@@ -22840,7 +22840,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.005s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step2_batch_yyy05_35_596.apx ---
@@ -22909,8 +22909,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.016s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.016s
+Time         : 0.015s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.015s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step2_batch_yyy09_23_151.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -23026,7 +23026,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.009s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step6_batch_yyy09_27_61.apx ---
@@ -23049,8 +23049,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step7_batch_yyy02_31_117.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -23072,7 +23072,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary1_step7_batch_yyy06_27_116.apx ---
@@ -23216,8 +23216,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary3_step1_batch_yyy08_37_258.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -23291,8 +23291,8 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_indvary3_step2_batch_yyy07_35_338.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -23362,8 +23362,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.007s
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_bw2.pfile-3-02.pddl.4.cnf_247_391.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -23431,8 +23431,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.009s
+Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.008s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C1-04.pddl.2.cnf_131_227.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -23546,7 +23546,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C1-07.pddl.1.cnf_86_136.apx ---
@@ -23592,7 +23592,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Planning2AF_ferry2.pfile-L2-C1-09.pddl.3.cnf_205_334.apx ---
@@ -23891,8 +23891,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bay-area-rapid-transit_20151217_1022.gml.20_45_56.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -23914,7 +23914,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_bay-town-trolley_20151216_1628.gml.20_198_277.apx ---
@@ -24181,7 +24181,7 @@ SATISFIABLE
 Models       : 2
 Calls        : 1
 Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_coos-county-area-transit_20151216_1739.gml.80_65_179.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -24272,8 +24272,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.008s
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_duke-university_20150227_1733.gml.80_110_268.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -24295,8 +24295,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_emel-limassol-buses_20130419_1345.gml.50_20_25.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -24387,8 +24387,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.008s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_gunnison-valley-rta_20151202_1952.gml.50_18_31.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -24489,8 +24489,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.007s
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_irvine-shuttle_20091229_1547.gml.20_43_59.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -24535,7 +24535,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_jeffco-express_20151217_0857.gml.20_77_117.apx ---
@@ -24675,8 +24675,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_massachusetts-archiver_20090912_0208.gml.80_34_59.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -24698,8 +24698,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_massachusetts_nrta_2014-12-03.gml.20_130_185.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -24865,8 +24865,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.006s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_ouibus_20151219_1959.gml.50_54_164.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -24957,8 +24957,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_redwood-coast-transit_20151216_1453.gml.20_113_165.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -25095,7 +25095,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sbase_20150429_2048.gml.80_98_171.apx ---
@@ -25313,7 +25313,7 @@ UNSATISFIABLE
 Models       : 0
 Calls        : 1
 Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+CPU Time     : 0.002s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_temiskaming-transit_20140107_0435.gml.20_62_87.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -25358,8 +25358,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.002s
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.001s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_tillamook-or-us.gml.20_182_281.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -25619,8 +25619,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.002s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_worcester-regional-transit-authority_20130618_1740.gml.80_80_214.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -25643,7 +25643,7 @@ UNSATISFIABLE
 Models       : 0
 Calls        : 1
 Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+CPU Time     : 0.002s
 
 --- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_yamhill-or-us.gml.20_157_241.apx ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -25734,7 +25734,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.003s
 
 --- Instance: comma2014-70-04 ---
@@ -25788,8 +25788,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: comma2014-70-06 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -25907,8 +25907,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: comma2014-70-11 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -25934,8 +25934,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: comma2014-70-12 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -26112,7 +26112,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.003s
 
 --- Instance: comma2014-70-16 ---
@@ -26254,8 +26254,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: comma2014-70-22 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -26277,8 +26277,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: comma2014-70-23 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -26300,8 +26300,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: comma2014-70-24 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -26377,8 +26377,8 @@ SATISFIABLE
 
 Models       : 4
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: comma2014-70-27 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -26400,8 +26400,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: comma2014-70-28 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -26498,7 +26498,7 @@ SATISFIABLE
 Models       : 12
 Calls        : 1
 Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.003s
+CPU Time     : 0.004s
 
 --- Instance: comma2014-70-31 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -26752,6 +26752,10 @@ Will execute 'go-diamond' with arguments '-mod -enum ./test_instances/_normalize
 + '[' -mod = --count-only ']'
 + ulimit -f 4194304
 + python3 /sw/diamond/diamond.py -mod -enum ./test_instances/_normalized/comma2014-70-40.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
 ==============================
 two-valued models
 clingo version 5.6.2
@@ -26763,10 +26767,6 @@ Models       : 0
 Calls        : 1
 Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.003s
-/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
-  openpar = [m.start() for m in re.finditer('\(',string)]
-/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
-  closepar = [m.start() for m in re.finditer('\)',string)]
 
 --- Instance: comma2014-80-01 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -27347,8 +27347,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: comma2014-80-25 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -27393,8 +27393,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: comma2014-80-27 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -27591,8 +27591,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: comma2014-80-35 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -27662,8 +27662,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: comma2014-80-38 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -27722,8 +27722,8 @@ SATISFIABLE
 
 Models       : 7
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: comma2014-80-40 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -27772,8 +27772,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: metro_beijing-02 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -27845,8 +27845,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: metro_beijing-05 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -27872,8 +27872,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: metro_london-01 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -28151,8 +28151,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: metro_shanghai-03 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -28178,8 +28178,8 @@ SATISFIABLE
 
 Models       : 2
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
 
 --- Instance: metro_shanghai-04 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
@@ -28203,7 +28203,7 @@ SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.004s
 
 --- Instance: metro_singapore-01 ---
@@ -28332,7 +28332,7 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.002s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.002s
 
 --- Instance: metro_tram_vienna-01 ---
@@ -28401,8 +28401,8 @@ UNSATISFIABLE
 
 Models       : 0
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
 
 --- Instance: metro_tram_vienna-05 ---
 Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
