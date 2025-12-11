@@ -1,0 +1,977 @@
+=== yadf stable ===
+
+--- Instance: 007 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/007.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,0) ass(4,0) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 088 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/088.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,1) ass(5,0) ass(4,0) ass(0,1) ass(1,0)
+Answer: 2
+ass(3,1) ass(2,0) ass(5,1) ass(4,0) ass(0,0) ass(1,1)
+Answer: 3
+ass(3,0) ass(2,0) ass(5,0) ass(4,1) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.009s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 097 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/097.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 2.037s (Solving: 0.07s 1st Model: 0.07s Unsat: 0.00s)
+CPU Time     : 2.035s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 109 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/109.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,0) ass(4,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 110 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/110.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,1) ass(6,0) ass(2,0) ass(5,0) ass(4,1) ass(7,1) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.265s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.264s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 133 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/133.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,0) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 1.378s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1.378s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 165 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/165.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,0) ass(2,0) ass(5,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.101s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.100s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 184 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/184.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,0) ass(5,1) ass(4,1) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.019s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.018s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: 189 ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/189.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.016s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.016s
++ exit_code=20
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b10.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b10.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(2,0) ass(5,1) ass(4,0) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.015s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.015s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b13.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b13.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,0) ass(5,0) ass(4,1) ass(0,1) ass(1,1)
+Answer: 2
+ass(3,0) ass(2,1) ass(5,1) ass(4,0) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.023s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.021s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b16.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b16.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(2,0) ass(5,1) ass(4,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.017s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.017s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b2.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b2.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(2,0) ass(3,0) ass(4,0) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b33.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b33.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 1.325s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.01s)
+CPU Time     : 1.324s
++ exit_code=20
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b34.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b34.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.256s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.256s
++ exit_code=20
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b35.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b35.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,0) ass(2,0) ass(5,1) ass(4,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.058s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.058s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b41.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b41.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(2,0) ass(5,1) ass(4,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.009s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b57.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b57.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(6,0) ass(2,0) ass(5,1) ass(4,1) ass(7,0) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.059s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.059s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b58.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b58.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(6,0) ass(2,1) ass(5,1) ass(4,1) ass(7,1) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.082s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.082s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: Small-result-b8.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/Small-result-b8.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,0) ass(2,0) ass(5,1) ass(4,0) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.145s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.145s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: T-1-cascadespoint-or-us.gml.20.apx.graph ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/T-1-cascadespoint-or-us.gml.20.apx.graph.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,1) ass(2,1) ass(5,1) ass(4,1) ass(0,1) ass(1,1)
++ exit_code=30
++ case $exit_code in
++ exit 0
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.027s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.027s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(6,0) ass(2,1) ass(9,0) ass(4,0) ass(7,1) ass(3,1) ass(8,1) ass(5,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 1.347s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1.347s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(8,1) ass(6,1) ass(5,1) ass(4,0) ass(7,0) ass(0,1) ass(3,0) ass(2,1) ass(9,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 1.329s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1.328s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(8,0) ass(2,1) ass(4,1) ass(7,0) ass(0,1) ass(3,1) ass(6,0) ass(5,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.291s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.291s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(8,0) ass(6,0) ass(4,0) ass(7,1) ass(0,0) ass(2,0) ass(5,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.254s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.254s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(2,1) ass(5,0) ass(4,1) ass(7,1) ass(0,1) ass(1,0) ass(8,1) ass(6,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.237s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.236s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(8,1) ass(2,1) ass(9,1) ass(4,0) ass(7,0) ass(0,1) ass(1,0) ass(3,1) ass(6,0) ass(5,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 1.150s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1.148s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(8,0) ass(6,0) ass(5,0) ass(4,0) ass(1,0) ass(3,1) ass(2,0) ass(9,0) ass(7,0) ass(0,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 1.385s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1.383s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,1) ass(5,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0) ass(2,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.050s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.050s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(6,0) ass(5,1) ass(9,1) ass(4,0) ass(7,0) ass(0,1) ass(1,1) ass(8,0) ass(2,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 1.250s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1.249s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(2,1) ass(5,0) ass(4,1) ass(0,0) ass(1,0) ass(6,0) ass(7,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.309s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.309s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(5,0) ass(4,0) ass(3,1) ass(8,1) ass(6,1) ass(2,0) ass(9,0) ass(7,1) ass(0,1) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 1.401s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1.401s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(8,1) ass(3,0) ass(6,1) ass(2,1) ass(5,1) ass(9,0) ass(4,0) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 2.080s (Solving: 0.01s 1st Model: 0.01s Unsat: 0.00s)
+CPU Time     : 2.079s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(6,1) ass(3,1) ass(8,0) ass(2,1) ass(5,0) ass(4,1) ass(7,0) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.312s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.310s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.279s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.279s
++ exit_code=20
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(9,0) ass(3,0) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(4,0) ass(7,0) ass(0,1) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 1.408s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1.406s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,1) ass(8,0) ass(6,0) ass(2,0) ass(5,1) ass(9,0) ass(4,1) ass(7,0) ass(0,0) ass(1,0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 2.148s (Solving: 0.01s 1st Model: 0.01s Unsat: 0.01s)
+CPU Time     : 2.146s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+Answer: 1
+ass(3,0) ass(6,1) ass(2,0) ass(5,0) ass(4,0) ass(7,1) ass(0,0) ass(1,1)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.065s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.064s
++ exit_code=30
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 1.438s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 1.438s
++ exit_code=20
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 7.264s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 7.262s
++ exit_code=20
++ case $exit_code in
++ exit 0
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-yadf' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'java -jar yadf_0.1.1.jar' with semantics '', model count '' and input file ''.
++ set -e
++ '[' -stb = --count-only ']'
++ java -jar /sw/yadf_0.1.1.jar -stb ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf
++ /sw/lpopt-2.2-x86_64/lpopt
++ set +e
++ clingo -n 0 /tmp/translated.lp
+clingo version 5.6.2
+Reading from /tmp/translated.lp
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.368s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.367s
++ exit_code=20
++ case $exit_code in
++ exit 0

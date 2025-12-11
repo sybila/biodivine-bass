@@ -1,0 +1,1102 @@
+=== goDiamond stm ===
+
+--- Instance: 007 ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/007.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/007.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(0) t(1) f(2) f(3) f(4)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
+
+--- Instance: 088 ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/088.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/088.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(0) t(2) f(1) f(3) f(4) f(5)
+Answer: 2
+t(1) t(3) t(5) f(0) f(2) f(4)
+Answer: 3
+t(4) f(0) f(1) f(2) f(3) f(5)
+SATISFIABLE
+
+Models       : 3
+Calls        : 1
+Time         : 0.009s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.009s
+
+--- Instance: 097 ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/097.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/097.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(0) f(1) f(2) f(3) f(4) f(5) f(6) f(7) f(8) f(9)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.220s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.220s
+
+--- Instance: 109 ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/109.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/109.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(0) f(1) f(2) f(3) f(4)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
+
+--- Instance: 110 ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/110.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/110.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(0) t(1) t(3) t(4) t(7) t(8) f(2) f(5) f(6)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.043s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.043s
+
+--- Instance: 133 ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/133.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/133.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(1) f(0) f(2) f(3) f(4) f(5) f(6) f(7) f(8) f(9)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.028s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.028s
+
+--- Instance: 165 ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/165.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/165.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(0) f(1) f(2) f(3) f(4) f(5) f(6) f(7)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.015s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.015s
+
+--- Instance: 184 ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/184.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/184.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(4) t(5) f(0) f(1) f(2) f(3)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+--- Instance: 189 ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/189.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/189.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.011s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.011s
+
+--- Instance: Small-result-b10.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b10.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b10.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(0) t(3) t(5) f(1) f(2) f(4)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s
+
+--- Instance: Small-result-b13.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b13.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b13.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(0) t(1) t(2) t(5) f(3) f(4)
+Answer: 2
+t(0) t(1) t(4) f(2) f(3) f(5)
+SATISFIABLE
+
+Models       : 2
+Calls        : 1
+Time         : 0.013s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+--- Instance: Small-result-b16.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b16.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b16.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(3) t(5) f(0) f(1) f(2) f(4)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+--- Instance: Small-result-b2.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b2.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b2.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(2) t(0) t(1) f(3) f(4)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.003s
+
+--- Instance: Small-result-b33.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b33.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b33.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(1) f(6) t(2) t(4) t(7) f(0) f(3) f(5) f(8)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.007s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.007s
+
+--- Instance: Small-result-b34.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b34.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b34.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.054s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.054s
+
+--- Instance: Small-result-b35.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b35.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b35.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(3) t(5) f(0) f(1) f(2) f(4) f(6)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.023s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.023s
+
+--- Instance: Small-result-b41.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b41.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b41.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(1) t(3) t(5) f(0) f(2) f(4)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.010s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s
+
+--- Instance: Small-result-b57.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b57.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b57.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(0) t(3) t(4) t(5) f(1) f(2) f(6) f(7)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.013s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.013s
+
+--- Instance: Small-result-b58.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b58.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b58.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(0) t(2) t(3) t(4) t(5) t(7) f(1) f(6)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.057s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.057s
+
+--- Instance: Small-result-b8.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/Small-result-b8.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/Small-result-b8.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(7) t(1) t(5) f(0) f(2) f(3) f(4) f(6)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
+
+--- Instance: T-1-cascadespoint-or-us.gml.20.apx.graph ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/T-1-cascadespoint-or-us.gml.20.apx.graph.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/T-1-cascadespoint-or-us.gml.20.apx.graph.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(0) t(1) t(2) t(4) t(5) t(6) f(3)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.022s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.022s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(2) t(3) t(7) t(8) f(0) f(1) f(4) f(5) f(6) f(9)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.014s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.014s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(0) t(1) t(2) t(5) t(6) t(8) f(3) f(4) f(7) f(9)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.037s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.037s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(8) t(0) t(1) t(2) t(3) t(4) f(5) f(6) f(7)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.056s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.056s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(0) f(3) t(5) t(7) f(1) f(2) f(4) f(6) f(8)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(1) f(3) t(0) t(2) t(4) t(7) t(8) f(5) f(6)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.008s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.008s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(4) t(0) t(2) t(3) t(8) t(9) f(1) f(5) f(6) f(7)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.036s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.036s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(4) f(8) t(3) f(0) f(1) f(2) f(5) f(6) f(7) f(9)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.111s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.111s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(1) f(7) t(2) t(4) t(6) f(0) f(3) f(5)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.012s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.012s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(4) t(0) t(1) t(2) t(3) t(5) t(9) f(6) f(7) f(8)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.048s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.048s
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(1) f(5) f(8) t(2) t(3) t(4) f(0) f(6) f(7)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.067s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.067s
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(5) t(0) t(1) t(3) t(6) t(7) t(8) f(2) f(4) f(9)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.255s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.255s
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(2) t(5) t(6) t(8) f(0) f(1) f(3) f(4) f(7) f(9)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.103s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.103s
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(1) t(2) t(3) t(4) t(6) f(0) f(5) f(7) f(8)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.053s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.053s
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.106s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.106s
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+f(9) t(0) t(5) f(1) f(2) f(3) f(4) f(6) f(7) f(8)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.133s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.133s
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(3) t(4) t(5) f(0) f(1) f(2) f(6) f(7) f(8) f(9)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.282s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.282s
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+Answer: 1
+t(1) t(6) t(7) f(0) f(2) f(3) f(4) f(5)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.027s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.027s
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.217s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.217s
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.242s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.242s
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-go-diamond' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'go-diamond' with arguments '-stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf'.
++ set -e
++ '[' -stm = --count-only ']'
++ ulimit -f 4194304
++ python3 /sw/diamond/diamond.py -stm -enum ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf
+/sw/diamond/lib/tools/formulatree.py:70: SyntaxWarning: invalid escape sequence '\('
+  openpar = [m.start() for m in re.finditer('\(',string)]
+/sw/diamond/lib/tools/formulatree.py:71: SyntaxWarning: invalid escape sequence '\)'
+  closepar = [m.start() for m in re.finditer('\)',string)]
+==============================
+transforming pForm ADF using ASP...
+==============================
+stable models:
+clingo version 5.6.2
+Reading from /sw/diamond/lib/base.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 0.062s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.062s

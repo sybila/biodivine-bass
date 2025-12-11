@@ -16,6 +16,9 @@ RUN tar -xf /sw/diamond-2.0.2.tar.bz2
 COPY ./run.sh /run.sh
 RUN chmod +x /run.sh
 
+# Make a link to the python interpreter
+RUN ln -s $(which python3) /usr/bin/python
+
 WORKDIR /root
 
 CMD ["/bin/bash"]

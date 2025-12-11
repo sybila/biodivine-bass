@@ -1,0 +1,325 @@
+=== adf-obdd stable ===
+
+--- Instance: 007 ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/007.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/007.normal.adf
+T(0) T(1) F(2) F(3) F(4) 
+
+--- Instance: 088 ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/088.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/088.normal.adf
+F(0) F(1) F(2) F(3) T(4) F(5) 
+F(0) T(1) F(2) T(3) F(4) T(5) 
+T(0) F(1) T(2) F(3) F(4) F(5) 
+
+--- Instance: 097 ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/097.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/097.normal.adf
+F(0) F(1) F(2) F(3) F(4) F(5) F(6) F(7) F(8) F(9) 
+
+--- Instance: 109 ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/109.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/109.normal.adf
+F(0) F(1) F(2) F(3) F(4) 
+
+--- Instance: 110 ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/110.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/110.normal.adf
+T(0) T(1) F(2) T(3) T(4) F(5) F(6) T(7) T(8) 
+
+--- Instance: 133 ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/133.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/133.normal.adf
+F(0) T(1) F(2) F(3) F(4) F(5) F(6) F(7) F(8) F(9) 
+
+--- Instance: 165 ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/165.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/165.normal.adf
+F(0) F(1) F(2) F(3) F(4) F(5) F(6) F(7) 
+
+--- Instance: 184 ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/184.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/184.normal.adf
+F(0) F(1) F(2) F(3) T(4) T(5) 
+
+--- Instance: 189 ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/189.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/189.normal.adf
+
+--- Instance: Small-result-b10.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b10.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b10.apx.graph.normal.adf
+T(0) F(1) F(2) T(3) F(4) T(5) 
+
+--- Instance: Small-result-b13.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b13.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b13.apx.graph.normal.adf
+T(0) T(1) F(2) F(3) T(4) F(5) 
+T(0) T(1) T(2) F(3) F(4) T(5) 
+
+--- Instance: Small-result-b16.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b16.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b16.apx.graph.normal.adf
+F(0) F(1) F(2) T(3) F(4) T(5) 
+
+--- Instance: Small-result-b2.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b2.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b2.apx.graph.normal.adf
+T(0) T(1) F(2) F(3) F(4) 
+
+--- Instance: Small-result-b33.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b33.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b33.apx.graph.normal.adf
+
+--- Instance: Small-result-b34.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b34.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b34.apx.graph.normal.adf
+
+--- Instance: Small-result-b35.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b35.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b35.apx.graph.normal.adf
+F(0) F(1) F(2) F(3) F(4) T(5) F(6) 
+
+--- Instance: Small-result-b41.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b41.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b41.apx.graph.normal.adf
+F(0) T(1) F(2) T(3) F(4) T(5) 
+
+--- Instance: Small-result-b57.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b57.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b57.apx.graph.normal.adf
+T(0) F(1) F(2) T(3) T(4) T(5) F(6) F(7) 
+
+--- Instance: Small-result-b58.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b58.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b58.apx.graph.normal.adf
+T(0) F(1) T(2) T(3) T(4) T(5) F(6) T(7) 
+
+--- Instance: Small-result-b8.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/Small-result-b8.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/Small-result-b8.apx.graph.normal.adf
+F(0) T(1) F(2) F(3) F(4) T(5) F(6) F(7) 
+
+--- Instance: T-1-cascadespoint-or-us.gml.20.apx.graph ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/T-1-cascadespoint-or-us.gml.20.apx.graph.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/T-1-cascadespoint-or-us.gml.20.apx.graph.normal.adf
+T(0) T(1) T(2) F(3) T(4) T(5) T(6) 
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf
+F(0) F(1) T(2) T(3) F(4) F(5) F(6) T(7) T(8) F(9) 
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf
+T(0) T(1) T(2) F(3) F(4) T(5) T(6) F(7) T(8) F(9) 
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy08_9_20.apx.normal.adf
+T(0) T(1) T(2) T(3) T(4) F(5) F(6) F(7) F(8) 
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf
+F(0) F(1) F(2) F(3) F(4) T(5) F(6) T(7) F(8) 
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf
+T(0) F(1) T(2) F(3) T(4) F(5) F(6) T(7) T(8) 
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf
+T(0) F(1) T(2) T(3) F(4) F(5) F(6) F(7) T(8) T(9) 
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf
+F(0) F(1) F(2) T(3) F(4) F(5) F(6) F(7) F(8) F(9) 
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf
+F(0) F(1) T(2) F(3) T(4) F(5) T(6) F(7) 
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf
+T(0) T(1) T(2) T(3) F(4) T(5) F(6) F(7) F(8) T(9) 
+
+--- Instance: adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_acyc_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf
+F(0) F(1) T(2) T(3) T(4) F(5) F(6) F(7) F(8) 
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy03_10_21.apx.normal.adf
+T(0) T(1) F(2) T(3) F(4) F(5) T(6) T(7) T(8) F(9) 
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy04_10_23.apx.normal.adf
+F(0) F(1) T(2) F(3) F(4) T(5) T(6) F(7) T(8) F(9) 
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_acyclic_depvary_step1_batch_yyy10_9_12.apx.normal.adf
+F(0) T(1) T(2) T(3) T(4) F(5) T(6) F(7) F(8) 
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy03_9_20.apx.normal.adf
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy04_10_22.apx.normal.adf
+T(0) F(1) F(2) F(3) F(4) T(5) F(6) F(7) F(8) F(9) 
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy06_10_27.apx.normal.adf
+F(0) F(1) F(2) T(3) T(4) T(5) F(6) F(7) F(8) F(9) 
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_ABA2AF_afinput_exp_cycles_depvary_step1_batch_yyy10_8_13.apx.normal.adf
+F(0) T(1) F(2) F(3) F(4) F(5) T(6) T(7) 
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_hkx-hamburg-kln-express_20150114_1008.gml.80_10_14.apx.normal.adf
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_northwestpoint_or_2015-12-07.gml.20_11_13.apx.normal.adf
+
+--- Instance: adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx ---
+Starting 'sybila/tool-adf-obdd' in '/home/daemontus/biodivine-adf-solver'.
+Will execute 'adf-obdd' with arguments '--stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf'.
++ set -e
++ '[' --stm = --count-only ']'
++ /sw/adf-obdd-main/target/release/adf-bdd --stm ./test_instances/_normalized/adfgen_nacyc_se05_a_02_s_02_b_02_t_02_x_02_c_sXOR_Traffic_sfbay-ferries-archiver_20100127_0320.gml.80_9_26.apx.normal.adf

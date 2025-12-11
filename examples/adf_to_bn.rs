@@ -39,9 +39,16 @@ fn main() {
 
     // Better normalized names for BN formats.
     for (i, var) in bn.variables().enumerate() {
-        bn.as_graph_mut()
-            .set_variable_name(var, format!("v_{i}").as_str())
-            .unwrap();
+        let original_name = bn.get_variable_name(var);
+        if let Ok(numeral) = original_name.parse::<usize>() {
+            bn.as_graph_mut()
+                .set_variable_name(var, format!("v_{numeral}").as_str())
+                .unwrap();
+        } else {
+            bn.as_graph_mut()
+                .set_variable_name(var, format!("v_{i}").as_str())
+                .unwrap();
+        }
     }
 
     std::fs::write(&out_path, bn.to_bnet(true).unwrap()).unwrap();
