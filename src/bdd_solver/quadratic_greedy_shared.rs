@@ -1,6 +1,6 @@
 use crate::bdd_solver::BddSolver;
 use cancel_this::Cancellable;
-use log::debug;
+use log::{debug, trace};
 use ruddy::split::Bdd;
 
 /// A quadratic greedy solver using shared BDD representation.
@@ -90,6 +90,14 @@ impl BddSolver for QuadraticGreedySolverShared {
                     best_idx = i;
                     best_result = merged;
                 }
+
+                trace!(
+                    "[{}/{}] Attempting best merge. Current best: {}; Iteration result: {}",
+                    i + 1,
+                    remaining.len(),
+                    best_size,
+                    size
+                );
             }
 
             // Update result
