@@ -1,6 +1,7 @@
 use cancel_this::Cancellable;
 use ruddy::split::Bdd;
 
+mod constraint_unification;
 mod naive_greedy;
 mod naive_greedy_shared;
 mod quadratic_greedy;
@@ -11,6 +12,8 @@ pub use naive_greedy_shared::NaiveGreedySolverShared;
 
 pub use quadratic_greedy::QuadraticGreedySolver;
 pub use quadratic_greedy_shared::QuadraticGreedySolverShared;
+
+pub use constraint_unification::ConstraintUnificationSolver;
 
 /// A trait implemented by algorithms which can perform merging of BDDs in some semi-optimized
 /// fashion. For all other intents and purposes, this only computes

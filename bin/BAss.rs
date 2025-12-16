@@ -1,6 +1,6 @@
 use biodivine_bass::bdd_solver::{
-    DynamicBddSolver, NaiveGreedySolver, NaiveGreedySolverShared, QuadraticGreedySolver,
-    QuadraticGreedySolverShared,
+    ConstraintUnificationSolver, DynamicBddSolver, NaiveGreedySolver, NaiveGreedySolverShared,
+    QuadraticGreedySolver, QuadraticGreedySolverShared,
 };
 use biodivine_bass::{AdfBdds, AdfExpressions, AdfInterpretationSolver, ModelSet, Statement};
 use cancel_this::Cancellable;
@@ -46,6 +46,10 @@ struct Args {
         require_equals = true
     )]
     solver: BddSolverType,
+
+    /// Prevent the solver from first merging all constraints that do not increase problem size
+    #[arg(long)]
+    dont_unify_constraints: bool,
 
     /// Number of models to enumerate from the result (default: all)
     #[arg(long, short = 'n')]
@@ -197,6 +201,13 @@ fn main() {
     };
 
     let bdd_solver: DynamicBddSolver = args.solver.clone().into();
+    let bdd_solver: DynamicBddSolver = if args.dont_unify_constraints {
+        info!("Constraint unification disabled by command line arguments.");
+        bdd_solver
+    } else {
+        Box::new(ConstraintUnificationSolver::from(bdd_solver))
+    };
+
     let interpretation_solver = AdfInterpretationSolver::new(bdd_solver);
 
     // Solve based on problem type
