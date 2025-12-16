@@ -235,12 +235,14 @@ fn process_result<T: ModelSet + 'static>(result: Cancellable<T>, args: &Args) {
             // Enumerate models up to solution_count limit
             let limit = args.solution_count.unwrap_or(usize::MAX);
             let mut count = 0;
-            for x in model_set.iter() {
-                if count >= limit {
-                    break;
+            if limit > 0 {
+                for x in model_set.iter() {
+                    if count >= limit {
+                        break;
+                    }
+                    print_model(x);
+                    count += 1;
                 }
-                print_model(x);
-                count += 1;
             }
 
             if (count as f64) < total_count {
