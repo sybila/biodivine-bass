@@ -717,7 +717,7 @@ def load_results(recorded_dir: Path, problem_type_filter: Optional[str] = None) 
             # Try direct mapping
             problem_type = problem_suffix
 
-        print(f"Loading {prob_type} problem for tool {tool_name}")
+        print(f"Loading {problem_type} problem for tool {tool_name}")
 
         # Read file content
         try:

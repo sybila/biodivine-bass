@@ -5,12 +5,12 @@ are presented as if the current working directory is the repository root.
 
 ## 0. Data preparation
 
-If you downloaded this content from the github repository, make sure to first unzip the `./test_instances/_normalized.zip` file, 
+If you downloaded this content from the GitHub repository, make sure to first unzip the `./test_instances/_normalized.zip` file, 
 since this file contains the additional BNs representations of the test instances in `.bnet` and `.sbml` format.
 
-If you downloaded this content from the [Zenodo artefact](https://doi.org/10.5281/zenodo.17794231), this folder should be already
-present. Furthemore, you can verify that `./benchmarks/results/raw` contains the full expected benchmark output across all tools
-(due to their size, these files are not present in the github repository).
+If you downloaded this content from the [Zenodo artifact](https://doi.org/10.5281/zenodo.17794231), this folder should be already
+present. Furthermore, you can verify that `./benchmarks/results/raw` contains the full expected benchmark output across all tools
+(due to their size, these files are not present in the GitHub repository).
 
 ## 1. Running benchmarks
 
@@ -22,7 +22,7 @@ to the native `timeout` utility to restrict runtime. Meanwhile, `PARALLEL` can b
 safely run at the same time. Default timeout is `10s`, default parallelism is one CPU core.
 
 **Note that in the published configuration (timeout of `1200s`), each full tool benchmark can take 12+ hours even when running 
-on 40-60 CPU cores. Outside of actual performance tests, we therfore recommend testing with a significantly smaller timeout. 
+on 40-60 CPU cores. Outside of actual performance tests, we therefore recommend testing with a significantly smaller timeout. 
 For example, with the default timeout and 4-8 CPU cores, most benchmark runs can be still completed in several hours. Do not
 benchmark two tools at the same time (this can confuse the scripts gathering statistics)**
 
@@ -60,7 +60,7 @@ To perform the analysis of computed instances, run the following commands:
 cd ./benchmarks/results
 
 python3 process_results ./2v ./exclude.txt > 2v_stats.txt
-mv summary.csv 2c_summary.csv
+mv summary.csv 2v_summary.csv
 
 python3 process_results ./adm ./exclude.txt > adm_stats.txt
 mv summary.csv adm_summary.csv
@@ -88,11 +88,11 @@ be accurate.
 
 ## 3. Running correctness check
 
-To verify correcness, we first extract all benchmark instances that can be solved in under `10s` by all tested 
+To verify correctness, we first extract all benchmark instances that can be solved in under `10s` by all tested 
 tools. To obtain these lists, you can run `python3 find_fast_instances.py`. Again, if you are using the provided
 results, this should produce no change.
 
-Afterwards, you can actually generate the tool outputs by running the following commands:
+Afterward, you can actually generate the tool outputs by running the following commands:
 
 ```bash
 cd ./benchmarks
