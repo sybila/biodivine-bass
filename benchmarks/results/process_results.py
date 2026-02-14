@@ -146,6 +146,7 @@ def join_tables(tables, instance_col):
 def compute_statistics(tables, instance_col):
     """Compute statistics for each table."""
     stats = {}
+    unique_solved = [] # List of (instance, tool_name)
     
     for table_name, df in tables.items():
         status_col = 'Status' if 'Status' in df.columns else None
@@ -180,6 +181,7 @@ def compute_statistics(tables, instance_col):
                             break
                 if is_unique:
                     unique_ok_count += 1
+                    unique_solved.append((row[instance_col], table_name))
         
         # Compute penalised average runtime
         if runtime_col:
@@ -200,7 +202,7 @@ def compute_statistics(tables, instance_col):
             'penalised_avg_runtime': penalised_avg_runtime
         }
     
-    return stats
+    return stats, unique_solved
 
 
 def main():
@@ -245,7 +247,13 @@ def main():
     
     # Compute statistics
     print("\nComputing statistics...")
-    stats = compute_statistics(processed_tables, instance_col)
+    stats, unique_solved = compute_statistics(processed_tables, instance_col)
+    
+    # Save unique solved instances
+    unique_output_file = output_file.replace('.csv', '_unique.csv') if output_file.endswith('.csv') else output_file + '_unique.csv'
+    print(f"Saving unique solved instances to {unique_output_file}...")
+    unique_df = pd.DataFrame(unique_solved, columns=[instance_col, 'Tool'])
+    unique_df.to_csv(unique_output_file, index=False)
     
     # Print statistics
     print("\n" + "="*80)

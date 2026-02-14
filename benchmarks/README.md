@@ -54,25 +54,37 @@ problem-specific directories (the file itself should then be named after the too
 `BAss` solving problem `com` should be placed in `./benchmarks/results/com/bass.csv`). Results that were
 used in the paper should already be present, so to test this step, you don't need your own full set of benchmark results. 
 
+ > If you encountered some out-of-memory errors, these are not always counted correctly. You can run `fix_killed_results.py` on the benchmark output folder to remove any result that contains the word "Killed" (typically reported when a process runs out of memory).
+
 To perform the analysis of computed instances, run the following commands:
 
 ```bash
 cd ./benchmarks/results
 
-python3 process_results ./2v ./exclude.txt > 2v_stats.txt
-mv summary.csv 2c_summary.csv
+python3 process_results.py ./2v ./exclude.txt > 2v_stats.txt
+python3 cactus_plot.py ./2v --output 2v_cactus.png  
+mv summary.csv 2v_summary.csv
+mv summary_unique.csv 2v_summary_unique.csv
 
-python3 process_results ./adm ./exclude.txt > adm_stats.txt
+python3 process_results.py ./adm ./exclude.txt > adm_stats.txt
+python3 cactus_plot.py ./adm --output adm_cactus.png  
 mv summary.csv adm_summary.csv
+mv summary_unique.csv adm_summary_unique.csv
 
-python3 process_results ./com ./exclude.txt > com_stats.txt
+python3 process_results.py ./com ./exclude.txt > com_stats.txt
+python3 cactus_plot.py ./com --output com_cactus.png  
 mv summary.csv com_summary.csv
+mv summary_unique.csv com_summary_unique.csv
 
-python3 process_results ./prf ./exclude.txt > prf_stats.txt
+python3 process_results.py ./prf ./exclude.txt > prf_stats.txt
+python3 cactus_plot.py ./prf --output prf_cactus.png  
 mv summary.csv prf_summary.csv
+mv summary_unique.csv prf_summary_unique.csv
 
-python3 process_results ./stm ./exclude.txt > stm_stats.txt
+python3 process_results.py ./stm ./exclude.txt > stm_stats.txt
+python3 cactus_plot.py ./stm --output stm_cactus.png  
 mv summary.csv stm_summary.csv
+mv summary_unique.csv stm_summary_unique.csv
 ```
 
 If you are using the pre-computed result files, this should produce no change. Otherwise, the summary tables
