@@ -20,4 +20,4 @@ docker run --rm --init \
   -v "${HOST_WORKDIR}:${CONTAINER_WORKDIR}" \
   -w "${CONTAINER_WORKDIR}" \
   "${DOCKER_IMAGE}" \
-  "/app/solve-sharpsat.sh" "$@"
+  "/app/solve-bmsa.sh" "$@"

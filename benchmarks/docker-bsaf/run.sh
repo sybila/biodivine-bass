@@ -14,10 +14,10 @@ set -e
 # The special arguments magic ensures the last argument is first (i.e. model name), and then
 # the rest follows as normal.
 if [ "$1" = "--count-only" ]; then
-    /app/solve-sharpsat.sh 64g 1g h3 $2 1 | wc -l
+    /app/solve-bmsa.sh 64g 1g h3 $2 | wc -l
     exit_code=${PIPESTATUS[0]}
     echo "Exit code of bsaf: $exit_code"
     exit $exit_code
 else
-    /app/solve-sharpsat.sh 64g 1g h3 $1 1
+    /app/solve-bmsa.sh 64g 1g h3 $1
 fi
